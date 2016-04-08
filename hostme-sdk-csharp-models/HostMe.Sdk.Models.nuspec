@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HostMe.Sdk.Models</id>
+    <version>1.0.*</version>
+    <title>HostMe.Sdk.Models</title>
+    <authors>HostMe</authors>
+    <owners>HostMe</owners>
+    <licenseUrl>https://github.com/HostMeApp/hostme-sdk-csharp/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/HostMeApp/hostme-sdk-csharp</projectUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/17345765?v=3&s=200</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library generated from a Swagger doc</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>HostMe LLC 2016</copyright>
+    <tags>Tag1 Tag2</tags>
+    <dependencies>
+      <dependency id="RestSharp" version="105.1.0" />
+      <dependency id="Newtonsoft.Json" version="8.0.2" />
+    </dependencies>
+  </metadata>
+</package>
