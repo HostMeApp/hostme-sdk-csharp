@@ -8,7 +8,7 @@
     <owners>HostMe</owners>
     <licenseUrl>https://github.com/HostMeApp/hostme-sdk-csharp/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/HostMeApp/hostme-sdk-csharp</projectUrl>
-    <iconUrl>https://avatars2.githubusercontent.com/u/17345765?v=3&s=200</iconUrl>
+    <iconUrl>https://avatars2.githubusercontent.com/u/17345765?v=3</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A library generated from a Swagger doc</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
