@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HostMe.Sdk.Apis.Client</id>
-    <version>1.0.*</version>
+    <version>1.0.0</version>
     <title>HostMe.Sdk.Apis.Client</title>
     <authors>HostMe</authors>
     <owners>HostMe</owners>
