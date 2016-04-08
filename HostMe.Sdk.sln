@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe.Sdk.Apis.Web", "hostme-sdk-csharp-web\HostMe.Sdk.Apis.Web.csproj", "{2915A55A-91BA-4264-BC38-D5657E05E8C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe.Sdk.Client", "hostme-sdk-csharp-client\HostMe.Sdk.Client.csproj", "{F78E3389-B486-47BC-AB08-64813B25A016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe.Sdk.Models", "hostme-sdk-csharp-models\HostMe.Sdk.Models.csproj", "{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe.Sdk.Apis.Admin", "hostme-sdk-csharp-admin\HostMe.Sdk.Apis.Admin.csproj", "{CFB6766E-4C48-4654-9335-8886BEB33F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostMe.Sdk.Apis.Mobile", "hostme-sdk-csharp-mobile\HostMe.Sdk.Apis.Mobile.csproj", "{87B1B6C2-F22A-4620-BB27-164E22A82B3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2915A55A-91BA-4264-BC38-D5657E05E8C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2915A55A-91BA-4264-BC38-D5657E05E8C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2915A55A-91BA-4264-BC38-D5657E05E8C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2915A55A-91BA-4264-BC38-D5657E05E8C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F78E3389-B486-47BC-AB08-64813B25A016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F78E3389-B486-47BC-AB08-64813B25A016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F78E3389-B486-47BC-AB08-64813B25A016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F78E3389-B486-47BC-AB08-64813B25A016}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB6766E-4C48-4654-9335-8886BEB33F15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB6766E-4C48-4654-9335-8886BEB33F15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB6766E-4C48-4654-9335-8886BEB33F15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB6766E-4C48-4654-9335-8886BEB33F15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87B1B6C2-F22A-4620-BB27-164E22A82B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87B1B6C2-F22A-4620-BB27-164E22A82B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87B1B6C2-F22A-4620-BB27-164E22A82B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87B1B6C2-F22A-4620-BB27-164E22A82B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
