@@ -6,8 +6,8 @@
     <ProjectGuid>{87B1B6C2-F22A-4620-BB27-164E22A82B3E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HostMe.Sdk.Apis.Admin</RootNamespace>
-    <AssemblyName>HostMe.Sdk.Apis.Admin</AssemblyName>
+    <RootNamespace>HostMe.Sdk.Apis.Mobile</RootNamespace>
+    <AssemblyName>HostMe.Sdk.Apis.Mobile</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
