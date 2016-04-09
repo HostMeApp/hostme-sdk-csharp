@@ -61,7 +61,6 @@
     <Compile Include="Model\*.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HostMe.Sdk.Client.nuspec" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>

@@ -6,8 +6,8 @@
     <ProjectGuid>{77FEB066-473E-40B7-8B2B-D90DB5CE53F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HostMe.Sdk</RootNamespace>
-    <AssemblyName>HostMe.Sdk</AssemblyName>
+    <RootNamespace>HostMe.Sdk.Models</RootNamespace>
+    <AssemblyName>HostMe.Sdk.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -56,7 +56,6 @@
     <Compile Include="HostMe\**\*.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HostMe.Sdk.Models.nuspec" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
