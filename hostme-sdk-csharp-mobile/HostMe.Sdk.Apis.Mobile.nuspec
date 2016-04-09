@@ -20,8 +20,8 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="HostMe.Sdk.Apis.Mobile.dll" target="lib\net451" />
-    <file src="HostMe.Sdk.Models.dll" target="lib\net451" />
-    <file src="HostMe.Sdk.Client.dll" target="lib\net451" />
+    <file src="bin\$configuration$\HostMe.Sdk.Apis.Mobile.dll" target="lib\net451" />
+    <file src="bin\$configuration$\HostMe.Sdk.Models.dll" target="lib\net451" />
+    <file src="bin\$configuration$\HostMe.Sdk.Client.dll" target="lib\net451" />
   </files>
 </package>
