@@ -54,7 +54,7 @@ namespace HostMe.Sdk.Models
         /// <param name="RequestedTime">RequestedTime.</param>
         /// <param name="Time">Time.</param>
 
-        public OnlineAvailability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, bool? Open = null, bool? RequestedTime = null, TimeSpan Time = null)
+        public OnlineAvailability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, bool? Open = null, bool? RequestedTime = null, TimeSpan? Time = null)
         {
             this.AcceptReservations = AcceptReservations;
             this.AvailabilityLevel = AvailabilityLevel;
@@ -87,7 +87,7 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets Time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=true)]
-        public TimeSpan Time { get; set; }
+        public TimeSpan? Time { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

@@ -58,7 +58,7 @@ namespace HostMe.Sdk.Models
         /// <param name="ReservedCovers">ReservedCovers.</param>
         /// <param name="Time">Time.</param>
 
-        public Availability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, int? InWaitCovers = null, int? MaxCoversForSlot = null, bool? Open = null, string RecommendedTables = null, bool? RequestedTime = null, int? ReservedCovers = null, TimeSpan Time = null)
+        public Availability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, int? InWaitCovers = null, int? MaxCoversForSlot = null, bool? Open = null, string RecommendedTables = null, bool? RequestedTime = null, int? ReservedCovers = null, TimeSpan? Time = null)
         {
             this.AcceptReservations = AcceptReservations;
             this.AvailabilityLevel = AvailabilityLevel;
@@ -119,7 +119,7 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets Time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=true)]
-        public TimeSpan Time { get; set; }
+        public TimeSpan? Time { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
