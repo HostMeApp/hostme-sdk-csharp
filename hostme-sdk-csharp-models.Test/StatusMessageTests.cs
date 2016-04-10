@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<StatusMessage> (instance, "instance is a StatusMessage");
         }
 
-        
         /// <summary>
         /// Test the property 'FromStatus' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FromStatus' 
         }
-        
         /// <summary>
         /// Test the property 'ToStatus' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ToStatus' 
         }
-        
         /// <summary>
         /// Test the property 'MessageTemplate' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MessageTemplate' 
         }
-        
 
     }
 
 }
-
-

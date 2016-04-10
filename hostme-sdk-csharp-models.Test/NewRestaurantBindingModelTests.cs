@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<NewRestaurantBindingModel> (instance, "instance is a NewRestaurantBindingModel");
         }
 
-        
         /// <summary>
         /// Test the property 'Name' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Name' 
         }
-        
         /// <summary>
         /// Test the property 'Address' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Address' 
         }
-        
         /// <summary>
         /// Test the property 'Phone' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Phone' 
         }
-        
         /// <summary>
         /// Test the property 'TimeZone' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TimeZone' 
         }
-        
         /// <summary>
         /// Test the property 'ImageUrl' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ImageUrl' 
         }
-        
         /// <summary>
         /// Test the property 'FacebookId' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FacebookId' 
         }
-        
         /// <summary>
         /// Test the property 'TwitterAccount' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TwitterAccount' 
         }
-        
         /// <summary>
         /// Test the property 'WebsiteUrl' 
         /// </summary>
@@ -124,7 +114,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WebsiteUrl' 
         }
-        
         /// <summary>
         /// Test the property 'FoursquareId' 
         /// </summary>
@@ -133,10 +122,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FoursquareId' 
         }
-        
 
     }
 
 }
-
-

@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -104,14 +102,13 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class TimeDimension {\n");
             sb.Append("  Hour: ").Append(Hour).Append("\n");
-            sb.Append("  WeekDay: ").Append(WeekDay).Append("\n");
-            sb.Append("  WeekDayNumber: ").Append(WeekDayNumber).Append("\n");
-            sb.Append("  Month: ").Append(Month).Append("\n");
-            sb.Append("  MonthNumber: ").Append(MonthNumber).Append("\n");
-            sb.Append("  Year: ").Append(Year).Append("\n");
-            sb.Append("  WeekNumber: ").Append(WeekNumber).Append("\n");
-            sb.Append("  TypeOfMeal: ").Append(TypeOfMeal).Append("\n");
-            
+sb.Append("  WeekDay: ").Append(WeekDay).Append("\n");
+sb.Append("  WeekDayNumber: ").Append(WeekDayNumber).Append("\n");
+sb.Append("  Month: ").Append(Month).Append("\n");
+sb.Append("  MonthNumber: ").Append(MonthNumber).Append("\n");
+sb.Append("  Year: ").Append(Year).Append("\n");
+sb.Append("  WeekNumber: ").Append(WeekNumber).Append("\n");
+sb.Append("  TypeOfMeal: ").Append(TypeOfMeal).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,36 +198,25 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Hour != null)
                     hash = hash * 59 + this.Hour.GetHashCode();
-                
                 if (this.WeekDay != null)
                     hash = hash * 59 + this.WeekDay.GetHashCode();
-                
                 if (this.WeekDayNumber != null)
                     hash = hash * 59 + this.WeekDayNumber.GetHashCode();
-                
                 if (this.Month != null)
                     hash = hash * 59 + this.Month.GetHashCode();
-                
                 if (this.MonthNumber != null)
                     hash = hash * 59 + this.MonthNumber.GetHashCode();
-                
                 if (this.Year != null)
                     hash = hash * 59 + this.Year.GetHashCode();
-                
                 if (this.WeekNumber != null)
                     hash = hash * 59 + this.WeekNumber.GetHashCode();
-                
                 if (this.TypeOfMeal != null)
                     hash = hash * 59 + this.TypeOfMeal.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

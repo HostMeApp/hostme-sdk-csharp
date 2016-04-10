@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -72,10 +70,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ManageInfoViewModel {\n");
             sb.Append("  LocalLoginProvider: ").Append(LocalLoginProvider).Append("\n");
-            sb.Append("  UserName: ").Append(UserName).Append("\n");
-            sb.Append("  Logins: ").Append(Logins).Append("\n");
-            sb.Append("  ExternalLoginProviders: ").Append(ExternalLoginProviders).Append("\n");
-            
+sb.Append("  UserName: ").Append(UserName).Append("\n");
+sb.Append("  Logins: ").Append(Logins).Append("\n");
+sb.Append("  ExternalLoginProviders: ").Append(ExternalLoginProviders).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,24 +142,17 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LocalLoginProvider != null)
                     hash = hash * 59 + this.LocalLoginProvider.GetHashCode();
-                
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
-                
                 if (this.Logins != null)
                     hash = hash * 59 + this.Logins.GetHashCode();
-                
                 if (this.ExternalLoginProviders != null)
                     hash = hash * 59 + this.ExternalLoginProviders.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

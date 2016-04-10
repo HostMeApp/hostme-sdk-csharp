@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -56,8 +54,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ODataPagedResult1MemberContract {\n");
             sb.Append("  Results: ").Append(Results).Append("\n");
-            sb.Append("  Count: ").Append(Count).Append("\n");
-            
+sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,18 +114,13 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
-                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

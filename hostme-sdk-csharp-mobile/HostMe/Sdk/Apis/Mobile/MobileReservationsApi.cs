@@ -7,17 +7,14 @@ using RestSharp;
 using HostMe.Sdk.Client;
 using HostMe.Sdk.Models;
 
-
 namespace HostMe.Sdk.Apis.Mobile
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IMobileReservationsApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -39,7 +36,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="value"></param>
         /// <returns>ApiResponse of Reservation</returns>
         ApiResponse<Reservation> AddNewReservationWithHttpInfo (NewReservationBindingModel value);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -63,7 +59,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="notes"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> CloseAsCanceledWithHttpInfo (string reservationId, string notes);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -85,7 +80,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <returns>ApiResponse of Reservation</returns>
         ApiResponse<Reservation> GetReservationByIdWithHttpInfo (string reservationId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -107,7 +101,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
         ApiResponse<List<Reservation>> GetUserReservationsWithHttpInfo (string queryOptions);
-        
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -129,7 +122,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ReadAllMessageWithHttpInfo (string reservationId);
-        
         /// <summary>
         /// Sends a message related to specified reservation
         /// </summary>
@@ -153,7 +145,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="body">The body of the message</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SendMessageWithHttpInfo (string reservationId, string body);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -177,11 +168,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="value"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateReservationWithHttpInfo (string reservationId, UpdateReservationBindingModel value);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -203,7 +191,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (NewReservationBindingModel value);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -227,7 +214,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="notes"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (string reservationId, string notes);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -249,7 +235,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reservation>> GetReservationByIdAsyncWithHttpInfo (string reservationId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -271,7 +256,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions);
-        
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -293,7 +277,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ReadAllMessageAsyncWithHttpInfo (string reservationId);
-        
         /// <summary>
         /// Sends a message related to specified reservation
         /// </summary>
@@ -317,7 +300,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="body">The body of the message</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageAsyncWithHttpInfo (string reservationId, string body);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -341,9 +323,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (string reservationId, UpdateReservationBindingModel value);
-        
         #endregion Asynchronous Operations
-        
     }
   
     /// <summary>
@@ -433,7 +413,6 @@ namespace HostMe.Sdk.Apis.Mobile
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
         /// <summary>
         ///  
         /// </summary>
@@ -486,11 +465,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (value.GetType() != typeof(byte[]))
+                                                            if (value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
             }
@@ -506,7 +481,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -526,7 +500,6 @@ namespace HostMe.Sdk.Apis.Mobile
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -578,11 +551,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            
-            
-            
-            if (value.GetType() != typeof(byte[]))
+                                                            if (value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
             }
@@ -591,7 +560,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -599,7 +567,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -618,7 +585,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -677,11 +643,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (notes.GetType() != typeof(byte[]))
+                                                if (notes.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(notes); // http body (model) parameter
             }
@@ -697,7 +659,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -717,7 +678,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 null);
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -773,11 +733,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (notes.GetType() != typeof(byte[]))
+                                                if (notes.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(notes); // http body (model) parameter
             }
@@ -786,7 +742,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = notes; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -794,7 +749,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -813,7 +767,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -867,11 +820,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -880,7 +829,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -900,7 +848,6 @@ namespace HostMe.Sdk.Apis.Mobile
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -953,13 +900,8 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -967,7 +909,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -986,7 +927,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1035,12 +975,8 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
-            
-            
-            
-            
+                        if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -1049,7 +985,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1069,7 +1004,6 @@ namespace HostMe.Sdk.Apis.Mobile
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1119,14 +1053,9 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
-            
-            
-            
-            
+                        if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1134,7 +1063,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1153,7 +1081,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 (List<Reservation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Reservation>)));
             
         }
-        
         /// <summary>
         /// Mark all message as read. 
         /// </summary>
@@ -1206,11 +1133,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -1219,7 +1142,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1239,7 +1161,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 null);
         }
 
-        
         /// <summary>
         /// Mark all message as read. 
         /// </summary>
@@ -1291,13 +1212,8 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1305,7 +1221,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1324,7 +1239,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
         /// <summary>
         /// Sends a message related to specified reservation 
         /// </summary>
@@ -1383,11 +1297,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
+                                                if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
@@ -1403,7 +1313,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1423,7 +1332,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 null);
         }
 
-        
         /// <summary>
         /// Sends a message related to specified reservation 
         /// </summary>
@@ -1479,11 +1387,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (body.GetType() != typeof(byte[]))
+                                                if (body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
             }
@@ -1492,7 +1396,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = body; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1500,7 +1403,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1519,7 +1421,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1578,11 +1479,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (value.GetType() != typeof(byte[]))
+                                                if (value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
             }
@@ -1598,7 +1495,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1618,7 +1514,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 null);
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1674,11 +1569,7 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-            
-            
-            
-            
-            if (value.GetType() != typeof(byte[]))
+                                                if (value.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
             }
@@ -1687,7 +1578,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1695,7 +1585,6 @@ namespace HostMe.Sdk.Apis.Mobile
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1714,7 +1603,5 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
     }
-    
 }

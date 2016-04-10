@@ -7,17 +7,14 @@ using RestSharp;
 using HostMe.Sdk.Client;
 using HostMe.Sdk.Models;
 
-
 namespace HostMe.Sdk.Apis.Admin
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IAdminLoyaltyApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -41,7 +38,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reward"></param>
         /// <returns>ApiResponse of Reward</returns>
         ApiResponse<Reward> AddNewRewardWithHttpInfo (int? restaurantId, Reward reward);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -65,7 +61,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="redeemId"></param>
         /// <returns>ApiResponse of RedeemRequest</returns>
         ApiResponse<RedeemRequest> ApproveRedeemRequestWithHttpInfo (int? restaurantId, string redeemId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -89,7 +84,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>ApiResponse of Member</returns>
         ApiResponse<Member> CloseMembershipWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -113,7 +107,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> DeleteRewardWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -137,7 +130,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phoneNumber"></param>
         /// <returns>ApiResponse of Member</returns>
         ApiResponse<Member> FindMemberByPhoneNumberWithHttpInfo (int? restaurantId, string phoneNumber);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -159,7 +151,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of List&lt;Reward&gt;</returns>
         ApiResponse<List<Reward>> GetAlRewardsWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -181,7 +172,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of ODataPagedResult1MemberContract</returns>
         ApiResponse<ODataPagedResult1MemberContract> GetAllMembersWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -203,7 +193,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of List&lt;RedeemRequest&gt;</returns>
         ApiResponse<List<RedeemRequest>> GetAllRedeemRequestsWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -225,7 +214,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of LoyaltySettings</returns>
         ApiResponse<LoyaltySettings> GetDefaultLoyaltySettingsWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -247,7 +235,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of LoyaltySettings</returns>
         ApiResponse<LoyaltySettings> GetLoyaltySettingsWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -271,7 +258,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>ApiResponse of byte[]</returns>
         ApiResponse<byte[]> GetMemberAvatarWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -295,7 +281,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>ApiResponse of ODataPagedResult1TransactionContract</returns>
         ApiResponse<ODataPagedResult1TransactionContract> GetMemberTransactionsWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -319,7 +304,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>ApiResponse of Member</returns>
         ApiResponse<Member> GetMembershipInfoWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -343,7 +327,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>ApiResponse of Reward</returns>
         ApiResponse<Reward> GetRewardByIdWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -367,7 +350,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>ApiResponse of Reward</returns>
         ApiResponse<Reward> PublishRewardWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -393,7 +375,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reason"></param>
         /// <returns>ApiResponse of RedeemRequest</returns>
         ApiResponse<RedeemRequest> RejectRedeemRequestWithHttpInfo (int? restaurantId, string redeemId, string reason);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -417,7 +398,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetLoyaltySettingsWithHttpInfo (int? restaurantId, LoyaltySettings settings);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -441,7 +421,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>ApiResponse of Reward</returns>
         ApiResponse<Reward> UnpublishRewardWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -467,11 +446,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reward"></param>
         /// <returns>ApiResponse of Reward</returns>
         ApiResponse<Reward> UpdateRewardWithHttpInfo (int? restaurantId, string rewardId, Reward reward);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -495,7 +471,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reward"></param>
         /// <returns>Task of ApiResponse (Reward)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reward>> AddNewRewardAsyncWithHttpInfo (int? restaurantId, Reward reward);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -519,7 +494,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="redeemId"></param>
         /// <returns>Task of ApiResponse (RedeemRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<RedeemRequest>> ApproveRedeemRequestAsyncWithHttpInfo (int? restaurantId, string redeemId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -543,7 +517,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>Task of ApiResponse (Member)</returns>
         System.Threading.Tasks.Task<ApiResponse<Member>> CloseMembershipAsyncWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -567,7 +540,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRewardAsyncWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -591,7 +563,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phoneNumber"></param>
         /// <returns>Task of ApiResponse (Member)</returns>
         System.Threading.Tasks.Task<ApiResponse<Member>> FindMemberByPhoneNumberAsyncWithHttpInfo (int? restaurantId, string phoneNumber);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -613,7 +584,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (List&lt;Reward&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reward>>> GetAlRewardsAsyncWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -635,7 +605,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (ODataPagedResult1MemberContract)</returns>
         System.Threading.Tasks.Task<ApiResponse<ODataPagedResult1MemberContract>> GetAllMembersAsyncWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -657,7 +626,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (List&lt;RedeemRequest&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<RedeemRequest>>> GetAllRedeemRequestsAsyncWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -679,7 +647,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (LoyaltySettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<LoyaltySettings>> GetDefaultLoyaltySettingsAsyncWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -701,7 +668,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (LoyaltySettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<LoyaltySettings>> GetLoyaltySettingsAsyncWithHttpInfo (int? restaurantId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -725,7 +691,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>Task of ApiResponse (byte[])</returns>
         System.Threading.Tasks.Task<ApiResponse<byte[]>> GetMemberAvatarAsyncWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -749,7 +714,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>Task of ApiResponse (ODataPagedResult1TransactionContract)</returns>
         System.Threading.Tasks.Task<ApiResponse<ODataPagedResult1TransactionContract>> GetMemberTransactionsAsyncWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -773,7 +737,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="memberId"></param>
         /// <returns>Task of ApiResponse (Member)</returns>
         System.Threading.Tasks.Task<ApiResponse<Member>> GetMembershipInfoAsyncWithHttpInfo (int? restaurantId, int? memberId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -797,7 +760,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>Task of ApiResponse (Reward)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reward>> GetRewardByIdAsyncWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -821,7 +783,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>Task of ApiResponse (Reward)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reward>> PublishRewardAsyncWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -847,7 +808,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reason"></param>
         /// <returns>Task of ApiResponse (RedeemRequest)</returns>
         System.Threading.Tasks.Task<ApiResponse<RedeemRequest>> RejectRedeemRequestAsyncWithHttpInfo (int? restaurantId, string redeemId, string reason);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -871,7 +831,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetLoyaltySettingsAsyncWithHttpInfo (int? restaurantId, LoyaltySettings settings);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -895,7 +854,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>Task of ApiResponse (Reward)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reward>> UnpublishRewardAsyncWithHttpInfo (int? restaurantId, string rewardId);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -921,9 +879,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reward"></param>
         /// <returns>Task of ApiResponse (Reward)</returns>
         System.Threading.Tasks.Task<ApiResponse<Reward>> UpdateRewardAsyncWithHttpInfo (int? restaurantId, string rewardId, Reward reward);
-        
         #endregion Asynchronous Operations
-        
     }
   
     /// <summary>
@@ -1013,7 +969,6 @@ namespace HostMe.Sdk.Apis.Admin
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1073,11 +1028,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            if (reward.GetType() != typeof(byte[]))
+                                                if (reward.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reward); // http body (model) parameter
             }
@@ -1093,7 +1044,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1113,7 +1063,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1170,11 +1119,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            if (reward.GetType() != typeof(byte[]))
+                                                if (reward.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reward); // http body (model) parameter
             }
@@ -1183,7 +1128,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = reward; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1191,7 +1135,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1210,7 +1153,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Reward) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reward)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1270,12 +1212,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
-            
-            
-            
-            
-            
+if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -1284,7 +1222,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1304,7 +1241,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1361,14 +1297,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
-            
-            
-            
-            
-            
+if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1376,7 +1307,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1395,7 +1325,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (RedeemRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RedeemRequest)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1455,12 +1384,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -1469,7 +1394,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1489,7 +1413,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1546,14 +1469,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1561,7 +1479,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1580,7 +1497,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Member) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Member)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1640,12 +1556,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -1654,7 +1566,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1674,7 +1585,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1731,14 +1641,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1746,7 +1651,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1765,7 +1669,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1825,12 +1728,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
             if (phoneNumber != null) localVarQueryParams.Add("phoneNumber", Configuration.ApiClient.ParameterToString(phoneNumber)); // query parameter
-            
-            
-            
-            
+                                    
 
             // authentication (oauth2) required
             
@@ -1839,7 +1738,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -1859,7 +1757,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -1916,14 +1813,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
             if (phoneNumber != null) localVarQueryParams.Add("phoneNumber", Configuration.ApiClient.ParameterToString(phoneNumber)); // query parameter
-            
-            
-            
-            
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -1931,7 +1823,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1950,7 +1841,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Member) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Member)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2004,11 +1894,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -2017,7 +1903,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2037,7 +1922,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2090,13 +1974,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2104,7 +1983,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2123,7 +2001,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (List<Reward>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Reward>)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2177,11 +2054,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -2190,7 +2063,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2210,7 +2082,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2263,13 +2134,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2277,7 +2143,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2296,7 +2161,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (ODataPagedResult1MemberContract) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ODataPagedResult1MemberContract)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2350,11 +2214,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -2363,7 +2223,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2383,7 +2242,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2436,13 +2294,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2450,7 +2303,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2469,7 +2321,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (List<RedeemRequest>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<RedeemRequest>)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2523,11 +2374,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -2536,7 +2383,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2556,7 +2402,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2609,13 +2454,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2623,7 +2463,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2642,7 +2481,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (LoyaltySettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoyaltySettings)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2696,11 +2534,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
             // authentication (oauth2) required
             
@@ -2709,7 +2543,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2729,7 +2562,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2782,13 +2614,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2796,7 +2623,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2815,7 +2641,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (LoyaltySettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LoyaltySettings)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2875,12 +2700,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -2889,7 +2710,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -2909,7 +2729,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -2966,14 +2785,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -2981,7 +2795,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3000,7 +2813,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (byte[]) Configuration.ApiClient.Deserialize(localVarResponse, typeof(byte[])));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3060,12 +2872,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -3074,7 +2882,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -3094,7 +2901,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3151,14 +2957,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -3166,7 +2967,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3185,7 +2985,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (ODataPagedResult1TransactionContract) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ODataPagedResult1TransactionContract)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3245,12 +3044,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -3259,7 +3054,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -3279,7 +3073,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3336,14 +3129,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
-            
-            
-            
-            
-            
+if (memberId != null) localVarPathParams.Add("memberId", Configuration.ApiClient.ParameterToString(memberId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -3351,7 +3139,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3370,7 +3157,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Member) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Member)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3430,12 +3216,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -3444,7 +3226,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -3464,7 +3245,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3521,14 +3301,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -3536,7 +3311,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3555,7 +3329,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Reward) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reward)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3615,12 +3388,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -3629,7 +3398,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -3649,7 +3417,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3706,14 +3473,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -3721,7 +3483,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3740,7 +3501,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Reward) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reward)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3806,12 +3566,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
-            
-            
-            
-            
-            if (reason.GetType() != typeof(byte[]))
+if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
+                                                if (reason.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reason); // http body (model) parameter
             }
@@ -3827,7 +3583,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -3847,7 +3602,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -3908,12 +3662,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
-            
-            
-            
-            
-            if (reason.GetType() != typeof(byte[]))
+if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
+                                                if (reason.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reason); // http body (model) parameter
             }
@@ -3922,7 +3672,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = reason; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -3930,7 +3679,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3949,7 +3697,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (RedeemRequest) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RedeemRequest)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4008,11 +3755,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            if (settings.GetType() != typeof(byte[]))
+                                                if (settings.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(settings); // http body (model) parameter
             }
@@ -4028,7 +3771,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -4048,7 +3790,6 @@ namespace HostMe.Sdk.Apis.Admin
                 null);
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4104,11 +3845,7 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            
-            
-            
-            
-            if (settings.GetType() != typeof(byte[]))
+                                                if (settings.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(settings); // http body (model) parameter
             }
@@ -4117,7 +3854,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = settings; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -4125,7 +3861,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4144,7 +3879,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4204,12 +3938,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
             // authentication (oauth2) required
             
@@ -4218,7 +3948,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -4238,7 +3967,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4295,14 +4023,9 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -4310,7 +4033,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4329,7 +4051,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Reward) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reward)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4395,12 +4116,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            if (reward.GetType() != typeof(byte[]))
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                if (reward.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reward); // http body (model) parameter
             }
@@ -4416,7 +4133,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -4436,7 +4152,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -4497,12 +4212,8 @@ namespace HostMe.Sdk.Apis.Admin
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
-            
-            
-            
-            
-            if (reward.GetType() != typeof(byte[]))
+if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
+                                                if (reward.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(reward); // http body (model) parameter
             }
@@ -4511,7 +4222,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = reward; // byte array
             }
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -4519,7 +4229,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4538,7 +4247,5 @@ namespace HostMe.Sdk.Apis.Admin
                 (Reward) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reward)));
             
         }
-        
     }
-    
 }

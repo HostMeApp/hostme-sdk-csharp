@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<UserInfoViewModel> (instance, "instance is a UserInfoViewModel");
         }
 
-        
         /// <summary>
         /// Test the property 'UserName' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'UserName' 
         }
-        
         /// <summary>
         /// Test the property 'HasRegistered' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'HasRegistered' 
         }
-        
         /// <summary>
         /// Test the property 'LoginProvider' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'LoginProvider' 
         }
-        
 
     }
 
 }
-
-

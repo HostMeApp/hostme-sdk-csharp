@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -80,11 +78,10 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingSettings {\n");
             sb.Append("  AcceptRemoteRegistration: ").Append(AcceptRemoteRegistration).Append("\n");
-            sb.Append("  EnableManualHold: ").Append(EnableManualHold).Append("\n");
-            sb.Append("  MaximumHoldTime: ").Append(MaximumHoldTime).Append("\n");
-            sb.Append("  PositionMessages: ").Append(PositionMessages).Append("\n");
-            sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
-            
+sb.Append("  EnableManualHold: ").Append(EnableManualHold).Append("\n");
+sb.Append("  MaximumHoldTime: ").Append(MaximumHoldTime).Append("\n");
+sb.Append("  PositionMessages: ").Append(PositionMessages).Append("\n");
+sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -159,27 +156,19 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AcceptRemoteRegistration != null)
                     hash = hash * 59 + this.AcceptRemoteRegistration.GetHashCode();
-                
                 if (this.EnableManualHold != null)
                     hash = hash * 59 + this.EnableManualHold.GetHashCode();
-                
                 if (this.MaximumHoldTime != null)
                     hash = hash * 59 + this.MaximumHoldTime.GetHashCode();
-                
                 if (this.PositionMessages != null)
                     hash = hash * 59 + this.PositionMessages.GetHashCode();
-                
                 if (this.StatusMessages != null)
                     hash = hash * 59 + this.StatusMessages.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

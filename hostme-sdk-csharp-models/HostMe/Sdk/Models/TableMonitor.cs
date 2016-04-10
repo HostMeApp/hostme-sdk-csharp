@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -148,17 +146,16 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class TableMonitor {\n");
             sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  WaitingItemId: ").Append(WaitingItemId).Append("\n");
-            sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
-            sb.Append("  RegistrationId: ").Append(RegistrationId).Append("\n");
-            sb.Append("  PartySize: ").Append(PartySize).Append("\n");
-            sb.Append("  Membership: ").Append(Membership).Append("\n");
-            sb.Append("  NextReservationTime: ").Append(NextReservationTime).Append("\n");
-            sb.Append("  AssignmentTime: ").Append(AssignmentTime).Append("\n");
-            sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
-            sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
-            
+sb.Append("  Status: ").Append(Status).Append("\n");
+sb.Append("  WaitingItemId: ").Append(WaitingItemId).Append("\n");
+sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
+sb.Append("  RegistrationId: ").Append(RegistrationId).Append("\n");
+sb.Append("  PartySize: ").Append(PartySize).Append("\n");
+sb.Append("  Membership: ").Append(Membership).Append("\n");
+sb.Append("  NextReservationTime: ").Append(NextReservationTime).Append("\n");
+sb.Append("  AssignmentTime: ").Append(AssignmentTime).Append("\n");
+sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
+sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -263,45 +260,31 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.WaitingItemId != null)
                     hash = hash * 59 + this.WaitingItemId.GetHashCode();
-                
                 if (this.ReservationId != null)
                     hash = hash * 59 + this.ReservationId.GetHashCode();
-                
                 if (this.RegistrationId != null)
                     hash = hash * 59 + this.RegistrationId.GetHashCode();
-                
                 if (this.PartySize != null)
                     hash = hash * 59 + this.PartySize.GetHashCode();
-                
                 if (this.Membership != null)
                     hash = hash * 59 + this.Membership.GetHashCode();
-                
                 if (this.NextReservationTime != null)
                     hash = hash * 59 + this.NextReservationTime.GetHashCode();
-                
                 if (this.AssignmentTime != null)
                     hash = hash * 59 + this.AssignmentTime.GetHashCode();
-                
                 if (this.RegistrationTime != null)
                     hash = hash * 59 + this.RegistrationTime.GetHashCode();
-                
                 if (this.EstimatedReleaseTime != null)
                     hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

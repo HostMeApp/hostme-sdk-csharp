@@ -11,7 +11,6 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -62,8 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ConfirmEmail'
             string userId = null; // TODO: replace null with proper value
-            string code = null; // TODO: replace null with proper value
-            
+string code = null; // TODO: replace null with proper value
             var response = instance.ConfirmEmail(userId, code);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
@@ -76,8 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetExternalLogin'
             string provider = null; // TODO: replace null with proper value
-            string error = null; // TODO: replace null with proper value
-            
+string error = null; // TODO: replace null with proper value
             var response = instance.GetExternalLogin(provider, error);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
@@ -90,7 +87,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetExternalLogin1'
             string accessToken = null; // TODO: replace null with proper value
-            
             var response = instance.GetExternalLogin1(accessToken);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
@@ -103,8 +99,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetExternalLogins'
             string returnUrl = null; // TODO: replace null with proper value
-            bool? generateState = null; // TODO: replace null with proper value
-            
+bool? generateState = null; // TODO: replace null with proper value
             var response = instance.GetExternalLogins(returnUrl, generateState);
             Assert.IsInstanceOf<List<ExternalLoginViewModel>> (response, "response is List<ExternalLoginViewModel>"); 
         }

@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -96,13 +94,12 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingReportItem {\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Created: ").Append(Created).Append("\n");
-            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-            sb.Append("  StartPosition: ").Append(StartPosition).Append("\n");
-            sb.Append("  TimeToCall: ").Append(TimeToCall).Append("\n");
-            sb.Append("  TimeToSeat: ").Append(TimeToSeat).Append("\n");
-            sb.Append("  TimeToCancel: ").Append(TimeToCancel).Append("\n");
-            
+sb.Append("  Created: ").Append(Created).Append("\n");
+sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+sb.Append("  StartPosition: ").Append(StartPosition).Append("\n");
+sb.Append("  TimeToCall: ").Append(TimeToCall).Append("\n");
+sb.Append("  TimeToSeat: ").Append(TimeToSeat).Append("\n");
+sb.Append("  TimeToCancel: ").Append(TimeToCancel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,33 +184,23 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Created != null)
                     hash = hash * 59 + this.Created.GetHashCode();
-                
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
-                
                 if (this.StartPosition != null)
                     hash = hash * 59 + this.StartPosition.GetHashCode();
-                
                 if (this.TimeToCall != null)
                     hash = hash * 59 + this.TimeToCall.GetHashCode();
-                
                 if (this.TimeToSeat != null)
                     hash = hash * 59 + this.TimeToSeat.GetHashCode();
-                
                 if (this.TimeToCancel != null)
                     hash = hash * 59 + this.TimeToCancel.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -29,10 +27,8 @@ namespace HostMe.Sdk.Models
         /// <param name="PhoneNumber">PhoneNumber (required).</param>
         /// <param name="Password">Password (required).</param>
         /// <param name="ConfirmPassword">ConfirmPassword.</param>
-        /// <param name="ConfirmationUrl">ConfirmationUrl.</param>
-        /// <param name="InvitationCode">InvitationCode.</param>
 
-        public RegisterBindingModel(string Email = null, string FullName = null, string PhoneNumber = null, string Password = null, string ConfirmPassword = null, string ConfirmationUrl = null, string InvitationCode = null)
+        public RegisterBindingModel(string Email = null, string FullName = null, string PhoneNumber = null, string Password = null, string ConfirmPassword = null)
         {
             // to ensure "FullName" is required (not null)
             if (FullName == null)
@@ -63,8 +59,6 @@ namespace HostMe.Sdk.Models
             }
             this.Email = Email;
             this.ConfirmPassword = ConfirmPassword;
-            this.ConfirmationUrl = ConfirmationUrl;
-            this.InvitationCode = InvitationCode;
             
         }
         
@@ -100,18 +94,6 @@ namespace HostMe.Sdk.Models
         public string ConfirmPassword { get; set; }
     
         /// <summary>
-        /// Gets or Sets ConfirmationUrl
-        /// </summary>
-        [DataMember(Name="confirmationUrl", EmitDefaultValue=false)]
-        public string ConfirmationUrl { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets InvitationCode
-        /// </summary>
-        [DataMember(Name="invitationCode", EmitDefaultValue=false)]
-        public string InvitationCode { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -120,13 +102,10 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RegisterBindingModel {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  FullName: ").Append(FullName).Append("\n");
-            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            sb.Append("  Password: ").Append(Password).Append("\n");
-            sb.Append("  ConfirmPassword: ").Append(ConfirmPassword).Append("\n");
-            sb.Append("  ConfirmationUrl: ").Append(ConfirmationUrl).Append("\n");
-            sb.Append("  InvitationCode: ").Append(InvitationCode).Append("\n");
-            
+sb.Append("  FullName: ").Append(FullName).Append("\n");
+sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+sb.Append("  Password: ").Append(Password).Append("\n");
+sb.Append("  ConfirmPassword: ").Append(ConfirmPassword).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,16 +166,6 @@ namespace HostMe.Sdk.Models
                     this.ConfirmPassword == other.ConfirmPassword ||
                     this.ConfirmPassword != null &&
                     this.ConfirmPassword.Equals(other.ConfirmPassword)
-                ) && 
-                (
-                    this.ConfirmationUrl == other.ConfirmationUrl ||
-                    this.ConfirmationUrl != null &&
-                    this.ConfirmationUrl.Equals(other.ConfirmationUrl)
-                ) && 
-                (
-                    this.InvitationCode == other.InvitationCode ||
-                    this.InvitationCode != null &&
-                    this.InvitationCode.Equals(other.InvitationCode)
                 );
         }
 
@@ -211,33 +180,19 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
-                
                 if (this.ConfirmPassword != null)
                     hash = hash * 59 + this.ConfirmPassword.GetHashCode();
-                
-                if (this.ConfirmationUrl != null)
-                    hash = hash * 59 + this.ConfirmationUrl.GetHashCode();
-                
-                if (this.InvitationCode != null)
-                    hash = hash * 59 + this.InvitationCode.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

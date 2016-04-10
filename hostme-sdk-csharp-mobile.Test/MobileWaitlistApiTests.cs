@@ -11,7 +11,6 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -62,7 +61,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CheckInWithWaiting'
             int? waitingItemId = null; // TODO: replace null with proper value
-            
             var response = instance.CheckInWithWaiting(waitingItemId);
             Assert.IsInstanceOf<Transaction> (response, "response is Transaction"); 
         }
@@ -75,7 +73,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'Close'
             int? waitingItemId = null; // TODO: replace null with proper value
-            
             instance.Close(waitingItemId);
              
         }
@@ -88,8 +85,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ConfirmWithApp'
             int? confirmationCode = null; // TODO: replace null with proper value
-            PhoneConfirmationBindingModel conf = null; // TODO: replace null with proper value
-            
+PhoneConfirmationBindingModel conf = null; // TODO: replace null with proper value
             var response = instance.ConfirmWithApp(confirmationCode, conf);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -102,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetInLine'
             NewRemoteWaitingBindingModel value = null; // TODO: replace null with proper value
-            
             var response = instance.GetInLine(value);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -114,8 +109,7 @@ namespace HostMe.Sdk.Test
         public void GetUserCurrentWaitingTest()
         {
             // TODO: add unit test for the method 'GetUserCurrentWaiting'
-            
-            var response = instance.GetUserCurrentWaiting();
+                        var response = instance.GetUserCurrentWaiting();
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
         
@@ -127,8 +121,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'LeaveTheLine'
             int? waitingItemId = null; // TODO: replace null with proper value
-            string comment = null; // TODO: replace null with proper value
-            
+string comment = null; // TODO: replace null with proper value
             instance.LeaveTheLine(waitingItemId, comment);
              
         }
@@ -141,7 +134,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'MarkAllMessagesAsRead'
             int? waitingItemId = null; // TODO: replace null with proper value
-            
             instance.MarkAllMessagesAsRead(waitingItemId);
              
         }
@@ -154,8 +146,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'PutOnHold'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.PutOnHold(restaurantId, waitingItemId);
              
         }
@@ -168,8 +159,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SendMessage'
             int? waitingItemId = null; // TODO: replace null with proper value
-            string body = null; // TODO: replace null with proper value
-            
+string body = null; // TODO: replace null with proper value
             var response = instance.SendMessage(waitingItemId, body);
             Assert.IsInstanceOf<Message> (response, "response is Message"); 
         }
@@ -182,8 +172,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'TakeOffHold'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.TakeOffHold(restaurantId, waitingItemId);
              
         }

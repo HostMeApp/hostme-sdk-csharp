@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -72,10 +70,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class TableUser {\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
-            sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
-            sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
-            
+sb.Append("  User: ").Append(User).Append("\n");
+sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
+sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,24 +142,17 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
-                
                 if (this.RegistrationTime != null)
                     hash = hash * 59 + this.RegistrationTime.GetHashCode();
-                
                 if (this.EstimatedReleaseTime != null)
                     hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -104,14 +102,13 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Membership {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
-            sb.Append("  Points: ").Append(Points).Append("\n");
-            sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
-            sb.Append("  IsMember: ").Append(IsMember).Append("\n");
-            sb.Append("  Profile: ").Append(Profile).Append("\n");
-            
+sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
+sb.Append("  Points: ").Append(Points).Append("\n");
+sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
+sb.Append("  Status: ").Append(Status).Append("\n");
+sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
+sb.Append("  IsMember: ").Append(IsMember).Append("\n");
+sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,36 +198,25 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.MembershipLevel != null)
                     hash = hash * 59 + this.MembershipLevel.GetHashCode();
-                
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
                 if (this.JoinDate != null)
                     hash = hash * 59 + this.JoinDate.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.Restaurant != null)
                     hash = hash * 59 + this.Restaurant.GetHashCode();
-                
                 if (this.IsMember != null)
                     hash = hash * 59 + this.IsMember.GetHashCode();
-                
                 if (this.Profile != null)
                     hash = hash * 59 + this.Profile.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<PositionMessage> (instance, "instance is a PositionMessage");
         }
 
-        
         /// <summary>
         /// Test the property 'MinPos' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinPos' 
         }
-        
         /// <summary>
         /// Test the property 'MaxPos' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxPos' 
         }
-        
         /// <summary>
         /// Test the property 'MessageTemplate' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MessageTemplate' 
         }
-        
 
     }
 
 }
-
-

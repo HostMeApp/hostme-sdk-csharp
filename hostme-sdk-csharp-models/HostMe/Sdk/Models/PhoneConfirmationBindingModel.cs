@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -116,12 +114,11 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class PhoneConfirmationBindingModel {\n");
             sb.Append("  PhoneId: ").Append(PhoneId).Append("\n");
-            sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
-            sb.Append("  Longitude: ").Append(Longitude).Append("\n");
-            sb.Append("  Lattitude: ").Append(Lattitude).Append("\n");
-            sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
-            sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
-            
+sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
+sb.Append("  Longitude: ").Append(Longitude).Append("\n");
+sb.Append("  Lattitude: ").Append(Lattitude).Append("\n");
+sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
+sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,30 +198,21 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.PhoneId != null)
                     hash = hash * 59 + this.PhoneId.GetHashCode();
-                
                 if (this.DeviceType != null)
                     hash = hash * 59 + this.DeviceType.GetHashCode();
-                
                 if (this.Longitude != null)
                     hash = hash * 59 + this.Longitude.GetHashCode();
-                
                 if (this.Lattitude != null)
                     hash = hash * 59 + this.Lattitude.GetHashCode();
-                
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
-                
                 if (this.NotificationUrl != null)
                     hash = hash * 59 + this.NotificationUrl.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<SetPushChannelBindingModel> (instance, "instance is a SetPushChannelBindingModel");
         }
 
-        
         /// <summary>
         /// Test the property 'NotificationUrl' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NotificationUrl' 
         }
-        
         /// <summary>
         /// Test the property 'DeviceType' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DeviceType' 
         }
-        
         /// <summary>
         /// Test the property 'Longitude' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Longitude' 
         }
-        
         /// <summary>
         /// Test the property 'Lattitude' 
         /// </summary>
@@ -88,10 +82,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Lattitude' 
         }
-        
 
     }
 
 }
-
-

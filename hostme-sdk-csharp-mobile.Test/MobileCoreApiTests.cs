@@ -11,7 +11,6 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -62,7 +61,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddExternalLogin'
             AddExternalLoginBindingModel model = null; // TODO: replace null with proper value
-            
             instance.AddExternalLogin(model);
              
         }
@@ -75,7 +73,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ChangePassword'
             ChangePasswordBindingModel model = null; // TODO: replace null with proper value
-            
             instance.ChangePassword(model);
              
         }
@@ -88,7 +85,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CheckIn'
             string token = null; // TODO: replace null with proper value
-            
             var response = instance.CheckIn(token);
             Assert.IsInstanceOf<Transaction> (response, "response is Transaction"); 
         }
@@ -101,10 +97,9 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'FindRestaurants'
             double? lat = null; // TODO: replace null with proper value
-            double? lon = null; // TODO: replace null with proper value
-            string name = null; // TODO: replace null with proper value
-            string city = null; // TODO: replace null with proper value
-            
+double? lon = null; // TODO: replace null with proper value
+string name = null; // TODO: replace null with proper value
+string city = null; // TODO: replace null with proper value
             var response = instance.FindRestaurants(lat, lon, name, city);
             Assert.IsInstanceOf<List<RestaurantInfo>> (response, "response is List<RestaurantInfo>"); 
         }
@@ -116,8 +111,7 @@ namespace HostMe.Sdk.Test
         public void GetAllRestaurantsTest()
         {
             // TODO: add unit test for the method 'GetAllRestaurants'
-            
-            var response = instance.GetAllRestaurants();
+                        var response = instance.GetAllRestaurants();
             Assert.IsInstanceOf<List<RestaurantInfo>> (response, "response is List<RestaurantInfo>"); 
         }
         
@@ -128,8 +122,7 @@ namespace HostMe.Sdk.Test
         public void GetListOfLocationsTest()
         {
             // TODO: add unit test for the method 'GetListOfLocations'
-            
-            var response = instance.GetListOfLocations();
+                        var response = instance.GetListOfLocations();
             Assert.IsInstanceOf<List<Location>> (response, "response is List<Location>"); 
         }
         
@@ -141,8 +134,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetManageInfo'
             string returnUrl = null; // TODO: replace null with proper value
-            bool? generateState = null; // TODO: replace null with proper value
-            
+bool? generateState = null; // TODO: replace null with proper value
             var response = instance.GetManageInfo(returnUrl, generateState);
             Assert.IsInstanceOf<ManageInfoViewModel> (response, "response is ManageInfoViewModel"); 
         }
@@ -155,7 +147,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetRegistrationToken'
             string token = null; // TODO: replace null with proper value
-            
             var response = instance.GetRegistrationToken(token);
             Assert.IsInstanceOf<CampaignInfo> (response, "response is CampaignInfo"); 
         }
@@ -168,11 +159,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetReservationAvailability'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? date = null; // TODO: replace null with proper value
-            int? partySize = null; // TODO: replace null with proper value
-            int? rangeInMinutes = null; // TODO: replace null with proper value
-            string areas = null; // TODO: replace null with proper value
-            
+DateTimeOffset? date = null; // TODO: replace null with proper value
+int? partySize = null; // TODO: replace null with proper value
+int? rangeInMinutes = null; // TODO: replace null with proper value
+string areas = null; // TODO: replace null with proper value
             var response = instance.GetReservationAvailability(restaurantId, date, partySize, rangeInMinutes, areas);
             Assert.IsInstanceOf<List<OnlineAvailability>> (response, "response is List<OnlineAvailability>"); 
         }
@@ -185,7 +175,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetRestaurantById'
             int? id = null; // TODO: replace null with proper value
-            
             var response = instance.GetRestaurantById(id);
             Assert.IsInstanceOf<RestaurantInfo> (response, "response is RestaurantInfo"); 
         }
@@ -197,8 +186,7 @@ namespace HostMe.Sdk.Test
         public void GetUserInfoTest()
         {
             // TODO: add unit test for the method 'GetUserInfo'
-            
-            var response = instance.GetUserInfo();
+                        var response = instance.GetUserInfo();
             Assert.IsInstanceOf<UserInfoViewModel> (response, "response is UserInfoViewModel"); 
         }
         
@@ -209,8 +197,7 @@ namespace HostMe.Sdk.Test
         public void GetUserProfileTest()
         {
             // TODO: add unit test for the method 'GetUserProfile'
-            
-            var response = instance.GetUserProfile();
+                        var response = instance.GetUserProfile();
             Assert.IsInstanceOf<UserProfile> (response, "response is UserProfile"); 
         }
         
@@ -221,8 +208,7 @@ namespace HostMe.Sdk.Test
         public void LogoutTest()
         {
             // TODO: add unit test for the method 'Logout'
-            
-            instance.Logout();
+                        instance.Logout();
              
         }
         
@@ -234,7 +220,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'PostProfileImage'
             byte[] image = null; // TODO: replace null with proper value
-            
             instance.PostProfileImage(image);
              
         }
@@ -246,8 +231,7 @@ namespace HostMe.Sdk.Test
         public void ProfileImageTest()
         {
             // TODO: add unit test for the method 'ProfileImage'
-            
-            var response = instance.ProfileImage();
+                        var response = instance.ProfileImage();
             Assert.IsInstanceOf<byte[]> (response, "response is byte[]"); 
         }
         
@@ -259,7 +243,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'Register'
             RegisterBindingModel model = null; // TODO: replace null with proper value
-            
             instance.Register(model);
              
         }
@@ -272,7 +255,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'RegisterExternal'
             RegisterExternalBindingModel model = null; // TODO: replace null with proper value
-            
             instance.RegisterExternal(model);
              
         }
@@ -285,7 +267,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'RemoveLogin'
             RemoveLoginBindingModel model = null; // TODO: replace null with proper value
-            
             instance.RemoveLogin(model);
              
         }
@@ -298,7 +279,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ResetPassword'
             ResetPasswordBindingModel model = null; // TODO: replace null with proper value
-            
             instance.ResetPassword(model);
              
         }
@@ -311,7 +291,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SetPassword'
             SetPasswordBindingModel model = null; // TODO: replace null with proper value
-            
             instance.SetPassword(model);
              
         }
@@ -324,7 +303,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SetPushChannelAsync'
             SetPushChannelBindingModel channel = null; // TODO: replace null with proper value
-            
             instance.SetPushChannelAsync(channel);
              
         }
@@ -337,7 +315,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'UpdateUserProfile'
             UserProfile profile = null; // TODO: replace null with proper value
-            
             instance.UpdateUserProfile(profile);
              
         }

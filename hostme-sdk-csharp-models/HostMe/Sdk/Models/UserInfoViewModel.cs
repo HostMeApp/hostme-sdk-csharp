@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -64,9 +62,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class UserInfoViewModel {\n");
             sb.Append("  UserName: ").Append(UserName).Append("\n");
-            sb.Append("  HasRegistered: ").Append(HasRegistered).Append("\n");
-            sb.Append("  LoginProvider: ").Append(LoginProvider).Append("\n");
-            
+sb.Append("  HasRegistered: ").Append(HasRegistered).Append("\n");
+sb.Append("  LoginProvider: ").Append(LoginProvider).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,21 +128,15 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.UserName != null)
                     hash = hash * 59 + this.UserName.GetHashCode();
-                
                 if (this.HasRegistered != null)
                     hash = hash * 59 + this.HasRegistered.GetHashCode();
-                
                 if (this.LoginProvider != null)
                     hash = hash * 59 + this.LoginProvider.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

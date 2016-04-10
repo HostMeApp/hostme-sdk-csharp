@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -104,14 +102,13 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RestaurantContactInfo {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-            sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
-            sb.Append("  Phone: ").Append(Phone).Append("\n");
-            sb.Append("  TimeOffSet: ").Append(TimeOffSet).Append("\n");
-            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            
+sb.Append("  Name: ").Append(Name).Append("\n");
+sb.Append("  Address: ").Append(Address).Append("\n");
+sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
+sb.Append("  Phone: ").Append(Phone).Append("\n");
+sb.Append("  TimeOffSet: ").Append(TimeOffSet).Append("\n");
+sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,36 +198,25 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
-                
                 if (this.WebsiteUrl != null)
                     hash = hash * 59 + this.WebsiteUrl.GetHashCode();
-                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                
                 if (this.TimeOffSet != null)
                     hash = hash * 59 + this.TimeOffSet.GetHashCode();
-                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

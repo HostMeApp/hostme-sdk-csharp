@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<MembershipLevel> (instance, "instance is a MembershipLevel");
         }
 
-        
         /// <summary>
         /// Test the property 'Level' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Level' 
         }
-        
         /// <summary>
         /// Test the property 'Points' 
         /// </summary>
@@ -70,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Points' 
         }
-        
 
     }
 
 }
-
-

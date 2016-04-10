@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<LoyaltySettings> (instance, "instance is a LoyaltySettings");
         }
 
-        
         /// <summary>
         /// Test the property 'CheckinPoints' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CheckinPoints' 
         }
-        
         /// <summary>
         /// Test the property 'IsEnabled' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsEnabled' 
         }
-        
         /// <summary>
         /// Test the property 'MembershipLevelRules' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MembershipLevelRules' 
         }
-        
         /// <summary>
         /// Test the property 'PurchasePointsRules' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PurchasePointsRules' 
         }
-        
         /// <summary>
         /// Test the property 'SignupPoints' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'SignupPoints' 
         }
-        
         /// <summary>
         /// Test the property 'WaitingPointsRules' 
         /// </summary>
@@ -106,10 +98,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WaitingPointsRules' 
         }
-        
 
     }
 
 }
-
-

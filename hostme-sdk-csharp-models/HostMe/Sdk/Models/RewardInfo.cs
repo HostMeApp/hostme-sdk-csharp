@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -88,12 +86,11 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RewardInfo {\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-            sb.Append("  PriceInPoints: ").Append(PriceInPoints).Append("\n");
-            sb.Append("  RedeemRequest: ").Append(RedeemRequest).Append("\n");
-            sb.Append("  Value: ").Append(Value).Append("\n");
-            
+sb.Append("  Id: ").Append(Id).Append("\n");
+sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+sb.Append("  PriceInPoints: ").Append(PriceInPoints).Append("\n");
+sb.Append("  RedeemRequest: ").Append(RedeemRequest).Append("\n");
+sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,30 +170,21 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
-                
                 if (this.PriceInPoints != null)
                     hash = hash * 59 + this.PriceInPoints.GetHashCode();
-                
                 if (this.RedeemRequest != null)
                     hash = hash * 59 + this.RedeemRequest.GetHashCode();
-                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

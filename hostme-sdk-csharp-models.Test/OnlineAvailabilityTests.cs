@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<OnlineAvailability> (instance, "instance is a OnlineAvailability");
         }
 
-        
         /// <summary>
         /// Test the property 'AcceptReservations' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AcceptReservations' 
         }
-        
         /// <summary>
         /// Test the property 'AvailabilityLevel' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvailabilityLevel' 
         }
-        
         /// <summary>
         /// Test the property 'Open' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Open' 
         }
-        
         /// <summary>
         /// Test the property 'RequestedTime' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RequestedTime' 
         }
-        
         /// <summary>
         /// Test the property 'Time' 
         /// </summary>
@@ -97,10 +90,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Time' 
         }
-        
 
     }
 
 }
-
-

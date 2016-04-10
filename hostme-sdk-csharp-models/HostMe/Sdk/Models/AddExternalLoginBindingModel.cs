@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -56,7 +54,6 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class AddExternalLoginBindingModel {\n");
             sb.Append("  ExternalAccessToken: ").Append(ExternalAccessToken).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,15 +108,11 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.ExternalAccessToken != null)
                     hash = hash * 59 + this.ExternalAccessToken.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -7,17 +7,14 @@ using RestSharp;
 using HostMe.Sdk.Client;
 using HostMe.Sdk.Models;
 
-
 namespace HostMe.Sdk.Apis.Admin
 {
-    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IAdminAuthApi
     {
         #region Synchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -41,7 +38,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="code"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> ConfirmEmailWithHttpInfo (string userId, string code);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -65,7 +61,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="error"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetExternalLoginWithHttpInfo (string provider, string error);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -87,7 +82,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="accessToken"></param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetExternalLogin1WithHttpInfo (string accessToken);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -111,11 +105,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="generateState"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ExternalLoginViewModel&gt;</returns>
         ApiResponse<List<ExternalLoginViewModel>> GetExternalLoginsWithHttpInfo (string returnUrl, bool? generateState);
-        
         #endregion Synchronous Operations
-        
         #region Asynchronous Operations
-        
         /// <summary>
         /// 
         /// </summary>
@@ -139,7 +130,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="code"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmEmailAsyncWithHttpInfo (string userId, string code);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -163,7 +153,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="error"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -185,7 +174,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="accessToken"></param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLogin1AsyncWithHttpInfo (string accessToken);
-        
         /// <summary>
         /// 
         /// </summary>
@@ -209,9 +197,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ExternalLoginViewModel&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<ExternalLoginViewModel>>> GetExternalLoginsAsyncWithHttpInfo (string returnUrl, bool? generateState);
-        
         #endregion Asynchronous Operations
-        
     }
   
     /// <summary>
@@ -301,7 +287,6 @@ namespace HostMe.Sdk.Apis.Admin
             this.Configuration.AddDefaultHeader(key, value);
         }
    
-        
         /// <summary>
         ///  
         /// </summary>
@@ -360,13 +345,9 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            
-            
-            
-            
+                        if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
+if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -375,7 +356,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -395,7 +375,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -451,15 +430,10 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
-            
-            
-            
-            
+                        if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
+if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.ParameterToString(code)); // query parameter
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -467,7 +441,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -486,7 +459,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -541,13 +513,9 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (provider != null) localVarQueryParams.Add("provider", Configuration.ApiClient.ParameterToString(provider)); // query parameter
-            if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.ParameterToString(error)); // query parameter
-            
-            
-            
-            
+                        if (provider != null) localVarQueryParams.Add("provider", Configuration.ApiClient.ParameterToString(provider)); // query parameter
+if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.ParameterToString(error)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -556,7 +524,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -576,7 +543,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -630,15 +596,10 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (provider != null) localVarQueryParams.Add("provider", Configuration.ApiClient.ParameterToString(provider)); // query parameter
-            if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.ParameterToString(error)); // query parameter
-            
-            
-            
-            
+                        if (provider != null) localVarQueryParams.Add("provider", Configuration.ApiClient.ParameterToString(provider)); // query parameter
+if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.ParameterToString(error)); // query parameter
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -646,7 +607,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -665,7 +625,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -718,12 +677,8 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
-            
-            
-            
-            
+                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -732,7 +687,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -752,7 +706,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -804,14 +757,9 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
-            
-            
-            
-            
+                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -819,7 +767,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -838,7 +785,6 @@ namespace HostMe.Sdk.Apis.Admin
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
-        
         /// <summary>
         ///  
         /// </summary>
@@ -893,13 +839,9 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (returnUrl != null) localVarQueryParams.Add("returnUrl", Configuration.ApiClient.ParameterToString(returnUrl)); // query parameter
-            if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
-            
-            
-            
-            
+                        if (returnUrl != null) localVarQueryParams.Add("returnUrl", Configuration.ApiClient.ParameterToString(returnUrl)); // query parameter
+if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -908,7 +850,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
@@ -928,7 +869,6 @@ namespace HostMe.Sdk.Apis.Admin
             
         }
 
-        
         /// <summary>
         ///  
         /// </summary>
@@ -982,15 +922,10 @@ namespace HostMe.Sdk.Apis.Admin
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            
-            if (returnUrl != null) localVarQueryParams.Add("returnUrl", Configuration.ApiClient.ParameterToString(returnUrl)); // query parameter
-            if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
-            
-            
-            
-            
+                        if (returnUrl != null) localVarQueryParams.Add("returnUrl", Configuration.ApiClient.ParameterToString(returnUrl)); // query parameter
+if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
+                                    
 
-            
             // authentication (oauth2) required
             
             // oauth required
@@ -998,7 +933,6 @@ namespace HostMe.Sdk.Apis.Admin
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1017,7 +951,5 @@ namespace HostMe.Sdk.Apis.Admin
                 (List<ExternalLoginViewModel>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ExternalLoginViewModel>)));
             
         }
-        
     }
-    
 }

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RegisterBindingModel> (instance, "instance is a RegisterBindingModel");
         }
 
-        
         /// <summary>
         /// Test the property 'Email' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Email' 
         }
-        
         /// <summary>
         /// Test the property 'FullName' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FullName' 
         }
-        
         /// <summary>
         /// Test the property 'PhoneNumber' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
-        
         /// <summary>
         /// Test the property 'Password' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Password' 
         }
-        
         /// <summary>
         /// Test the property 'ConfirmPassword' 
         /// </summary>
@@ -97,28 +90,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ConfirmPassword' 
         }
-        
-        /// <summary>
-        /// Test the property 'ConfirmationUrl' 
-        /// </summary>
-        [Test]
-        public void ConfirmationUrlTest()
-        {
-            // TODO: unit test for the property 'ConfirmationUrl' 
-        }
-        
-        /// <summary>
-        /// Test the property 'InvitationCode' 
-        /// </summary>
-        [Test]
-        public void InvitationCodeTest()
-        {
-            // TODO: unit test for the property 'InvitationCode' 
-        }
-        
 
     }
 
 }
-
-

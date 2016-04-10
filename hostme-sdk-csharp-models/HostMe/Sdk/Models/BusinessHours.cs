@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -56,8 +54,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class BusinessHours {\n");
             sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
-            sb.Append("  IsOpenNow: ").Append(IsOpenNow).Append("\n");
-            
+sb.Append("  IsOpenNow: ").Append(IsOpenNow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,18 +114,13 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.OpeningHours != null)
                     hash = hash * 59 + this.OpeningHours.GetHashCode();
-                
                 if (this.IsOpenNow != null)
                     hash = hash * 59 + this.IsOpenNow.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

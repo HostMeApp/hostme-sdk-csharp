@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<SetPasswordBindingModel> (instance, "instance is a SetPasswordBindingModel");
         }
 
-        
         /// <summary>
         /// Test the property 'NewPassword' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NewPassword' 
         }
-        
         /// <summary>
         /// Test the property 'ConfirmPassword' 
         /// </summary>
@@ -70,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ConfirmPassword' 
         }
-        
 
     }
 
 }
-
-

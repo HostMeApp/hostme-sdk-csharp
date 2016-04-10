@@ -11,7 +11,6 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -62,7 +61,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CancelMembershipAtRestaurant'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             instance.CancelMembershipAtRestaurant(restaurantId);
              
         }
@@ -75,8 +73,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'EnrollIntoLoyaltyProgram'
             int? restaurantId = null; // TODO: replace null with proper value
-            JoinMembershipBindingModel value = null; // TODO: replace null with proper value
-            
+JoinMembershipBindingModel value = null; // TODO: replace null with proper value
             var response = instance.EnrollIntoLoyaltyProgram(restaurantId, value);
             Assert.IsInstanceOf<Membership> (response, "response is Membership"); 
         }
@@ -88,8 +85,7 @@ namespace HostMe.Sdk.Test
         public void GetAllUserMembershipsTest()
         {
             // TODO: add unit test for the method 'GetAllUserMemberships'
-            
-            var response = instance.GetAllUserMemberships();
+                        var response = instance.GetAllUserMemberships();
             Assert.IsInstanceOf<List<Membership>> (response, "response is List<Membership>"); 
         }
         
@@ -101,7 +97,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetCustomerRedeemRequests'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetCustomerRedeemRequests(restaurantId);
             Assert.IsInstanceOf<List<RedeemRequestInfo>> (response, "response is List<RedeemRequestInfo>"); 
         }
@@ -114,7 +109,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetMemberRewardOptions'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetMemberRewardOptions(restaurantId);
             Assert.IsInstanceOf<List<RewardInfo>> (response, "response is List<RewardInfo>"); 
         }
@@ -127,7 +121,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetMemberTransactions'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetMemberTransactions(restaurantId);
             Assert.IsInstanceOf<List<Transaction>> (response, "response is List<Transaction>"); 
         }
@@ -140,7 +133,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetMembershipByRestaurantId'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetMembershipByRestaurantId(restaurantId);
             Assert.IsInstanceOf<Membership> (response, "response is Membership"); 
         }
@@ -153,8 +145,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetRedeemRequestInfo'
             int? restaurantId = null; // TODO: replace null with proper value
-            string redeemId = null; // TODO: replace null with proper value
-            
+string redeemId = null; // TODO: replace null with proper value
             var response = instance.GetRedeemRequestInfo(restaurantId, redeemId);
             Assert.IsInstanceOf<RedeemRequestInfo> (response, "response is RedeemRequestInfo"); 
         }
@@ -167,8 +158,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SubmitRequestForRedeem'
             int? restaurantId = null; // TODO: replace null with proper value
-            string rewardId = null; // TODO: replace null with proper value
-            
+string rewardId = null; // TODO: replace null with proper value
             var response = instance.SubmitRequestForRedeem(restaurantId, rewardId);
             Assert.IsInstanceOf<RedeemRequestInfo> (response, "response is RedeemRequestInfo"); 
         }

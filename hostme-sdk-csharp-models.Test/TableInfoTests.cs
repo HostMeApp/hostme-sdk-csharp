@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TableInfo> (instance, "instance is a TableInfo");
         }
 
-        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
-        
         /// <summary>
         /// Test the property 'IsComb' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsComb' 
         }
-        
         /// <summary>
         /// Test the property 'TableTopSize' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableTopSize' 
         }
-        
         /// <summary>
         /// Test the property 'Area' 
         /// </summary>
@@ -88,10 +82,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Area' 
         }
-        
 
     }
 
 }
-
-

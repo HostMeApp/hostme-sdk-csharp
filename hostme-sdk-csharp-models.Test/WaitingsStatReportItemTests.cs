@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingsStatReportItem> (instance, "instance is a WaitingsStatReportItem");
         }
 
-        
         /// <summary>
         /// Test the property 'Dimensions' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Dimensions' 
         }
-        
         /// <summary>
         /// Test the property 'TotalPartyCount' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TotalPartyCount' 
         }
-        
         /// <summary>
         /// Test the property 'TotalHeadCount' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TotalHeadCount' 
         }
-        
         /// <summary>
         /// Test the property 'TotalSeatedCount' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TotalSeatedCount' 
         }
-        
         /// <summary>
         /// Test the property 'TotalCanceledCount' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TotalCanceledCount' 
         }
-        
         /// <summary>
         /// Test the property 'MinTimeToCall' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinTimeToCall' 
         }
-        
         /// <summary>
         /// Test the property 'AvgTimeToCall' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgTimeToCall' 
         }
-        
         /// <summary>
         /// Test the property 'MaxTimeToCall' 
         /// </summary>
@@ -124,7 +114,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxTimeToCall' 
         }
-        
         /// <summary>
         /// Test the property 'MinTimeToSeat' 
         /// </summary>
@@ -133,7 +122,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinTimeToSeat' 
         }
-        
         /// <summary>
         /// Test the property 'AvgTimeToSeat' 
         /// </summary>
@@ -142,7 +130,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgTimeToSeat' 
         }
-        
         /// <summary>
         /// Test the property 'MaxTimeToSeat' 
         /// </summary>
@@ -151,7 +138,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxTimeToSeat' 
         }
-        
         /// <summary>
         /// Test the property 'MinTimeToCancel' 
         /// </summary>
@@ -160,7 +146,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinTimeToCancel' 
         }
-        
         /// <summary>
         /// Test the property 'AvgTimeToCancel' 
         /// </summary>
@@ -169,7 +154,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgTimeToCancel' 
         }
-        
         /// <summary>
         /// Test the property 'MaxTimeToCancel' 
         /// </summary>
@@ -178,7 +162,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxTimeToCancel' 
         }
-        
         /// <summary>
         /// Test the property 'MaxLine' 
         /// </summary>
@@ -187,7 +170,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxLine' 
         }
-        
         /// <summary>
         /// Test the property 'AvgLine' 
         /// </summary>
@@ -196,10 +178,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgLine' 
         }
-        
 
     }
 
 }
-
-

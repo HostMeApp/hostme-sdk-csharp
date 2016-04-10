@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TimeDimension> (instance, "instance is a TimeDimension");
         }
 
-        
         /// <summary>
         /// Test the property 'Hour' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Hour' 
         }
-        
         /// <summary>
         /// Test the property 'WeekDay' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WeekDay' 
         }
-        
         /// <summary>
         /// Test the property 'WeekDayNumber' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WeekDayNumber' 
         }
-        
         /// <summary>
         /// Test the property 'Month' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Month' 
         }
-        
         /// <summary>
         /// Test the property 'MonthNumber' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MonthNumber' 
         }
-        
         /// <summary>
         /// Test the property 'Year' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Year' 
         }
-        
         /// <summary>
         /// Test the property 'WeekNumber' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WeekNumber' 
         }
-        
         /// <summary>
         /// Test the property 'TypeOfMeal' 
         /// </summary>
@@ -124,10 +114,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TypeOfMeal' 
         }
-        
 
     }
 
 }
-
-

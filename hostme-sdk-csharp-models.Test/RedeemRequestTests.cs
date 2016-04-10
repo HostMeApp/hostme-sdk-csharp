@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RedeemRequest> (instance, "instance is a RedeemRequest");
         }
 
-        
         /// <summary>
         /// Test the property 'Id' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Id' 
         }
-        
         /// <summary>
         /// Test the property 'Submited' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Submited' 
         }
-        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
-        
         /// <summary>
         /// Test the property 'StatusComment' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StatusComment' 
         }
-        
         /// <summary>
         /// Test the property 'Closed' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Closed' 
         }
-        
         /// <summary>
         /// Test the property 'RewardId' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RewardId' 
         }
-        
         /// <summary>
         /// Test the property 'CustomerMembershipId' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CustomerMembershipId' 
         }
-        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -124,7 +114,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
-        
         /// <summary>
         /// Test the property 'MemberInfo' 
         /// </summary>
@@ -133,7 +122,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MemberInfo' 
         }
-        
         /// <summary>
         /// Test the property 'RewardDetails' 
         /// </summary>
@@ -142,10 +130,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RewardDetails' 
         }
-        
 
     }
 
 }
-
-
