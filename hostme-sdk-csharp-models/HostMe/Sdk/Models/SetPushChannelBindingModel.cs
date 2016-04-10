@@ -56,25 +56,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets NotificationUrl
         /// </summary>
-        [DataMember(Name="notificationUrl", EmitDefaultValue=false)]
+        [DataMember(Name="notificationUrl", EmitDefaultValue=true)]
         public string NotificationUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets DeviceType
         /// </summary>
-        [DataMember(Name="deviceType", EmitDefaultValue=false)]
+        [DataMember(Name="deviceType", EmitDefaultValue=true)]
         public string DeviceType { get; set; }
     
         /// <summary>
         /// Gets or Sets Longitude
         /// </summary>
-        [DataMember(Name="longitude", EmitDefaultValue=false)]
+        [DataMember(Name="longitude", EmitDefaultValue=true)]
         public double? Longitude { get; set; }
     
         /// <summary>
         /// Gets or Sets Lattitude
         /// </summary>
-        [DataMember(Name="lattitude", EmitDefaultValue=false)]
+        [DataMember(Name="lattitude", EmitDefaultValue=true)]
         public double? Lattitude { get; set; }
     
         /// <summary>

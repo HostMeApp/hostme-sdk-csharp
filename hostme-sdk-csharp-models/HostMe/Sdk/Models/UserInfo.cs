@@ -48,49 +48,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets UserName
         /// </summary>
-        [DataMember(Name="userName", EmitDefaultValue=false)]
+        [DataMember(Name="userName", EmitDefaultValue=true)]
         public string UserName { get; set; }
     
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets FullName
         /// </summary>
-        [DataMember(Name="fullName", EmitDefaultValue=false)]
+        [DataMember(Name="fullName", EmitDefaultValue=true)]
         public string FullName { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
         public string PhoneNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets Roles
         /// </summary>
-        [DataMember(Name="roles", EmitDefaultValue=false)]
+        [DataMember(Name="roles", EmitDefaultValue=true)]
         public List<RoleInfo> Roles { get; set; }
     
         /// <summary>
         /// Gets or Sets Identities
         /// </summary>
-        [DataMember(Name="identities", EmitDefaultValue=false)]
+        [DataMember(Name="identities", EmitDefaultValue=true)]
         public List<UserIdentityInfo> Identities { get; set; }
     
         /// <summary>
         /// Gets or Sets Subscriptions
         /// </summary>
-        [DataMember(Name="subscriptions", EmitDefaultValue=false)]
+        [DataMember(Name="subscriptions", EmitDefaultValue=true)]
         public List<UserSubscriptionInfo> Subscriptions { get; set; }
     
         /// <summary>

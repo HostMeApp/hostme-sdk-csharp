@@ -49,7 +49,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>List&lt;RestaurantInfo&gt;</returns>
-        List<RestaurantInfo> FindRestaurants (double? lat, double? lon, string name);
+        List<RestaurantInfo> FindRestaurants (double? lat = null, double? lon = null, string name = null);
   
         /// <summary>
         /// 
@@ -62,7 +62,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>ApiResponse of List&lt;RestaurantInfo&gt;</returns>
-        ApiResponse<List<RestaurantInfo>> FindRestaurantsWithHttpInfo (double? lat, double? lon, string name);
+        ApiResponse<List<RestaurantInfo>> FindRestaurantsWithHttpInfo (double? lat = null, double? lon = null, string name = null);
         /// <summary>
         /// 
         /// </summary>
@@ -76,7 +76,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>List&lt;OnlineAvailability&gt;</returns>
-        List<OnlineAvailability> GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas);
+        List<OnlineAvailability> GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null);
   
         /// <summary>
         /// 
@@ -91,7 +91,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>ApiResponse of List&lt;OnlineAvailability&gt;</returns>
-        ApiResponse<List<OnlineAvailability>> GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas);
+        ApiResponse<List<OnlineAvailability>> GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -149,7 +149,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>Task of List&lt;RestaurantInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<RestaurantInfo>> FindRestaurantsAsync (double? lat, double? lon, string name);
+        System.Threading.Tasks.Task<List<RestaurantInfo>> FindRestaurantsAsync (double? lat = null, double? lon = null, string name = null);
 
         /// <summary>
         /// 
@@ -162,7 +162,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;RestaurantInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<RestaurantInfo>>> FindRestaurantsAsyncWithHttpInfo (double? lat, double? lon, string name);
+        System.Threading.Tasks.Task<ApiResponse<List<RestaurantInfo>>> FindRestaurantsAsyncWithHttpInfo (double? lat = null, double? lon = null, string name = null);
         /// <summary>
         /// 
         /// </summary>
@@ -176,7 +176,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of List&lt;OnlineAvailability&gt;</returns>
-        System.Threading.Tasks.Task<List<OnlineAvailability>> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas);
+        System.Threading.Tasks.Task<List<OnlineAvailability>> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null);
 
         /// <summary>
         /// 
@@ -191,7 +191,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;OnlineAvailability&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<OnlineAvailability>>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas);
+        System.Threading.Tasks.Task<ApiResponse<List<OnlineAvailability>>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -495,7 +495,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param> 
         /// <param name="name"> (optional)</param> 
         /// <returns>List&lt;RestaurantInfo&gt;</returns>
-        public List<RestaurantInfo> FindRestaurants (double? lat, double? lon, string name)
+        public List<RestaurantInfo> FindRestaurants (double? lat = null, double? lon = null, string name = null)
         {
              ApiResponse<List<RestaurantInfo>> localVarResponse = FindRestaurantsWithHttpInfo(lat, lon, name);
              return localVarResponse.Data;
@@ -509,7 +509,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="lon"> (optional)</param> 
         /// <param name="name"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;RestaurantInfo&gt;</returns>
-        public ApiResponse< List<RestaurantInfo> > FindRestaurantsWithHttpInfo (double? lat, double? lon, string name)
+        public ApiResponse< List<RestaurantInfo> > FindRestaurantsWithHttpInfo (double? lat = null, double? lon = null, string name = null)
         {
             
     
@@ -578,7 +578,7 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>Task of List&lt;RestaurantInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<RestaurantInfo>> FindRestaurantsAsync (double? lat, double? lon, string name)
+        public async System.Threading.Tasks.Task<List<RestaurantInfo>> FindRestaurantsAsync (double? lat = null, double? lon = null, string name = null)
         {
              ApiResponse<List<RestaurantInfo>> localVarResponse = await FindRestaurantsAsyncWithHttpInfo(lat, lon, name);
              return localVarResponse.Data;
@@ -593,7 +593,7 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;RestaurantInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<RestaurantInfo>>> FindRestaurantsAsyncWithHttpInfo (double? lat, double? lon, string name)
+        public async System.Threading.Tasks.Task<ApiResponse<List<RestaurantInfo>>> FindRestaurantsAsyncWithHttpInfo (double? lat = null, double? lon = null, string name = null)
         {
             
     
@@ -663,7 +663,7 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
         /// <param name="rangeInMinutes"></param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>List&lt;OnlineAvailability&gt;</returns>
-        public List<OnlineAvailability> GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas)
+        public List<OnlineAvailability> GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null)
         {
              ApiResponse<List<OnlineAvailability>> localVarResponse = GetReservationAvailabilityWithHttpInfo(restaurantId, date, partySize, rangeInMinutes, areas);
              return localVarResponse.Data;
@@ -679,7 +679,7 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
         /// <param name="rangeInMinutes"></param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;OnlineAvailability&gt;</returns>
-        public ApiResponse< List<OnlineAvailability> > GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas)
+        public ApiResponse< List<OnlineAvailability> > GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -768,7 +768,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of List&lt;OnlineAvailability&gt;</returns>
-        public async System.Threading.Tasks.Task<List<OnlineAvailability>> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas)
+        public async System.Threading.Tasks.Task<List<OnlineAvailability>> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null)
         {
              ApiResponse<List<OnlineAvailability>> localVarResponse = await GetReservationAvailabilityAsyncWithHttpInfo(restaurantId, date, partySize, rangeInMinutes, areas);
              return localVarResponse.Data;
@@ -785,7 +785,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="rangeInMinutes"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;OnlineAvailability&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<OnlineAvailability>>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas)
+        public async System.Threading.Tasks.Task<ApiResponse<List<OnlineAvailability>>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetReservationAvailability");

@@ -25,7 +25,7 @@ namespace HostMe.Sdk.Models
         /// <param name="Close">Close.</param>
         /// <param name="Open">Open.</param>
 
-        public HourlyInterval(string Close = null, string Open = null)
+        public HourlyInterval(TimeSpan Close = null, TimeSpan Open = null)
         {
             this.Close = Close;
             this.Open = Open;
@@ -36,14 +36,14 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Close
         /// </summary>
-        [DataMember(Name="close", EmitDefaultValue=false)]
-        public string Close { get; set; }
+        [DataMember(Name="close", EmitDefaultValue=true)]
+        public TimeSpan Close { get; set; }
     
         /// <summary>
         /// Gets or Sets Open
         /// </summary>
-        [DataMember(Name="open", EmitDefaultValue=false)]
-        public string Open { get; set; }
+        [DataMember(Name="open", EmitDefaultValue=true)]
+        public TimeSpan Open { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

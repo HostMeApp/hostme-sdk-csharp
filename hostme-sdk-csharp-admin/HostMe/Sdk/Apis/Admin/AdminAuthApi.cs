@@ -48,7 +48,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>Object</returns>
-        Object GetExternalLogin (string provider, string error);
+        Object GetExternalLogin (string provider, string error = null);
   
         /// <summary>
         /// 
@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GetExternalLoginWithHttpInfo (string provider, string error);
+        ApiResponse<Object> GetExternalLoginWithHttpInfo (string provider, string error = null);
         /// <summary>
         /// 
         /// </summary>
@@ -92,7 +92,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>List&lt;ExternalLoginViewModel&gt;</returns>
-        List<ExternalLoginViewModel> GetExternalLogins (string returnUrl, bool? generateState);
+        List<ExternalLoginViewModel> GetExternalLogins (string returnUrl, bool? generateState = null);
   
         /// <summary>
         /// 
@@ -104,7 +104,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>ApiResponse of List&lt;ExternalLoginViewModel&gt;</returns>
-        ApiResponse<List<ExternalLoginViewModel>> GetExternalLoginsWithHttpInfo (string returnUrl, bool? generateState);
+        ApiResponse<List<ExternalLoginViewModel>> GetExternalLoginsWithHttpInfo (string returnUrl, bool? generateState = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -140,7 +140,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error);
+        System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error = null);
 
         /// <summary>
         /// 
@@ -152,7 +152,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error);
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error = null);
         /// <summary>
         /// 
         /// </summary>
@@ -184,7 +184,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of List&lt;ExternalLoginViewModel&gt;</returns>
-        System.Threading.Tasks.Task<List<ExternalLoginViewModel>> GetExternalLoginsAsync (string returnUrl, bool? generateState);
+        System.Threading.Tasks.Task<List<ExternalLoginViewModel>> GetExternalLoginsAsync (string returnUrl, bool? generateState = null);
 
         /// <summary>
         /// 
@@ -196,7 +196,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ExternalLoginViewModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ExternalLoginViewModel>>> GetExternalLoginsAsyncWithHttpInfo (string returnUrl, bool? generateState);
+        System.Threading.Tasks.Task<ApiResponse<List<ExternalLoginViewModel>>> GetExternalLoginsAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
         #endregion Asynchronous Operations
     }
   
@@ -466,7 +466,7 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <param name="provider"></param> 
         /// <param name="error"> (optional)</param> 
         /// <returns>Object</returns>
-        public Object GetExternalLogin (string provider, string error)
+        public Object GetExternalLogin (string provider, string error = null)
         {
              ApiResponse<Object> localVarResponse = GetExternalLoginWithHttpInfo(provider, error);
              return localVarResponse.Data;
@@ -479,7 +479,7 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <param name="provider"></param> 
         /// <param name="error"> (optional)</param> 
         /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GetExternalLoginWithHttpInfo (string provider, string error)
+        public ApiResponse< Object > GetExternalLoginWithHttpInfo (string provider, string error = null)
         {
             
             // verify the required parameter 'provider' is set
@@ -550,7 +550,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error)
+        public async System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error = null)
         {
              ApiResponse<Object> localVarResponse = await GetExternalLoginAsyncWithHttpInfo(provider, error);
              return localVarResponse.Data;
@@ -564,7 +564,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error = null)
         {
             // verify the required parameter 'provider' is set
             if (provider == null) throw new ApiException(400, "Missing required parameter 'provider' when calling GetExternalLogin");
@@ -792,7 +792,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
         /// <returns>List&lt;ExternalLoginViewModel&gt;</returns>
-        public List<ExternalLoginViewModel> GetExternalLogins (string returnUrl, bool? generateState)
+        public List<ExternalLoginViewModel> GetExternalLogins (string returnUrl, bool? generateState = null)
         {
              ApiResponse<List<ExternalLoginViewModel>> localVarResponse = GetExternalLoginsWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
@@ -805,7 +805,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;ExternalLoginViewModel&gt;</returns>
-        public ApiResponse< List<ExternalLoginViewModel> > GetExternalLoginsWithHttpInfo (string returnUrl, bool? generateState)
+        public ApiResponse< List<ExternalLoginViewModel> > GetExternalLoginsWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             
             // verify the required parameter 'returnUrl' is set
@@ -876,7 +876,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of List&lt;ExternalLoginViewModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ExternalLoginViewModel>> GetExternalLoginsAsync (string returnUrl, bool? generateState)
+        public async System.Threading.Tasks.Task<List<ExternalLoginViewModel>> GetExternalLoginsAsync (string returnUrl, bool? generateState = null)
         {
              ApiResponse<List<ExternalLoginViewModel>> localVarResponse = await GetExternalLoginsAsyncWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
@@ -890,7 +890,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;ExternalLoginViewModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ExternalLoginViewModel>>> GetExternalLoginsAsyncWithHttpInfo (string returnUrl, bool? generateState)
+        public async System.Threading.Tasks.Task<ApiResponse<List<ExternalLoginViewModel>>> GetExternalLoginsAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             // verify the required parameter 'returnUrl' is set
             if (returnUrl == null) throw new ApiException(400, "Missing required parameter 'returnUrl' when calling GetExternalLogins");

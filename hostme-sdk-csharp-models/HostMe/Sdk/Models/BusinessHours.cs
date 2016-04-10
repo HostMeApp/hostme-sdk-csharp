@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets OpeningHours
         /// </summary>
-        [DataMember(Name="openingHours", EmitDefaultValue=false)]
+        [DataMember(Name="openingHours", EmitDefaultValue=true)]
         public List<WeekDayOpenHours> OpeningHours { get; set; }
     
         /// <summary>
         /// Gets or Sets IsOpenNow
         /// </summary>
-        [DataMember(Name="isOpenNow", EmitDefaultValue=false)]
+        [DataMember(Name="isOpenNow", EmitDefaultValue=true)]
         public bool? IsOpenNow { get; set; }
     
         /// <summary>

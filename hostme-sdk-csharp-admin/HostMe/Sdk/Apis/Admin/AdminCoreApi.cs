@@ -224,7 +224,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>List&lt;Restaurant&gt;</returns>
-        List<Restaurant> FindRestaurantsByUserPhone (string phone, string email);
+        List<Restaurant> FindRestaurantsByUserPhone (string phone = null, string email = null);
   
         /// <summary>
         /// 
@@ -236,7 +236,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>ApiResponse of List&lt;Restaurant&gt;</returns>
-        ApiResponse<List<Restaurant>> FindRestaurantsByUserPhoneWithHttpInfo (string phone, string email);
+        ApiResponse<List<Restaurant>> FindRestaurantsByUserPhoneWithHttpInfo (string phone = null, string email = null);
         /// <summary>
         /// 
         /// </summary>
@@ -247,7 +247,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>UserInfo</returns>
-        UserInfo FindUserByPhoneAsync (string phone, string email);
+        UserInfo FindUserByPhoneAsync (string phone = null, string email = null);
   
         /// <summary>
         /// 
@@ -259,7 +259,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>ApiResponse of UserInfo</returns>
-        ApiResponse<UserInfo> FindUserByPhoneAsyncWithHttpInfo (string phone, string email);
+        ApiResponse<UserInfo> FindUserByPhoneAsyncWithHttpInfo (string phone = null, string email = null);
         /// <summary>
         /// 
         /// </summary>
@@ -331,7 +331,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>ManageInfoViewModel</returns>
-        ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState);
+        ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null);
   
         /// <summary>
         /// 
@@ -343,7 +343,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        ApiResponse<ManageInfoViewModel> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState);
+        ApiResponse<ManageInfoViewModel> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -354,7 +354,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>string</returns>
-        string GetRegistrationToken (int? restaurantId, string tableNumber);
+        string GetRegistrationToken (int? restaurantId, string tableNumber = null);
   
         /// <summary>
         /// 
@@ -366,7 +366,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber);
+        ApiResponse<string> GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -954,7 +954,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of List&lt;Restaurant&gt;</returns>
-        System.Threading.Tasks.Task<List<Restaurant>> FindRestaurantsByUserPhoneAsync (string phone, string email);
+        System.Threading.Tasks.Task<List<Restaurant>> FindRestaurantsByUserPhoneAsync (string phone = null, string email = null);
 
         /// <summary>
         /// 
@@ -966,7 +966,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Restaurant&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Restaurant>>> FindRestaurantsByUserPhoneAsyncWithHttpInfo (string phone, string email);
+        System.Threading.Tasks.Task<ApiResponse<List<Restaurant>>> FindRestaurantsByUserPhoneAsyncWithHttpInfo (string phone = null, string email = null);
         /// <summary>
         /// 
         /// </summary>
@@ -977,7 +977,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of UserInfo</returns>
-        System.Threading.Tasks.Task<UserInfo> FindUserByPhoneAsyncAsync (string phone, string email);
+        System.Threading.Tasks.Task<UserInfo> FindUserByPhoneAsyncAsync (string phone = null, string email = null);
 
         /// <summary>
         /// 
@@ -989,7 +989,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of ApiResponse (UserInfo)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserInfo>> FindUserByPhoneAsyncAsyncWithHttpInfo (string phone, string email);
+        System.Threading.Tasks.Task<ApiResponse<UserInfo>> FindUserByPhoneAsyncAsyncWithHttpInfo (string phone = null, string email = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1061,7 +1061,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ManageInfoViewModel</returns>
-        System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState);
+        System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null);
 
         /// <summary>
         /// 
@@ -1073,7 +1073,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState);
+        System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1084,7 +1084,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber);
+        System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null);
 
         /// <summary>
         /// 
@@ -1096,7 +1096,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber);
+        System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -3104,7 +3104,7 @@ if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.Par
         /// <param name="phone"> (optional)</param> 
         /// <param name="email"> (optional)</param> 
         /// <returns>List&lt;Restaurant&gt;</returns>
-        public List<Restaurant> FindRestaurantsByUserPhone (string phone, string email)
+        public List<Restaurant> FindRestaurantsByUserPhone (string phone = null, string email = null)
         {
              ApiResponse<List<Restaurant>> localVarResponse = FindRestaurantsByUserPhoneWithHttpInfo(phone, email);
              return localVarResponse.Data;
@@ -3117,7 +3117,7 @@ if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.Par
         /// <param name="phone"> (optional)</param> 
         /// <param name="email"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;Restaurant&gt;</returns>
-        public ApiResponse< List<Restaurant> > FindRestaurantsByUserPhoneWithHttpInfo (string phone, string email)
+        public ApiResponse< List<Restaurant> > FindRestaurantsByUserPhoneWithHttpInfo (string phone = null, string email = null)
         {
             
     
@@ -3184,7 +3184,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of List&lt;Restaurant&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Restaurant>> FindRestaurantsByUserPhoneAsync (string phone, string email)
+        public async System.Threading.Tasks.Task<List<Restaurant>> FindRestaurantsByUserPhoneAsync (string phone = null, string email = null)
         {
              ApiResponse<List<Restaurant>> localVarResponse = await FindRestaurantsByUserPhoneAsyncWithHttpInfo(phone, email);
              return localVarResponse.Data;
@@ -3198,7 +3198,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Restaurant&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Restaurant>>> FindRestaurantsByUserPhoneAsyncWithHttpInfo (string phone, string email)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Restaurant>>> FindRestaurantsByUserPhoneAsyncWithHttpInfo (string phone = null, string email = null)
         {
             
     
@@ -3264,7 +3264,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param> 
         /// <param name="email"> (optional)</param> 
         /// <returns>UserInfo</returns>
-        public UserInfo FindUserByPhoneAsync (string phone, string email)
+        public UserInfo FindUserByPhoneAsync (string phone = null, string email = null)
         {
              ApiResponse<UserInfo> localVarResponse = FindUserByPhoneAsyncWithHttpInfo(phone, email);
              return localVarResponse.Data;
@@ -3277,7 +3277,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param> 
         /// <param name="email"> (optional)</param> 
         /// <returns>ApiResponse of UserInfo</returns>
-        public ApiResponse< UserInfo > FindUserByPhoneAsyncWithHttpInfo (string phone, string email)
+        public ApiResponse< UserInfo > FindUserByPhoneAsyncWithHttpInfo (string phone = null, string email = null)
         {
             
     
@@ -3344,7 +3344,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of UserInfo</returns>
-        public async System.Threading.Tasks.Task<UserInfo> FindUserByPhoneAsyncAsync (string phone, string email)
+        public async System.Threading.Tasks.Task<UserInfo> FindUserByPhoneAsyncAsync (string phone = null, string email = null)
         {
              ApiResponse<UserInfo> localVarResponse = await FindUserByPhoneAsyncAsyncWithHttpInfo(phone, email);
              return localVarResponse.Data;
@@ -3358,7 +3358,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="phone"> (optional)</param>
         /// <param name="email"> (optional)</param>
         /// <returns>Task of ApiResponse (UserInfo)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserInfo>> FindUserByPhoneAsyncAsyncWithHttpInfo (string phone, string email)
+        public async System.Threading.Tasks.Task<ApiResponse<UserInfo>> FindUserByPhoneAsyncAsyncWithHttpInfo (string phone = null, string email = null)
         {
             
     
@@ -3892,7 +3892,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
         /// <returns>ManageInfoViewModel</returns>
-        public ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState)
+        public ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null)
         {
              ApiResponse<ManageInfoViewModel> localVarResponse = GetManageInfoWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
@@ -3905,7 +3905,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
         /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        public ApiResponse< ManageInfoViewModel > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState)
+        public ApiResponse< ManageInfoViewModel > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             
             // verify the required parameter 'returnUrl' is set
@@ -3976,7 +3976,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ManageInfoViewModel</returns>
-        public async System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState)
+        public async System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null)
         {
              ApiResponse<ManageInfoViewModel> localVarResponse = await GetManageInfoAsyncWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
@@ -3990,7 +3990,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
         /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState)
+        public async System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             // verify the required parameter 'returnUrl' is set
             if (returnUrl == null) throw new ApiException(400, "Missing required parameter 'returnUrl' when calling GetManageInfo");
@@ -4058,7 +4058,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="restaurantId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
         /// <returns>string</returns>
-        public string GetRegistrationToken (int? restaurantId, string tableNumber)
+        public string GetRegistrationToken (int? restaurantId, string tableNumber = null)
         {
              ApiResponse<string> localVarResponse = GetRegistrationTokenWithHttpInfo(restaurantId, tableNumber);
              return localVarResponse.Data;
@@ -4071,7 +4071,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="restaurantId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber)
+        public ApiResponse< string > GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4142,7 +4142,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber)
+        public async System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null)
         {
              ApiResponse<string> localVarResponse = await GetRegistrationTokenAsyncWithHttpInfo(restaurantId, tableNumber);
              return localVarResponse.Data;
@@ -4156,7 +4156,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRegistrationToken");

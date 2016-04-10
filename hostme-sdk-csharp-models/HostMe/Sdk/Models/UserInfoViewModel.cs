@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets UserName
         /// </summary>
-        [DataMember(Name="userName", EmitDefaultValue=false)]
+        [DataMember(Name="userName", EmitDefaultValue=true)]
         public string UserName { get; set; }
     
         /// <summary>
         /// Gets or Sets HasRegistered
         /// </summary>
-        [DataMember(Name="hasRegistered", EmitDefaultValue=false)]
+        [DataMember(Name="hasRegistered", EmitDefaultValue=true)]
         public bool? HasRegistered { get; set; }
     
         /// <summary>
         /// Gets or Sets LoginProvider
         /// </summary>
-        [DataMember(Name="loginProvider", EmitDefaultValue=false)]
+        [DataMember(Name="loginProvider", EmitDefaultValue=true)]
         public string LoginProvider { get; set; }
     
         /// <summary>

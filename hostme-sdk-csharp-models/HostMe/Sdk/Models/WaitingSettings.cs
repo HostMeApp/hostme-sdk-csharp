@@ -42,31 +42,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AcceptRemoteRegistration
         /// </summary>
-        [DataMember(Name="acceptRemoteRegistration", EmitDefaultValue=false)]
+        [DataMember(Name="acceptRemoteRegistration", EmitDefaultValue=true)]
         public bool? AcceptRemoteRegistration { get; set; }
     
         /// <summary>
         /// Gets or Sets EnableManualHold
         /// </summary>
-        [DataMember(Name="enableManualHold", EmitDefaultValue=false)]
+        [DataMember(Name="enableManualHold", EmitDefaultValue=true)]
         public bool? EnableManualHold { get; set; }
     
         /// <summary>
         /// Gets or Sets MaximumHoldTime
         /// </summary>
-        [DataMember(Name="maximumHoldTime", EmitDefaultValue=false)]
+        [DataMember(Name="maximumHoldTime", EmitDefaultValue=true)]
         public int? MaximumHoldTime { get; set; }
     
         /// <summary>
         /// Gets or Sets PositionMessages
         /// </summary>
-        [DataMember(Name="positionMessages", EmitDefaultValue=false)]
+        [DataMember(Name="positionMessages", EmitDefaultValue=true)]
         public List<PositionMessage> PositionMessages { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusMessages
         /// </summary>
-        [DataMember(Name="statusMessages", EmitDefaultValue=false)]
+        [DataMember(Name="statusMessages", EmitDefaultValue=true)]
         public List<StatusMessage> StatusMessages { get; set; }
     
         /// <summary>

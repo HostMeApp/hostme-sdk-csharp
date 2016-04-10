@@ -94,187 +94,187 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets HoursInterval
         /// </summary>
-        [DataMember(Name="hoursInterval", EmitDefaultValue=false)]
+        [DataMember(Name="hoursInterval", EmitDefaultValue=true)]
         public int? HoursInterval { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxPartySize
         /// </summary>
-        [DataMember(Name="maxPartySize", EmitDefaultValue=false)]
+        [DataMember(Name="maxPartySize", EmitDefaultValue=true)]
         public int? MaxPartySize { get; set; }
     
         /// <summary>
         /// Gets or Sets MinPartySize
         /// </summary>
-        [DataMember(Name="minPartySize", EmitDefaultValue=false)]
+        [DataMember(Name="minPartySize", EmitDefaultValue=true)]
         public int? MinPartySize { get; set; }
     
         /// <summary>
         /// Gets or Sets OpeningHours
         /// </summary>
-        [DataMember(Name="openingHours", EmitDefaultValue=false)]
+        [DataMember(Name="openingHours", EmitDefaultValue=true)]
         public BusinessHours OpeningHours { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationHours
         /// </summary>
-        [DataMember(Name="reservationHours", EmitDefaultValue=false)]
+        [DataMember(Name="reservationHours", EmitDefaultValue=true)]
         public BusinessHours ReservationHours { get; set; }
     
         /// <summary>
         /// Gets or Sets SeatingZones
         /// </summary>
-        [DataMember(Name="seatingZones", EmitDefaultValue=false)]
+        [DataMember(Name="seatingZones", EmitDefaultValue=true)]
         public List<string> SeatingZones { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
     
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
+        [DataMember(Name="address", EmitDefaultValue=true)]
         public string Address { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets FacebookId
         /// </summary>
-        [DataMember(Name="facebookId", EmitDefaultValue=false)]
+        [DataMember(Name="facebookId", EmitDefaultValue=true)]
         public string FacebookId { get; set; }
     
         /// <summary>
         /// Gets or Sets TwitterAccount
         /// </summary>
-        [DataMember(Name="twitterAccount", EmitDefaultValue=false)]
+        [DataMember(Name="twitterAccount", EmitDefaultValue=true)]
         public string TwitterAccount { get; set; }
     
         /// <summary>
         /// Gets or Sets WebsiteUrl
         /// </summary>
-        [DataMember(Name="websiteUrl", EmitDefaultValue=false)]
+        [DataMember(Name="websiteUrl", EmitDefaultValue=true)]
         public string WebsiteUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets FoursquareId
         /// </summary>
-        [DataMember(Name="foursquareId", EmitDefaultValue=false)]
+        [DataMember(Name="foursquareId", EmitDefaultValue=true)]
         public string FoursquareId { get; set; }
     
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
+        [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeOffSet
         /// </summary>
-        [DataMember(Name="timeOffSet", EmitDefaultValue=false)]
+        [DataMember(Name="timeOffSet", EmitDefaultValue=true)]
         public double? TimeOffSet { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        [DataMember(Name="timeZone", EmitDefaultValue=true)]
         public string TimeZone { get; set; }
     
         /// <summary>
         /// Gets or Sets Lat
         /// </summary>
-        [DataMember(Name="lat", EmitDefaultValue=false)]
+        [DataMember(Name="lat", EmitDefaultValue=true)]
         public double? Lat { get; set; }
     
         /// <summary>
         /// Gets or Sets Lon
         /// </summary>
-        [DataMember(Name="lon", EmitDefaultValue=false)]
+        [DataMember(Name="lon", EmitDefaultValue=true)]
         public double? Lon { get; set; }
     
         /// <summary>
         /// Gets or Sets HasHostmeSystem
         /// </summary>
-        [DataMember(Name="hasHostmeSystem", EmitDefaultValue=false)]
+        [DataMember(Name="hasHostmeSystem", EmitDefaultValue=true)]
         public bool? HasHostmeSystem { get; set; }
     
         /// <summary>
         /// Gets or Sets Distance
         /// </summary>
-        [DataMember(Name="distance", EmitDefaultValue=false)]
+        [DataMember(Name="distance", EmitDefaultValue=true)]
         public double? Distance { get; set; }
     
         /// <summary>
         /// Gets or Sets Rating
         /// </summary>
-        [DataMember(Name="rating", EmitDefaultValue=false)]
+        [DataMember(Name="rating", EmitDefaultValue=true)]
         public int? Rating { get; set; }
     
         /// <summary>
         /// Gets or Sets HasLoyaltyProgram
         /// </summary>
-        [DataMember(Name="hasLoyaltyProgram", EmitDefaultValue=false)]
+        [DataMember(Name="hasLoyaltyProgram", EmitDefaultValue=true)]
         public bool? HasLoyaltyProgram { get; set; }
     
         /// <summary>
         /// Gets or Sets AcceptRemouteLine
         /// </summary>
-        [DataMember(Name="acceptRemouteLine", EmitDefaultValue=false)]
+        [DataMember(Name="acceptRemouteLine", EmitDefaultValue=true)]
         public bool? AcceptRemouteLine { get; set; }
     
         /// <summary>
         /// Gets or Sets AcceptReservation
         /// </summary>
-        [DataMember(Name="acceptReservation", EmitDefaultValue=false)]
+        [DataMember(Name="acceptReservation", EmitDefaultValue=true)]
         public bool? AcceptReservation { get; set; }
     
         /// <summary>
         /// Gets or Sets AllowManualHold
         /// </summary>
-        [DataMember(Name="allowManualHold", EmitDefaultValue=false)]
+        [DataMember(Name="allowManualHold", EmitDefaultValue=true)]
         public bool? AllowManualHold { get; set; }
     
         /// <summary>
         /// Gets or Sets CurrentLineStats
         /// </summary>
-        [DataMember(Name="currentLineStats", EmitDefaultValue=false)]
+        [DataMember(Name="currentLineStats", EmitDefaultValue=true)]
         public WaitingStats CurrentLineStats { get; set; }
     
         /// <summary>
         /// Gets or Sets IsFavorite
         /// </summary>
-        [DataMember(Name="isFavorite", EmitDefaultValue=false)]
+        [DataMember(Name="isFavorite", EmitDefaultValue=true)]
         public bool? IsFavorite { get; set; }
     
         /// <summary>
         /// Gets or Sets NumberOfDeals
         /// </summary>
-        [DataMember(Name="numberOfDeals", EmitDefaultValue=false)]
+        [DataMember(Name="numberOfDeals", EmitDefaultValue=true)]
         public int? NumberOfDeals { get; set; }
     
         /// <summary>
         /// Gets or Sets NumberOfVotes
         /// </summary>
-        [DataMember(Name="numberOfVotes", EmitDefaultValue=false)]
+        [DataMember(Name="numberOfVotes", EmitDefaultValue=true)]
         public int? NumberOfVotes { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationIncomeEmail
         /// </summary>
-        [DataMember(Name="reservationIncomeEmail", EmitDefaultValue=false)]
+        [DataMember(Name="reservationIncomeEmail", EmitDefaultValue=true)]
         public string ReservationIncomeEmail { get; set; }
     
         /// <summary>

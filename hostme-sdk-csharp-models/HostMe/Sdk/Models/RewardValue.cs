@@ -38,7 +38,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name="type", EmitDefaultValue=true)]
         public TypeEnum? Type { get; set; }
     
         /// <summary>
@@ -67,31 +67,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
-        [DataMember(Name="amount", EmitDefaultValue=false)]
+        [DataMember(Name="amount", EmitDefaultValue=true)]
         public double? Amount { get; set; }
     
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=true)]
         public string Description { get; set; }
     
         /// <summary>
         /// Gets or Sets Discount
         /// </summary>
-        [DataMember(Name="discount", EmitDefaultValue=false)]
+        [DataMember(Name="discount", EmitDefaultValue=true)]
         public double? Discount { get; set; }
     
         /// <summary>
         /// Gets or Sets FreeMeal
         /// </summary>
-        [DataMember(Name="freeMeal", EmitDefaultValue=false)]
+        [DataMember(Name="freeMeal", EmitDefaultValue=true)]
         public string FreeMeal { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>

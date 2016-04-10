@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets WaitByArea
         /// </summary>
-        [DataMember(Name="waitByArea", EmitDefaultValue=false)]
+        [DataMember(Name="waitByArea", EmitDefaultValue=true)]
         public List<WaitingStatLine> WaitByArea { get; set; }
     
         /// <summary>
         /// Gets or Sets WaitByGroup
         /// </summary>
-        [DataMember(Name="waitByGroup", EmitDefaultValue=false)]
+        [DataMember(Name="waitByGroup", EmitDefaultValue=true)]
         public List<WaitingStatLine> WaitByGroup { get; set; }
     
         /// <summary>

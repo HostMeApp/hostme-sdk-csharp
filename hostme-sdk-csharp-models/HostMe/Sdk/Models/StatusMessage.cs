@@ -54,19 +54,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets FromStatus
         /// </summary>
-        [DataMember(Name="fromStatus", EmitDefaultValue=false)]
+        [DataMember(Name="fromStatus", EmitDefaultValue=true)]
         public string FromStatus { get; set; }
     
         /// <summary>
         /// Gets or Sets ToStatus
         /// </summary>
-        [DataMember(Name="toStatus", EmitDefaultValue=false)]
+        [DataMember(Name="toStatus", EmitDefaultValue=true)]
         public string ToStatus { get; set; }
     
         /// <summary>
         /// Gets or Sets MessageTemplate
         /// </summary>
-        [DataMember(Name="messageTemplate", EmitDefaultValue=false)]
+        [DataMember(Name="messageTemplate", EmitDefaultValue=true)]
         public string MessageTemplate { get; set; }
     
         /// <summary>

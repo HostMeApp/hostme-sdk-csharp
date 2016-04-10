@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Exception
         /// </summary>
-        [DataMember(Name="exception", EmitDefaultValue=false)]
+        [DataMember(Name="exception", EmitDefaultValue=true)]
         public Object Exception { get; set; }
     
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
-        [DataMember(Name="errorMessage", EmitDefaultValue=false)]
+        [DataMember(Name="errorMessage", EmitDefaultValue=true)]
         public string ErrorMessage { get; set; }
     
         /// <summary>

@@ -89,7 +89,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>List&lt;Reservation&gt;</returns>
-        List<Reservation> GetUserReservations (string queryOptions);
+        List<Reservation> GetUserReservations (string queryOptions = null);
   
         /// <summary>
         /// 
@@ -100,7 +100,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
-        ApiResponse<List<Reservation>> GetUserReservationsWithHttpInfo (string queryOptions);
+        ApiResponse<List<Reservation>> GetUserReservationsWithHttpInfo (string queryOptions = null);
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -244,7 +244,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>Task of List&lt;Reservation&gt;</returns>
-        System.Threading.Tasks.Task<List<Reservation>> GetUserReservationsAsync (string queryOptions);
+        System.Threading.Tasks.Task<List<Reservation>> GetUserReservationsAsync (string queryOptions = null);
 
         /// <summary>
         /// 
@@ -255,7 +255,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions);
+        System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions = null);
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -933,7 +933,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param> 
         /// <returns>List&lt;Reservation&gt;</returns>
-        public List<Reservation> GetUserReservations (string queryOptions)
+        public List<Reservation> GetUserReservations (string queryOptions = null)
         {
              ApiResponse<List<Reservation>> localVarResponse = GetUserReservationsWithHttpInfo(queryOptions);
              return localVarResponse.Data;
@@ -945,7 +945,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
-        public ApiResponse< List<Reservation> > GetUserReservationsWithHttpInfo (string queryOptions)
+        public ApiResponse< List<Reservation> > GetUserReservationsWithHttpInfo (string queryOptions = null)
         {
             
     
@@ -1010,7 +1010,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>Task of List&lt;Reservation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Reservation>> GetUserReservationsAsync (string queryOptions)
+        public async System.Threading.Tasks.Task<List<Reservation>> GetUserReservationsAsync (string queryOptions = null)
         {
              ApiResponse<List<Reservation>> localVarResponse = await GetUserReservationsAsyncWithHttpInfo(queryOptions);
              return localVarResponse.Data;
@@ -1023,7 +1023,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queryOptions"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions = null)
         {
             
     

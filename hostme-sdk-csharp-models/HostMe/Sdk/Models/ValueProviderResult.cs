@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AttemptedValue
         /// </summary>
-        [DataMember(Name="attemptedValue", EmitDefaultValue=false)]
+        [DataMember(Name="attemptedValue", EmitDefaultValue=true)]
         public string AttemptedValue { get; set; }
     
         /// <summary>
         /// Gets or Sets Culture
         /// </summary>
-        [DataMember(Name="culture", EmitDefaultValue=false)]
+        [DataMember(Name="culture", EmitDefaultValue=true)]
         public string Culture { get; set; }
     
         /// <summary>
         /// Gets or Sets RawValue
         /// </summary>
-        [DataMember(Name="rawValue", EmitDefaultValue=false)]
+        [DataMember(Name="rawValue", EmitDefaultValue=true)]
         public Object RawValue { get; set; }
     
         /// <summary>

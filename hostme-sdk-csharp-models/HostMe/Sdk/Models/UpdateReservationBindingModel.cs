@@ -72,49 +72,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets ReservationId
         /// </summary>
-        [DataMember(Name="reservationId", EmitDefaultValue=false)]
+        [DataMember(Name="reservationId", EmitDefaultValue=true)]
         public int? ReservationId { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
         public string PhoneNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationTime
         /// </summary>
-        [DataMember(Name="reservationTime", EmitDefaultValue=false)]
+        [DataMember(Name="reservationTime", EmitDefaultValue=true)]
         public DateTimeOffset? ReservationTime { get; set; }
     
         /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
-        [DataMember(Name="groupSize", EmitDefaultValue=false)]
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
         public int? GroupSize { get; set; }
     
         /// <summary>
         /// Gets or Sets Areas
         /// </summary>
-        [DataMember(Name="areas", EmitDefaultValue=false)]
+        [DataMember(Name="areas", EmitDefaultValue=true)]
         public string Areas { get; set; }
     
         /// <summary>
         /// Gets or Sets Note
         /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=false)]
+        [DataMember(Name="note", EmitDefaultValue=true)]
         public string Note { get; set; }
     
         /// <summary>
         /// Gets or Sets HighChair
         /// </summary>
-        [DataMember(Name="highChair", EmitDefaultValue=false)]
+        [DataMember(Name="highChair", EmitDefaultValue=true)]
         public bool? HighChair { get; set; }
     
         /// <summary>
         /// Gets or Sets Stroller
         /// </summary>
-        [DataMember(Name="stroller", EmitDefaultValue=false)]
+        [DataMember(Name="stroller", EmitDefaultValue=true)]
         public bool? Stroller { get; set; }
     
         /// <summary>

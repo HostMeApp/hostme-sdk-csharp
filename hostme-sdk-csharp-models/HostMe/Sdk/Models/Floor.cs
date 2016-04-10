@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets FloorId
         /// </summary>
-        [DataMember(Name="floorId", EmitDefaultValue=false)]
+        [DataMember(Name="floorId", EmitDefaultValue=true)]
         public string FloorId { get; set; }
     
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
     
         /// <summary>
         /// Gets or Sets Map
         /// </summary>
-        [DataMember(Name="map", EmitDefaultValue=false)]
+        [DataMember(Name="map", EmitDefaultValue=true)]
         public string Map { get; set; }
     
         /// <summary>

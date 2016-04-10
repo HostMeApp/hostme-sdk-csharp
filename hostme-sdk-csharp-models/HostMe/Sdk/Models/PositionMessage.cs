@@ -54,19 +54,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets MinPos
         /// </summary>
-        [DataMember(Name="minPos", EmitDefaultValue=false)]
+        [DataMember(Name="minPos", EmitDefaultValue=true)]
         public int? MinPos { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxPos
         /// </summary>
-        [DataMember(Name="maxPos", EmitDefaultValue=false)]
+        [DataMember(Name="maxPos", EmitDefaultValue=true)]
         public int? MaxPos { get; set; }
     
         /// <summary>
         /// Gets or Sets MessageTemplate
         /// </summary>
-        [DataMember(Name="messageTemplate", EmitDefaultValue=false)]
+        [DataMember(Name="messageTemplate", EmitDefaultValue=true)]
         public string MessageTemplate { get; set; }
     
         /// <summary>

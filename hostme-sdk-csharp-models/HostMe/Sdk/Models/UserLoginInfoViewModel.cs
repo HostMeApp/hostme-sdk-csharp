@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets LoginProvider
         /// </summary>
-        [DataMember(Name="loginProvider", EmitDefaultValue=false)]
+        [DataMember(Name="loginProvider", EmitDefaultValue=true)]
         public string LoginProvider { get; set; }
     
         /// <summary>
         /// Gets or Sets ProviderKey
         /// </summary>
-        [DataMember(Name="providerKey", EmitDefaultValue=false)]
+        [DataMember(Name="providerKey", EmitDefaultValue=true)]
         public string ProviderKey { get; set; }
     
         /// <summary>

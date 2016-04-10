@@ -64,98 +64,98 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Dimensions
         /// </summary>
-        [DataMember(Name="dimensions", EmitDefaultValue=false)]
+        [DataMember(Name="dimensions", EmitDefaultValue=true)]
         public WaitingsStatDimensions Dimensions { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalPartyCount
         /// </summary>
-        [DataMember(Name="totalPartyCount", EmitDefaultValue=false)]
+        [DataMember(Name="totalPartyCount", EmitDefaultValue=true)]
         public double? TotalPartyCount { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalHeadCount
         /// </summary>
-        [DataMember(Name="totalHeadCount", EmitDefaultValue=false)]
+        [DataMember(Name="totalHeadCount", EmitDefaultValue=true)]
         public double? TotalHeadCount { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalSeatedCount
         /// </summary>
-        [DataMember(Name="totalSeatedCount", EmitDefaultValue=false)]
+        [DataMember(Name="totalSeatedCount", EmitDefaultValue=true)]
         public double? TotalSeatedCount { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalCanceledCount
         /// </summary>
-        [DataMember(Name="totalCanceledCount", EmitDefaultValue=false)]
+        [DataMember(Name="totalCanceledCount", EmitDefaultValue=true)]
         public double? TotalCanceledCount { get; set; }
     
         /// <summary>
         /// Gets or Sets MinTimeToCall
         /// </summary>
-        [DataMember(Name="minTimeToCall", EmitDefaultValue=false)]
+        [DataMember(Name="minTimeToCall", EmitDefaultValue=true)]
         public double? MinTimeToCall { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgTimeToCall
         /// </summary>
-        [DataMember(Name="avgTimeToCall", EmitDefaultValue=false)]
+        [DataMember(Name="avgTimeToCall", EmitDefaultValue=true)]
         public double? AvgTimeToCall { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxTimeToCall
         /// </summary>
-        [DataMember(Name="maxTimeToCall", EmitDefaultValue=false)]
+        [DataMember(Name="maxTimeToCall", EmitDefaultValue=true)]
         public double? MaxTimeToCall { get; set; }
     
         /// <summary>
         /// Gets or Sets MinTimeToSeat
         /// </summary>
-        [DataMember(Name="minTimeToSeat", EmitDefaultValue=false)]
+        [DataMember(Name="minTimeToSeat", EmitDefaultValue=true)]
         public double? MinTimeToSeat { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgTimeToSeat
         /// </summary>
-        [DataMember(Name="avgTimeToSeat", EmitDefaultValue=false)]
+        [DataMember(Name="avgTimeToSeat", EmitDefaultValue=true)]
         public double? AvgTimeToSeat { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxTimeToSeat
         /// </summary>
-        [DataMember(Name="maxTimeToSeat", EmitDefaultValue=false)]
+        [DataMember(Name="maxTimeToSeat", EmitDefaultValue=true)]
         public double? MaxTimeToSeat { get; set; }
     
         /// <summary>
         /// Gets or Sets MinTimeToCancel
         /// </summary>
-        [DataMember(Name="minTimeToCancel", EmitDefaultValue=false)]
+        [DataMember(Name="minTimeToCancel", EmitDefaultValue=true)]
         public double? MinTimeToCancel { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgTimeToCancel
         /// </summary>
-        [DataMember(Name="avgTimeToCancel", EmitDefaultValue=false)]
+        [DataMember(Name="avgTimeToCancel", EmitDefaultValue=true)]
         public double? AvgTimeToCancel { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxTimeToCancel
         /// </summary>
-        [DataMember(Name="maxTimeToCancel", EmitDefaultValue=false)]
+        [DataMember(Name="maxTimeToCancel", EmitDefaultValue=true)]
         public double? MaxTimeToCancel { get; set; }
     
         /// <summary>
         /// Maximum line position at a given period
         /// </summary>
         /// <value>Maximum line position at a given period</value>
-        [DataMember(Name="maxLine", EmitDefaultValue=false)]
+        [DataMember(Name="maxLine", EmitDefaultValue=true)]
         public int? MaxLine { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgLine
         /// </summary>
-        [DataMember(Name="avgLine", EmitDefaultValue=false)]
+        [DataMember(Name="avgLine", EmitDefaultValue=true)]
         public double? AvgLine { get; set; }
     
         /// <summary>

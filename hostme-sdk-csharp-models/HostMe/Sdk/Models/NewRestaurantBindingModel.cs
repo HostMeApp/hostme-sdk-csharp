@@ -74,56 +74,56 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
     
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
+        [DataMember(Name="address", EmitDefaultValue=true)]
         public string Address { get; set; }
     
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
+        [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        [DataMember(Name="timeZone", EmitDefaultValue=true)]
         public string TimeZone { get; set; }
     
         /// <summary>
         /// Url of the restaurant&#39;s logo. The logo size should be 100x100
         /// </summary>
         /// <value>Url of the restaurant&#39;s logo. The logo size should be 100x100</value>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets FacebookId
         /// </summary>
-        [DataMember(Name="facebookId", EmitDefaultValue=false)]
+        [DataMember(Name="facebookId", EmitDefaultValue=true)]
         public string FacebookId { get; set; }
     
         /// <summary>
         /// Gets or Sets TwitterAccount
         /// </summary>
-        [DataMember(Name="twitterAccount", EmitDefaultValue=false)]
+        [DataMember(Name="twitterAccount", EmitDefaultValue=true)]
         public string TwitterAccount { get; set; }
     
         /// <summary>
         /// Gets or Sets WebsiteUrl
         /// </summary>
-        [DataMember(Name="websiteUrl", EmitDefaultValue=false)]
+        [DataMember(Name="websiteUrl", EmitDefaultValue=true)]
         public string WebsiteUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets FoursquareId
         /// </summary>
-        [DataMember(Name="foursquareId", EmitDefaultValue=false)]
+        [DataMember(Name="foursquareId", EmitDefaultValue=true)]
         public string FoursquareId { get; set; }
     
         /// <summary>

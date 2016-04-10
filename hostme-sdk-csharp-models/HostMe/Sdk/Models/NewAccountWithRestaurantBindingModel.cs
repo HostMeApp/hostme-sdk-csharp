@@ -76,37 +76,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets FullName
         /// </summary>
-        [DataMember(Name="fullName", EmitDefaultValue=false)]
+        [DataMember(Name="fullName", EmitDefaultValue=true)]
         public string FullName { get; set; }
     
         /// <summary>
         /// Gets or Sets UserPhone
         /// </summary>
-        [DataMember(Name="userPhone", EmitDefaultValue=false)]
+        [DataMember(Name="userPhone", EmitDefaultValue=true)]
         public string UserPhone { get; set; }
     
         /// <summary>
         /// Gets or Sets UserEmail
         /// </summary>
-        [DataMember(Name="userEmail", EmitDefaultValue=false)]
+        [DataMember(Name="userEmail", EmitDefaultValue=true)]
         public string UserEmail { get; set; }
     
         /// <summary>
         /// Gets or Sets RestaurantName
         /// </summary>
-        [DataMember(Name="restaurantName", EmitDefaultValue=false)]
+        [DataMember(Name="restaurantName", EmitDefaultValue=true)]
         public string RestaurantName { get; set; }
     
         /// <summary>
         /// Gets or Sets RestaurantAddress
         /// </summary>
-        [DataMember(Name="restaurantAddress", EmitDefaultValue=false)]
+        [DataMember(Name="restaurantAddress", EmitDefaultValue=true)]
         public string RestaurantAddress { get; set; }
     
         /// <summary>
         /// Gets or Sets RestaurantPhone
         /// </summary>
-        [DataMember(Name="restaurantPhone", EmitDefaultValue=false)]
+        [DataMember(Name="restaurantPhone", EmitDefaultValue=true)]
         public string RestaurantPhone { get; set; }
     
         /// <summary>

@@ -47,7 +47,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns></returns>
-        void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber);
+        void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber = null);
   
         /// <summary>
         /// When table is ready hostess originates Call event. It notifies client that table is ready
@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber);
+        ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null);
         /// <summary>
         /// Closes current waiting position. When person gets a table, hostess should close current position.
         /// </summary>
@@ -171,7 +171,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingItem&gt;</returns>
-        List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions, string from, int? to);
+        List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
   
         /// <summary>
         /// Returns all waiting items for the selecetd restaurant
@@ -185,7 +185,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingItem&gt;</returns>
-        ApiResponse<List<WaitingItem>> GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions, string from, int? to);
+        ApiResponse<List<WaitingItem>> GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -306,7 +306,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -319,7 +319,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -331,7 +331,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -344,7 +344,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -356,7 +356,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -369,7 +369,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -381,7 +381,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -394,7 +394,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -406,7 +406,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -419,7 +419,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -431,7 +431,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -444,7 +444,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -456,7 +456,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingReportItem&gt;</returns>
-        List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -469,7 +469,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingReportItem&gt;</returns>
-        ApiResponse<List<WaitingReportItem>> GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingReportItem>> GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -482,7 +482,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to);
+        List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -496,7 +496,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<WaitingsStatReportItem>> GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -723,7 +723,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber);
+        System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber = null);
 
         /// <summary>
         /// When table is ready hostess originates Call event. It notifies client that table is ready
@@ -736,7 +736,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null);
         /// <summary>
         /// Closes current waiting position. When person gets a table, hostess should close current position.
         /// </summary>
@@ -847,7 +847,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions, string from, int? to);
+        System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
 
         /// <summary>
         /// Returns all waiting items for the selecetd restaurant
@@ -861,7 +861,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions, string from, int? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -982,7 +982,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -995,7 +995,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1007,7 +1007,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1020,7 +1020,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1032,7 +1032,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1045,7 +1045,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1057,7 +1057,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1070,7 +1070,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1082,7 +1082,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1095,7 +1095,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1107,7 +1107,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1120,7 +1120,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1132,7 +1132,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1145,7 +1145,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1158,7 +1158,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -1172,7 +1172,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1623,7 +1623,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param> 
         /// <param name="tableNumber">Number of the table (optional)</param> 
         /// <returns></returns>
-        public void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber)
+        public void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber = null)
         {
              CallWaitingPartyWithHttpInfo(restaurantId, waitingItemId, tableNumber);
         }
@@ -1636,7 +1636,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="waitingItemId">Waiting item identifier</param> 
         /// <param name="tableNumber">Number of the table (optional)</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber)
+        public ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -1713,7 +1713,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber)
+        public async System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber = null)
         {
              await CallWaitingPartyAsyncWithHttpInfo(restaurantId, waitingItemId, tableNumber);
 
@@ -1727,7 +1727,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling CallWaitingParty");
@@ -2542,7 +2542,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingItem&gt;</returns>
-        public List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions, string from, int? to)
+        public List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
         {
              ApiResponse<List<WaitingItem>> localVarResponse = GetAllWaitingsWithHttpInfo(restaurantId, queryOptions, from, to);
              return localVarResponse.Data;
@@ -2557,7 +2557,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingItem&gt;</returns>
-        public ApiResponse< List<WaitingItem> > GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions, string from, int? to)
+        public ApiResponse< List<WaitingItem> > GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2632,7 +2632,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions, string from, int? to)
+        public async System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
         {
              ApiResponse<List<WaitingItem>> localVarResponse = await GetAllWaitingsAsyncWithHttpInfo(restaurantId, queryOptions, from, to);
              return localVarResponse.Data;
@@ -2648,7 +2648,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions, string from, int? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetAllWaitings");
@@ -3543,7 +3543,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByGroupWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3557,7 +3557,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3630,7 +3630,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByGroupAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3645,7 +3645,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByGroup");
@@ -3715,7 +3715,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByHourWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3729,7 +3729,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3802,7 +3802,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByHourAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3817,7 +3817,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByHour");
@@ -3887,7 +3887,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByLineWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3901,7 +3901,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3974,7 +3974,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByLineAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -3989,7 +3989,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByLine");
@@ -4059,7 +4059,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByMealWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4073,7 +4073,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4146,7 +4146,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByMealAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4161,7 +4161,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByMeal");
@@ -4231,7 +4231,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByWeekWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4245,7 +4245,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4318,7 +4318,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByWeekAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4333,7 +4333,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByWeek");
@@ -4403,7 +4403,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByWeekDayWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4417,7 +4417,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4490,7 +4490,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByWeekDayAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4505,7 +4505,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByWeekDay");
@@ -4575,7 +4575,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingReportItem&gt;</returns>
-        public List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingReportItem>> localVarResponse = GetWaitingsForPeriodWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4589,7 +4589,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingReportItem&gt;</returns>
-        public ApiResponse< List<WaitingReportItem> > GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingReportItem> > GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4662,7 +4662,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingReportItem>> localVarResponse = await GetWaitingsForPeriodAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -4677,7 +4677,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingsForPeriod");
@@ -4748,7 +4748,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to)
+        public List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingsGroupByWithHttpInfo(restaurantId, groupBy, from, to);
              return localVarResponse.Data;
@@ -4763,7 +4763,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4842,7 +4842,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingsGroupByAsyncWithHttpInfo(restaurantId, groupBy, from, to);
              return localVarResponse.Data;
@@ -4858,7 +4858,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingsGroupBy");

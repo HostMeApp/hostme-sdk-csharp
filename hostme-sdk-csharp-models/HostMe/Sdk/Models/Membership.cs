@@ -48,49 +48,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets MembershipLevel
         /// </summary>
-        [DataMember(Name="membershipLevel", EmitDefaultValue=false)]
+        [DataMember(Name="membershipLevel", EmitDefaultValue=true)]
         public string MembershipLevel { get; set; }
     
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
-        [DataMember(Name="points", EmitDefaultValue=false)]
+        [DataMember(Name="points", EmitDefaultValue=true)]
         public long? Points { get; set; }
     
         /// <summary>
         /// Gets or Sets JoinDate
         /// </summary>
-        [DataMember(Name="joinDate", EmitDefaultValue=false)]
+        [DataMember(Name="joinDate", EmitDefaultValue=true)]
         public DateTimeOffset? JoinDate { get; set; }
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>
         /// Gets or Sets Restaurant
         /// </summary>
-        [DataMember(Name="restaurant", EmitDefaultValue=false)]
+        [DataMember(Name="restaurant", EmitDefaultValue=true)]
         public RestaurantInfo Restaurant { get; set; }
     
         /// <summary>
         /// Gets or Sets IsMember
         /// </summary>
-        [DataMember(Name="isMember", EmitDefaultValue=false)]
+        [DataMember(Name="isMember", EmitDefaultValue=true)]
         public bool? IsMember { get; set; }
     
         /// <summary>
         /// Gets or Sets Profile
         /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=false)]
+        [DataMember(Name="profile", EmitDefaultValue=true)]
         public UserProfile Profile { get; set; }
     
         /// <summary>

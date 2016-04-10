@@ -44,37 +44,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets CheckinPoints
         /// </summary>
-        [DataMember(Name="checkinPoints", EmitDefaultValue=false)]
+        [DataMember(Name="checkinPoints", EmitDefaultValue=true)]
         public int? CheckinPoints { get; set; }
     
         /// <summary>
         /// Gets or Sets IsEnabled
         /// </summary>
-        [DataMember(Name="isEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="isEnabled", EmitDefaultValue=true)]
         public bool? IsEnabled { get; set; }
     
         /// <summary>
         /// Gets or Sets MembershipLevelRules
         /// </summary>
-        [DataMember(Name="membershipLevelRules", EmitDefaultValue=false)]
+        [DataMember(Name="membershipLevelRules", EmitDefaultValue=true)]
         public List<MembershipLevel> MembershipLevelRules { get; set; }
     
         /// <summary>
         /// Gets or Sets PurchasePointsRules
         /// </summary>
-        [DataMember(Name="purchasePointsRules", EmitDefaultValue=false)]
+        [DataMember(Name="purchasePointsRules", EmitDefaultValue=true)]
         public List<PurchaseToPoints> PurchasePointsRules { get; set; }
     
         /// <summary>
         /// Gets or Sets SignupPoints
         /// </summary>
-        [DataMember(Name="signupPoints", EmitDefaultValue=false)]
+        [DataMember(Name="signupPoints", EmitDefaultValue=true)]
         public int? SignupPoints { get; set; }
     
         /// <summary>
         /// Gets or Sets WaitingPointsRules
         /// </summary>
-        [DataMember(Name="waitingPointsRules", EmitDefaultValue=false)]
+        [DataMember(Name="waitingPointsRules", EmitDefaultValue=true)]
         public List<MinutesToPoints> WaitingPointsRules { get; set; }
     
         /// <summary>

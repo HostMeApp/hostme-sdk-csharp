@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Interval
         /// </summary>
-        [DataMember(Name="interval", EmitDefaultValue=false)]
+        [DataMember(Name="interval", EmitDefaultValue=true)]
         public WeekDayOpenHours Interval { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxCoversPerSlot
         /// </summary>
-        [DataMember(Name="maxCoversPerSlot", EmitDefaultValue=false)]
+        [DataMember(Name="maxCoversPerSlot", EmitDefaultValue=true)]
         public int? MaxCoversPerSlot { get; set; }
     
         /// <summary>

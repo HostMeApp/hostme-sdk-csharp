@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets Role
         /// </summary>
-        [DataMember(Name="role", EmitDefaultValue=false)]
+        [DataMember(Name="role", EmitDefaultValue=true)]
         public string Role { get; set; }
     
         /// <summary>

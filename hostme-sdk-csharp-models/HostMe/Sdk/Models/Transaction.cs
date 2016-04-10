@@ -48,49 +48,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name="time", EmitDefaultValue=false)]
+        [DataMember(Name="time", EmitDefaultValue=true)]
         public DateTimeOffset? Time { get; set; }
     
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
+        [DataMember(Name="type", EmitDefaultValue=true)]
         public string Type { get; set; }
     
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
-        [DataMember(Name="points", EmitDefaultValue=false)]
+        [DataMember(Name="points", EmitDefaultValue=true)]
         public long? Points { get; set; }
     
         /// <summary>
         /// Gets or Sets Note
         /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=false)]
+        [DataMember(Name="note", EmitDefaultValue=true)]
         public string Note { get; set; }
     
         /// <summary>
         /// Gets or Sets Units
         /// </summary>
-        [DataMember(Name="units", EmitDefaultValue=false)]
+        [DataMember(Name="units", EmitDefaultValue=true)]
         public double? Units { get; set; }
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusReason
         /// </summary>
-        [DataMember(Name="statusReason", EmitDefaultValue=false)]
+        [DataMember(Name="statusReason", EmitDefaultValue=true)]
         public string StatusReason { get; set; }
     
         /// <summary>

@@ -40,25 +40,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Table
         /// </summary>
-        [DataMember(Name="table", EmitDefaultValue=false)]
+        [DataMember(Name="table", EmitDefaultValue=true)]
         public TableInfo Table { get; set; }
     
         /// <summary>
         /// Gets or Sets User
         /// </summary>
-        [DataMember(Name="user", EmitDefaultValue=false)]
+        [DataMember(Name="user", EmitDefaultValue=true)]
         public UserProfile User { get; set; }
     
         /// <summary>
         /// Gets or Sets RegistrationTime
         /// </summary>
-        [DataMember(Name="registrationTime", EmitDefaultValue=false)]
+        [DataMember(Name="registrationTime", EmitDefaultValue=true)]
         public DateTimeOffset? RegistrationTime { get; set; }
     
         /// <summary>
         /// Gets or Sets EstimatedReleaseTime
         /// </summary>
-        [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=false)]
+        [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=true)]
         public DateTimeOffset? EstimatedReleaseTime { get; set; }
     
         /// <summary>

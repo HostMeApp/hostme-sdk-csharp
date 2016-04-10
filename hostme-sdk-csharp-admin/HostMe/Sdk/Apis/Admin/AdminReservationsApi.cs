@@ -97,7 +97,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Reservation</returns>
-        Reservation CloseAsSeated (int? restaurantId, string reservationId, string tableNumber);
+        Reservation CloseAsSeated (int? restaurantId, string reservationId, string tableNumber = null);
   
         /// <summary>
         /// 
@@ -110,7 +110,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> CloseAsSeatedWithHttpInfo (int? restaurantId, string reservationId, string tableNumber);
+        ApiResponse<Reservation> CloseAsSeatedWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -170,7 +170,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>AvailabilityResponse</returns>
-        AvailabilityResponse GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas);
+        AvailabilityResponse GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null);
   
         /// <summary>
         /// 
@@ -187,7 +187,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>ApiResponse of AvailabilityResponse</returns>
-        ApiResponse<AvailabilityResponse> GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas);
+        ApiResponse<AvailabilityResponse> GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -222,7 +222,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>List&lt;Reservation&gt;</returns>
-        List<Reservation> GetReservationsForPeriod (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        List<Reservation> GetReservationsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
   
         /// <summary>
         /// 
@@ -235,7 +235,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
-        ApiResponse<List<Reservation>> GetReservationsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        ApiResponse<List<Reservation>> GetReservationsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -246,7 +246,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>int?</returns>
-        int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from);
+        int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null);
   
         /// <summary>
         /// 
@@ -258,7 +258,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>ApiResponse of int?</returns>
-        ApiResponse<int?> GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from);
+        ApiResponse<int?> GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -533,7 +533,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> CloseAsSeatedAsync (int? restaurantId, string reservationId, string tableNumber);
+        System.Threading.Tasks.Task<Reservation> CloseAsSeatedAsync (int? restaurantId, string reservationId, string tableNumber = null);
 
         /// <summary>
         /// 
@@ -546,7 +546,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> CloseAsSeatedAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber);
+        System.Threading.Tasks.Task<ApiResponse<Reservation>> CloseAsSeatedAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -606,7 +606,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of AvailabilityResponse</returns>
-        System.Threading.Tasks.Task<AvailabilityResponse> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas);
+        System.Threading.Tasks.Task<AvailabilityResponse> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null);
 
         /// <summary>
         /// 
@@ -623,7 +623,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (AvailabilityResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AvailabilityResponse>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas);
+        System.Threading.Tasks.Task<ApiResponse<AvailabilityResponse>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -658,7 +658,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;Reservation&gt;</returns>
-        System.Threading.Tasks.Task<List<Reservation>> GetReservationsForPeriodAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<List<Reservation>> GetReservationsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
 
         /// <summary>
         /// 
@@ -671,7 +671,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetReservationsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to);
+        System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetReservationsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
         /// <summary>
         /// 
         /// </summary>
@@ -682,7 +682,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>Task of int?</returns>
-        System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from);
+        System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null);
 
         /// <summary>
         /// 
@@ -694,7 +694,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from);
+        System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1535,7 +1535,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="reservationId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
         /// <returns>Reservation</returns>
-        public Reservation CloseAsSeated (int? restaurantId, string reservationId, string tableNumber)
+        public Reservation CloseAsSeated (int? restaurantId, string reservationId, string tableNumber = null)
         {
              ApiResponse<Reservation> localVarResponse = CloseAsSeatedWithHttpInfo(restaurantId, reservationId, tableNumber);
              return localVarResponse.Data;
@@ -1549,7 +1549,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="reservationId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
         /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > CloseAsSeatedWithHttpInfo (int? restaurantId, string reservationId, string tableNumber)
+        public ApiResponse< Reservation > CloseAsSeatedWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -1626,7 +1626,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> CloseAsSeatedAsync (int? restaurantId, string reservationId, string tableNumber)
+        public async System.Threading.Tasks.Task<Reservation> CloseAsSeatedAsync (int? restaurantId, string reservationId, string tableNumber = null)
         {
              ApiResponse<Reservation> localVarResponse = await CloseAsSeatedAsyncWithHttpInfo(restaurantId, reservationId, tableNumber);
              return localVarResponse.Data;
@@ -1641,7 +1641,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> CloseAsSeatedAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber)
+        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> CloseAsSeatedAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling CloseAsSeated");
@@ -2049,7 +2049,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="type"> (optional)</param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>AvailabilityResponse</returns>
-        public AvailabilityResponse GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas)
+        public AvailabilityResponse GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null)
         {
              ApiResponse<AvailabilityResponse> localVarResponse = GetReservationAvailabilityWithHttpInfo(restaurantId, date, partySize, rangeInMinutes, tableTurnOver, type, areas);
              return localVarResponse.Data;
@@ -2067,7 +2067,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="type"> (optional)</param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>ApiResponse of AvailabilityResponse</returns>
-        public ApiResponse< AvailabilityResponse > GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas)
+        public ApiResponse< AvailabilityResponse > GetReservationAvailabilityWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2160,7 +2160,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of AvailabilityResponse</returns>
-        public async System.Threading.Tasks.Task<AvailabilityResponse> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas)
+        public async System.Threading.Tasks.Task<AvailabilityResponse> GetReservationAvailabilityAsync (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null)
         {
              ApiResponse<AvailabilityResponse> localVarResponse = await GetReservationAvailabilityAsyncWithHttpInfo(restaurantId, date, partySize, rangeInMinutes, tableTurnOver, type, areas);
              return localVarResponse.Data;
@@ -2179,7 +2179,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="type"> (optional)</param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (AvailabilityResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AvailabilityResponse>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver, string type, string areas)
+        public async System.Threading.Tasks.Task<ApiResponse<AvailabilityResponse>> GetReservationAvailabilityAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, double? tableTurnOver = null, string type = null, string areas = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetReservationAvailability");
@@ -2431,7 +2431,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>List&lt;Reservation&gt;</returns>
-        public List<Reservation> GetReservationsForPeriod (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public List<Reservation> GetReservationsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<Reservation>> localVarResponse = GetReservationsForPeriodWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -2445,7 +2445,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="from"> (optional)</param> 
         /// <param name="to"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
-        public ApiResponse< List<Reservation> > GetReservationsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public ApiResponse< List<Reservation> > GetReservationsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2518,7 +2518,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of List&lt;Reservation&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Reservation>> GetReservationsForPeriodAsync (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<List<Reservation>> GetReservationsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
              ApiResponse<List<Reservation>> localVarResponse = await GetReservationsForPeriodAsyncWithHttpInfo(restaurantId, from, to);
              return localVarResponse.Data;
@@ -2533,7 +2533,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="from"> (optional)</param>
         /// <param name="to"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetReservationsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from, DateTimeOffset? to)
+        public async System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetReservationsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetReservationsForPeriod");
@@ -2602,7 +2602,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="restaurantId"></param> 
         /// <param name="from"> (optional)</param> 
         /// <returns>int?</returns>
-        public int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from)
+        public int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null)
         {
              ApiResponse<int?> localVarResponse = GetUnreadMessagesCountWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
@@ -2615,7 +2615,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="restaurantId"></param> 
         /// <param name="from"> (optional)</param> 
         /// <returns>ApiResponse of int?</returns>
-        public ApiResponse< int? > GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from)
+        public ApiResponse< int? > GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2686,7 +2686,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>Task of int?</returns>
-        public async System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from)
+        public async System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null)
         {
              ApiResponse<int?> localVarResponse = await GetUnreadMessagesCountAsyncWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
@@ -2700,7 +2700,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
         /// <returns>Task of ApiResponse (int?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from)
+        public async System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetUnreadMessagesCount");

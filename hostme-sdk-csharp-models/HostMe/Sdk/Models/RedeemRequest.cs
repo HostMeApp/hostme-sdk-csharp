@@ -38,7 +38,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
@@ -75,55 +75,55 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Submited
         /// </summary>
-        [DataMember(Name="submited", EmitDefaultValue=false)]
+        [DataMember(Name="submited", EmitDefaultValue=true)]
         public DateTimeOffset? Submited { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusComment
         /// </summary>
-        [DataMember(Name="statusComment", EmitDefaultValue=false)]
+        [DataMember(Name="statusComment", EmitDefaultValue=true)]
         public string StatusComment { get; set; }
     
         /// <summary>
         /// Gets or Sets Closed
         /// </summary>
-        [DataMember(Name="closed", EmitDefaultValue=false)]
+        [DataMember(Name="closed", EmitDefaultValue=true)]
         public DateTimeOffset? Closed { get; set; }
     
         /// <summary>
         /// Gets or Sets RewardId
         /// </summary>
-        [DataMember(Name="rewardId", EmitDefaultValue=false)]
+        [DataMember(Name="rewardId", EmitDefaultValue=true)]
         public string RewardId { get; set; }
     
         /// <summary>
         /// Gets or Sets CustomerMembershipId
         /// </summary>
-        [DataMember(Name="customerMembershipId", EmitDefaultValue=false)]
+        [DataMember(Name="customerMembershipId", EmitDefaultValue=true)]
         public int? CustomerMembershipId { get; set; }
     
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets MemberInfo
         /// </summary>
-        [DataMember(Name="memberInfo", EmitDefaultValue=false)]
+        [DataMember(Name="memberInfo", EmitDefaultValue=true)]
         public Member MemberInfo { get; set; }
     
         /// <summary>
         /// Gets or Sets RewardDetails
         /// </summary>
-        [DataMember(Name="rewardDetails", EmitDefaultValue=false)]
+        [DataMember(Name="rewardDetails", EmitDefaultValue=true)]
         public RewardInfo RewardDetails { get; set; }
     
         /// <summary>

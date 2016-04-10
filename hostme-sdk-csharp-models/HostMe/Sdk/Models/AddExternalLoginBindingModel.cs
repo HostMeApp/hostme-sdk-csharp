@@ -42,7 +42,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets ExternalAccessToken
         /// </summary>
-        [DataMember(Name="externalAccessToken", EmitDefaultValue=false)]
+        [DataMember(Name="externalAccessToken", EmitDefaultValue=true)]
         public string ExternalAccessToken { get; set; }
     
         /// <summary>

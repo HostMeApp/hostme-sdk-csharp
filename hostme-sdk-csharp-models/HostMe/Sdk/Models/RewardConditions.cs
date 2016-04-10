@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AvailableHours
         /// </summary>
-        [DataMember(Name="availableHours", EmitDefaultValue=false)]
+        [DataMember(Name="availableHours", EmitDefaultValue=true)]
         public List<WeekDayOpenHours> AvailableHours { get; set; }
     
         /// <summary>
         /// Gets or Sets MembershipLevel
         /// </summary>
-        [DataMember(Name="membershipLevel", EmitDefaultValue=false)]
+        [DataMember(Name="membershipLevel", EmitDefaultValue=true)]
         public string MembershipLevel { get; set; }
     
         /// <summary>

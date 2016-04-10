@@ -66,31 +66,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets FullName
         /// </summary>
-        [DataMember(Name="fullName", EmitDefaultValue=false)]
+        [DataMember(Name="fullName", EmitDefaultValue=true)]
         public string FullName { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
         public string PhoneNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets Password
         /// </summary>
-        [DataMember(Name="password", EmitDefaultValue=false)]
+        [DataMember(Name="password", EmitDefaultValue=true)]
         public string Password { get; set; }
     
         /// <summary>
         /// Gets or Sets ConfirmPassword
         /// </summary>
-        [DataMember(Name="confirmPassword", EmitDefaultValue=false)]
+        [DataMember(Name="confirmPassword", EmitDefaultValue=true)]
         public string ConfirmPassword { get; set; }
     
         /// <summary>

@@ -34,7 +34,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets RestaurantId
         /// </summary>
-        [DataMember(Name="restaurantId", EmitDefaultValue=false)]
+        [DataMember(Name="restaurantId", EmitDefaultValue=true)]
         public int? RestaurantId { get; set; }
     
         /// <summary>

@@ -38,7 +38,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
@@ -63,19 +63,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusComment
         /// </summary>
-        [DataMember(Name="statusComment", EmitDefaultValue=false)]
+        [DataMember(Name="statusComment", EmitDefaultValue=true)]
         public string StatusComment { get; set; }
     
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>

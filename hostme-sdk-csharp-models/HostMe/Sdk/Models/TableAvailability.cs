@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets MinCoversRequired
         /// </summary>
-        [DataMember(Name="minCoversRequired", EmitDefaultValue=false)]
+        [DataMember(Name="minCoversRequired", EmitDefaultValue=true)]
         public int? MinCoversRequired { get; set; }
     
         /// <summary>
         /// Gets or Sets Reservable
         /// </summary>
-        [DataMember(Name="reservable", EmitDefaultValue=false)]
+        [DataMember(Name="reservable", EmitDefaultValue=true)]
         public bool? Reservable { get; set; }
     
         /// <summary>
         /// Gets or Sets Hours
         /// </summary>
-        [DataMember(Name="hours", EmitDefaultValue=false)]
+        [DataMember(Name="hours", EmitDefaultValue=true)]
         public List<WeekDayOpenHours> Hours { get; set; }
     
         /// <summary>

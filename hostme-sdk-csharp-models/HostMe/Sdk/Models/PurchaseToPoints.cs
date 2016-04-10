@@ -42,31 +42,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets FlatPoints
         /// </summary>
-        [DataMember(Name="flatPoints", EmitDefaultValue=false)]
+        [DataMember(Name="flatPoints", EmitDefaultValue=true)]
         public int? FlatPoints { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxAmount
         /// </summary>
-        [DataMember(Name="maxAmount", EmitDefaultValue=false)]
+        [DataMember(Name="maxAmount", EmitDefaultValue=true)]
         public double? MaxAmount { get; set; }
     
         /// <summary>
         /// Gets or Sets Method
         /// </summary>
-        [DataMember(Name="method", EmitDefaultValue=false)]
+        [DataMember(Name="method", EmitDefaultValue=true)]
         public string Method { get; set; }
     
         /// <summary>
         /// Gets or Sets MinAmount
         /// </summary>
-        [DataMember(Name="minAmount", EmitDefaultValue=false)]
+        [DataMember(Name="minAmount", EmitDefaultValue=true)]
         public double? MinAmount { get; set; }
     
         /// <summary>
         /// Gets or Sets PointsPerCent
         /// </summary>
-        [DataMember(Name="pointsPerCent", EmitDefaultValue=false)]
+        [DataMember(Name="pointsPerCent", EmitDefaultValue=true)]
         public int? PointsPerCent { get; set; }
     
         /// <summary>

@@ -38,7 +38,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AvailabilityMethod
         /// </summary>
-        [DataMember(Name="availabilityMethod", EmitDefaultValue=false)]
+        [DataMember(Name="availabilityMethod", EmitDefaultValue=true)]
         public AvailabilityMethodEnum? AvailabilityMethod { get; set; }
     
         /// <summary>
@@ -99,127 +99,127 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets ConfirmationMessageRequestTemplate
         /// </summary>
-        [DataMember(Name="confirmationMessageRequestTemplate", EmitDefaultValue=false)]
+        [DataMember(Name="confirmationMessageRequestTemplate", EmitDefaultValue=true)]
         public string ConfirmationMessageRequestTemplate { get; set; }
     
         /// <summary>
         /// Gets or Sets CoversAvailableForWait
         /// </summary>
-        [DataMember(Name="coversAvailableForWait", EmitDefaultValue=false)]
+        [DataMember(Name="coversAvailableForWait", EmitDefaultValue=true)]
         public int? CoversAvailableForWait { get; set; }
     
         /// <summary>
         /// Gets or Sets CoversAvaliableForReservation
         /// </summary>
-        [DataMember(Name="coversAvaliableForReservation", EmitDefaultValue=false)]
+        [DataMember(Name="coversAvaliableForReservation", EmitDefaultValue=true)]
         public int? CoversAvaliableForReservation { get; set; }
     
         /// <summary>
         /// Gets or Sets DefaultMaxCoversPerSlot
         /// </summary>
-        [DataMember(Name="defaultMaxCoversPerSlot", EmitDefaultValue=false)]
+        [DataMember(Name="defaultMaxCoversPerSlot", EmitDefaultValue=true)]
         public int? DefaultMaxCoversPerSlot { get; set; }
     
         /// <summary>
         /// Gets or Sets EnableAutoScheduling
         /// </summary>
-        [DataMember(Name="enableAutoScheduling", EmitDefaultValue=false)]
+        [DataMember(Name="enableAutoScheduling", EmitDefaultValue=true)]
         public bool? EnableAutoScheduling { get; set; }
     
         /// <summary>
         /// Gets or Sets IsEnabled
         /// </summary>
-        [DataMember(Name="isEnabled", EmitDefaultValue=false)]
+        [DataMember(Name="isEnabled", EmitDefaultValue=true)]
         public bool? IsEnabled { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxCoversPerSlotExceptions
         /// </summary>
-        [DataMember(Name="maxCoversPerSlotExceptions", EmitDefaultValue=false)]
+        [DataMember(Name="maxCoversPerSlotExceptions", EmitDefaultValue=true)]
         public List<SlotSetting> MaxCoversPerSlotExceptions { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxMinutesLate
         /// </summary>
-        [DataMember(Name="maxMinutesLate", EmitDefaultValue=false)]
+        [DataMember(Name="maxMinutesLate", EmitDefaultValue=true)]
         public int? MaxMinutesLate { get; set; }
     
         /// <summary>
         /// Gets or Sets MaxPartySize
         /// </summary>
-        [DataMember(Name="maxPartySize", EmitDefaultValue=false)]
+        [DataMember(Name="maxPartySize", EmitDefaultValue=true)]
         public int? MaxPartySize { get; set; }
     
         /// <summary>
         /// Gets or Sets MiniutesToConfirm
         /// </summary>
-        [DataMember(Name="miniutesToConfirm", EmitDefaultValue=false)]
+        [DataMember(Name="miniutesToConfirm", EmitDefaultValue=true)]
         public int? MiniutesToConfirm { get; set; }
     
         /// <summary>
         /// Gets or Sets MinPartySize
         /// </summary>
-        [DataMember(Name="minPartySize", EmitDefaultValue=false)]
+        [DataMember(Name="minPartySize", EmitDefaultValue=true)]
         public int? MinPartySize { get; set; }
     
         /// <summary>
         /// Gets or Sets MinutesToNotifyManager
         /// </summary>
-        [DataMember(Name="minutesToNotifyManager", EmitDefaultValue=false)]
+        [DataMember(Name="minutesToNotifyManager", EmitDefaultValue=true)]
         public int? MinutesToNotifyManager { get; set; }
     
         /// <summary>
         /// Gets or Sets RequireReservationConfirmation
         /// </summary>
-        [DataMember(Name="requireReservationConfirmation", EmitDefaultValue=false)]
+        [DataMember(Name="requireReservationConfirmation", EmitDefaultValue=true)]
         public bool? RequireReservationConfirmation { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationEmail
         /// </summary>
-        [DataMember(Name="reservationEmail", EmitDefaultValue=false)]
+        [DataMember(Name="reservationEmail", EmitDefaultValue=true)]
         public string ReservationEmail { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationHours
         /// </summary>
-        [DataMember(Name="reservationHours", EmitDefaultValue=false)]
+        [DataMember(Name="reservationHours", EmitDefaultValue=true)]
         public List<WeekDayOpenHours> ReservationHours { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationHoursStep
         /// </summary>
-        [DataMember(Name="reservationHoursStep", EmitDefaultValue=false)]
+        [DataMember(Name="reservationHoursStep", EmitDefaultValue=true)]
         public int? ReservationHoursStep { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationInboxEmail
         /// </summary>
-        [DataMember(Name="reservationInboxEmail", EmitDefaultValue=false)]
+        [DataMember(Name="reservationInboxEmail", EmitDefaultValue=true)]
         public string ReservationInboxEmail { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusMessages
         /// </summary>
-        [DataMember(Name="statusMessages", EmitDefaultValue=false)]
+        [DataMember(Name="statusMessages", EmitDefaultValue=true)]
         public List<StatusMessage> StatusMessages { get; set; }
     
         /// <summary>
         /// Gets or Sets TableTurnOver
         /// </summary>
-        [DataMember(Name="tableTurnOver", EmitDefaultValue=false)]
+        [DataMember(Name="tableTurnOver", EmitDefaultValue=true)]
         public double? TableTurnOver { get; set; }
     
         /// <summary>
         /// Gets or Sets TableTurnOverByGroup
         /// </summary>
-        [DataMember(Name="tableTurnOverByGroup", EmitDefaultValue=false)]
+        [DataMember(Name="tableTurnOverByGroup", EmitDefaultValue=true)]
         public List<double?> TableTurnOverByGroup { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalCovers
         /// </summary>
-        [DataMember(Name="totalCovers", EmitDefaultValue=false)]
+        [DataMember(Name="totalCovers", EmitDefaultValue=true)]
         public int? TotalCovers { get; set; }
     
         /// <summary>

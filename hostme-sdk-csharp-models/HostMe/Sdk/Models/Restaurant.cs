@@ -74,127 +74,127 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
     
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
+        [DataMember(Name="address", EmitDefaultValue=true)]
         public string Address { get; set; }
     
         /// <summary>
         /// Gets or Sets Location
         /// </summary>
-        [DataMember(Name="location", EmitDefaultValue=false)]
+        [DataMember(Name="location", EmitDefaultValue=true)]
         public string Location { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets Lat
         /// </summary>
-        [DataMember(Name="lat", EmitDefaultValue=false)]
+        [DataMember(Name="lat", EmitDefaultValue=true)]
         public double? Lat { get; set; }
     
         /// <summary>
         /// Gets or Sets Lon
         /// </summary>
-        [DataMember(Name="lon", EmitDefaultValue=false)]
+        [DataMember(Name="lon", EmitDefaultValue=true)]
         public double? Lon { get; set; }
     
         /// <summary>
         /// Gets or Sets FacebookId
         /// </summary>
-        [DataMember(Name="facebookId", EmitDefaultValue=false)]
+        [DataMember(Name="facebookId", EmitDefaultValue=true)]
         public string FacebookId { get; set; }
     
         /// <summary>
         /// Gets or Sets TwitterAccount
         /// </summary>
-        [DataMember(Name="twitterAccount", EmitDefaultValue=false)]
+        [DataMember(Name="twitterAccount", EmitDefaultValue=true)]
         public string TwitterAccount { get; set; }
     
         /// <summary>
         /// Gets or Sets WebsiteUrl
         /// </summary>
-        [DataMember(Name="websiteUrl", EmitDefaultValue=false)]
+        [DataMember(Name="websiteUrl", EmitDefaultValue=true)]
         public string WebsiteUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets FoursquareId
         /// </summary>
-        [DataMember(Name="foursquareId", EmitDefaultValue=false)]
+        [DataMember(Name="foursquareId", EmitDefaultValue=true)]
         public string FoursquareId { get; set; }
     
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
+        [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeOffSet
         /// </summary>
-        [DataMember(Name="timeOffSet", EmitDefaultValue=false)]
+        [DataMember(Name="timeOffSet", EmitDefaultValue=true)]
         public double? TimeOffSet { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        [DataMember(Name="timeZone", EmitDefaultValue=true)]
         public string TimeZone { get; set; }
     
         /// <summary>
         /// Gets or Sets Settings
         /// </summary>
-        [DataMember(Name="settings", EmitDefaultValue=false)]
+        [DataMember(Name="settings", EmitDefaultValue=true)]
         public RestaurantSettings Settings { get; set; }
     
         /// <summary>
         /// Gets or Sets GooglePlaceId
         /// </summary>
-        [DataMember(Name="googlePlaceId", EmitDefaultValue=false)]
+        [DataMember(Name="googlePlaceId", EmitDefaultValue=true)]
         public string GooglePlaceId { get; set; }
     
         /// <summary>
         /// Gets or Sets YelpId
         /// </summary>
-        [DataMember(Name="yelpId", EmitDefaultValue=false)]
+        [DataMember(Name="yelpId", EmitDefaultValue=true)]
         public string YelpId { get; set; }
     
         /// <summary>
         /// Gets or Sets City
         /// </summary>
-        [DataMember(Name="city", EmitDefaultValue=false)]
+        [DataMember(Name="city", EmitDefaultValue=true)]
         public string City { get; set; }
     
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
+        [DataMember(Name="state", EmitDefaultValue=true)]
         public string State { get; set; }
     
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
-        [DataMember(Name="country", EmitDefaultValue=false)]
+        [DataMember(Name="country", EmitDefaultValue=true)]
         public string Country { get; set; }
     
         /// <summary>
         /// Gets or Sets IsPublished
         /// </summary>
-        [DataMember(Name="isPublished", EmitDefaultValue=false)]
+        [DataMember(Name="isPublished", EmitDefaultValue=true)]
         public bool? IsPublished { get; set; }
     
         /// <summary>

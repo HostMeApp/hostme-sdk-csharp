@@ -54,19 +54,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets OldPassword
         /// </summary>
-        [DataMember(Name="oldPassword", EmitDefaultValue=false)]
+        [DataMember(Name="oldPassword", EmitDefaultValue=true)]
         public string OldPassword { get; set; }
     
         /// <summary>
         /// Gets or Sets NewPassword
         /// </summary>
-        [DataMember(Name="newPassword", EmitDefaultValue=false)]
+        [DataMember(Name="newPassword", EmitDefaultValue=true)]
         public string NewPassword { get; set; }
     
         /// <summary>
         /// Gets or Sets ConfirmPassword
         /// </summary>
-        [DataMember(Name="confirmPassword", EmitDefaultValue=false)]
+        [DataMember(Name="confirmPassword", EmitDefaultValue=true)]
         public string ConfirmPassword { get; set; }
     
         /// <summary>

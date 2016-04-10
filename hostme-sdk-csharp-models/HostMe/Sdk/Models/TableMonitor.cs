@@ -41,7 +41,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
@@ -80,61 +80,61 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets WaitingItemId
         /// </summary>
-        [DataMember(Name="waitingItemId", EmitDefaultValue=false)]
+        [DataMember(Name="waitingItemId", EmitDefaultValue=true)]
         public int? WaitingItemId { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationId
         /// </summary>
-        [DataMember(Name="reservationId", EmitDefaultValue=false)]
+        [DataMember(Name="reservationId", EmitDefaultValue=true)]
         public string ReservationId { get; set; }
     
         /// <summary>
         /// Gets or Sets RegistrationId
         /// </summary>
-        [DataMember(Name="registrationId", EmitDefaultValue=false)]
+        [DataMember(Name="registrationId", EmitDefaultValue=true)]
         public int? RegistrationId { get; set; }
     
         /// <summary>
         /// Gets or Sets PartySize
         /// </summary>
-        [DataMember(Name="partySize", EmitDefaultValue=false)]
+        [DataMember(Name="partySize", EmitDefaultValue=true)]
         public int? PartySize { get; set; }
     
         /// <summary>
         /// Gets or Sets Membership
         /// </summary>
-        [DataMember(Name="membership", EmitDefaultValue=false)]
+        [DataMember(Name="membership", EmitDefaultValue=true)]
         public MembershipInfo Membership { get; set; }
     
         /// <summary>
         /// Gets or Sets NextReservationTime
         /// </summary>
-        [DataMember(Name="nextReservationTime", EmitDefaultValue=false)]
+        [DataMember(Name="nextReservationTime", EmitDefaultValue=true)]
         public DateTimeOffset? NextReservationTime { get; set; }
     
         /// <summary>
         /// Gets or Sets AssignmentTime
         /// </summary>
-        [DataMember(Name="assignmentTime", EmitDefaultValue=false)]
+        [DataMember(Name="assignmentTime", EmitDefaultValue=true)]
         public DateTimeOffset? AssignmentTime { get; set; }
     
         /// <summary>
         /// Gets or Sets RegistrationTime
         /// </summary>
-        [DataMember(Name="registrationTime", EmitDefaultValue=false)]
+        [DataMember(Name="registrationTime", EmitDefaultValue=true)]
         public DateTimeOffset? RegistrationTime { get; set; }
     
         /// <summary>
         /// Gets or Sets EstimatedReleaseTime
         /// </summary>
-        [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=false)]
+        [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=true)]
         public DateTimeOffset? EstimatedReleaseTime { get; set; }
     
         /// <summary>

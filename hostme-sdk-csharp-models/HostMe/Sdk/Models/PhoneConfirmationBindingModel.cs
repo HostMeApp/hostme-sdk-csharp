@@ -69,40 +69,40 @@ namespace HostMe.Sdk.Models
         /// Phone identifier that will be used to send push notifications
         /// </summary>
         /// <value>Phone identifier that will be used to send push notifications</value>
-        [DataMember(Name="phoneId", EmitDefaultValue=false)]
+        [DataMember(Name="phoneId", EmitDefaultValue=true)]
         public string PhoneId { get; set; }
     
         /// <summary>
         /// Gets or Sets DeviceType
         /// </summary>
-        [DataMember(Name="deviceType", EmitDefaultValue=false)]
+        [DataMember(Name="deviceType", EmitDefaultValue=true)]
         public string DeviceType { get; set; }
     
         /// <summary>
         /// Longitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.
         /// </summary>
         /// <value>Longitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.</value>
-        [DataMember(Name="longitude", EmitDefaultValue=false)]
+        [DataMember(Name="longitude", EmitDefaultValue=true)]
         public double? Longitude { get; set; }
     
         /// <summary>
         /// Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.
         /// </summary>
         /// <value>Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.</value>
-        [DataMember(Name="lattitude", EmitDefaultValue=false)]
+        [DataMember(Name="lattitude", EmitDefaultValue=true)]
         public double? Lattitude { get; set; }
     
         /// <summary>
         /// Optional. Only is used.
         /// </summary>
         /// <value>Optional. Only is used.</value>
-        [DataMember(Name="customerName", EmitDefaultValue=false)]
+        [DataMember(Name="customerName", EmitDefaultValue=true)]
         public string CustomerName { get; set; }
     
         /// <summary>
         /// Gets or Sets NotificationUrl
         /// </summary>
-        [DataMember(Name="notificationUrl", EmitDefaultValue=false)]
+        [DataMember(Name="notificationUrl", EmitDefaultValue=true)]
         public string NotificationUrl { get; set; }
     
         /// <summary>

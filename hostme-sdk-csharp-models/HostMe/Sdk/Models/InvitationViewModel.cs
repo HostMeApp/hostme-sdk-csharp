@@ -44,37 +44,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets Role
         /// </summary>
-        [DataMember(Name="role", EmitDefaultValue=false)]
+        [DataMember(Name="role", EmitDefaultValue=true)]
         public string Role { get; set; }
     
         /// <summary>
         /// Gets or Sets IsRedeemed
         /// </summary>
-        [DataMember(Name="isRedeemed", EmitDefaultValue=false)]
+        [DataMember(Name="isRedeemed", EmitDefaultValue=true)]
         public bool? IsRedeemed { get; set; }
     
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name="code", EmitDefaultValue=false)]
+        [DataMember(Name="code", EmitDefaultValue=true)]
         public string Code { get; set; }
     
         /// <summary>
         /// Gets or Sets FullName
         /// </summary>
-        [DataMember(Name="fullName", EmitDefaultValue=false)]
+        [DataMember(Name="fullName", EmitDefaultValue=true)]
         public string FullName { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneNumber
         /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
+        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
         public string PhoneNumber { get; set; }
     
         /// <summary>

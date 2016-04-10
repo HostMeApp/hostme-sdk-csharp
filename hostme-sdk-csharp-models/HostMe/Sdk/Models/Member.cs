@@ -50,55 +50,55 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets MembershipLevel
         /// </summary>
-        [DataMember(Name="membershipLevel", EmitDefaultValue=false)]
+        [DataMember(Name="membershipLevel", EmitDefaultValue=true)]
         public string MembershipLevel { get; set; }
     
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
-        [DataMember(Name="points", EmitDefaultValue=false)]
+        [DataMember(Name="points", EmitDefaultValue=true)]
         public long? Points { get; set; }
     
         /// <summary>
         /// Gets or Sets JoinDate
         /// </summary>
-        [DataMember(Name="joinDate", EmitDefaultValue=false)]
+        [DataMember(Name="joinDate", EmitDefaultValue=true)]
         public DateTimeOffset? JoinDate { get; set; }
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>
         /// Gets or Sets NumberOfVisits30Days
         /// </summary>
-        [DataMember(Name="numberOfVisits30Days", EmitDefaultValue=false)]
+        [DataMember(Name="numberOfVisits30Days", EmitDefaultValue=true)]
         public int? NumberOfVisits30Days { get; set; }
     
         /// <summary>
         /// Gets or Sets NumberOfVisitsTotal
         /// </summary>
-        [DataMember(Name="numberOfVisitsTotal", EmitDefaultValue=false)]
+        [DataMember(Name="numberOfVisitsTotal", EmitDefaultValue=true)]
         public int? NumberOfVisitsTotal { get; set; }
     
         /// <summary>
         /// Gets or Sets LastVisitDate
         /// </summary>
-        [DataMember(Name="lastVisitDate", EmitDefaultValue=false)]
+        [DataMember(Name="lastVisitDate", EmitDefaultValue=true)]
         public DateTimeOffset? LastVisitDate { get; set; }
     
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
-        [DataMember(Name="customer", EmitDefaultValue=false)]
+        [DataMember(Name="customer", EmitDefaultValue=true)]
         public UserProfile Customer { get; set; }
     
         /// <summary>

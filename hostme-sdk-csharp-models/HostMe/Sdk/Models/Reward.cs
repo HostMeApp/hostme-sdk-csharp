@@ -35,7 +35,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
         /// <summary>
@@ -66,37 +66,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Conditions
         /// </summary>
-        [DataMember(Name="conditions", EmitDefaultValue=false)]
+        [DataMember(Name="conditions", EmitDefaultValue=true)]
         public RewardConditions Conditions { get; set; }
     
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=true)]
         public string Description { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets PriceInPoints
         /// </summary>
-        [DataMember(Name="priceInPoints", EmitDefaultValue=false)]
+        [DataMember(Name="priceInPoints", EmitDefaultValue=true)]
         public double? PriceInPoints { get; set; }
     
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name="value", EmitDefaultValue=true)]
         public RewardValue Value { get; set; }
     
         /// <summary>

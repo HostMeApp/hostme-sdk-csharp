@@ -48,49 +48,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
+        [DataMember(Name="name", EmitDefaultValue=true)]
         public string Name { get; set; }
     
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
-        [DataMember(Name="address", EmitDefaultValue=false)]
+        [DataMember(Name="address", EmitDefaultValue=true)]
         public string Address { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets WebsiteUrl
         /// </summary>
-        [DataMember(Name="websiteUrl", EmitDefaultValue=false)]
+        [DataMember(Name="websiteUrl", EmitDefaultValue=true)]
         public string WebsiteUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
+        [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeOffSet
         /// </summary>
-        [DataMember(Name="timeOffSet", EmitDefaultValue=false)]
+        [DataMember(Name="timeOffSet", EmitDefaultValue=true)]
         public double? TimeOffSet { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        [DataMember(Name="timeZone", EmitDefaultValue=true)]
         public string TimeZone { get; set; }
     
         /// <summary>

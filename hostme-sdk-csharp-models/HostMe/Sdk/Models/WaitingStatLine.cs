@@ -40,25 +40,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Area
         /// </summary>
-        [DataMember(Name="area", EmitDefaultValue=false)]
+        [DataMember(Name="area", EmitDefaultValue=true)]
         public string Area { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgCallTime
         /// </summary>
-        [DataMember(Name="avgCallTime", EmitDefaultValue=false)]
+        [DataMember(Name="avgCallTime", EmitDefaultValue=true)]
         public double? AvgCallTime { get; set; }
     
         /// <summary>
         /// Gets or Sets AvgSeatTime
         /// </summary>
-        [DataMember(Name="avgSeatTime", EmitDefaultValue=false)]
+        [DataMember(Name="avgSeatTime", EmitDefaultValue=true)]
         public double? AvgSeatTime { get; set; }
     
         /// <summary>
         /// Gets or Sets TopSize
         /// </summary>
-        [DataMember(Name="topSize", EmitDefaultValue=false)]
+        [DataMember(Name="topSize", EmitDefaultValue=true)]
         public int? TopSize { get; set; }
     
         /// <summary>

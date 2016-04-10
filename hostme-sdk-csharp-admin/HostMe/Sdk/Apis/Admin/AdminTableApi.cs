@@ -138,7 +138,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>List&lt;TableInfo&gt;</returns>
-        List<TableInfo> GetAvailableTables (int? restaurantId, DateTimeOffset? date, int? partySize, string areas);
+        List<TableInfo> GetAvailableTables (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null);
   
         /// <summary>
         /// 
@@ -152,7 +152,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>ApiResponse of List&lt;TableInfo&gt;</returns>
-        ApiResponse<List<TableInfo>> GetAvailableTablesWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas);
+        ApiResponse<List<TableInfo>> GetAvailableTablesWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -208,7 +208,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>List&lt;TableMonitor&gt;</returns>
-        List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize, DateTimeOffset? time);
+        List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
   
         /// <summary>
         /// 
@@ -221,7 +221,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>ApiResponse of List&lt;TableMonitor&gt;</returns>
-        ApiResponse<List<TableMonitor>> GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time);
+        ApiResponse<List<TableMonitor>> GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -233,7 +233,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>List&lt;TableUser&gt;</returns>
-        List<TableUser> GetTableUsersList (int? restaurantId, int? partySize, DateTimeOffset? time);
+        List<TableUser> GetTableUsersList (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
   
         /// <summary>
         /// 
@@ -246,7 +246,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>ApiResponse of List&lt;TableUser&gt;</returns>
-        ApiResponse<List<TableUser>> GetTableUsersListWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time);
+        ApiResponse<List<TableUser>> GetTableUsersListWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -489,7 +489,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of List&lt;TableInfo&gt;</returns>
-        System.Threading.Tasks.Task<List<TableInfo>> GetAvailableTablesAsync (int? restaurantId, DateTimeOffset? date, int? partySize, string areas);
+        System.Threading.Tasks.Task<List<TableInfo>> GetAvailableTablesAsync (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null);
 
         /// <summary>
         /// 
@@ -503,7 +503,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableInfo&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TableInfo>>> GetAvailableTablesAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas);
+        System.Threading.Tasks.Task<ApiResponse<List<TableInfo>>> GetAvailableTablesAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null);
         /// <summary>
         /// 
         /// </summary>
@@ -559,7 +559,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableMonitor&gt;</returns>
-        System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize, DateTimeOffset? time);
+        System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
 
         /// <summary>
         /// 
@@ -572,7 +572,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableMonitor&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time);
+        System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -584,7 +584,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableUser&gt;</returns>
-        System.Threading.Tasks.Task<List<TableUser>> GetTableUsersListAsync (int? restaurantId, int? partySize, DateTimeOffset? time);
+        System.Threading.Tasks.Task<List<TableUser>> GetTableUsersListAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
 
         /// <summary>
         /// 
@@ -597,7 +597,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableUser&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TableUser>>> GetTableUsersListAsyncWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time);
+        System.Threading.Tasks.Task<ApiResponse<List<TableUser>>> GetTableUsersListAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1670,7 +1670,7 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="partySize"></param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>List&lt;TableInfo&gt;</returns>
-        public List<TableInfo> GetAvailableTables (int? restaurantId, DateTimeOffset? date, int? partySize, string areas)
+        public List<TableInfo> GetAvailableTables (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null)
         {
              ApiResponse<List<TableInfo>> localVarResponse = GetAvailableTablesWithHttpInfo(restaurantId, date, partySize, areas);
              return localVarResponse.Data;
@@ -1685,7 +1685,7 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="partySize"></param> 
         /// <param name="areas"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;TableInfo&gt;</returns>
-        public ApiResponse< List<TableInfo> > GetAvailableTablesWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas)
+        public ApiResponse< List<TableInfo> > GetAvailableTablesWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -1768,7 +1768,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of List&lt;TableInfo&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TableInfo>> GetAvailableTablesAsync (int? restaurantId, DateTimeOffset? date, int? partySize, string areas)
+        public async System.Threading.Tasks.Task<List<TableInfo>> GetAvailableTablesAsync (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null)
         {
              ApiResponse<List<TableInfo>> localVarResponse = await GetAvailableTablesAsyncWithHttpInfo(restaurantId, date, partySize, areas);
              return localVarResponse.Data;
@@ -1784,7 +1784,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <param name="partySize"></param>
         /// <param name="areas"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableInfo&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TableInfo>>> GetAvailableTablesAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TableInfo>>> GetAvailableTablesAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date, int? partySize, string areas = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetAvailableTables");
@@ -2191,7 +2191,7 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="partySize"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>List&lt;TableMonitor&gt;</returns>
-        public List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
              ApiResponse<List<TableMonitor>> localVarResponse = GetTableMonitorsWithHttpInfo(restaurantId, partySize, time);
              return localVarResponse.Data;
@@ -2205,7 +2205,7 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="partySize"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;TableMonitor&gt;</returns>
-        public ApiResponse< List<TableMonitor> > GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public ApiResponse< List<TableMonitor> > GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2278,7 +2278,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableMonitor&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public async System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
              ApiResponse<List<TableMonitor>> localVarResponse = await GetTableMonitorsAsyncWithHttpInfo(restaurantId, partySize, time);
              return localVarResponse.Data;
@@ -2293,7 +2293,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableMonitor&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetTableMonitors");
@@ -2363,7 +2363,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>List&lt;TableUser&gt;</returns>
-        public List<TableUser> GetTableUsersList (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public List<TableUser> GetTableUsersList (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
              ApiResponse<List<TableUser>> localVarResponse = GetTableUsersListWithHttpInfo(restaurantId, partySize, time);
              return localVarResponse.Data;
@@ -2377,7 +2377,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;TableUser&gt;</returns>
-        public ApiResponse< List<TableUser> > GetTableUsersListWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public ApiResponse< List<TableUser> > GetTableUsersListWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2450,7 +2450,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableUser&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TableUser>> GetTableUsersListAsync (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public async System.Threading.Tasks.Task<List<TableUser>> GetTableUsersListAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
              ApiResponse<List<TableUser>> localVarResponse = await GetTableUsersListAsyncWithHttpInfo(restaurantId, partySize, time);
              return localVarResponse.Data;
@@ -2465,7 +2465,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// <param name="partySize"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableUser&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TableUser>>> GetTableUsersListAsyncWithHttpInfo (int? restaurantId, int? partySize, DateTimeOffset? time)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TableUser>>> GetTableUsersListAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetTableUsersList");

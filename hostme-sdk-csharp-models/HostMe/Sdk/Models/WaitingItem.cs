@@ -90,175 +90,175 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>
         /// Gets or Sets Created
         /// </summary>
-        [DataMember(Name="created", EmitDefaultValue=false)]
+        [DataMember(Name="created", EmitDefaultValue=true)]
         public DateTimeOffset? Created { get; set; }
     
         /// <summary>
         /// Gets or Sets Closed
         /// </summary>
-        [DataMember(Name="closed", EmitDefaultValue=false)]
+        [DataMember(Name="closed", EmitDefaultValue=true)]
         public DateTimeOffset? Closed { get; set; }
     
         /// <summary>
         /// Gets or Sets PhoneId
         /// </summary>
-        [DataMember(Name="phoneId", EmitDefaultValue=false)]
+        [DataMember(Name="phoneId", EmitDefaultValue=true)]
         public string PhoneId { get; set; }
     
         /// <summary>
         /// Gets or Sets ConfirmationCode
         /// </summary>
-        [DataMember(Name="confirmationCode", EmitDefaultValue=false)]
+        [DataMember(Name="confirmationCode", EmitDefaultValue=true)]
         public int? ConfirmationCode { get; set; }
     
         /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
-        [DataMember(Name="customerName", EmitDefaultValue=false)]
+        [DataMember(Name="customerName", EmitDefaultValue=true)]
         public string CustomerName { get; set; }
     
         /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
-        [DataMember(Name="groupSize", EmitDefaultValue=false)]
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
         public int? GroupSize { get; set; }
     
         /// <summary>
         /// Gets or Sets Phone
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
+        [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
     
         /// <summary>
         /// Gets or Sets RegistrationMethod
         /// </summary>
-        [DataMember(Name="registrationMethod", EmitDefaultValue=false)]
+        [DataMember(Name="registrationMethod", EmitDefaultValue=true)]
         public string RegistrationMethod { get; set; }
     
         /// <summary>
         /// Gets or Sets DeviceType
         /// </summary>
-        [DataMember(Name="deviceType", EmitDefaultValue=false)]
+        [DataMember(Name="deviceType", EmitDefaultValue=true)]
         public string DeviceType { get; set; }
     
         /// <summary>
         /// Gets or Sets NotificationUrl
         /// </summary>
-        [DataMember(Name="notificationUrl", EmitDefaultValue=false)]
+        [DataMember(Name="notificationUrl", EmitDefaultValue=true)]
         public string NotificationUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets Areas
         /// </summary>
-        [DataMember(Name="areas", EmitDefaultValue=false)]
+        [DataMember(Name="areas", EmitDefaultValue=true)]
         public string Areas { get; set; }
     
         /// <summary>
         /// Gets or Sets ExpectedTime
         /// </summary>
-        [DataMember(Name="expectedTime", EmitDefaultValue=false)]
+        [DataMember(Name="expectedTime", EmitDefaultValue=true)]
         public DateTimeOffset? ExpectedTime { get; set; }
     
         /// <summary>
         /// Gets or Sets Position
         /// </summary>
-        [DataMember(Name="position", EmitDefaultValue=false)]
+        [DataMember(Name="position", EmitDefaultValue=true)]
         public int? Position { get; set; }
     
         /// <summary>
         /// Gets or Sets Note
         /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=false)]
+        [DataMember(Name="note", EmitDefaultValue=true)]
         public string Note { get; set; }
     
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets StatusTime
         /// </summary>
-        [DataMember(Name="statusTime", EmitDefaultValue=false)]
+        [DataMember(Name="statusTime", EmitDefaultValue=true)]
         public DateTimeOffset? StatusTime { get; set; }
     
         /// <summary>
         /// Gets or Sets RestaurantId
         /// </summary>
-        [DataMember(Name="restaurantId", EmitDefaultValue=false)]
+        [DataMember(Name="restaurantId", EmitDefaultValue=true)]
         public int? RestaurantId { get; set; }
     
         /// <summary>
         /// Gets or Sets HighChair
         /// </summary>
-        [DataMember(Name="highChair", EmitDefaultValue=false)]
+        [DataMember(Name="highChair", EmitDefaultValue=true)]
         public bool? HighChair { get; set; }
     
         /// <summary>
         /// Gets or Sets Stroller
         /// </summary>
-        [DataMember(Name="stroller", EmitDefaultValue=false)]
+        [DataMember(Name="stroller", EmitDefaultValue=true)]
         public bool? Stroller { get; set; }
     
         /// <summary>
         /// Gets or Sets OnHoldMode
         /// </summary>
-        [DataMember(Name="onHoldMode", EmitDefaultValue=false)]
+        [DataMember(Name="onHoldMode", EmitDefaultValue=true)]
         public string OnHoldMode { get; set; }
     
         /// <summary>
         /// Gets or Sets OnHoldTime
         /// </summary>
-        [DataMember(Name="onHoldTime", EmitDefaultValue=false)]
+        [DataMember(Name="onHoldTime", EmitDefaultValue=true)]
         public DateTimeOffset? OnHoldTime { get; set; }
     
         /// <summary>
         /// Gets or Sets OnHoldEndTime
         /// </summary>
-        [DataMember(Name="onHoldEndTime", EmitDefaultValue=false)]
+        [DataMember(Name="onHoldEndTime", EmitDefaultValue=true)]
         public DateTimeOffset? OnHoldEndTime { get; set; }
     
         /// <summary>
         /// Gets or Sets Messages
         /// </summary>
-        [DataMember(Name="messages", EmitDefaultValue=false)]
+        [DataMember(Name="messages", EmitDefaultValue=true)]
         public List<Message> Messages { get; set; }
     
         /// <summary>
         /// Gets or Sets Membership
         /// </summary>
-        [DataMember(Name="membership", EmitDefaultValue=false)]
+        [DataMember(Name="membership", EmitDefaultValue=true)]
         public MembershipInfo Membership { get; set; }
     
         /// <summary>
         /// Gets or Sets Reservation
         /// </summary>
-        [DataMember(Name="reservation", EmitDefaultValue=false)]
+        [DataMember(Name="reservation", EmitDefaultValue=true)]
         public ReservationInfo Reservation { get; set; }
     
         /// <summary>
         /// Gets or Sets EstimatedTurnOverTime
         /// </summary>
-        [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=false)]
+        [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=true)]
         public double? EstimatedTurnOverTime { get; set; }
     
         /// <summary>
         /// Gets or Sets UnreadMessageCount
         /// </summary>
-        [DataMember(Name="unreadMessageCount", EmitDefaultValue=false)]
+        [DataMember(Name="unreadMessageCount", EmitDefaultValue=true)]
         public int? UnreadMessageCount { get; set; }
     
         /// <summary>

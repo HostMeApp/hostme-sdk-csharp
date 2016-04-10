@@ -38,7 +38,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets UnitType
         /// </summary>
-        [DataMember(Name="unitType", EmitDefaultValue=false)]
+        [DataMember(Name="unitType", EmitDefaultValue=true)]
         public UnitTypeEnum? UnitType { get; set; }
     
         /// <summary>
@@ -67,31 +67,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Availabilities
         /// </summary>
-        [DataMember(Name="availabilities", EmitDefaultValue=false)]
+        [DataMember(Name="availabilities", EmitDefaultValue=true)]
         public List<Availability> Availabilities { get; set; }
     
         /// <summary>
         /// Gets or Sets RequestedTime
         /// </summary>
-        [DataMember(Name="requestedTime", EmitDefaultValue=false)]
+        [DataMember(Name="requestedTime", EmitDefaultValue=true)]
         public DateTimeOffset? RequestedTime { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalCovers
         /// </summary>
-        [DataMember(Name="totalCovers", EmitDefaultValue=false)]
+        [DataMember(Name="totalCovers", EmitDefaultValue=true)]
         public int? TotalCovers { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalReservationCovers
         /// </summary>
-        [DataMember(Name="totalReservationCovers", EmitDefaultValue=false)]
+        [DataMember(Name="totalReservationCovers", EmitDefaultValue=true)]
         public int? TotalReservationCovers { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalWaitCovers
         /// </summary>
-        [DataMember(Name="totalWaitCovers", EmitDefaultValue=false)]
+        [DataMember(Name="totalWaitCovers", EmitDefaultValue=true)]
         public int? TotalWaitCovers { get; set; }
     
         /// <summary>

@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets City
         /// </summary>
-        [DataMember(Name="city", EmitDefaultValue=false)]
+        [DataMember(Name="city", EmitDefaultValue=true)]
         public string City { get; set; }
     
         /// <summary>
         /// Gets or Sets State
         /// </summary>
-        [DataMember(Name="state", EmitDefaultValue=false)]
+        [DataMember(Name="state", EmitDefaultValue=true)]
         public string State { get; set; }
     
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
-        [DataMember(Name="country", EmitDefaultValue=false)]
+        [DataMember(Name="country", EmitDefaultValue=true)]
         public string Country { get; set; }
     
         /// <summary>

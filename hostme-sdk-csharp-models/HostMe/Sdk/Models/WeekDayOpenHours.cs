@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name="time", EmitDefaultValue=false)]
+        [DataMember(Name="time", EmitDefaultValue=true)]
         public List<HourlyInterval> Time { get; set; }
     
         /// <summary>
         /// Gets or Sets WeekDay
         /// </summary>
-        [DataMember(Name="weekDay", EmitDefaultValue=false)]
+        [DataMember(Name="weekDay", EmitDefaultValue=true)]
         public int? WeekDay { get; set; }
     
         /// <summary>

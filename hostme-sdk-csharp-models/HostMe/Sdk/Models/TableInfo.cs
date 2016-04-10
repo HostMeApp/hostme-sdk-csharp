@@ -40,25 +40,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets IsComb
         /// </summary>
-        [DataMember(Name="isComb", EmitDefaultValue=false)]
+        [DataMember(Name="isComb", EmitDefaultValue=true)]
         public bool? IsComb { get; set; }
     
         /// <summary>
         /// Gets or Sets TableTopSize
         /// </summary>
-        [DataMember(Name="tableTopSize", EmitDefaultValue=false)]
+        [DataMember(Name="tableTopSize", EmitDefaultValue=true)]
         public int? TableTopSize { get; set; }
     
         /// <summary>
         /// Gets or Sets Area
         /// </summary>
-        [DataMember(Name="area", EmitDefaultValue=false)]
+        [DataMember(Name="area", EmitDefaultValue=true)]
         public string Area { get; set; }
     
         /// <summary>

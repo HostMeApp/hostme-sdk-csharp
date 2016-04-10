@@ -42,31 +42,31 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name="time", EmitDefaultValue=false)]
+        [DataMember(Name="time", EmitDefaultValue=true)]
         public TimeDimension Time { get; set; }
     
         /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
-        [DataMember(Name="groupSize", EmitDefaultValue=false)]
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
         public int? GroupSize { get; set; }
     
         /// <summary>
         /// Gets or Sets TopSize
         /// </summary>
-        [DataMember(Name="topSize", EmitDefaultValue=false)]
+        [DataMember(Name="topSize", EmitDefaultValue=true)]
         public int? TopSize { get; set; }
     
         /// <summary>
         /// Gets or Sets LinePosition
         /// </summary>
-        [DataMember(Name="linePosition", EmitDefaultValue=false)]
+        [DataMember(Name="linePosition", EmitDefaultValue=true)]
         public int? LinePosition { get; set; }
     
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>

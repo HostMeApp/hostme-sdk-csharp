@@ -48,49 +48,49 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Hour
         /// </summary>
-        [DataMember(Name="hour", EmitDefaultValue=false)]
+        [DataMember(Name="hour", EmitDefaultValue=true)]
         public int? Hour { get; set; }
     
         /// <summary>
         /// Gets or Sets WeekDay
         /// </summary>
-        [DataMember(Name="weekDay", EmitDefaultValue=false)]
+        [DataMember(Name="weekDay", EmitDefaultValue=true)]
         public string WeekDay { get; set; }
     
         /// <summary>
         /// Gets or Sets WeekDayNumber
         /// </summary>
-        [DataMember(Name="weekDayNumber", EmitDefaultValue=false)]
+        [DataMember(Name="weekDayNumber", EmitDefaultValue=true)]
         public int? WeekDayNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets Month
         /// </summary>
-        [DataMember(Name="month", EmitDefaultValue=false)]
+        [DataMember(Name="month", EmitDefaultValue=true)]
         public string Month { get; set; }
     
         /// <summary>
         /// Gets or Sets MonthNumber
         /// </summary>
-        [DataMember(Name="monthNumber", EmitDefaultValue=false)]
+        [DataMember(Name="monthNumber", EmitDefaultValue=true)]
         public int? MonthNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets Year
         /// </summary>
-        [DataMember(Name="year", EmitDefaultValue=false)]
+        [DataMember(Name="year", EmitDefaultValue=true)]
         public int? Year { get; set; }
     
         /// <summary>
         /// Gets or Sets WeekNumber
         /// </summary>
-        [DataMember(Name="weekNumber", EmitDefaultValue=false)]
+        [DataMember(Name="weekNumber", EmitDefaultValue=true)]
         public int? WeekNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets TypeOfMeal
         /// </summary>
-        [DataMember(Name="typeOfMeal", EmitDefaultValue=false)]
+        [DataMember(Name="typeOfMeal", EmitDefaultValue=true)]
         public string TypeOfMeal { get; set; }
     
         /// <summary>

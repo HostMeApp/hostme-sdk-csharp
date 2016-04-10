@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
-        [DataMember(Name="results", EmitDefaultValue=false)]
+        [DataMember(Name="results", EmitDefaultValue=true)]
         public List<Member> Results { get; set; }
     
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
-        [DataMember(Name="count", EmitDefaultValue=false)]
+        [DataMember(Name="count", EmitDefaultValue=true)]
         public int? Count { get; set; }
     
         /// <summary>

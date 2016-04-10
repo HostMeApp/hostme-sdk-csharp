@@ -46,43 +46,43 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=false)]
+        [DataMember(Name="status", EmitDefaultValue=true)]
         public string Status { get; set; }
     
         /// <summary>
         /// Gets or Sets Created
         /// </summary>
-        [DataMember(Name="created", EmitDefaultValue=false)]
+        [DataMember(Name="created", EmitDefaultValue=true)]
         public DateTimeOffset? Created { get; set; }
     
         /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
-        [DataMember(Name="groupSize", EmitDefaultValue=false)]
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
         public int? GroupSize { get; set; }
     
         /// <summary>
         /// Gets or Sets StartPosition
         /// </summary>
-        [DataMember(Name="startPosition", EmitDefaultValue=false)]
+        [DataMember(Name="startPosition", EmitDefaultValue=true)]
         public int? StartPosition { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeToCall
         /// </summary>
-        [DataMember(Name="timeToCall", EmitDefaultValue=false)]
+        [DataMember(Name="timeToCall", EmitDefaultValue=true)]
         public int? TimeToCall { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeToSeat
         /// </summary>
-        [DataMember(Name="timeToSeat", EmitDefaultValue=false)]
+        [DataMember(Name="timeToSeat", EmitDefaultValue=true)]
         public int? TimeToSeat { get; set; }
     
         /// <summary>
         /// Gets or Sets TimeToCancel
         /// </summary>
-        [DataMember(Name="timeToCancel", EmitDefaultValue=false)]
+        [DataMember(Name="timeToCancel", EmitDefaultValue=true)]
         public int? TimeToCancel { get; set; }
     
         /// <summary>

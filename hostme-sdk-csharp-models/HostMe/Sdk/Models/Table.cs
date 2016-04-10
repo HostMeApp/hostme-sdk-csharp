@@ -44,37 +44,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=false)]
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
         public string TableNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets TableTopSize
         /// </summary>
-        [DataMember(Name="tableTopSize", EmitDefaultValue=false)]
+        [DataMember(Name="tableTopSize", EmitDefaultValue=true)]
         public int? TableTopSize { get; set; }
     
         /// <summary>
         /// Gets or Sets Area
         /// </summary>
-        [DataMember(Name="area", EmitDefaultValue=false)]
+        [DataMember(Name="area", EmitDefaultValue=true)]
         public string Area { get; set; }
     
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
-        [DataMember(Name="tags", EmitDefaultValue=false)]
+        [DataMember(Name="tags", EmitDefaultValue=true)]
         public List<string> Tags { get; set; }
     
         /// <summary>
         /// Gets or Sets Reservability
         /// </summary>
-        [DataMember(Name="reservability", EmitDefaultValue=false)]
+        [DataMember(Name="reservability", EmitDefaultValue=true)]
         public TableAvailability Reservability { get; set; }
     
         /// <summary>
         /// Gets or Sets Waitability
         /// </summary>
-        [DataMember(Name="waitability", EmitDefaultValue=false)]
+        [DataMember(Name="waitability", EmitDefaultValue=true)]
         public TableAvailability Waitability { get; set; }
     
         /// <summary>

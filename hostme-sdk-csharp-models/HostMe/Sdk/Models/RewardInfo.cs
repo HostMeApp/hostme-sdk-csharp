@@ -44,37 +44,37 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
+        [DataMember(Name="description", EmitDefaultValue=true)]
         public string Description { get; set; }
     
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets ImageUrl
         /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=false)]
+        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
         public string ImageUrl { get; set; }
     
         /// <summary>
         /// Gets or Sets PriceInPoints
         /// </summary>
-        [DataMember(Name="priceInPoints", EmitDefaultValue=false)]
+        [DataMember(Name="priceInPoints", EmitDefaultValue=true)]
         public double? PriceInPoints { get; set; }
     
         /// <summary>
         /// Gets or Sets RedeemRequest
         /// </summary>
-        [DataMember(Name="redeemRequest", EmitDefaultValue=false)]
+        [DataMember(Name="redeemRequest", EmitDefaultValue=true)]
         public RedeemRequestInfo RedeemRequest { get; set; }
     
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
-        [DataMember(Name="value", EmitDefaultValue=false)]
+        [DataMember(Name="value", EmitDefaultValue=true)]
         public RewardValue Value { get; set; }
     
         /// <summary>

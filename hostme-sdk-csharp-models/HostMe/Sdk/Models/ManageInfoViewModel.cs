@@ -40,25 +40,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets LocalLoginProvider
         /// </summary>
-        [DataMember(Name="localLoginProvider", EmitDefaultValue=false)]
+        [DataMember(Name="localLoginProvider", EmitDefaultValue=true)]
         public string LocalLoginProvider { get; set; }
     
         /// <summary>
         /// Gets or Sets UserName
         /// </summary>
-        [DataMember(Name="userName", EmitDefaultValue=false)]
+        [DataMember(Name="userName", EmitDefaultValue=true)]
         public string UserName { get; set; }
     
         /// <summary>
         /// Gets or Sets Logins
         /// </summary>
-        [DataMember(Name="logins", EmitDefaultValue=false)]
+        [DataMember(Name="logins", EmitDefaultValue=true)]
         public List<UserLoginInfoViewModel> Logins { get; set; }
     
         /// <summary>
         /// Gets or Sets ExternalLoginProviders
         /// </summary>
-        [DataMember(Name="externalLoginProviders", EmitDefaultValue=false)]
+        [DataMember(Name="externalLoginProviders", EmitDefaultValue=true)]
         public List<ExternalLoginViewModel> ExternalLoginProviders { get; set; }
     
         /// <summary>

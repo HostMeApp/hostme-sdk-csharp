@@ -38,19 +38,19 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Areas
         /// </summary>
-        [DataMember(Name="areas", EmitDefaultValue=false)]
+        [DataMember(Name="areas", EmitDefaultValue=true)]
         public List<string> Areas { get; set; }
     
         /// <summary>
         /// Gets or Sets OpeningHours
         /// </summary>
-        [DataMember(Name="openingHours", EmitDefaultValue=false)]
+        [DataMember(Name="openingHours", EmitDefaultValue=true)]
         public List<WeekDayOpenHours> OpeningHours { get; set; }
     
         /// <summary>
         /// Gets or Sets TableSizes
         /// </summary>
-        [DataMember(Name="tableSizes", EmitDefaultValue=false)]
+        [DataMember(Name="tableSizes", EmitDefaultValue=true)]
         public List<int?> TableSizes { get; set; }
     
         /// <summary>

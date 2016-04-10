@@ -41,7 +41,7 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AvailabilityLevel
         /// </summary>
-        [DataMember(Name="availabilityLevel", EmitDefaultValue=false)]
+        [DataMember(Name="availabilityLevel", EmitDefaultValue=true)]
         public AvailabilityLevelEnum? AvailabilityLevel { get; set; }
     
         /// <summary>
@@ -54,7 +54,7 @@ namespace HostMe.Sdk.Models
         /// <param name="RequestedTime">RequestedTime.</param>
         /// <param name="Time">Time.</param>
 
-        public OnlineAvailability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, bool? Open = null, bool? RequestedTime = null, string Time = null)
+        public OnlineAvailability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, bool? Open = null, bool? RequestedTime = null, TimeSpan Time = null)
         {
             this.AcceptReservations = AcceptReservations;
             this.AvailabilityLevel = AvailabilityLevel;
@@ -68,26 +68,26 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets AcceptReservations
         /// </summary>
-        [DataMember(Name="acceptReservations", EmitDefaultValue=false)]
+        [DataMember(Name="acceptReservations", EmitDefaultValue=true)]
         public bool? AcceptReservations { get; set; }
     
         /// <summary>
         /// Gets or Sets Open
         /// </summary>
-        [DataMember(Name="open", EmitDefaultValue=false)]
+        [DataMember(Name="open", EmitDefaultValue=true)]
         public bool? Open { get; set; }
     
         /// <summary>
         /// Gets or Sets RequestedTime
         /// </summary>
-        [DataMember(Name="requestedTime", EmitDefaultValue=false)]
+        [DataMember(Name="requestedTime", EmitDefaultValue=true)]
         public bool? RequestedTime { get; set; }
     
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name="time", EmitDefaultValue=false)]
-        public string Time { get; set; }
+        [DataMember(Name="time", EmitDefaultValue=true)]
+        public TimeSpan Time { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

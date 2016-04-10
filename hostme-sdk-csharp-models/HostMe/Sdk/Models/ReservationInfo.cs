@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationTime
         /// </summary>
-        [DataMember(Name="reservationTime", EmitDefaultValue=false)]
+        [DataMember(Name="reservationTime", EmitDefaultValue=true)]
         public DateTimeOffset? ReservationTime { get; set; }
     
         /// <summary>

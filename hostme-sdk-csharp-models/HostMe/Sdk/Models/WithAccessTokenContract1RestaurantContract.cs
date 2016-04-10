@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
-        [DataMember(Name="data", EmitDefaultValue=false)]
+        [DataMember(Name="data", EmitDefaultValue=true)]
         public Restaurant Data { get; set; }
     
         /// <summary>
         /// Gets or Sets AccessToken
         /// </summary>
-        [DataMember(Name="accessToken", EmitDefaultValue=false)]
+        [DataMember(Name="accessToken", EmitDefaultValue=true)]
         public string AccessToken { get; set; }
     
         /// <summary>

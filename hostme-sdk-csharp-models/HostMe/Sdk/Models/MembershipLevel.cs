@@ -36,13 +36,13 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
-        [DataMember(Name="level", EmitDefaultValue=false)]
+        [DataMember(Name="level", EmitDefaultValue=true)]
         public string Level { get; set; }
     
         /// <summary>
         /// Gets or Sets Points
         /// </summary>
-        [DataMember(Name="points", EmitDefaultValue=false)]
+        [DataMember(Name="points", EmitDefaultValue=true)]
         public int? Points { get; set; }
     
         /// <summary>

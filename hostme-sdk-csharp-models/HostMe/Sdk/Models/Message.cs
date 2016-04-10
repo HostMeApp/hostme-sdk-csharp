@@ -52,61 +52,61 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
+        [DataMember(Name="id", EmitDefaultValue=true)]
         public int? Id { get; set; }
     
         /// <summary>
         /// Gets or Sets WaitItemId
         /// </summary>
-        [DataMember(Name="waitItemId", EmitDefaultValue=false)]
+        [DataMember(Name="waitItemId", EmitDefaultValue=true)]
         public int? WaitItemId { get; set; }
     
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
-        [DataMember(Name="body", EmitDefaultValue=false)]
+        [DataMember(Name="body", EmitDefaultValue=true)]
         public string Body { get; set; }
     
         /// <summary>
         /// Gets or Sets Time
         /// </summary>
-        [DataMember(Name="time", EmitDefaultValue=false)]
+        [DataMember(Name="time", EmitDefaultValue=true)]
         public DateTimeOffset? Time { get; set; }
     
         /// <summary>
         /// Gets or Sets Origin
         /// </summary>
-        [DataMember(Name="origin", EmitDefaultValue=false)]
+        [DataMember(Name="origin", EmitDefaultValue=true)]
         public string Origin { get; set; }
     
         /// <summary>
         /// Gets or Sets IsAutoMessage
         /// </summary>
-        [DataMember(Name="isAutoMessage", EmitDefaultValue=false)]
+        [DataMember(Name="isAutoMessage", EmitDefaultValue=true)]
         public bool? IsAutoMessage { get; set; }
     
         /// <summary>
         /// Gets or Sets DeliveryStatus
         /// </summary>
-        [DataMember(Name="deliveryStatus", EmitDefaultValue=false)]
+        [DataMember(Name="deliveryStatus", EmitDefaultValue=true)]
         public string DeliveryStatus { get; set; }
     
         /// <summary>
         /// Gets or Sets DeliveryTime
         /// </summary>
-        [DataMember(Name="deliveryTime", EmitDefaultValue=false)]
+        [DataMember(Name="deliveryTime", EmitDefaultValue=true)]
         public DateTimeOffset? DeliveryTime { get; set; }
     
         /// <summary>
         /// Gets or Sets DeliveryFailureReason
         /// </summary>
-        [DataMember(Name="deliveryFailureReason", EmitDefaultValue=false)]
+        [DataMember(Name="deliveryFailureReason", EmitDefaultValue=true)]
         public string DeliveryFailureReason { get; set; }
     
         /// <summary>
         /// Gets or Sets IsRead
         /// </summary>
-        [DataMember(Name="isRead", EmitDefaultValue=false)]
+        [DataMember(Name="isRead", EmitDefaultValue=true)]
         public bool? IsRead { get; set; }
     
         /// <summary>

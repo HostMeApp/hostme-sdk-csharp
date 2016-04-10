@@ -40,25 +40,25 @@ namespace HostMe.Sdk.Models
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
-        [DataMember(Name="userId", EmitDefaultValue=false)]
+        [DataMember(Name="userId", EmitDefaultValue=true)]
         public string UserId { get; set; }
     
         /// <summary>
         /// Gets or Sets UserName
         /// </summary>
-        [DataMember(Name="userName", EmitDefaultValue=false)]
+        [DataMember(Name="userName", EmitDefaultValue=true)]
         public string UserName { get; set; }
     
         /// <summary>
         /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=false)]
+        [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets Role
         /// </summary>
-        [DataMember(Name="role", EmitDefaultValue=false)]
+        [DataMember(Name="role", EmitDefaultValue=true)]
         public string Role { get; set; }
     
         /// <summary>
