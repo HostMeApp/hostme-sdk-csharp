@@ -13,7 +13,7 @@
     <description>A library generated from a Swagger doc</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>HostMe LLC 2016</copyright>
-    <tags>hostme widget restaurant reservation loyalty waitlist</tags>
+    <tags>hostme widget restaurant reservation loyalty wait list</tags>
     <dependencies>
       <dependency id="RestSharp" version="105.1.0" />
       <dependency id="Newtonsoft.Json" version="8.0.2" />
