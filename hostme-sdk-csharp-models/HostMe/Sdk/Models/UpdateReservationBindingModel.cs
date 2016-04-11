@@ -23,7 +23,6 @@ namespace HostMe.Sdk.Models
         /// Initializes a new instance of the <see cref="UpdateReservationBindingModel" />class.
         /// </summary>
         /// <param name="ReservationId">ReservationId (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
         /// <param name="ReservationTime">ReservationTime (required).</param>
         /// <param name="GroupSize">GroupSize (required).</param>
         /// <param name="Areas">Areas.</param>
@@ -31,7 +30,7 @@ namespace HostMe.Sdk.Models
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
 
-        public UpdateReservationBindingModel(int? ReservationId = null, string PhoneNumber = null, DateTimeOffset? ReservationTime = null, int? GroupSize = null, string Areas = null, string Note = null, bool? HighChair = null, bool? Stroller = null)
+        public UpdateReservationBindingModel(int? ReservationId = null, DateTimeOffset? ReservationTime = null, int? GroupSize = null, string Areas = null, string Note = null, bool? HighChair = null, bool? Stroller = null)
         {
             // to ensure "ReservationId" is required (not null)
             if (ReservationId == null)
@@ -60,7 +59,6 @@ namespace HostMe.Sdk.Models
             {
                 this.GroupSize = GroupSize;
             }
-            this.PhoneNumber = PhoneNumber;
             this.Areas = Areas;
             this.Note = Note;
             this.HighChair = HighChair;
@@ -74,12 +72,6 @@ namespace HostMe.Sdk.Models
         /// </summary>
         [DataMember(Name="reservationId", EmitDefaultValue=true)]
         public int? ReservationId { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets PhoneNumber
-        /// </summary>
-        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
-        public string PhoneNumber { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationTime
@@ -126,7 +118,6 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class UpdateReservationBindingModel {\n");
             sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
-sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
 sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
 sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
 sb.Append("  Areas: ").Append(Areas).Append("\n");
@@ -175,11 +166,6 @@ sb.Append("  Stroller: ").Append(Stroller).Append("\n");
                     this.ReservationId.Equals(other.ReservationId)
                 ) && 
                 (
-                    this.PhoneNumber == other.PhoneNumber ||
-                    this.PhoneNumber != null &&
-                    this.PhoneNumber.Equals(other.PhoneNumber)
-                ) && 
-                (
                     this.ReservationTime == other.ReservationTime ||
                     this.ReservationTime != null &&
                     this.ReservationTime.Equals(other.ReservationTime)
@@ -224,8 +210,6 @@ sb.Append("  Stroller: ").Append(Stroller).Append("\n");
                 // Suitable nullity checks etc, of course :)
                 if (this.ReservationId != null)
                     hash = hash * 59 + this.ReservationId.GetHashCode();
-                if (this.PhoneNumber != null)
-                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.GroupSize != null)

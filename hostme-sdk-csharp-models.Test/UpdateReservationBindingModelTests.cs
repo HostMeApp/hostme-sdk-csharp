@@ -59,14 +59,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'ReservationId' 
         }
         /// <summary>
-        /// Test the property 'PhoneNumber' 
-        /// </summary>
-        [Test]
-        public void PhoneNumberTest()
-        {
-            // TODO: unit test for the property 'PhoneNumber' 
-        }
-        /// <summary>
         /// Test the property 'ReservationTime' 
         /// </summary>
         [Test]

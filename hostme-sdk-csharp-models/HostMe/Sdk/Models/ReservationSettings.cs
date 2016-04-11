@@ -68,7 +68,7 @@ namespace HostMe.Sdk.Models
         /// <param name="TableTurnOverByGroup">TableTurnOverByGroup.</param>
         /// <param name="TotalCovers">TotalCovers.</param>
 
-        public ReservationSettings(AvailabilityMethodEnum? AvailabilityMethod = null, string ConfirmationMessageRequestTemplate = null, int? CoversAvailableForWait = null, int? CoversAvaliableForReservation = null, int? DefaultMaxCoversPerSlot = null, bool? EnableAutoScheduling = null, bool? IsEnabled = null, List<SlotSetting> MaxCoversPerSlotExceptions = null, int? MaxMinutesLate = null, int? MaxPartySize = null, int? MiniutesToConfirm = null, int? MinPartySize = null, int? MinutesToNotifyManager = null, bool? RequireReservationConfirmation = null, string ReservationEmail = null, List<WeekDayOpenHours> ReservationHours = null, int? ReservationHoursStep = null, string ReservationInboxEmail = null, List<StatusMessage> StatusMessages = null, double? TableTurnOver = null, List<double?> TableTurnOverByGroup = null, int? TotalCovers = null)
+        public ReservationSettings(AvailabilityMethodEnum? AvailabilityMethod = null, string ConfirmationMessageRequestTemplate = null, int? CoversAvailableForWait = null, int? CoversAvaliableForReservation = null, int? DefaultMaxCoversPerSlot = null, bool? EnableAutoScheduling = null, bool? IsEnabled = null, List<SlotSetting> MaxCoversPerSlotExceptions = null, int? MaxMinutesLate = null, int? MaxPartySize = null, int? MiniutesToConfirm = null, int? MinPartySize = null, int? MinutesToNotifyManager = null, bool? RequireReservationConfirmation = null, string ReservationEmail = null, List<WeekDayOpenHours> ReservationHours = null, int? ReservationHoursStep = null, string ReservationInboxEmail = null, List<StatusMessage> StatusMessages = null, double? TableTurnOver = null, List<List<double?>> TableTurnOverByGroup = null, int? TotalCovers = null)
         {
             this.AvailabilityMethod = AvailabilityMethod;
             this.ConfirmationMessageRequestTemplate = ConfirmationMessageRequestTemplate;
@@ -214,7 +214,7 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets TableTurnOverByGroup
         /// </summary>
         [DataMember(Name="tableTurnOverByGroup", EmitDefaultValue=true)]
-        public List<double?> TableTurnOverByGroup { get; set; }
+        public List<List<double?>> TableTurnOverByGroup { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalCovers
