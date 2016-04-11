@@ -18,73 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingItem :  IEquatable<WaitingItem>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingItem" /> class.
-        /// Initializes a new instance of the <see cref="WaitingItem" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="Created">Created.</param>
-        /// <param name="Closed">Closed.</param>
-        /// <param name="PhoneId">PhoneId.</param>
-        /// <param name="ConfirmationCode">ConfirmationCode.</param>
-        /// <param name="CustomerName">CustomerName.</param>
-        /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="RegistrationMethod">RegistrationMethod.</param>
-        /// <param name="DeviceType">DeviceType.</param>
-        /// <param name="NotificationUrl">NotificationUrl.</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="ExpectedTime">ExpectedTime.</param>
-        /// <param name="Position">Position.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="StatusTime">StatusTime.</param>
-        /// <param name="RestaurantId">RestaurantId.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-        /// <param name="OnHoldMode">OnHoldMode.</param>
-        /// <param name="OnHoldTime">OnHoldTime.</param>
-        /// <param name="OnHoldEndTime">OnHoldEndTime.</param>
-        /// <param name="Messages">Messages.</param>
-        /// <param name="Membership">Membership.</param>
-        /// <param name="Reservation">Reservation.</param>
-        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
-        /// <param name="UnreadMessageCount">UnreadMessageCount.</param>
-
-        public WaitingItem(int? Id = null, string Status = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, string PhoneId = null, int? ConfirmationCode = null, string CustomerName = null, int? GroupSize = null, string Phone = null, string RegistrationMethod = null, string DeviceType = null, string NotificationUrl = null, string Areas = null, DateTimeOffset? ExpectedTime = null, int? Position = null, string Note = null, string TableNumber = null, DateTimeOffset? StatusTime = null, int? RestaurantId = null, bool? HighChair = null, bool? Stroller = null, string OnHoldMode = null, DateTimeOffset? OnHoldTime = null, DateTimeOffset? OnHoldEndTime = null, List<Message> Messages = null, MembershipInfo Membership = null, ReservationInfo Reservation = null, double? EstimatedTurnOverTime = null, int? UnreadMessageCount = null)
-        {
-            this.Id = Id;
-            this.Status = Status;
-            this.Created = Created;
-            this.Closed = Closed;
-            this.PhoneId = PhoneId;
-            this.ConfirmationCode = ConfirmationCode;
-            this.CustomerName = CustomerName;
-            this.GroupSize = GroupSize;
-            this.Phone = Phone;
-            this.RegistrationMethod = RegistrationMethod;
-            this.DeviceType = DeviceType;
-            this.NotificationUrl = NotificationUrl;
-            this.Areas = Areas;
-            this.ExpectedTime = ExpectedTime;
-            this.Position = Position;
-            this.Note = Note;
-            this.TableNumber = TableNumber;
-            this.StatusTime = StatusTime;
-            this.RestaurantId = RestaurantId;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            this.OnHoldMode = OnHoldMode;
-            this.OnHoldTime = OnHoldTime;
-            this.OnHoldEndTime = OnHoldEndTime;
-            this.Messages = Messages;
-            this.Membership = Membership;
-            this.Reservation = Reservation;
-            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
-            this.UnreadMessageCount = UnreadMessageCount;
-            
-        }
+       
         
     
         /// <summary>

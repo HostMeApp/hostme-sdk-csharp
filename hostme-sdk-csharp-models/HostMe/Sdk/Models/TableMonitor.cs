@@ -44,37 +44,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TableMonitor" /> class.
-        /// Initializes a new instance of the <see cref="TableMonitor" />class.
-        /// </summary>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="WaitingItemId">WaitingItemId.</param>
-        /// <param name="ReservationId">ReservationId.</param>
-        /// <param name="RegistrationId">RegistrationId.</param>
-        /// <param name="PartySize">PartySize.</param>
-        /// <param name="Membership">Membership.</param>
-        /// <param name="NextReservationTime">NextReservationTime.</param>
-        /// <param name="AssignmentTime">AssignmentTime.</param>
-        /// <param name="RegistrationTime">RegistrationTime.</param>
-        /// <param name="EstimatedReleaseTime">EstimatedReleaseTime.</param>
-
-        public TableMonitor(string TableNumber = null, StatusEnum? Status = null, int? WaitingItemId = null, string ReservationId = null, int? RegistrationId = null, int? PartySize = null, MembershipInfo Membership = null, DateTimeOffset? NextReservationTime = null, DateTimeOffset? AssignmentTime = null, DateTimeOffset? RegistrationTime = null, DateTimeOffset? EstimatedReleaseTime = null)
-        {
-            this.TableNumber = TableNumber;
-            this.Status = Status;
-            this.WaitingItemId = WaitingItemId;
-            this.ReservationId = ReservationId;
-            this.RegistrationId = RegistrationId;
-            this.PartySize = PartySize;
-            this.Membership = Membership;
-            this.NextReservationTime = NextReservationTime;
-            this.AssignmentTime = AssignmentTime;
-            this.RegistrationTime = RegistrationTime;
-            this.EstimatedReleaseTime = EstimatedReleaseTime;
-            
-        }
+       
         
     
         /// <summary>

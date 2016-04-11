@@ -18,39 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class SetPushChannelBindingModel :  IEquatable<SetPushChannelBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SetPushChannelBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="SetPushChannelBindingModel" />class.
-        /// </summary>
-        /// <param name="NotificationUrl">NotificationUrl (required).</param>
-        /// <param name="DeviceType">DeviceType (required).</param>
-        /// <param name="Longitude">Longitude.</param>
-        /// <param name="Lattitude">Lattitude.</param>
-
-        public SetPushChannelBindingModel(string NotificationUrl = null, string DeviceType = null, double? Longitude = null, double? Lattitude = null)
-        {
-            // to ensure "NotificationUrl" is required (not null)
-            if (NotificationUrl == null)
-            {
-                throw new InvalidDataException("NotificationUrl is a required property for SetPushChannelBindingModel and cannot be null");
-            }
-            else
-            {
-                this.NotificationUrl = NotificationUrl;
-            }
-            // to ensure "DeviceType" is required (not null)
-            if (DeviceType == null)
-            {
-                throw new InvalidDataException("DeviceType is a required property for SetPushChannelBindingModel and cannot be null");
-            }
-            else
-            {
-                this.DeviceType = DeviceType;
-            }
-            this.Longitude = Longitude;
-            this.Lattitude = Lattitude;
-            
-        }
+       
         
     
         /// <summary>

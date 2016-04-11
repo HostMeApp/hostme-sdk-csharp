@@ -18,27 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class InvitationViewModel :  IEquatable<InvitationViewModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InvitationViewModel" /> class.
-        /// Initializes a new instance of the <see cref="InvitationViewModel" />class.
-        /// </summary>
-        /// <param name="Email">Email.</param>
-        /// <param name="Role">Role.</param>
-        /// <param name="IsRedeemed">IsRedeemed.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="FullName">FullName.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-
-        public InvitationViewModel(string Email = null, string Role = null, bool? IsRedeemed = null, string Code = null, string FullName = null, string PhoneNumber = null)
-        {
-            this.Email = Email;
-            this.Role = Role;
-            this.IsRedeemed = IsRedeemed;
-            this.Code = Code;
-            this.FullName = FullName;
-            this.PhoneNumber = PhoneNumber;
-            
-        }
+       
         
     
         /// <summary>

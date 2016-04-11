@@ -44,25 +44,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="availabilityLevel", EmitDefaultValue=true)]
         public AvailabilityLevelEnum? AvailabilityLevel { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OnlineAvailability" /> class.
-        /// Initializes a new instance of the <see cref="OnlineAvailability" />class.
-        /// </summary>
-        /// <param name="AcceptReservations">AcceptReservations.</param>
-        /// <param name="AvailabilityLevel">AvailabilityLevel.</param>
-        /// <param name="Open">Open.</param>
-        /// <param name="RequestedTime">RequestedTime.</param>
-        /// <param name="Time">Time.</param>
-
-        public OnlineAvailability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, bool? Open = null, bool? RequestedTime = null, TimeSpan? Time = null)
-        {
-            this.AcceptReservations = AcceptReservations;
-            this.AvailabilityLevel = AvailabilityLevel;
-            this.Open = Open;
-            this.RequestedTime = RequestedTime;
-            this.Time = Time;
-            
-        }
+       
         
     
         /// <summary>

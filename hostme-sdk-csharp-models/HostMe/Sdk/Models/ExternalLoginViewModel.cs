@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ExternalLoginViewModel :  IEquatable<ExternalLoginViewModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalLoginViewModel" /> class.
-        /// Initializes a new instance of the <see cref="ExternalLoginViewModel" />class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="Url">Url.</param>
-        /// <param name="State">State.</param>
-
-        public ExternalLoginViewModel(string Name = null, string Url = null, string State = null)
-        {
-            this.Name = Name;
-            this.Url = Url;
-            this.State = State;
-            
-        }
+       
         
     
         /// <summary>

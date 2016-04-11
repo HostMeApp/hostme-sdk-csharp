@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WithAccessTokenContract1RestaurantContract :  IEquatable<WithAccessTokenContract1RestaurantContract>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WithAccessTokenContract1RestaurantContract" /> class.
-        /// Initializes a new instance of the <see cref="WithAccessTokenContract1RestaurantContract" />class.
-        /// </summary>
-        /// <param name="Data">Data.</param>
-        /// <param name="AccessToken">AccessToken.</param>
-
-        public WithAccessTokenContract1RestaurantContract(Restaurant Data = null, string AccessToken = null)
-        {
-            this.Data = Data;
-            this.AccessToken = AccessToken;
-            
-        }
+       
         
     
         /// <summary>

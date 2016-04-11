@@ -18,37 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RegisterExternalBindingModel :  IEquatable<RegisterExternalBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RegisterExternalBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="RegisterExternalBindingModel" />class.
-        /// </summary>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="FullName">FullName (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber (required).</param>
-
-        public RegisterExternalBindingModel(string UserName = null, string FullName = null, string PhoneNumber = null)
-        {
-            // to ensure "FullName" is required (not null)
-            if (FullName == null)
-            {
-                throw new InvalidDataException("FullName is a required property for RegisterExternalBindingModel and cannot be null");
-            }
-            else
-            {
-                this.FullName = FullName;
-            }
-            // to ensure "PhoneNumber" is required (not null)
-            if (PhoneNumber == null)
-            {
-                throw new InvalidDataException("PhoneNumber is a required property for RegisterExternalBindingModel and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumber = PhoneNumber;
-            }
-            this.UserName = UserName;
-            
-        }
+       
         
     
         /// <summary>

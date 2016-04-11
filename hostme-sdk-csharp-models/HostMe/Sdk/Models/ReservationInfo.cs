@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ReservationInfo :  IEquatable<ReservationInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ReservationInfo" /> class.
-        /// Initializes a new instance of the <see cref="ReservationInfo" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="ReservationTime">ReservationTime.</param>
-
-        public ReservationInfo(string Id = null, DateTimeOffset? ReservationTime = null)
-        {
-            this.Id = Id;
-            this.ReservationTime = ReservationTime;
-            
-        }
+       
         
     
         /// <summary>

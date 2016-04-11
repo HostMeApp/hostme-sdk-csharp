@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserIdentityInfo :  IEquatable<UserIdentityInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserIdentityInfo" /> class.
-        /// Initializes a new instance of the <see cref="UserIdentityInfo" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="IdentityProvider">IdentityProvider.</param>
-        /// <param name="NameIdentifier">NameIdentifier.</param>
-
-        public UserIdentityInfo(int? Id = null, string IdentityProvider = null, string NameIdentifier = null)
-        {
-            this.Id = Id;
-            this.IdentityProvider = IdentityProvider;
-            this.NameIdentifier = NameIdentifier;
-            
-        }
+       
         
     
         /// <summary>

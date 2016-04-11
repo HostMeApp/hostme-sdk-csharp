@@ -18,57 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Restaurant :  IEquatable<Restaurant>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Restaurant" /> class.
-        /// Initializes a new instance of the <see cref="Restaurant" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="Location">Location.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="Lat">Lat.</param>
-        /// <param name="Lon">Lon.</param>
-        /// <param name="FacebookId">FacebookId.</param>
-        /// <param name="TwitterAccount">TwitterAccount.</param>
-        /// <param name="WebsiteUrl">WebsiteUrl.</param>
-        /// <param name="FoursquareId">FoursquareId.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="TimeOffSet">TimeOffSet.</param>
-        /// <param name="TimeZone">TimeZone.</param>
-        /// <param name="Settings">Settings.</param>
-        /// <param name="GooglePlaceId">GooglePlaceId.</param>
-        /// <param name="YelpId">YelpId.</param>
-        /// <param name="City">City.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Country">Country.</param>
-        /// <param name="IsPublished">IsPublished.</param>
-
-        public Restaurant(int? Id = null, string Name = null, string Address = null, string Location = null, string ImageUrl = null, double? Lat = null, double? Lon = null, string FacebookId = null, string TwitterAccount = null, string WebsiteUrl = null, string FoursquareId = null, string Phone = null, double? TimeOffSet = null, string TimeZone = null, RestaurantSettings Settings = null, string GooglePlaceId = null, string YelpId = null, string City = null, string State = null, string Country = null, bool? IsPublished = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.Address = Address;
-            this.Location = Location;
-            this.ImageUrl = ImageUrl;
-            this.Lat = Lat;
-            this.Lon = Lon;
-            this.FacebookId = FacebookId;
-            this.TwitterAccount = TwitterAccount;
-            this.WebsiteUrl = WebsiteUrl;
-            this.FoursquareId = FoursquareId;
-            this.Phone = Phone;
-            this.TimeOffSet = TimeOffSet;
-            this.TimeZone = TimeZone;
-            this.Settings = Settings;
-            this.GooglePlaceId = GooglePlaceId;
-            this.YelpId = YelpId;
-            this.City = City;
-            this.State = State;
-            this.Country = Country;
-            this.IsPublished = IsPublished;
-            
-        }
+       
         
     
         /// <summary>

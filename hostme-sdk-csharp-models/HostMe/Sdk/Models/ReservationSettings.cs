@@ -41,59 +41,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="availabilityMethod", EmitDefaultValue=true)]
         public AvailabilityMethodEnum? AvailabilityMethod { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ReservationSettings" /> class.
-        /// Initializes a new instance of the <see cref="ReservationSettings" />class.
-        /// </summary>
-        /// <param name="AvailabilityMethod">AvailabilityMethod.</param>
-        /// <param name="ConfirmationMessageRequestTemplate">ConfirmationMessageRequestTemplate.</param>
-        /// <param name="CoversAvailableForWait">CoversAvailableForWait.</param>
-        /// <param name="CoversAvaliableForReservation">CoversAvaliableForReservation.</param>
-        /// <param name="DefaultMaxCoversPerSlot">DefaultMaxCoversPerSlot.</param>
-        /// <param name="EnableAutoScheduling">EnableAutoScheduling.</param>
-        /// <param name="IsEnabled">IsEnabled.</param>
-        /// <param name="MaxCoversPerSlotExceptions">MaxCoversPerSlotExceptions.</param>
-        /// <param name="MaxMinutesLate">MaxMinutesLate.</param>
-        /// <param name="MaxPartySize">MaxPartySize.</param>
-        /// <param name="MiniutesToConfirm">MiniutesToConfirm.</param>
-        /// <param name="MinPartySize">MinPartySize.</param>
-        /// <param name="MinutesToNotifyManager">MinutesToNotifyManager.</param>
-        /// <param name="RequireReservationConfirmation">RequireReservationConfirmation.</param>
-        /// <param name="ReservationEmail">ReservationEmail.</param>
-        /// <param name="ReservationHours">ReservationHours.</param>
-        /// <param name="ReservationHoursStep">ReservationHoursStep.</param>
-        /// <param name="ReservationInboxEmail">ReservationInboxEmail.</param>
-        /// <param name="StatusMessages">StatusMessages.</param>
-        /// <param name="TableTurnOver">TableTurnOver.</param>
-        /// <param name="TableTurnOverByGroup">TableTurnOverByGroup.</param>
-        /// <param name="TotalCovers">TotalCovers.</param>
-
-        public ReservationSettings(AvailabilityMethodEnum? AvailabilityMethod = null, string ConfirmationMessageRequestTemplate = null, int? CoversAvailableForWait = null, int? CoversAvaliableForReservation = null, int? DefaultMaxCoversPerSlot = null, bool? EnableAutoScheduling = null, bool? IsEnabled = null, List<SlotSetting> MaxCoversPerSlotExceptions = null, int? MaxMinutesLate = null, int? MaxPartySize = null, int? MiniutesToConfirm = null, int? MinPartySize = null, int? MinutesToNotifyManager = null, bool? RequireReservationConfirmation = null, string ReservationEmail = null, List<WeekDayOpenHours> ReservationHours = null, int? ReservationHoursStep = null, string ReservationInboxEmail = null, List<StatusMessage> StatusMessages = null, double? TableTurnOver = null, List<List<double?>> TableTurnOverByGroup = null, int? TotalCovers = null)
-        {
-            this.AvailabilityMethod = AvailabilityMethod;
-            this.ConfirmationMessageRequestTemplate = ConfirmationMessageRequestTemplate;
-            this.CoversAvailableForWait = CoversAvailableForWait;
-            this.CoversAvaliableForReservation = CoversAvaliableForReservation;
-            this.DefaultMaxCoversPerSlot = DefaultMaxCoversPerSlot;
-            this.EnableAutoScheduling = EnableAutoScheduling;
-            this.IsEnabled = IsEnabled;
-            this.MaxCoversPerSlotExceptions = MaxCoversPerSlotExceptions;
-            this.MaxMinutesLate = MaxMinutesLate;
-            this.MaxPartySize = MaxPartySize;
-            this.MiniutesToConfirm = MiniutesToConfirm;
-            this.MinPartySize = MinPartySize;
-            this.MinutesToNotifyManager = MinutesToNotifyManager;
-            this.RequireReservationConfirmation = RequireReservationConfirmation;
-            this.ReservationEmail = ReservationEmail;
-            this.ReservationHours = ReservationHours;
-            this.ReservationHoursStep = ReservationHoursStep;
-            this.ReservationInboxEmail = ReservationInboxEmail;
-            this.StatusMessages = StatusMessages;
-            this.TableTurnOver = TableTurnOver;
-            this.TableTurnOverByGroup = TableTurnOverByGroup;
-            this.TotalCovers = TotalCovers;
-            
-        }
+       
         
     
         /// <summary>

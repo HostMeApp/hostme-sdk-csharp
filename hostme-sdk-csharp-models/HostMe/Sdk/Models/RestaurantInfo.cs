@@ -18,77 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RestaurantInfo :  IEquatable<RestaurantInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestaurantInfo" /> class.
-        /// Initializes a new instance of the <see cref="RestaurantInfo" />class.
-        /// </summary>
-        /// <param name="HoursInterval">HoursInterval.</param>
-        /// <param name="MaxPartySize">MaxPartySize.</param>
-        /// <param name="MinPartySize">MinPartySize.</param>
-        /// <param name="OpeningHours">OpeningHours.</param>
-        /// <param name="ReservationHours">ReservationHours.</param>
-        /// <param name="SeatingZones">SeatingZones.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Address">Address.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="FacebookId">FacebookId.</param>
-        /// <param name="TwitterAccount">TwitterAccount.</param>
-        /// <param name="WebsiteUrl">WebsiteUrl.</param>
-        /// <param name="FoursquareId">FoursquareId.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="TimeOffSet">TimeOffSet.</param>
-        /// <param name="TimeZone">TimeZone.</param>
-        /// <param name="Lat">Lat.</param>
-        /// <param name="Lon">Lon.</param>
-        /// <param name="HasHostmeSystem">HasHostmeSystem.</param>
-        /// <param name="Distance">Distance.</param>
-        /// <param name="Rating">Rating.</param>
-        /// <param name="HasLoyaltyProgram">HasLoyaltyProgram.</param>
-        /// <param name="AcceptRemouteLine">AcceptRemouteLine.</param>
-        /// <param name="AcceptReservation">AcceptReservation.</param>
-        /// <param name="AllowManualHold">AllowManualHold.</param>
-        /// <param name="CurrentLineStats">CurrentLineStats.</param>
-        /// <param name="IsFavorite">IsFavorite.</param>
-        /// <param name="NumberOfDeals">NumberOfDeals.</param>
-        /// <param name="NumberOfVotes">NumberOfVotes.</param>
-        /// <param name="ReservationIncomeEmail">ReservationIncomeEmail.</param>
-
-        public RestaurantInfo(int? HoursInterval = null, int? MaxPartySize = null, int? MinPartySize = null, BusinessHours OpeningHours = null, BusinessHours ReservationHours = null, List<string> SeatingZones = null, int? Id = null, string Name = null, string Address = null, string ImageUrl = null, string FacebookId = null, string TwitterAccount = null, string WebsiteUrl = null, string FoursquareId = null, string Phone = null, double? TimeOffSet = null, string TimeZone = null, double? Lat = null, double? Lon = null, bool? HasHostmeSystem = null, double? Distance = null, int? Rating = null, bool? HasLoyaltyProgram = null, bool? AcceptRemouteLine = null, bool? AcceptReservation = null, bool? AllowManualHold = null, WaitingStats CurrentLineStats = null, bool? IsFavorite = null, int? NumberOfDeals = null, int? NumberOfVotes = null, string ReservationIncomeEmail = null)
-        {
-            this.HoursInterval = HoursInterval;
-            this.MaxPartySize = MaxPartySize;
-            this.MinPartySize = MinPartySize;
-            this.OpeningHours = OpeningHours;
-            this.ReservationHours = ReservationHours;
-            this.SeatingZones = SeatingZones;
-            this.Id = Id;
-            this.Name = Name;
-            this.Address = Address;
-            this.ImageUrl = ImageUrl;
-            this.FacebookId = FacebookId;
-            this.TwitterAccount = TwitterAccount;
-            this.WebsiteUrl = WebsiteUrl;
-            this.FoursquareId = FoursquareId;
-            this.Phone = Phone;
-            this.TimeOffSet = TimeOffSet;
-            this.TimeZone = TimeZone;
-            this.Lat = Lat;
-            this.Lon = Lon;
-            this.HasHostmeSystem = HasHostmeSystem;
-            this.Distance = Distance;
-            this.Rating = Rating;
-            this.HasLoyaltyProgram = HasLoyaltyProgram;
-            this.AcceptRemouteLine = AcceptRemouteLine;
-            this.AcceptReservation = AcceptReservation;
-            this.AllowManualHold = AllowManualHold;
-            this.CurrentLineStats = CurrentLineStats;
-            this.IsFavorite = IsFavorite;
-            this.NumberOfDeals = NumberOfDeals;
-            this.NumberOfVotes = NumberOfVotes;
-            this.ReservationIncomeEmail = ReservationIncomeEmail;
-            
-        }
+       
         
     
         /// <summary>

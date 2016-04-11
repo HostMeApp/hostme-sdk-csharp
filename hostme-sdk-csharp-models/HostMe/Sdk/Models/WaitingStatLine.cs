@@ -18,23 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingStatLine :  IEquatable<WaitingStatLine>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingStatLine" /> class.
-        /// Initializes a new instance of the <see cref="WaitingStatLine" />class.
-        /// </summary>
-        /// <param name="Area">Area.</param>
-        /// <param name="AvgCallTime">AvgCallTime.</param>
-        /// <param name="AvgSeatTime">AvgSeatTime.</param>
-        /// <param name="TopSize">TopSize.</param>
-
-        public WaitingStatLine(string Area = null, double? AvgCallTime = null, double? AvgSeatTime = null, int? TopSize = null)
-        {
-            this.Area = Area;
-            this.AvgCallTime = AvgCallTime;
-            this.AvgSeatTime = AvgSeatTime;
-            this.TopSize = TopSize;
-            
-        }
+       
         
     
         /// <summary>

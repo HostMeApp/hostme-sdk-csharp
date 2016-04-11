@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingsStatDimensions :  IEquatable<WaitingsStatDimensions>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingsStatDimensions" /> class.
-        /// Initializes a new instance of the <see cref="WaitingsStatDimensions" />class.
-        /// </summary>
-        /// <param name="Time">Time.</param>
-        /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="TopSize">TopSize.</param>
-        /// <param name="LinePosition">LinePosition.</param>
-        /// <param name="Status">Status.</param>
-
-        public WaitingsStatDimensions(TimeDimension Time = null, int? GroupSize = null, int? TopSize = null, int? LinePosition = null, string Status = null)
-        {
-            this.Time = Time;
-            this.GroupSize = GroupSize;
-            this.TopSize = TopSize;
-            this.LinePosition = LinePosition;
-            this.Status = Status;
-            
-        }
+       
         
     
         /// <summary>

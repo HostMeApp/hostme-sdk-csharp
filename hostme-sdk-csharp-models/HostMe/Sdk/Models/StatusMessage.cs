@@ -18,37 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class StatusMessage :  IEquatable<StatusMessage>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StatusMessage" /> class.
-        /// Initializes a new instance of the <see cref="StatusMessage" />class.
-        /// </summary>
-        /// <param name="FromStatus">FromStatus (required).</param>
-        /// <param name="ToStatus">ToStatus (required).</param>
-        /// <param name="MessageTemplate">MessageTemplate.</param>
-
-        public StatusMessage(string FromStatus = null, string ToStatus = null, string MessageTemplate = null)
-        {
-            // to ensure "FromStatus" is required (not null)
-            if (FromStatus == null)
-            {
-                throw new InvalidDataException("FromStatus is a required property for StatusMessage and cannot be null");
-            }
-            else
-            {
-                this.FromStatus = FromStatus;
-            }
-            // to ensure "ToStatus" is required (not null)
-            if (ToStatus == null)
-            {
-                throw new InvalidDataException("ToStatus is a required property for StatusMessage and cannot be null");
-            }
-            else
-            {
-                this.ToStatus = ToStatus;
-            }
-            this.MessageTemplate = MessageTemplate;
-            
-        }
+       
         
     
         /// <summary>

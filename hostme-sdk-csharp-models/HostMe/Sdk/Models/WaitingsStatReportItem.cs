@@ -18,47 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingsStatReportItem :  IEquatable<WaitingsStatReportItem>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingsStatReportItem" /> class.
-        /// Initializes a new instance of the <see cref="WaitingsStatReportItem" />class.
-        /// </summary>
-        /// <param name="Dimensions">Dimensions.</param>
-        /// <param name="TotalPartyCount">TotalPartyCount.</param>
-        /// <param name="TotalHeadCount">TotalHeadCount.</param>
-        /// <param name="TotalSeatedCount">TotalSeatedCount.</param>
-        /// <param name="TotalCanceledCount">TotalCanceledCount.</param>
-        /// <param name="MinTimeToCall">MinTimeToCall.</param>
-        /// <param name="AvgTimeToCall">AvgTimeToCall.</param>
-        /// <param name="MaxTimeToCall">MaxTimeToCall.</param>
-        /// <param name="MinTimeToSeat">MinTimeToSeat.</param>
-        /// <param name="AvgTimeToSeat">AvgTimeToSeat.</param>
-        /// <param name="MaxTimeToSeat">MaxTimeToSeat.</param>
-        /// <param name="MinTimeToCancel">MinTimeToCancel.</param>
-        /// <param name="AvgTimeToCancel">AvgTimeToCancel.</param>
-        /// <param name="MaxTimeToCancel">MaxTimeToCancel.</param>
-        /// <param name="MaxLine">Maximum line position at a given period.</param>
-        /// <param name="AvgLine">AvgLine.</param>
-
-        public WaitingsStatReportItem(WaitingsStatDimensions Dimensions = null, double? TotalPartyCount = null, double? TotalHeadCount = null, double? TotalSeatedCount = null, double? TotalCanceledCount = null, double? MinTimeToCall = null, double? AvgTimeToCall = null, double? MaxTimeToCall = null, double? MinTimeToSeat = null, double? AvgTimeToSeat = null, double? MaxTimeToSeat = null, double? MinTimeToCancel = null, double? AvgTimeToCancel = null, double? MaxTimeToCancel = null, int? MaxLine = null, double? AvgLine = null)
-        {
-            this.Dimensions = Dimensions;
-            this.TotalPartyCount = TotalPartyCount;
-            this.TotalHeadCount = TotalHeadCount;
-            this.TotalSeatedCount = TotalSeatedCount;
-            this.TotalCanceledCount = TotalCanceledCount;
-            this.MinTimeToCall = MinTimeToCall;
-            this.AvgTimeToCall = AvgTimeToCall;
-            this.MaxTimeToCall = MaxTimeToCall;
-            this.MinTimeToSeat = MinTimeToSeat;
-            this.AvgTimeToSeat = AvgTimeToSeat;
-            this.MaxTimeToSeat = MaxTimeToSeat;
-            this.MinTimeToCancel = MinTimeToCancel;
-            this.AvgTimeToCancel = AvgTimeToCancel;
-            this.MaxTimeToCancel = MaxTimeToCancel;
-            this.MaxLine = MaxLine;
-            this.AvgLine = AvgLine;
-            
-        }
+       
         
     
         /// <summary>

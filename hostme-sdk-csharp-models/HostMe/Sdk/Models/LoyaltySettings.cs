@@ -18,27 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class LoyaltySettings :  IEquatable<LoyaltySettings>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="LoyaltySettings" /> class.
-        /// Initializes a new instance of the <see cref="LoyaltySettings" />class.
-        /// </summary>
-        /// <param name="CheckinPoints">CheckinPoints.</param>
-        /// <param name="IsEnabled">IsEnabled.</param>
-        /// <param name="MembershipLevelRules">MembershipLevelRules.</param>
-        /// <param name="PurchasePointsRules">PurchasePointsRules.</param>
-        /// <param name="SignupPoints">SignupPoints.</param>
-        /// <param name="WaitingPointsRules">WaitingPointsRules.</param>
-
-        public LoyaltySettings(int? CheckinPoints = null, bool? IsEnabled = null, List<MembershipLevel> MembershipLevelRules = null, List<PurchaseToPoints> PurchasePointsRules = null, int? SignupPoints = null, List<MinutesToPoints> WaitingPointsRules = null)
-        {
-            this.CheckinPoints = CheckinPoints;
-            this.IsEnabled = IsEnabled;
-            this.MembershipLevelRules = MembershipLevelRules;
-            this.PurchasePointsRules = PurchasePointsRules;
-            this.SignupPoints = SignupPoints;
-            this.WaitingPointsRules = WaitingPointsRules;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class PurchaseToPoints :  IEquatable<PurchaseToPoints>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PurchaseToPoints" /> class.
-        /// Initializes a new instance of the <see cref="PurchaseToPoints" />class.
-        /// </summary>
-        /// <param name="FlatPoints">FlatPoints.</param>
-        /// <param name="MaxAmount">MaxAmount.</param>
-        /// <param name="Method">Method.</param>
-        /// <param name="MinAmount">MinAmount.</param>
-        /// <param name="PointsPerCent">PointsPerCent.</param>
-
-        public PurchaseToPoints(int? FlatPoints = null, double? MaxAmount = null, string Method = null, double? MinAmount = null, int? PointsPerCent = null)
-        {
-            this.FlatPoints = FlatPoints;
-            this.MaxAmount = MaxAmount;
-            this.Method = Method;
-            this.MinAmount = MinAmount;
-            this.PointsPerCent = PointsPerCent;
-            
-        }
+       
         
     
         /// <summary>

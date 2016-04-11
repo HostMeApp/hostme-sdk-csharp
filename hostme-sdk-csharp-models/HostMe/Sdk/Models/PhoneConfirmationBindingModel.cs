@@ -18,51 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class PhoneConfirmationBindingModel :  IEquatable<PhoneConfirmationBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PhoneConfirmationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="PhoneConfirmationBindingModel" />class.
-        /// </summary>
-        /// <param name="PhoneId">Phone identifier that will be used to send push notifications.</param>
-        /// <param name="DeviceType">DeviceType (required).</param>
-        /// <param name="Longitude">Longitude of the phone. Coordinates are used to check that phone location and restaurant are close enought..</param>
-        /// <param name="Lattitude">Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought..</param>
-        /// <param name="CustomerName">Optional. Only is used. (required).</param>
-        /// <param name="NotificationUrl">NotificationUrl (required).</param>
-
-        public PhoneConfirmationBindingModel(string PhoneId = null, string DeviceType = null, double? Longitude = null, double? Lattitude = null, string CustomerName = null, string NotificationUrl = null)
-        {
-            // to ensure "DeviceType" is required (not null)
-            if (DeviceType == null)
-            {
-                throw new InvalidDataException("DeviceType is a required property for PhoneConfirmationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.DeviceType = DeviceType;
-            }
-            // to ensure "CustomerName" is required (not null)
-            if (CustomerName == null)
-            {
-                throw new InvalidDataException("CustomerName is a required property for PhoneConfirmationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.CustomerName = CustomerName;
-            }
-            // to ensure "NotificationUrl" is required (not null)
-            if (NotificationUrl == null)
-            {
-                throw new InvalidDataException("NotificationUrl is a required property for PhoneConfirmationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.NotificationUrl = NotificationUrl;
-            }
-            this.PhoneId = PhoneId;
-            this.Longitude = Longitude;
-            this.Lattitude = Lattitude;
-            
-        }
+       
         
     
         /// <summary>

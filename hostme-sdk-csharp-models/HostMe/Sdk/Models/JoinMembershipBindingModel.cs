@@ -18,17 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class JoinMembershipBindingModel :  IEquatable<JoinMembershipBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="JoinMembershipBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="JoinMembershipBindingModel" />class.
-        /// </summary>
-        /// <param name="RestaurantId">RestaurantId.</param>
-
-        public JoinMembershipBindingModel(int? RestaurantId = null)
-        {
-            this.RestaurantId = RestaurantId;
-            
-        }
+       
         
     
         /// <summary>

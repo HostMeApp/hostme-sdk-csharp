@@ -18,37 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class PositionMessage :  IEquatable<PositionMessage>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PositionMessage" /> class.
-        /// Initializes a new instance of the <see cref="PositionMessage" />class.
-        /// </summary>
-        /// <param name="MinPos">MinPos (required).</param>
-        /// <param name="MaxPos">MaxPos (required).</param>
-        /// <param name="MessageTemplate">MessageTemplate.</param>
-
-        public PositionMessage(int? MinPos = null, int? MaxPos = null, string MessageTemplate = null)
-        {
-            // to ensure "MinPos" is required (not null)
-            if (MinPos == null)
-            {
-                throw new InvalidDataException("MinPos is a required property for PositionMessage and cannot be null");
-            }
-            else
-            {
-                this.MinPos = MinPos;
-            }
-            // to ensure "MaxPos" is required (not null)
-            if (MaxPos == null)
-            {
-                throw new InvalidDataException("MaxPos is a required property for PositionMessage and cannot be null");
-            }
-            else
-            {
-                this.MaxPos = MaxPos;
-            }
-            this.MessageTemplate = MessageTemplate;
-            
-        }
+       
         
     
         /// <summary>

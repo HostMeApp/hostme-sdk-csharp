@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RoleInfo :  IEquatable<RoleInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RoleInfo" /> class.
-        /// Initializes a new instance of the <see cref="RoleInfo" />class.
-        /// </summary>
-        /// <param name="RestaurantId">RestaurantId.</param>
-        /// <param name="RestaurantName">RestaurantName.</param>
-        /// <param name="Name">Name.</param>
-
-        public RoleInfo(int? RestaurantId = null, string RestaurantName = null, string Name = null)
-        {
-            this.RestaurantId = RestaurantId;
-            this.RestaurantName = RestaurantName;
-            this.Name = Name;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,31 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Transaction :  IEquatable<Transaction>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Transaction" /> class.
-        /// Initializes a new instance of the <see cref="Transaction" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Time">Time.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Points">Points.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="Units">Units.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="StatusReason">StatusReason.</param>
-
-        public Transaction(int? Id = null, DateTimeOffset? Time = null, string Type = null, long? Points = null, string Note = null, double? Units = null, string Status = null, string StatusReason = null)
-        {
-            this.Id = Id;
-            this.Time = Time;
-            this.Type = Type;
-            this.Points = Points;
-            this.Note = Note;
-            this.Units = Units;
-            this.Status = Status;
-            this.StatusReason = StatusReason;
-            
-        }
+       
         
     
         /// <summary>

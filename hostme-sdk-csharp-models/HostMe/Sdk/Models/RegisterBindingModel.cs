@@ -18,49 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RegisterBindingModel :  IEquatable<RegisterBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RegisterBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="RegisterBindingModel" />class.
-        /// </summary>
-        /// <param name="Email">Email.</param>
-        /// <param name="FullName">FullName (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber (required).</param>
-        /// <param name="Password">Password (required).</param>
-        /// <param name="ConfirmPassword">ConfirmPassword.</param>
-
-        public RegisterBindingModel(string Email = null, string FullName = null, string PhoneNumber = null, string Password = null, string ConfirmPassword = null)
-        {
-            // to ensure "FullName" is required (not null)
-            if (FullName == null)
-            {
-                throw new InvalidDataException("FullName is a required property for RegisterBindingModel and cannot be null");
-            }
-            else
-            {
-                this.FullName = FullName;
-            }
-            // to ensure "PhoneNumber" is required (not null)
-            if (PhoneNumber == null)
-            {
-                throw new InvalidDataException("PhoneNumber is a required property for RegisterBindingModel and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumber = PhoneNumber;
-            }
-            // to ensure "Password" is required (not null)
-            if (Password == null)
-            {
-                throw new InvalidDataException("Password is a required property for RegisterBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Password = Password;
-            }
-            this.Email = Email;
-            this.ConfirmPassword = ConfirmPassword;
-            
-        }
+       
         
     
         /// <summary>

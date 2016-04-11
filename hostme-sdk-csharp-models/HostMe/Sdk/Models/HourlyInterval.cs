@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class HourlyInterval :  IEquatable<HourlyInterval>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HourlyInterval" /> class.
-        /// Initializes a new instance of the <see cref="HourlyInterval" />class.
-        /// </summary>
-        /// <param name="Close">Close.</param>
-        /// <param name="Open">Open.</param>
-
-        public HourlyInterval(TimeSpan? Close = null, TimeSpan? Open = null)
-        {
-            this.Close = Close;
-            this.Open = Open;
-            
-        }
+       
         
     
         /// <summary>

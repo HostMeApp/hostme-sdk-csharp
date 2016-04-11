@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserInfoViewModel :  IEquatable<UserInfoViewModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserInfoViewModel" /> class.
-        /// Initializes a new instance of the <see cref="UserInfoViewModel" />class.
-        /// </summary>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="HasRegistered">HasRegistered.</param>
-        /// <param name="LoginProvider">LoginProvider.</param>
-
-        public UserInfoViewModel(string UserName = null, bool? HasRegistered = null, string LoginProvider = null)
-        {
-            this.UserName = UserName;
-            this.HasRegistered = HasRegistered;
-            this.LoginProvider = LoginProvider;
-            
-        }
+       
         
     
         /// <summary>

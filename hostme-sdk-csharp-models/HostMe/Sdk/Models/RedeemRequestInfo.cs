@@ -41,23 +41,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RedeemRequestInfo" /> class.
-        /// Initializes a new instance of the <see cref="RedeemRequestInfo" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="StatusComment">StatusComment.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-
-        public RedeemRequestInfo(string Id = null, StatusEnum? Status = null, string StatusComment = null, string TableNumber = null)
-        {
-            this.Id = Id;
-            this.Status = Status;
-            this.StatusComment = StatusComment;
-            this.TableNumber = TableNumber;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ODataPagedResult1MemberContract :  IEquatable<ODataPagedResult1MemberContract>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ODataPagedResult1MemberContract" /> class.
-        /// Initializes a new instance of the <see cref="ODataPagedResult1MemberContract" />class.
-        /// </summary>
-        /// <param name="Results">Results.</param>
-        /// <param name="Count">Count.</param>
-
-        public ODataPagedResult1MemberContract(List<Member> Results = null, int? Count = null)
-        {
-            this.Results = Results;
-            this.Count = Count;
-            
-        }
+       
         
     
         /// <summary>

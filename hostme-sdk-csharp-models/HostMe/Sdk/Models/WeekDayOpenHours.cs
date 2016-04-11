@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WeekDayOpenHours :  IEquatable<WeekDayOpenHours>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WeekDayOpenHours" /> class.
-        /// Initializes a new instance of the <see cref="WeekDayOpenHours" />class.
-        /// </summary>
-        /// <param name="Time">Time.</param>
-        /// <param name="WeekDay">WeekDay.</param>
-
-        public WeekDayOpenHours(List<HourlyInterval> Time = null, int? WeekDay = null)
-        {
-            this.Time = Time;
-            this.WeekDay = WeekDay;
-            
-        }
+       
         
     
         /// <summary>

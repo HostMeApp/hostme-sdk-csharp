@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ModelState :  IEquatable<ModelState>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModelState" /> class.
-        /// Initializes a new instance of the <see cref="ModelState" />class.
-        /// </summary>
-        /// <param name="Value">Value.</param>
-        /// <param name="Errors">Errors.</param>
-
-        public ModelState(ValueProviderResult Value = null, List<ModelError> Errors = null)
-        {
-            this.Value = Value;
-            this.Errors = Errors;
-            
-        }
+       
         
     
         /// <summary>

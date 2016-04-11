@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class TableAvailability :  IEquatable<TableAvailability>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TableAvailability" /> class.
-        /// Initializes a new instance of the <see cref="TableAvailability" />class.
-        /// </summary>
-        /// <param name="MinCoversRequired">MinCoversRequired.</param>
-        /// <param name="Reservable">Reservable.</param>
-        /// <param name="Hours">Hours.</param>
-
-        public TableAvailability(int? MinCoversRequired = null, bool? Reservable = null, List<WeekDayOpenHours> Hours = null)
-        {
-            this.MinCoversRequired = MinCoversRequired;
-            this.Reservable = Reservable;
-            this.Hours = Hours;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RewardConditions :  IEquatable<RewardConditions>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RewardConditions" /> class.
-        /// Initializes a new instance of the <see cref="RewardConditions" />class.
-        /// </summary>
-        /// <param name="AvailableHours">AvailableHours.</param>
-        /// <param name="MembershipLevel">MembershipLevel.</param>
-
-        public RewardConditions(List<WeekDayOpenHours> AvailableHours = null, string MembershipLevel = null)
-        {
-            this.AvailableHours = AvailableHours;
-            this.MembershipLevel = MembershipLevel;
-            
-        }
+       
         
     
         /// <summary>

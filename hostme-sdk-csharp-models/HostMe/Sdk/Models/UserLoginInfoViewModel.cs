@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserLoginInfoViewModel :  IEquatable<UserLoginInfoViewModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserLoginInfoViewModel" /> class.
-        /// Initializes a new instance of the <see cref="UserLoginInfoViewModel" />class.
-        /// </summary>
-        /// <param name="LoginProvider">LoginProvider.</param>
-        /// <param name="ProviderKey">ProviderKey.</param>
-
-        public UserLoginInfoViewModel(string LoginProvider = null, string ProviderKey = null)
-        {
-            this.LoginProvider = LoginProvider;
-            this.ProviderKey = ProviderKey;
-            
-        }
+       
         
     
         /// <summary>

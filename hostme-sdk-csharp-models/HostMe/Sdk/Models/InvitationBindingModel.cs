@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class InvitationBindingModel :  IEquatable<InvitationBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="InvitationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="InvitationBindingModel" />class.
-        /// </summary>
-        /// <param name="Email">Email.</param>
-        /// <param name="Role">Role.</param>
-
-        public InvitationBindingModel(string Email = null, string Role = null)
-        {
-            this.Email = Email;
-            this.Role = Role;
-            
-        }
+       
         
     
         /// <summary>

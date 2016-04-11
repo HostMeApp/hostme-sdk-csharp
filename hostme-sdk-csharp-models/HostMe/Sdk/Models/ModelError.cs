@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ModelError :  IEquatable<ModelError>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModelError" /> class.
-        /// Initializes a new instance of the <see cref="ModelError" />class.
-        /// </summary>
-        /// <param name="Exception">Exception.</param>
-        /// <param name="ErrorMessage">ErrorMessage.</param>
-
-        public ModelError(Object Exception = null, string ErrorMessage = null)
-        {
-            this.Exception = Exception;
-            this.ErrorMessage = ErrorMessage;
-            
-        }
+       
         
     
         /// <summary>

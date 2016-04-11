@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Location :  IEquatable<Location>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Location" /> class.
-        /// Initializes a new instance of the <see cref="Location" />class.
-        /// </summary>
-        /// <param name="City">City.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Country">Country.</param>
-
-        public Location(string City = null, string State = null, string Country = null)
-        {
-            this.City = City;
-            this.State = State;
-            this.Country = Country;
-            
-        }
+       
         
     
         /// <summary>

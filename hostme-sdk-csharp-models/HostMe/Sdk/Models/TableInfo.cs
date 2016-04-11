@@ -18,23 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class TableInfo :  IEquatable<TableInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TableInfo" /> class.
-        /// Initializes a new instance of the <see cref="TableInfo" />class.
-        /// </summary>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="IsComb">IsComb.</param>
-        /// <param name="TableTopSize">TableTopSize.</param>
-        /// <param name="Area">Area.</param>
-
-        public TableInfo(string TableNumber = null, bool? IsComb = null, int? TableTopSize = null, string Area = null)
-        {
-            this.TableNumber = TableNumber;
-            this.IsComb = IsComb;
-            this.TableTopSize = TableTopSize;
-            this.Area = Area;
-            
-        }
+       
         
     
         /// <summary>

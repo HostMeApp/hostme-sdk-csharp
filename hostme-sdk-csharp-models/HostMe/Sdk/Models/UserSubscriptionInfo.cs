@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserSubscriptionInfo :  IEquatable<UserSubscriptionInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserSubscriptionInfo" /> class.
-        /// Initializes a new instance of the <see cref="UserSubscriptionInfo" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Description">Description.</param>
-
-        public UserSubscriptionInfo(int? Id = null, string Name = null, string Description = null)
-        {
-            this.Id = Id;
-            this.Name = Name;
-            this.Description = Description;
-            
-        }
+       
         
     
         /// <summary>

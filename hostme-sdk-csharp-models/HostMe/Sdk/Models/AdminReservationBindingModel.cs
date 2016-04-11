@@ -38,86 +38,8 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="type", EmitDefaultValue=true)]
         public TypeEnum? Type { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AdminReservationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="AdminReservationBindingModel" />class.
-        /// </summary>
-        /// <param name="RestaurantId">RestaurantId (required).</param>
-        /// <param name="ReservationTime">ReservationTime (required).</param>
-        /// <param name="CustomerName">CustomerName (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber (required).</param>
-        /// <param name="GroupSize">GroupSize (required).</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
-        /// <param name="Type">Type.</param>
-
-        public AdminReservationBindingModel(int? RestaurantId = null, DateTimeOffset? ReservationTime = null, string CustomerName = null, string PhoneNumber = null, int? GroupSize = null, string Areas = null, string Note = null, string TableNumber = null, bool? HighChair = null, bool? Stroller = null, double? EstimatedTurnOverTime = null, TypeEnum? Type = null)
-        {
-            // to ensure "RestaurantId" is required (not null)
-            if (RestaurantId == null)
-            {
-                throw new InvalidDataException("RestaurantId is a required property for AdminReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.RestaurantId = RestaurantId;
-            }
-            // to ensure "ReservationTime" is required (not null)
-            if (ReservationTime == null)
-            {
-                throw new InvalidDataException("ReservationTime is a required property for AdminReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.ReservationTime = ReservationTime;
-            }
-            // to ensure "CustomerName" is required (not null)
-            if (CustomerName == null)
-            {
-                throw new InvalidDataException("CustomerName is a required property for AdminReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.CustomerName = CustomerName;
-            }
-            // to ensure "PhoneNumber" is required (not null)
-            if (PhoneNumber == null)
-            {
-                throw new InvalidDataException("PhoneNumber is a required property for AdminReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumber = PhoneNumber;
-            }
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for AdminReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
-            this.Areas = Areas;
-            this.Note = Note;
-            this.TableNumber = TableNumber;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
-            this.Type = Type;
-            
-        }
+       
         
-    
-        /// <summary>
-        /// Gets or Sets RestaurantId
-        /// </summary>
-        [DataMember(Name="restaurantId", EmitDefaultValue=true)]
-        public int? RestaurantId { get; set; }
     
         /// <summary>
         /// Gets or Sets ReservationTime
@@ -187,8 +109,7 @@ namespace HostMe.Sdk.Models
         {
             var sb = new StringBuilder();
             sb.Append("class AdminReservationBindingModel {\n");
-            sb.Append("  RestaurantId: ").Append(RestaurantId).Append("\n");
-sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
 sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
 sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
 sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
@@ -235,11 +156,6 @@ sb.Append("  Type: ").Append(Type).Append("\n");
                 return false;
 
             return 
-                (
-                    this.RestaurantId == other.RestaurantId ||
-                    this.RestaurantId != null &&
-                    this.RestaurantId.Equals(other.RestaurantId)
-                ) && 
                 (
                     this.ReservationTime == other.ReservationTime ||
                     this.ReservationTime != null &&
@@ -308,8 +224,6 @@ sb.Append("  Type: ").Append(Type).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.RestaurantId != null)
-                    hash = hash * 59 + this.RestaurantId.GetHashCode();
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.CustomerName != null)

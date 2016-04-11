@@ -41,27 +41,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="unitType", EmitDefaultValue=true)]
         public UnitTypeEnum? UnitType { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AvailabilityResponse" /> class.
-        /// Initializes a new instance of the <see cref="AvailabilityResponse" />class.
-        /// </summary>
-        /// <param name="Availabilities">Availabilities.</param>
-        /// <param name="RequestedTime">RequestedTime.</param>
-        /// <param name="TotalCovers">TotalCovers.</param>
-        /// <param name="TotalReservationCovers">TotalReservationCovers.</param>
-        /// <param name="TotalWaitCovers">TotalWaitCovers.</param>
-        /// <param name="UnitType">UnitType.</param>
-
-        public AvailabilityResponse(List<Availability> Availabilities = null, DateTimeOffset? RequestedTime = null, int? TotalCovers = null, int? TotalReservationCovers = null, int? TotalWaitCovers = null, UnitTypeEnum? UnitType = null)
-        {
-            this.Availabilities = Availabilities;
-            this.RequestedTime = RequestedTime;
-            this.TotalCovers = TotalCovers;
-            this.TotalReservationCovers = TotalReservationCovers;
-            this.TotalWaitCovers = TotalWaitCovers;
-            this.UnitType = UnitType;
-            
-        }
+       
         
     
         /// <summary>

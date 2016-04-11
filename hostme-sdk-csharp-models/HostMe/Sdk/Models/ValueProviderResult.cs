@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ValueProviderResult :  IEquatable<ValueProviderResult>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ValueProviderResult" /> class.
-        /// Initializes a new instance of the <see cref="ValueProviderResult" />class.
-        /// </summary>
-        /// <param name="AttemptedValue">AttemptedValue.</param>
-        /// <param name="Culture">Culture.</param>
-        /// <param name="RawValue">RawValue.</param>
-
-        public ValueProviderResult(string AttemptedValue = null, string Culture = null, Object RawValue = null)
-        {
-            this.AttemptedValue = AttemptedValue;
-            this.Culture = Culture;
-            this.RawValue = RawValue;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,47 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class PanelConfirmationBindingModel :  IEquatable<PanelConfirmationBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PanelConfirmationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="PanelConfirmationBindingModel" />class.
-        /// </summary>
-        /// <param name="CustomerName">CustomerName (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-        /// <param name="ConfirmationMethod">ConfirmationMethod.</param>
-        /// <param name="GroupSize">GroupSize (required).</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-
-        public PanelConfirmationBindingModel(string CustomerName = null, string PhoneNumber = null, string ConfirmationMethod = null, int? GroupSize = null, string Areas = null, string Note = null, bool? HighChair = null, bool? Stroller = null)
-        {
-            // to ensure "CustomerName" is required (not null)
-            if (CustomerName == null)
-            {
-                throw new InvalidDataException("CustomerName is a required property for PanelConfirmationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.CustomerName = CustomerName;
-            }
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for PanelConfirmationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
-            this.PhoneNumber = PhoneNumber;
-            this.ConfirmationMethod = ConfirmationMethod;
-            this.Areas = Areas;
-            this.Note = Note;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            
-        }
+       
         
     
         /// <summary>

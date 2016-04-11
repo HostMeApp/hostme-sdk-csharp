@@ -18,41 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserProfile :  IEquatable<UserProfile>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserProfile" /> class.
-        /// Initializes a new instance of the <see cref="UserProfile" />class.
-        /// </summary>
-        /// <param name="Email">Email.</param>
-        /// <param name="FullName">FullName (required).</param>
-        /// <param name="PhoneNumber">PhoneNumber (required).</param>
-        /// <param name="Gender">Gender.</param>
-        /// <param name="Dob">Dob.</param>
-
-        public UserProfile(string Email = null, string FullName = null, string PhoneNumber = null, string Gender = null, DateTimeOffset? Dob = null)
-        {
-            // to ensure "FullName" is required (not null)
-            if (FullName == null)
-            {
-                throw new InvalidDataException("FullName is a required property for UserProfile and cannot be null");
-            }
-            else
-            {
-                this.FullName = FullName;
-            }
-            // to ensure "PhoneNumber" is required (not null)
-            if (PhoneNumber == null)
-            {
-                throw new InvalidDataException("PhoneNumber is a required property for UserProfile and cannot be null");
-            }
-            else
-            {
-                this.PhoneNumber = PhoneNumber;
-            }
-            this.Email = Email;
-            this.Gender = Gender;
-            this.Dob = Dob;
-            
-        }
+       
         
     
         /// <summary>

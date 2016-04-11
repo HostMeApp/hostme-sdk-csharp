@@ -18,53 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UpdateReservationBindingModel :  IEquatable<UpdateReservationBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateReservationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="UpdateReservationBindingModel" />class.
-        /// </summary>
-        /// <param name="ReservationId">ReservationId (required).</param>
-        /// <param name="ReservationTime">ReservationTime (required).</param>
-        /// <param name="GroupSize">GroupSize (required).</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-
-        public UpdateReservationBindingModel(int? ReservationId = null, DateTimeOffset? ReservationTime = null, int? GroupSize = null, string Areas = null, string Note = null, bool? HighChair = null, bool? Stroller = null)
-        {
-            // to ensure "ReservationId" is required (not null)
-            if (ReservationId == null)
-            {
-                throw new InvalidDataException("ReservationId is a required property for UpdateReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.ReservationId = ReservationId;
-            }
-            // to ensure "ReservationTime" is required (not null)
-            if (ReservationTime == null)
-            {
-                throw new InvalidDataException("ReservationTime is a required property for UpdateReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.ReservationTime = ReservationTime;
-            }
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for UpdateReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
-            this.Areas = Areas;
-            this.Note = Note;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            
-        }
+       
         
     
         /// <summary>

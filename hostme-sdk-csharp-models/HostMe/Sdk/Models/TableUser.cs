@@ -18,23 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class TableUser :  IEquatable<TableUser>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TableUser" /> class.
-        /// Initializes a new instance of the <see cref="TableUser" />class.
-        /// </summary>
-        /// <param name="Table">Table.</param>
-        /// <param name="User">User.</param>
-        /// <param name="RegistrationTime">RegistrationTime.</param>
-        /// <param name="EstimatedReleaseTime">EstimatedReleaseTime.</param>
-
-        public TableUser(TableInfo Table = null, UserProfile User = null, DateTimeOffset? RegistrationTime = null, DateTimeOffset? EstimatedReleaseTime = null)
-        {
-            this.Table = Table;
-            this.User = User;
-            this.RegistrationTime = RegistrationTime;
-            this.EstimatedReleaseTime = EstimatedReleaseTime;
-            
-        }
+       
         
     
         /// <summary>

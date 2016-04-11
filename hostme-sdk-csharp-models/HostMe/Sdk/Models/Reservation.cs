@@ -38,55 +38,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="type", EmitDefaultValue=true)]
         public TypeEnum? Type { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Reservation" /> class.
-        /// Initializes a new instance of the <see cref="Reservation" />class.
-        /// </summary>
-        /// <param name="UnreadMessageCount">UnreadMessageCount.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Restaurant">Restaurant.</param>
-        /// <param name="Created">Created.</param>
-        /// <param name="Closed">Closed.</param>
-        /// <param name="ReservationTime">ReservationTime.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="CustomerName">CustomerName.</param>
-        /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="NotificationUrl">NotificationUrl.</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
-        /// <param name="Messages">Messages.</param>
-        /// <param name="Membership">Membership.</param>
-        /// <param name="Type">Type.</param>
-
-        public Reservation(int? UnreadMessageCount = null, string Id = null, RestaurantContactInfo Restaurant = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, DateTimeOffset? ReservationTime = null, string Status = null, string CustomerName = null, int? GroupSize = null, string Phone = null, string NotificationUrl = null, string Areas = null, string Note = null, string TableNumber = null, bool? HighChair = null, bool? Stroller = null, double? EstimatedTurnOverTime = null, List<Message> Messages = null, MembershipInfo Membership = null, TypeEnum? Type = null)
-        {
-            this.UnreadMessageCount = UnreadMessageCount;
-            this.Id = Id;
-            this.Restaurant = Restaurant;
-            this.Created = Created;
-            this.Closed = Closed;
-            this.ReservationTime = ReservationTime;
-            this.Status = Status;
-            this.CustomerName = CustomerName;
-            this.GroupSize = GroupSize;
-            this.Phone = Phone;
-            this.NotificationUrl = NotificationUrl;
-            this.Areas = Areas;
-            this.Note = Note;
-            this.TableNumber = TableNumber;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
-            this.Messages = Messages;
-            this.Membership = Membership;
-            this.Type = Type;
-            
-        }
+       
         
     
         /// <summary>

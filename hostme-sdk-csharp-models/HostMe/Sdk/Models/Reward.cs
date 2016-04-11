@@ -38,29 +38,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="status", EmitDefaultValue=true)]
         public StatusEnum? Status { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Reward" /> class.
-        /// Initializes a new instance of the <see cref="Reward" />class.
-        /// </summary>
-        /// <param name="Conditions">Conditions.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="PriceInPoints">PriceInPoints.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="Status">Status.</param>
-
-        public Reward(RewardConditions Conditions = null, string Description = null, string Id = null, string ImageUrl = null, double? PriceInPoints = null, RewardValue Value = null, StatusEnum? Status = null)
-        {
-            this.Conditions = Conditions;
-            this.Description = Description;
-            this.Id = Id;
-            this.ImageUrl = ImageUrl;
-            this.PriceInPoints = PriceInPoints;
-            this.Value = Value;
-            this.Status = Status;
-            
-        }
+       
         
     
         /// <summary>

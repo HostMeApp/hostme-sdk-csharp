@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class MembershipLevel :  IEquatable<MembershipLevel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MembershipLevel" /> class.
-        /// Initializes a new instance of the <see cref="MembershipLevel" />class.
-        /// </summary>
-        /// <param name="Level">Level.</param>
-        /// <param name="Points">Points.</param>
-
-        public MembershipLevel(string Level = null, int? Points = null)
-        {
-            this.Level = Level;
-            this.Points = Points;
-            
-        }
+       
         
     
         /// <summary>

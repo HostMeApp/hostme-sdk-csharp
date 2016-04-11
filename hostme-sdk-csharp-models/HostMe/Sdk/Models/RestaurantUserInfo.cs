@@ -18,23 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RestaurantUserInfo :  IEquatable<RestaurantUserInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestaurantUserInfo" /> class.
-        /// Initializes a new instance of the <see cref="RestaurantUserInfo" />class.
-        /// </summary>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Role">Role.</param>
-
-        public RestaurantUserInfo(string UserId = null, string UserName = null, string Email = null, string Role = null)
-        {
-            this.UserId = UserId;
-            this.UserName = UserName;
-            this.Email = Email;
-            this.Role = Role;
-            
-        }
+       
         
     
         /// <summary>

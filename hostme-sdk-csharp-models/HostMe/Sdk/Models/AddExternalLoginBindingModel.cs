@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class AddExternalLoginBindingModel :  IEquatable<AddExternalLoginBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AddExternalLoginBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="AddExternalLoginBindingModel" />class.
-        /// </summary>
-        /// <param name="ExternalAccessToken">ExternalAccessToken (required).</param>
-
-        public AddExternalLoginBindingModel(string ExternalAccessToken = null)
-        {
-            // to ensure "ExternalAccessToken" is required (not null)
-            if (ExternalAccessToken == null)
-            {
-                throw new InvalidDataException("ExternalAccessToken is a required property for AddExternalLoginBindingModel and cannot be null");
-            }
-            else
-            {
-                this.ExternalAccessToken = ExternalAccessToken;
-            }
-            
-        }
+       
         
     
         /// <summary>

@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Floor :  IEquatable<Floor>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Floor" /> class.
-        /// Initializes a new instance of the <see cref="Floor" />class.
-        /// </summary>
-        /// <param name="FloorId">FloorId.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Map">Map.</param>
-
-        public Floor(string FloorId = null, string Name = null, string Map = null)
-        {
-            this.FloorId = FloorId;
-            this.Name = Name;
-            this.Map = Map;
-            
-        }
+       
         
     
         /// <summary>

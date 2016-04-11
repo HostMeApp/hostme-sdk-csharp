@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingStats :  IEquatable<WaitingStats>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingStats" /> class.
-        /// Initializes a new instance of the <see cref="WaitingStats" />class.
-        /// </summary>
-        /// <param name="WaitByArea">WaitByArea.</param>
-        /// <param name="WaitByGroup">WaitByGroup.</param>
-
-        public WaitingStats(List<WaitingStatLine> WaitByArea = null, List<WaitingStatLine> WaitByGroup = null)
-        {
-            this.WaitByArea = WaitByArea;
-            this.WaitByGroup = WaitByGroup;
-            
-        }
+       
         
     
         /// <summary>

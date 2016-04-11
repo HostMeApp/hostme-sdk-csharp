@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ResetPasswordBindingModel :  IEquatable<ResetPasswordBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ResetPasswordBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="ResetPasswordBindingModel" />class.
-        /// </summary>
-        /// <param name="Email">Email (required).</param>
-
-        public ResetPasswordBindingModel(string Email = null)
-        {
-            // to ensure "Email" is required (not null)
-            if (Email == null)
-            {
-                throw new InvalidDataException("Email is a required property for ResetPasswordBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Email = Email;
-            }
-            
-        }
+       
         
     
         /// <summary>

@@ -18,29 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingReportItem :  IEquatable<WaitingReportItem>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingReportItem" /> class.
-        /// Initializes a new instance of the <see cref="WaitingReportItem" />class.
-        /// </summary>
-        /// <param name="Status">Status.</param>
-        /// <param name="Created">Created.</param>
-        /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="StartPosition">StartPosition.</param>
-        /// <param name="TimeToCall">TimeToCall.</param>
-        /// <param name="TimeToSeat">TimeToSeat.</param>
-        /// <param name="TimeToCancel">TimeToCancel.</param>
-
-        public WaitingReportItem(string Status = null, DateTimeOffset? Created = null, int? GroupSize = null, int? StartPosition = null, int? TimeToCall = null, int? TimeToSeat = null, int? TimeToCancel = null)
-        {
-            this.Status = Status;
-            this.Created = Created;
-            this.GroupSize = GroupSize;
-            this.StartPosition = StartPosition;
-            this.TimeToCall = TimeToCall;
-            this.TimeToSeat = TimeToSeat;
-            this.TimeToCancel = TimeToCancel;
-            
-        }
+       
         
     
         /// <summary>

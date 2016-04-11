@@ -18,27 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class SetPasswordBindingModel :  IEquatable<SetPasswordBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SetPasswordBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="SetPasswordBindingModel" />class.
-        /// </summary>
-        /// <param name="NewPassword">NewPassword (required).</param>
-        /// <param name="ConfirmPassword">ConfirmPassword.</param>
-
-        public SetPasswordBindingModel(string NewPassword = null, string ConfirmPassword = null)
-        {
-            // to ensure "NewPassword" is required (not null)
-            if (NewPassword == null)
-            {
-                throw new InvalidDataException("NewPassword is a required property for SetPasswordBindingModel and cannot be null");
-            }
-            else
-            {
-                this.NewPassword = NewPassword;
-            }
-            this.ConfirmPassword = ConfirmPassword;
-            
-        }
+       
         
     
         /// <summary>

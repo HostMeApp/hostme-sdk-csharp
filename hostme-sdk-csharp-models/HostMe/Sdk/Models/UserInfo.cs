@@ -18,31 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UserInfo :  IEquatable<UserInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UserInfo" /> class.
-        /// Initializes a new instance of the <see cref="UserInfo" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="FullName">FullName.</param>
-        /// <param name="PhoneNumber">PhoneNumber.</param>
-        /// <param name="Roles">Roles.</param>
-        /// <param name="Identities">Identities.</param>
-        /// <param name="Subscriptions">Subscriptions.</param>
-
-        public UserInfo(string Id = null, string UserName = null, string Email = null, string FullName = null, string PhoneNumber = null, List<RoleInfo> Roles = null, List<UserIdentityInfo> Identities = null, List<UserSubscriptionInfo> Subscriptions = null)
-        {
-            this.Id = Id;
-            this.UserName = UserName;
-            this.Email = Email;
-            this.FullName = FullName;
-            this.PhoneNumber = PhoneNumber;
-            this.Roles = Roles;
-            this.Identities = Identities;
-            this.Subscriptions = Subscriptions;
-            
-        }
+       
         
     
         /// <summary>

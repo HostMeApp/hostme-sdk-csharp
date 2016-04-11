@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class SlotSetting :  IEquatable<SlotSetting>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SlotSetting" /> class.
-        /// Initializes a new instance of the <see cref="SlotSetting" />class.
-        /// </summary>
-        /// <param name="Interval">Interval.</param>
-        /// <param name="MaxCoversPerSlot">MaxCoversPerSlot.</param>
-
-        public SlotSetting(WeekDayOpenHours Interval = null, int? MaxCoversPerSlot = null)
-        {
-            this.Interval = Interval;
-            this.MaxCoversPerSlot = MaxCoversPerSlot;
-            
-        }
+       
         
     
         /// <summary>

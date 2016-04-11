@@ -18,37 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ChangePasswordBindingModel :  IEquatable<ChangePasswordBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ChangePasswordBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="ChangePasswordBindingModel" />class.
-        /// </summary>
-        /// <param name="OldPassword">OldPassword (required).</param>
-        /// <param name="NewPassword">NewPassword (required).</param>
-        /// <param name="ConfirmPassword">ConfirmPassword.</param>
-
-        public ChangePasswordBindingModel(string OldPassword = null, string NewPassword = null, string ConfirmPassword = null)
-        {
-            // to ensure "OldPassword" is required (not null)
-            if (OldPassword == null)
-            {
-                throw new InvalidDataException("OldPassword is a required property for ChangePasswordBindingModel and cannot be null");
-            }
-            else
-            {
-                this.OldPassword = OldPassword;
-            }
-            // to ensure "NewPassword" is required (not null)
-            if (NewPassword == null)
-            {
-                throw new InvalidDataException("NewPassword is a required property for ChangePasswordBindingModel and cannot be null");
-            }
-            else
-            {
-                this.NewPassword = NewPassword;
-            }
-            this.ConfirmPassword = ConfirmPassword;
-            
-        }
+       
         
     
         /// <summary>

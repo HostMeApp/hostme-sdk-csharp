@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class MinutesToPoints :  IEquatable<MinutesToPoints>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MinutesToPoints" /> class.
-        /// Initializes a new instance of the <see cref="MinutesToPoints" />class.
-        /// </summary>
-        /// <param name="FlatPoints">FlatPoints.</param>
-        /// <param name="MaxMinutes">MaxMinutes.</param>
-        /// <param name="Method">Method.</param>
-        /// <param name="MinMinutes">MinMinutes.</param>
-        /// <param name="PointsPerMinutes">PointsPerMinutes.</param>
-
-        public MinutesToPoints(int? FlatPoints = null, int? MaxMinutes = null, string Method = null, int? MinMinutes = null, int? PointsPerMinutes = null)
-        {
-            this.FlatPoints = FlatPoints;
-            this.MaxMinutes = MaxMinutes;
-            this.Method = Method;
-            this.MinMinutes = MinMinutes;
-            this.PointsPerMinutes = PointsPerMinutes;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class CampaignInfo :  IEquatable<CampaignInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="CampaignInfo" /> class.
-        /// Initializes a new instance of the <see cref="CampaignInfo" />class.
-        /// </summary>
-        /// <param name="RestaurantId">RestaurantId.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-
-        public CampaignInfo(int? RestaurantId = null, string TableNumber = null)
-        {
-            this.RestaurantId = RestaurantId;
-            this.TableNumber = TableNumber;
-            
-        }
+       
         
     
         /// <summary>

@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RemoveLoginBindingModel :  IEquatable<RemoveLoginBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RemoveLoginBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="RemoveLoginBindingModel" />class.
-        /// </summary>
-        /// <param name="Email">Email (required).</param>
-
-        public RemoveLoginBindingModel(string Email = null)
-        {
-            // to ensure "Email" is required (not null)
-            if (Email == null)
-            {
-                throw new InvalidDataException("Email is a required property for RemoveLoginBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Email = Email;
-            }
-            
-        }
+       
         
     
         /// <summary>

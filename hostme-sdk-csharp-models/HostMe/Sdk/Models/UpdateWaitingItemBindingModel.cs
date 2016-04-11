@@ -18,59 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class UpdateWaitingItemBindingModel :  IEquatable<UpdateWaitingItemBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateWaitingItemBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="UpdateWaitingItemBindingModel" />class.
-        /// </summary>
-        /// <param name="Id">Id (required).</param>
-        /// <param name="CustomerName">CustomerName (required).</param>
-        /// <param name="GroupSize">GroupSize (required).</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
-
-        public UpdateWaitingItemBindingModel(int? Id = null, string CustomerName = null, int? GroupSize = null, string Phone = null, string Areas = null, string Note = null, string TableNumber = null, bool? HighChair = null, bool? Stroller = null, double? EstimatedTurnOverTime = null)
-        {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for UpdateWaitingItemBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            // to ensure "CustomerName" is required (not null)
-            if (CustomerName == null)
-            {
-                throw new InvalidDataException("CustomerName is a required property for UpdateWaitingItemBindingModel and cannot be null");
-            }
-            else
-            {
-                this.CustomerName = CustomerName;
-            }
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for UpdateWaitingItemBindingModel and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
-            this.Phone = Phone;
-            this.Areas = Areas;
-            this.Note = Note;
-            this.TableNumber = TableNumber;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
-            
-        }
+       
         
     
         /// <summary>

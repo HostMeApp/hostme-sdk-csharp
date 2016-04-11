@@ -18,31 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class TimeDimension :  IEquatable<TimeDimension>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TimeDimension" /> class.
-        /// Initializes a new instance of the <see cref="TimeDimension" />class.
-        /// </summary>
-        /// <param name="Hour">Hour.</param>
-        /// <param name="WeekDay">WeekDay.</param>
-        /// <param name="WeekDayNumber">WeekDayNumber.</param>
-        /// <param name="Month">Month.</param>
-        /// <param name="MonthNumber">MonthNumber.</param>
-        /// <param name="Year">Year.</param>
-        /// <param name="WeekNumber">WeekNumber.</param>
-        /// <param name="TypeOfMeal">TypeOfMeal.</param>
-
-        public TimeDimension(int? Hour = null, string WeekDay = null, int? WeekDayNumber = null, string Month = null, int? MonthNumber = null, int? Year = null, int? WeekNumber = null, string TypeOfMeal = null)
-        {
-            this.Hour = Hour;
-            this.WeekDay = WeekDay;
-            this.WeekDayNumber = WeekDayNumber;
-            this.Month = Month;
-            this.MonthNumber = MonthNumber;
-            this.Year = Year;
-            this.WeekNumber = WeekNumber;
-            this.TypeOfMeal = TypeOfMeal;
-            
-        }
+       
         
     
         /// <summary>

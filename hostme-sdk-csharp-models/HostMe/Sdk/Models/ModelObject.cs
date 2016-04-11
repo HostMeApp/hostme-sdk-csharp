@@ -18,15 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ModelObject :  IEquatable<ModelObject>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ModelObject" /> class.
-        /// Initializes a new instance of the <see cref="ModelObject" />class.
-        /// </summary>
-
-        public ModelObject()
-        {
-            
-        }
+       
         
     
         /// <summary>

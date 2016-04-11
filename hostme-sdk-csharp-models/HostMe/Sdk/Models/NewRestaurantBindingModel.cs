@@ -18,57 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class NewRestaurantBindingModel :  IEquatable<NewRestaurantBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NewRestaurantBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="NewRestaurantBindingModel" />class.
-        /// </summary>
-        /// <param name="Name">Name (required).</param>
-        /// <param name="Address">Address (required).</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="TimeZone">TimeZone (required).</param>
-        /// <param name="ImageUrl">Url of the restaurant&#39;s logo. The logo size should be 100x100.</param>
-        /// <param name="FacebookId">FacebookId.</param>
-        /// <param name="TwitterAccount">TwitterAccount.</param>
-        /// <param name="WebsiteUrl">WebsiteUrl.</param>
-        /// <param name="FoursquareId">FoursquareId.</param>
-
-        public NewRestaurantBindingModel(string Name = null, string Address = null, string Phone = null, string TimeZone = null, string ImageUrl = null, string FacebookId = null, string TwitterAccount = null, string WebsiteUrl = null, string FoursquareId = null)
-        {
-            // to ensure "Name" is required (not null)
-            if (Name == null)
-            {
-                throw new InvalidDataException("Name is a required property for NewRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Name = Name;
-            }
-            // to ensure "Address" is required (not null)
-            if (Address == null)
-            {
-                throw new InvalidDataException("Address is a required property for NewRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Address = Address;
-            }
-            // to ensure "TimeZone" is required (not null)
-            if (TimeZone == null)
-            {
-                throw new InvalidDataException("TimeZone is a required property for NewRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.TimeZone = TimeZone;
-            }
-            this.Phone = Phone;
-            this.ImageUrl = ImageUrl;
-            this.FacebookId = FacebookId;
-            this.TwitterAccount = TwitterAccount;
-            this.WebsiteUrl = WebsiteUrl;
-            this.FoursquareId = FoursquareId;
-            
-        }
+       
         
     
         /// <summary>

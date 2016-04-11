@@ -18,59 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class NewAccountWithRestaurantBindingModel :  IEquatable<NewAccountWithRestaurantBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NewAccountWithRestaurantBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="NewAccountWithRestaurantBindingModel" />class.
-        /// </summary>
-        /// <param name="FullName">FullName (required).</param>
-        /// <param name="UserPhone">UserPhone (required).</param>
-        /// <param name="UserEmail">UserEmail (required).</param>
-        /// <param name="RestaurantName">RestaurantName.</param>
-        /// <param name="RestaurantAddress">RestaurantAddress (required).</param>
-        /// <param name="RestaurantPhone">RestaurantPhone.</param>
-
-        public NewAccountWithRestaurantBindingModel(string FullName = null, string UserPhone = null, string UserEmail = null, string RestaurantName = null, string RestaurantAddress = null, string RestaurantPhone = null)
-        {
-            // to ensure "FullName" is required (not null)
-            if (FullName == null)
-            {
-                throw new InvalidDataException("FullName is a required property for NewAccountWithRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.FullName = FullName;
-            }
-            // to ensure "UserPhone" is required (not null)
-            if (UserPhone == null)
-            {
-                throw new InvalidDataException("UserPhone is a required property for NewAccountWithRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.UserPhone = UserPhone;
-            }
-            // to ensure "UserEmail" is required (not null)
-            if (UserEmail == null)
-            {
-                throw new InvalidDataException("UserEmail is a required property for NewAccountWithRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.UserEmail = UserEmail;
-            }
-            // to ensure "RestaurantAddress" is required (not null)
-            if (RestaurantAddress == null)
-            {
-                throw new InvalidDataException("RestaurantAddress is a required property for NewAccountWithRestaurantBindingModel and cannot be null");
-            }
-            else
-            {
-                this.RestaurantAddress = RestaurantAddress;
-            }
-            this.RestaurantName = RestaurantName;
-            this.RestaurantPhone = RestaurantPhone;
-            
-        }
+       
         
     
         /// <summary>

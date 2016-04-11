@@ -18,23 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class ManageInfoViewModel :  IEquatable<ManageInfoViewModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ManageInfoViewModel" /> class.
-        /// Initializes a new instance of the <see cref="ManageInfoViewModel" />class.
-        /// </summary>
-        /// <param name="LocalLoginProvider">LocalLoginProvider.</param>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="Logins">Logins.</param>
-        /// <param name="ExternalLoginProviders">ExternalLoginProviders.</param>
-
-        public ManageInfoViewModel(string LocalLoginProvider = null, string UserName = null, List<UserLoginInfoViewModel> Logins = null, List<ExternalLoginViewModel> ExternalLoginProviders = null)
-        {
-            this.LocalLoginProvider = LocalLoginProvider;
-            this.UserName = UserName;
-            this.Logins = Logins;
-            this.ExternalLoginProviders = ExternalLoginProviders;
-            
-        }
+       
         
     
         /// <summary>

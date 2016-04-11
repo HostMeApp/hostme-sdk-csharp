@@ -18,73 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class NewReservationBindingModel :  IEquatable<NewReservationBindingModel>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="NewReservationBindingModel" /> class.
-        /// Initializes a new instance of the <see cref="NewReservationBindingModel" />class.
-        /// </summary>
-        /// <param name="RestaurantId">RestaurantId (required).</param>
-        /// <param name="ReservationTime">ReservationTime (required).</param>
-        /// <param name="GroupSize">GroupSize (required).</param>
-        /// <param name="NotificationUrl">NotificationUrl.</param>
-        /// <param name="DeviceType">DeviceType (required).</param>
-        /// <param name="Areas">Areas (required).</param>
-        /// <param name="Note">Note.</param>
-        /// <param name="HighChair">HighChair.</param>
-        /// <param name="Stroller">Stroller.</param>
-
-        public NewReservationBindingModel(int? RestaurantId = null, DateTimeOffset? ReservationTime = null, int? GroupSize = null, string NotificationUrl = null, string DeviceType = null, string Areas = null, string Note = null, bool? HighChair = null, bool? Stroller = null)
-        {
-            // to ensure "RestaurantId" is required (not null)
-            if (RestaurantId == null)
-            {
-                throw new InvalidDataException("RestaurantId is a required property for NewReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.RestaurantId = RestaurantId;
-            }
-            // to ensure "ReservationTime" is required (not null)
-            if (ReservationTime == null)
-            {
-                throw new InvalidDataException("ReservationTime is a required property for NewReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.ReservationTime = ReservationTime;
-            }
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for NewReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
-            // to ensure "DeviceType" is required (not null)
-            if (DeviceType == null)
-            {
-                throw new InvalidDataException("DeviceType is a required property for NewReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.DeviceType = DeviceType;
-            }
-            // to ensure "Areas" is required (not null)
-            if (Areas == null)
-            {
-                throw new InvalidDataException("Areas is a required property for NewReservationBindingModel and cannot be null");
-            }
-            else
-            {
-                this.Areas = Areas;
-            }
-            this.NotificationUrl = NotificationUrl;
-            this.Note = Note;
-            this.HighChair = HighChair;
-            this.Stroller = Stroller;
-            
-        }
+       
         
     
         /// <summary>

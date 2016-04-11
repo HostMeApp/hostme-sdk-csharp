@@ -18,35 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Message :  IEquatable<Message>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Message" /> class.
-        /// Initializes a new instance of the <see cref="Message" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="WaitItemId">WaitItemId.</param>
-        /// <param name="Body">Body.</param>
-        /// <param name="Time">Time.</param>
-        /// <param name="Origin">Origin.</param>
-        /// <param name="IsAutoMessage">IsAutoMessage.</param>
-        /// <param name="DeliveryStatus">DeliveryStatus.</param>
-        /// <param name="DeliveryTime">DeliveryTime.</param>
-        /// <param name="DeliveryFailureReason">DeliveryFailureReason.</param>
-        /// <param name="IsRead">IsRead.</param>
-
-        public Message(int? Id = null, int? WaitItemId = null, string Body = null, DateTimeOffset? Time = null, string Origin = null, bool? IsAutoMessage = null, string DeliveryStatus = null, DateTimeOffset? DeliveryTime = null, string DeliveryFailureReason = null, bool? IsRead = null)
-        {
-            this.Id = Id;
-            this.WaitItemId = WaitItemId;
-            this.Body = Body;
-            this.Time = Time;
-            this.Origin = Origin;
-            this.IsAutoMessage = IsAutoMessage;
-            this.DeliveryStatus = DeliveryStatus;
-            this.DeliveryTime = DeliveryTime;
-            this.DeliveryFailureReason = DeliveryFailureReason;
-            this.IsRead = IsRead;
-            
-        }
+       
         
     
         /// <summary>

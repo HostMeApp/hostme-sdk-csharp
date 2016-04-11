@@ -18,27 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Table :  IEquatable<Table>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Table" /> class.
-        /// Initializes a new instance of the <see cref="Table" />class.
-        /// </summary>
-        /// <param name="TableNumber">TableNumber.</param>
-        /// <param name="TableTopSize">TableTopSize.</param>
-        /// <param name="Area">Area.</param>
-        /// <param name="Tags">Tags.</param>
-        /// <param name="Reservability">Reservability.</param>
-        /// <param name="Waitability">Waitability.</param>
-
-        public Table(string TableNumber = null, int? TableTopSize = null, string Area = null, List<string> Tags = null, TableAvailability Reservability = null, TableAvailability Waitability = null)
-        {
-            this.TableNumber = TableNumber;
-            this.TableTopSize = TableTopSize;
-            this.Area = Area;
-            this.Tags = Tags;
-            this.Reservability = Reservability;
-            this.Waitability = Waitability;
-            
-        }
+       
         
     
         /// <summary>

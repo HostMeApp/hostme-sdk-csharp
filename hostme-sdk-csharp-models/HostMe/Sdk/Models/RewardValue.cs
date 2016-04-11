@@ -41,27 +41,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="type", EmitDefaultValue=true)]
         public TypeEnum? Type { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RewardValue" /> class.
-        /// Initializes a new instance of the <see cref="RewardValue" />class.
-        /// </summary>
-        /// <param name="Amount">Amount.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Discount">Discount.</param>
-        /// <param name="FreeMeal">FreeMeal.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="Type">Type.</param>
-
-        public RewardValue(double? Amount = null, string Description = null, double? Discount = null, string FreeMeal = null, string ImageUrl = null, TypeEnum? Type = null)
-        {
-            this.Amount = Amount;
-            this.Description = Description;
-            this.Discount = Discount;
-            this.FreeMeal = FreeMeal;
-            this.ImageUrl = ImageUrl;
-            this.Type = Type;
-            
-        }
+       
         
     
         /// <summary>

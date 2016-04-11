@@ -18,31 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class Membership :  IEquatable<Membership>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Membership" /> class.
-        /// Initializes a new instance of the <see cref="Membership" />class.
-        /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="MembershipLevel">MembershipLevel.</param>
-        /// <param name="Points">Points.</param>
-        /// <param name="JoinDate">JoinDate.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="Restaurant">Restaurant.</param>
-        /// <param name="IsMember">IsMember.</param>
-        /// <param name="Profile">Profile.</param>
-
-        public Membership(int? Id = null, string MembershipLevel = null, long? Points = null, DateTimeOffset? JoinDate = null, string Status = null, RestaurantInfo Restaurant = null, bool? IsMember = null, UserProfile Profile = null)
-        {
-            this.Id = Id;
-            this.MembershipLevel = MembershipLevel;
-            this.Points = Points;
-            this.JoinDate = JoinDate;
-            this.Status = Status;
-            this.Restaurant = Restaurant;
-            this.IsMember = IsMember;
-            this.Profile = Profile;
-            
-        }
+       
         
     
         /// <summary>

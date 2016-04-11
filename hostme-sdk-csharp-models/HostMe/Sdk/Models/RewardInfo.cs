@@ -18,27 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RewardInfo :  IEquatable<RewardInfo>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RewardInfo" /> class.
-        /// Initializes a new instance of the <see cref="RewardInfo" />class.
-        /// </summary>
-        /// <param name="Description">Description.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="ImageUrl">ImageUrl.</param>
-        /// <param name="PriceInPoints">PriceInPoints.</param>
-        /// <param name="RedeemRequest">RedeemRequest.</param>
-        /// <param name="Value">Value.</param>
-
-        public RewardInfo(string Description = null, string Id = null, string ImageUrl = null, double? PriceInPoints = null, RedeemRequestInfo RedeemRequest = null, RewardValue Value = null)
-        {
-            this.Description = Description;
-            this.Id = Id;
-            this.ImageUrl = ImageUrl;
-            this.PriceInPoints = PriceInPoints;
-            this.RedeemRequest = RedeemRequest;
-            this.Value = Value;
-            
-        }
+       
         
     
         /// <summary>

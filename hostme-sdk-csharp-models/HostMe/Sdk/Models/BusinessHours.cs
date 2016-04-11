@@ -18,19 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class BusinessHours :  IEquatable<BusinessHours>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="BusinessHours" /> class.
-        /// Initializes a new instance of the <see cref="BusinessHours" />class.
-        /// </summary>
-        /// <param name="OpeningHours">OpeningHours.</param>
-        /// <param name="IsOpenNow">IsOpenNow.</param>
-
-        public BusinessHours(List<WeekDayOpenHours> OpeningHours = null, bool? IsOpenNow = null)
-        {
-            this.OpeningHours = OpeningHours;
-            this.IsOpenNow = IsOpenNow;
-            
-        }
+       
         
     
         /// <summary>

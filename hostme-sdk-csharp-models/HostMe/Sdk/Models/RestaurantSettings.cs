@@ -18,21 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class RestaurantSettings :  IEquatable<RestaurantSettings>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RestaurantSettings" /> class.
-        /// Initializes a new instance of the <see cref="RestaurantSettings" />class.
-        /// </summary>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="OpeningHours">OpeningHours.</param>
-        /// <param name="TableSizes">TableSizes.</param>
-
-        public RestaurantSettings(List<string> Areas = null, List<WeekDayOpenHours> OpeningHours = null, List<int?> TableSizes = null)
-        {
-            this.Areas = Areas;
-            this.OpeningHours = OpeningHours;
-            this.TableSizes = TableSizes;
-            
-        }
+       
         
     
         /// <summary>

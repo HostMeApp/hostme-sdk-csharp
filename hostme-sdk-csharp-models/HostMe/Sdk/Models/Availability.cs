@@ -44,33 +44,7 @@ namespace HostMe.Sdk.Models
         [DataMember(Name="availabilityLevel", EmitDefaultValue=true)]
         public AvailabilityLevelEnum? AvailabilityLevel { get; set; }
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Availability" /> class.
-        /// Initializes a new instance of the <see cref="Availability" />class.
-        /// </summary>
-        /// <param name="AcceptReservations">AcceptReservations.</param>
-        /// <param name="AvailabilityLevel">AvailabilityLevel.</param>
-        /// <param name="InWaitCovers">InWaitCovers.</param>
-        /// <param name="MaxCoversForSlot">MaxCoversForSlot.</param>
-        /// <param name="Open">Open.</param>
-        /// <param name="RecommendedTables">RecommendedTables.</param>
-        /// <param name="RequestedTime">RequestedTime.</param>
-        /// <param name="ReservedCovers">ReservedCovers.</param>
-        /// <param name="Time">Time.</param>
-
-        public Availability(bool? AcceptReservations = null, AvailabilityLevelEnum? AvailabilityLevel = null, int? InWaitCovers = null, int? MaxCoversForSlot = null, bool? Open = null, string RecommendedTables = null, bool? RequestedTime = null, int? ReservedCovers = null, TimeSpan? Time = null)
-        {
-            this.AcceptReservations = AcceptReservations;
-            this.AvailabilityLevel = AvailabilityLevel;
-            this.InWaitCovers = InWaitCovers;
-            this.MaxCoversForSlot = MaxCoversForSlot;
-            this.Open = Open;
-            this.RecommendedTables = RecommendedTables;
-            this.RequestedTime = RequestedTime;
-            this.ReservedCovers = ReservedCovers;
-            this.Time = Time;
-            
-        }
+       
         
     
         /// <summary>

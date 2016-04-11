@@ -18,25 +18,7 @@ namespace HostMe.Sdk.Models
     public partial class WaitingSettings :  IEquatable<WaitingSettings>
     { 
     
-        /// <summary>
-        /// Initializes a new instance of the <see cref="WaitingSettings" /> class.
-        /// Initializes a new instance of the <see cref="WaitingSettings" />class.
-        /// </summary>
-        /// <param name="AcceptRemoteRegistration">AcceptRemoteRegistration.</param>
-        /// <param name="EnableManualHold">EnableManualHold.</param>
-        /// <param name="MaximumHoldTime">MaximumHoldTime.</param>
-        /// <param name="PositionMessages">PositionMessages.</param>
-        /// <param name="StatusMessages">StatusMessages.</param>
-
-        public WaitingSettings(bool? AcceptRemoteRegistration = null, bool? EnableManualHold = null, int? MaximumHoldTime = null, List<PositionMessage> PositionMessages = null, List<StatusMessage> StatusMessages = null)
-        {
-            this.AcceptRemoteRegistration = AcceptRemoteRegistration;
-            this.EnableManualHold = EnableManualHold;
-            this.MaximumHoldTime = MaximumHoldTime;
-            this.PositionMessages = PositionMessages;
-            this.StatusMessages = StatusMessages;
-            
-        }
+       
         
     
         /// <summary>
