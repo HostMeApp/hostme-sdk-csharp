@@ -266,6 +266,18 @@ string tableNumber = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test GetRestaurantConfiguration
+        /// </summary>
+        [Test]
+        public void GetRestaurantConfigurationTest()
+        {
+            // TODO: add unit test for the method 'GetRestaurantConfiguration'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantConfiguration(restaurantId);
+            Assert.IsInstanceOf<RestaurantConfiguration> (response, "response is RestaurantConfiguration"); 
+        }
+        
+        /// <summary>
         /// Test GetRestaurantSettings
         /// </summary>
         [Test]

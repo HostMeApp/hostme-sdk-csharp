@@ -178,6 +178,18 @@ DateTimeOffset? to = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test GetRestaurantReservationsStatistic
+        /// </summary>
+        [Test]
+        public void GetRestaurantReservationsStatisticTest()
+        {
+            // TODO: add unit test for the method 'GetRestaurantReservationsStatistic'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantReservationsStatistic(restaurantId);
+            Assert.IsInstanceOf<ReservationsStatistic> (response, "response is ReservationsStatistic"); 
+        }
+        
+        /// <summary>
         /// Test GetUnreadMessagesCount
         /// </summary>
         [Test]

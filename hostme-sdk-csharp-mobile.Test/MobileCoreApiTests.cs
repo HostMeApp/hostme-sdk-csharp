@@ -90,6 +90,18 @@ namespace HostMe.Sdk.Test
         }
         
         /// <summary>
+        /// Test CreateRestaurantUser
+        /// </summary>
+        [Test]
+        public void CreateRestaurantUserTest()
+        {
+            // TODO: add unit test for the method 'CreateRestaurantUser'
+            CreateRestaurantCustomer model = null; // TODO: replace null with proper value
+            instance.CreateRestaurantUser(model);
+             
+        }
+        
+        /// <summary>
         /// Test FindRestaurants
         /// </summary>
         [Test]

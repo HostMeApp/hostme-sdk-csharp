@@ -49,9 +49,8 @@ namespace HostMe.Sdk.Models
         public double? Lattitude { get; set; }
     
         /// <summary>
-        /// Optional. Only is used.
+        /// Gets or Sets CustomerName
         /// </summary>
-        /// <value>Optional. Only is used.</value>
         [DataMember(Name="customerName", EmitDefaultValue=true)]
         public string CustomerName { get; set; }
     

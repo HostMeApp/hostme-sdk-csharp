@@ -22,12 +22,6 @@ namespace HostMe.Sdk.Models
         
     
         /// <summary>
-        /// Gets or Sets ReservationId
-        /// </summary>
-        [DataMember(Name="reservationId", EmitDefaultValue=true)]
-        public int? ReservationId { get; set; }
-    
-        /// <summary>
         /// Gets or Sets ReservationTime
         /// </summary>
         [DataMember(Name="reservationTime", EmitDefaultValue=true)]
@@ -71,8 +65,7 @@ namespace HostMe.Sdk.Models
         {
             var sb = new StringBuilder();
             sb.Append("class UpdateReservationBindingModel {\n");
-            sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
-sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
 sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
 sb.Append("  Areas: ").Append(Areas).Append("\n");
 sb.Append("  Note: ").Append(Note).Append("\n");
@@ -114,11 +107,6 @@ sb.Append("  Stroller: ").Append(Stroller).Append("\n");
                 return false;
 
             return 
-                (
-                    this.ReservationId == other.ReservationId ||
-                    this.ReservationId != null &&
-                    this.ReservationId.Equals(other.ReservationId)
-                ) && 
                 (
                     this.ReservationTime == other.ReservationTime ||
                     this.ReservationTime != null &&
@@ -162,8 +150,6 @@ sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ReservationId != null)
-                    hash = hash * 59 + this.ReservationId.GetHashCode();
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.GroupSize != null)
