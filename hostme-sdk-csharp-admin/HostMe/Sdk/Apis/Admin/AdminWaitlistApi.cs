@@ -717,7 +717,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>WaitingItem</returns>
         WaitingItem UpdateWaiting (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item);
   
@@ -730,7 +730,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>ApiResponse of WaitingItem</returns>
         ApiResponse<WaitingItem> UpdateWaitingWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item);
         #endregion Synchronous Operations
@@ -1437,7 +1437,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of WaitingItem</returns>
         System.Threading.Tasks.Task<WaitingItem> UpdateWaitingAsync (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item);
 
@@ -1450,7 +1450,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of ApiResponse (WaitingItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitingItem>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item);
         #endregion Asynchronous Operations
@@ -6617,7 +6617,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param> 
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param> 
-        /// <param name="item">Update model of witing record</param> 
+        /// <param name="item">Update model of waiting record</param> 
         /// <returns>WaitingItem</returns>
         public WaitingItem UpdateWaiting (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item)
         {
@@ -6631,7 +6631,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param> 
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param> 
-        /// <param name="item">Update model of witing record</param> 
+        /// <param name="item">Update model of waiting record</param> 
         /// <returns>ApiResponse of WaitingItem</returns>
         public ApiResponse< WaitingItem > UpdateWaitingWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item)
         {
@@ -6718,7 +6718,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of WaitingItem</returns>
         public async System.Threading.Tasks.Task<WaitingItem> UpdateWaitingAsync (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item)
         {
@@ -6733,7 +6733,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Identifier of the restaurant registered in our system</param>
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
-        /// <param name="item">Update model of witing record</param>
+        /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of ApiResponse (WaitingItem)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WaitingItem>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItemBindingModel item)
         {

@@ -1736,7 +1736,7 @@ namespace HostMe.Sdk.Apis.Mobile
                 throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling MobileWaitlistApi->PutOnHold");
             
     
-            var localVarPath = "/api/wm/mb/waitings/waitings/{waitingItemId}/putonhold";
+            var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/putonhold";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1820,7 +1820,7 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId == null) throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling PutOnHold");
             
     
-            var localVarPath = "/api/wm/mb/waitings/waitings/{waitingItemId}/putonhold";
+            var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/putonhold";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2090,7 +2090,7 @@ namespace HostMe.Sdk.Apis.Mobile
                 throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling MobileWaitlistApi->TakeOffHold");
             
     
-            var localVarPath = "/api/wm/mb/waitings/waitings/{waitingItemId}/takeoffhold";
+            var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/takeoffhold";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2174,7 +2174,7 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId == null) throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling TakeOffHold");
             
     
-            var localVarPath = "/api/wm/mb/waitings/waitings/{waitingItemId}/takeoffhold";
+            var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/takeoffhold";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
