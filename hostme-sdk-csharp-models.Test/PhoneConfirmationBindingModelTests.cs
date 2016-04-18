@@ -75,12 +75,12 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Longitude' 
         }
         /// <summary>
-        /// Test the property 'Lattitude' 
+        /// Test the property 'Latitude' 
         /// </summary>
         [Test]
-        public void LattitudeTest()
+        public void LatitudeTest()
         {
-            // TODO: unit test for the property 'Lattitude' 
+            // TODO: unit test for the property 'Latitude' 
         }
         /// <summary>
         /// Test the property 'CustomerName' 

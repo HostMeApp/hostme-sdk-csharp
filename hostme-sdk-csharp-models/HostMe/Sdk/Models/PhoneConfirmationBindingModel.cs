@@ -45,8 +45,8 @@ namespace HostMe.Sdk.Models
         /// Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.
         /// </summary>
         /// <value>Latitude of the phone. Coordinates are used to check that phone location and restaurant are close enought.</value>
-        [DataMember(Name="lattitude", EmitDefaultValue=true)]
-        public double? Lattitude { get; set; }
+        [DataMember(Name="latitude", EmitDefaultValue=true)]
+        public double? Latitude { get; set; }
     
         /// <summary>
         /// Gets or Sets CustomerName
@@ -71,7 +71,7 @@ namespace HostMe.Sdk.Models
             sb.Append("  PhoneId: ").Append(PhoneId).Append("\n");
 sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
 sb.Append("  Longitude: ").Append(Longitude).Append("\n");
-sb.Append("  Lattitude: ").Append(Lattitude).Append("\n");
+sb.Append("  Latitude: ").Append(Latitude).Append("\n");
 sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
 sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
             sb.Append("}\n");
@@ -126,9 +126,9 @@ sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
                     this.Longitude.Equals(other.Longitude)
                 ) && 
                 (
-                    this.Lattitude == other.Lattitude ||
-                    this.Lattitude != null &&
-                    this.Lattitude.Equals(other.Lattitude)
+                    this.Latitude == other.Latitude ||
+                    this.Latitude != null &&
+                    this.Latitude.Equals(other.Latitude)
                 ) && 
                 (
                     this.CustomerName == other.CustomerName ||
@@ -159,8 +159,8 @@ sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
                     hash = hash * 59 + this.DeviceType.GetHashCode();
                 if (this.Longitude != null)
                     hash = hash * 59 + this.Longitude.GetHashCode();
-                if (this.Lattitude != null)
-                    hash = hash * 59 + this.Lattitude.GetHashCode();
+                if (this.Latitude != null)
+                    hash = hash * 59 + this.Latitude.GetHashCode();
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
                 if (this.NotificationUrl != null)

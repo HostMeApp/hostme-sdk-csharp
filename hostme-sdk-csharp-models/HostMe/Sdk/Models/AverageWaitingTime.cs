@@ -15,23 +15,23 @@ namespace HostMe.Sdk.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class SetPushChannelBindingModel :  IEquatable<SetPushChannelBindingModel>
+    public partial class AverageWaitingTime :  IEquatable<AverageWaitingTime>
     { 
     
        
         
     
         /// <summary>
-        /// Gets or Sets NotificationUrl
+        /// Gets or Sets ValueMinutes
         /// </summary>
-        [DataMember(Name="notificationUrl", EmitDefaultValue=true)]
-        public string NotificationUrl { get; set; }
+        [DataMember(Name="valueMinutes", EmitDefaultValue=true)]
+        public int? ValueMinutes { get; set; }
     
         /// <summary>
-        /// Gets or Sets DeviceType
+        /// Gets or Sets TotalMinutes
         /// </summary>
-        [DataMember(Name="deviceType", EmitDefaultValue=true)]
-        public string DeviceType { get; set; }
+        [DataMember(Name="totalMinutes", EmitDefaultValue=true)]
+        public int? TotalMinutes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -40,9 +40,9 @@ namespace HostMe.Sdk.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SetPushChannelBindingModel {\n");
-            sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
-sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
+            sb.Append("class AverageWaitingTime {\n");
+            sb.Append("  ValueMinutes: ").Append(ValueMinutes).Append("\n");
+sb.Append("  TotalMinutes: ").Append(TotalMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -64,15 +64,15 @@ sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SetPushChannelBindingModel);
+            return this.Equals(obj as AverageWaitingTime);
         }
 
         /// <summary>
-        /// Returns true if SetPushChannelBindingModel instances are equal
+        /// Returns true if AverageWaitingTime instances are equal
         /// </summary>
-        /// <param name="other">Instance of SetPushChannelBindingModel to be compared</param>
+        /// <param name="other">Instance of AverageWaitingTime to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SetPushChannelBindingModel other)
+        public bool Equals(AverageWaitingTime other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -80,14 +80,14 @@ sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
 
             return 
                 (
-                    this.NotificationUrl == other.NotificationUrl ||
-                    this.NotificationUrl != null &&
-                    this.NotificationUrl.Equals(other.NotificationUrl)
+                    this.ValueMinutes == other.ValueMinutes ||
+                    this.ValueMinutes != null &&
+                    this.ValueMinutes.Equals(other.ValueMinutes)
                 ) && 
                 (
-                    this.DeviceType == other.DeviceType ||
-                    this.DeviceType != null &&
-                    this.DeviceType.Equals(other.DeviceType)
+                    this.TotalMinutes == other.TotalMinutes ||
+                    this.TotalMinutes != null &&
+                    this.TotalMinutes.Equals(other.TotalMinutes)
                 );
         }
 
@@ -102,10 +102,10 @@ sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.NotificationUrl != null)
-                    hash = hash * 59 + this.NotificationUrl.GetHashCode();
-                if (this.DeviceType != null)
-                    hash = hash * 59 + this.DeviceType.GetHashCode();
+                if (this.ValueMinutes != null)
+                    hash = hash * 59 + this.ValueMinutes.GetHashCode();
+                if (this.TotalMinutes != null)
+                    hash = hash * 59 + this.TotalMinutes.GetHashCode();
                 return hash;
             }
         }

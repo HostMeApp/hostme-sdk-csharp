@@ -282,6 +282,14 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'UnreadMessageCount' 
         }
+        /// <summary>
+        /// Test the property 'Restaurant' 
+        /// </summary>
+        [Test]
+        public void RestaurantTest()
+        {
+            // TODO: unit test for the property 'Restaurant' 
+        }
 
     }
 

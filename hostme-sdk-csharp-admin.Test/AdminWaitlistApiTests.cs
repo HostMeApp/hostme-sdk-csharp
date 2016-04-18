@@ -54,6 +54,19 @@ namespace HostMe.Sdk.Test
 
         
         /// <summary>
+        /// Test AddConfirmedWaiting
+        /// </summary>
+        [Test]
+        public void AddConfirmedWaitingTest()
+        {
+            // TODO: add unit test for the method 'AddConfirmedWaiting'
+            int? restaurantId = null; // TODO: replace null with proper value
+PanelConfirmationBindingModel conf = null; // TODO: replace null with proper value
+            var response = instance.AddConfirmedWaiting(restaurantId, conf);
+            Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
+        }
+        
+        /// <summary>
         /// Test AddNewWaiting
         /// </summary>
         [Test]
@@ -160,6 +173,18 @@ int? to = null; // TODO: replace null with proper value
 int? waitingItemId = null; // TODO: replace null with proper value
             var response = instance.GetMessages(restaurantId, waitingItemId);
             Assert.IsInstanceOf<List<Message>> (response, "response is List<Message>"); 
+        }
+        
+        /// <summary>
+        /// Test GetRestaurantReservationsStatistic
+        /// </summary>
+        [Test]
+        public void GetRestaurantReservationsStatisticTest()
+        {
+            // TODO: add unit test for the method 'GetRestaurantReservationsStatistic'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantReservationsStatistic(restaurantId);
+            Assert.IsInstanceOf<WaitingsStatistic> (response, "response is WaitingsStatistic"); 
         }
         
         /// <summary>

@@ -196,6 +196,12 @@ namespace HostMe.Sdk.Models
         public int? UnreadMessageCount { get; set; }
     
         /// <summary>
+        /// Gets or Sets Restaurant
+        /// </summary>
+        [DataMember(Name="restaurant", EmitDefaultValue=true)]
+        public RestaurantContactInfo Restaurant { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -232,6 +238,7 @@ sb.Append("  Membership: ").Append(Membership).Append("\n");
 sb.Append("  Reservation: ").Append(Reservation).Append("\n");
 sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
 sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
+sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -412,6 +419,11 @@ sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
                     this.UnreadMessageCount == other.UnreadMessageCount ||
                     this.UnreadMessageCount != null &&
                     this.UnreadMessageCount.Equals(other.UnreadMessageCount)
+                ) && 
+                (
+                    this.Restaurant == other.Restaurant ||
+                    this.Restaurant != null &&
+                    this.Restaurant.Equals(other.Restaurant)
                 );
         }
 
@@ -484,6 +496,8 @@ sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
                     hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
                 if (this.UnreadMessageCount != null)
                     hash = hash * 59 + this.UnreadMessageCount.GetHashCode();
+                if (this.Restaurant != null)
+                    hash = hash * 59 + this.Restaurant.GetHashCode();
                 return hash;
             }
         }

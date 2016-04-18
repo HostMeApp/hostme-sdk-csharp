@@ -164,9 +164,9 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetTableMonitors'
             int? restaurantId = null; // TODO: replace null with proper value
-int? partySize = null; // TODO: replace null with proper value
+double? tableTurnOver = null; // TODO: replace null with proper value
 DateTimeOffset? time = null; // TODO: replace null with proper value
-            var response = instance.GetTableMonitors(restaurantId, partySize, time);
+            var response = instance.GetTableMonitors(restaurantId, tableTurnOver, time);
             Assert.IsInstanceOf<List<TableMonitor>> (response, "response is List<TableMonitor>"); 
         }
         

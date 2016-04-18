@@ -205,10 +205,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>List&lt;TableMonitor&gt;</returns>
-        List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
+        List<TableMonitor> GetTableMonitors (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null);
   
         /// <summary>
         /// 
@@ -218,10 +218,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>ApiResponse of List&lt;TableMonitor&gt;</returns>
-        ApiResponse<List<TableMonitor>> GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
+        ApiResponse<List<TableMonitor>> GetTableMonitorsWithHttpInfo (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -556,10 +556,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableMonitor&gt;</returns>
-        System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
+        System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null);
 
         /// <summary>
         /// 
@@ -569,10 +569,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableMonitor&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null);
+        System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2188,12 +2188,12 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <param name="partySize"> (optional)</param> 
+        /// <param name="tableTurnOver"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>List&lt;TableMonitor&gt;</returns>
-        public List<TableMonitor> GetTableMonitors (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
+        public List<TableMonitor> GetTableMonitors (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null)
         {
-             ApiResponse<List<TableMonitor>> localVarResponse = GetTableMonitorsWithHttpInfo(restaurantId, partySize, time);
+             ApiResponse<List<TableMonitor>> localVarResponse = GetTableMonitorsWithHttpInfo(restaurantId, tableTurnOver, time);
              return localVarResponse.Data;
         }
 
@@ -2202,10 +2202,10 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <param name="partySize"> (optional)</param> 
+        /// <param name="tableTurnOver"> (optional)</param> 
         /// <param name="time"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;TableMonitor&gt;</returns>
-        public ApiResponse< List<TableMonitor> > GetTableMonitorsWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
+        public ApiResponse< List<TableMonitor> > GetTableMonitorsWithHttpInfo (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2240,7 +2240,7 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (partySize != null) localVarQueryParams.Add("partySize", Configuration.ApiClient.ParameterToString(partySize)); // query parameter
+            if (tableTurnOver != null) localVarQueryParams.Add("tableTurnOver", Configuration.ApiClient.ParameterToString(tableTurnOver)); // query parameter
 if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.ParameterToString(time)); // query parameter
                                     
 
@@ -2275,12 +2275,12 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of List&lt;TableMonitor&gt;</returns>
-        public async System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
+        public async System.Threading.Tasks.Task<List<TableMonitor>> GetTableMonitorsAsync (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null)
         {
-             ApiResponse<List<TableMonitor>> localVarResponse = await GetTableMonitorsAsyncWithHttpInfo(restaurantId, partySize, time);
+             ApiResponse<List<TableMonitor>> localVarResponse = await GetTableMonitorsAsyncWithHttpInfo(restaurantId, tableTurnOver, time);
              return localVarResponse.Data;
 
         }
@@ -2290,10 +2290,10 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="partySize"> (optional)</param>
+        /// <param name="tableTurnOver"> (optional)</param>
         /// <param name="time"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;TableMonitor&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, int? partySize = null, DateTimeOffset? time = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<TableMonitor>>> GetTableMonitorsAsyncWithHttpInfo (int? restaurantId, double? tableTurnOver = null, DateTimeOffset? time = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetTableMonitors");
@@ -2326,7 +2326,7 @@ if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.Parame
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (partySize != null) localVarQueryParams.Add("partySize", Configuration.ApiClient.ParameterToString(partySize)); // query parameter
+            if (tableTurnOver != null) localVarQueryParams.Add("tableTurnOver", Configuration.ApiClient.ParameterToString(tableTurnOver)); // query parameter
 if (time != null) localVarQueryParams.Add("time", Configuration.ApiClient.ParameterToString(time)); // query parameter
                                     
 
