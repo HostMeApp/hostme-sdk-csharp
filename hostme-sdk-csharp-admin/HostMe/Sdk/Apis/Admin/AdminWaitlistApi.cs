@@ -240,8 +240,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>WaitingsStatistic</returns>
-        WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId);
+        WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId, string area = null);
   
         /// <summary>
         /// 
@@ -251,8 +252,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>ApiResponse of WaitingsStatistic</returns>
-        ApiResponse<WaitingsStatistic> GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId);
+        ApiResponse<WaitingsStatistic> GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, string area = null);
         /// <summary>
         /// 
         /// </summary>
@@ -960,8 +962,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>Task of WaitingsStatistic</returns>
-        System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId);
+        System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, string area = null);
 
         /// <summary>
         /// 
@@ -971,8 +974,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>Task of ApiResponse (WaitingsStatistic)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId);
+        System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null);
         /// <summary>
         /// 
         /// </summary>
@@ -3160,10 +3164,11 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
+        /// <param name="area"> (optional)</param> 
         /// <returns>WaitingsStatistic</returns>
-        public WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId)
+        public WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId, string area = null)
         {
-             ApiResponse<WaitingsStatistic> localVarResponse = GetRestaurantReservationsStatisticWithHttpInfo(restaurantId);
+             ApiResponse<WaitingsStatistic> localVarResponse = GetRestaurantReservationsStatisticWithHttpInfo(restaurantId, area);
              return localVarResponse.Data;
         }
 
@@ -3172,8 +3177,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
+        /// <param name="area"> (optional)</param> 
         /// <returns>ApiResponse of WaitingsStatistic</returns>
-        public ApiResponse< WaitingsStatistic > GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId)
+        public ApiResponse< WaitingsStatistic > GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, string area = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3208,7 +3214,8 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                
+            if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -3241,10 +3248,11 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>Task of WaitingsStatistic</returns>
-        public async System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId)
+        public async System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, string area = null)
         {
-             ApiResponse<WaitingsStatistic> localVarResponse = await GetRestaurantReservationsStatisticAsyncWithHttpInfo(restaurantId);
+             ApiResponse<WaitingsStatistic> localVarResponse = await GetRestaurantReservationsStatisticAsyncWithHttpInfo(restaurantId, area);
              return localVarResponse.Data;
 
         }
@@ -3254,8 +3262,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="area"> (optional)</param>
         /// <returns>Task of ApiResponse (WaitingsStatistic)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId)
+        public async System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRestaurantReservationsStatistic");
@@ -3288,7 +3297,8 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                
+            if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
+                                    
 
             // authentication (oauth2) required
             

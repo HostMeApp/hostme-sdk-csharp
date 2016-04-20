@@ -183,7 +183,8 @@ int? waitingItemId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantReservationsStatistic'
             int? restaurantId = null; // TODO: replace null with proper value
-            var response = instance.GetRestaurantReservationsStatistic(restaurantId);
+string area = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantReservationsStatistic(restaurantId, area);
             Assert.IsInstanceOf<WaitingsStatistic> (response, "response is WaitingsStatistic"); 
         }
         

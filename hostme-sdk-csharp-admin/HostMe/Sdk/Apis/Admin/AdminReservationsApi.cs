@@ -244,8 +244,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ReservationsStatistic</returns>
-        ReservationsStatistic GetRestaurantReservationsStatistic (int? restaurantId);
+        ReservationsStatistic GetRestaurantReservationsStatistic (int? restaurantId, DateTimeOffset? date = null);
   
         /// <summary>
         /// 
@@ -255,8 +256,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ApiResponse of ReservationsStatistic</returns>
-        ApiResponse<ReservationsStatistic> GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId);
+        ApiResponse<ReservationsStatistic> GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, DateTimeOffset? date = null);
         /// <summary>
         /// 
         /// </summary>
@@ -701,8 +703,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ReservationsStatistic</returns>
-        System.Threading.Tasks.Task<ReservationsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId);
+        System.Threading.Tasks.Task<ReservationsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, DateTimeOffset? date = null);
 
         /// <summary>
         /// 
@@ -712,8 +715,9 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (ReservationsStatistic)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId);
+        System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2642,10 +2646,11 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
+        /// <param name="date"> (optional)</param> 
         /// <returns>ReservationsStatistic</returns>
-        public ReservationsStatistic GetRestaurantReservationsStatistic (int? restaurantId)
+        public ReservationsStatistic GetRestaurantReservationsStatistic (int? restaurantId, DateTimeOffset? date = null)
         {
-             ApiResponse<ReservationsStatistic> localVarResponse = GetRestaurantReservationsStatisticWithHttpInfo(restaurantId);
+             ApiResponse<ReservationsStatistic> localVarResponse = GetRestaurantReservationsStatisticWithHttpInfo(restaurantId, date);
              return localVarResponse.Data;
         }
 
@@ -2654,8 +2659,9 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
+        /// <param name="date"> (optional)</param> 
         /// <returns>ApiResponse of ReservationsStatistic</returns>
-        public ApiResponse< ReservationsStatistic > GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId)
+        public ApiResponse< ReservationsStatistic > GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, DateTimeOffset? date = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2690,7 +2696,8 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -2723,10 +2730,11 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ReservationsStatistic</returns>
-        public async System.Threading.Tasks.Task<ReservationsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId)
+        public async System.Threading.Tasks.Task<ReservationsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, DateTimeOffset? date = null)
         {
-             ApiResponse<ReservationsStatistic> localVarResponse = await GetRestaurantReservationsStatisticAsyncWithHttpInfo(restaurantId);
+             ApiResponse<ReservationsStatistic> localVarResponse = await GetRestaurantReservationsStatisticAsyncWithHttpInfo(restaurantId, date);
              return localVarResponse.Data;
 
         }
@@ -2736,8 +2744,9 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (ReservationsStatistic)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId)
+        public async System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRestaurantReservationsStatistic");
@@ -2770,7 +2779,8 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
+                                    
 
             // authentication (oauth2) required
             

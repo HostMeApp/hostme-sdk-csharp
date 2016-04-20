@@ -185,7 +185,8 @@ DateTimeOffset? to = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantReservationsStatistic'
             int? restaurantId = null; // TODO: replace null with proper value
-            var response = instance.GetRestaurantReservationsStatistic(restaurantId);
+DateTimeOffset? date = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantReservationsStatistic(restaurantId, date);
             Assert.IsInstanceOf<ReservationsStatistic> (response, "response is ReservationsStatistic"); 
         }
         
