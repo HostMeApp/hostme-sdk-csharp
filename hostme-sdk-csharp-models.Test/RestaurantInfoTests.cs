@@ -59,6 +59,14 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'HoursInterval' 
         }
         /// <summary>
+        /// Test the property 'City' 
+        /// </summary>
+        [Test]
+        public void CityTest()
+        {
+            // TODO: unit test for the property 'City' 
+        }
+        /// <summary>
         /// Test the property 'MaxPartySize' 
         /// </summary>
         [Test]
@@ -219,14 +227,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Distance' 
         }
         /// <summary>
-        /// Test the property 'Rating' 
-        /// </summary>
-        [Test]
-        public void RatingTest()
-        {
-            // TODO: unit test for the property 'Rating' 
-        }
-        /// <summary>
         /// Test the property 'HasLoyaltyProgram' 
         /// </summary>
         [Test]
@@ -265,30 +265,6 @@ namespace HostMe.Sdk.Test
         public void CurrentLineStatsTest()
         {
             // TODO: unit test for the property 'CurrentLineStats' 
-        }
-        /// <summary>
-        /// Test the property 'IsFavorite' 
-        /// </summary>
-        [Test]
-        public void IsFavoriteTest()
-        {
-            // TODO: unit test for the property 'IsFavorite' 
-        }
-        /// <summary>
-        /// Test the property 'NumberOfDeals' 
-        /// </summary>
-        [Test]
-        public void NumberOfDealsTest()
-        {
-            // TODO: unit test for the property 'NumberOfDeals' 
-        }
-        /// <summary>
-        /// Test the property 'NumberOfVotes' 
-        /// </summary>
-        [Test]
-        public void NumberOfVotesTest()
-        {
-            // TODO: unit test for the property 'NumberOfVotes' 
         }
         /// <summary>
         /// Test the property 'ReservationIncomeEmail' 

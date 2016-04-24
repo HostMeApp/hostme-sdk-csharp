@@ -176,15 +176,15 @@ int? waitingItemId = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test GetRestaurantReservationsStatistic
+        /// Test GetRestaurantWaitingsStatistic
         /// </summary>
         [Test]
-        public void GetRestaurantReservationsStatisticTest()
+        public void GetRestaurantWaitingsStatisticTest()
         {
-            // TODO: add unit test for the method 'GetRestaurantReservationsStatistic'
+            // TODO: add unit test for the method 'GetRestaurantWaitingsStatistic'
             int? restaurantId = null; // TODO: replace null with proper value
 string area = null; // TODO: replace null with proper value
-            var response = instance.GetRestaurantReservationsStatistic(restaurantId, area);
+            var response = instance.GetRestaurantWaitingsStatistic(restaurantId, area);
             Assert.IsInstanceOf<WaitingsStatistic> (response, "response is WaitingsStatistic"); 
         }
         

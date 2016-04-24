@@ -242,7 +242,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>WaitingsStatistic</returns>
-        WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId, string area = null);
+        WaitingsStatistic GetRestaurantWaitingsStatistic (int? restaurantId, string area = null);
   
         /// <summary>
         /// 
@@ -254,7 +254,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>ApiResponse of WaitingsStatistic</returns>
-        ApiResponse<WaitingsStatistic> GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, string area = null);
+        ApiResponse<WaitingsStatistic> GetRestaurantWaitingsStatisticWithHttpInfo (int? restaurantId, string area = null);
         /// <summary>
         /// 
         /// </summary>
@@ -964,7 +964,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>Task of WaitingsStatistic</returns>
-        System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, string area = null);
+        System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantWaitingsStatisticAsync (int? restaurantId, string area = null);
 
         /// <summary>
         /// 
@@ -976,7 +976,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>Task of ApiResponse (WaitingsStatistic)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null);
+        System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantWaitingsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1615,14 +1615,7 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = conf; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1706,13 +1699,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = conf; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1786,14 +1772,7 @@ namespace HostMe.Sdk.Apis.Admin
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1866,13 +1845,6 @@ namespace HostMe.Sdk.Apis.Admin
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1955,14 +1927,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (tableNumber != null) localVarQueryParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2042,13 +2007,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (tableNumber != null) localVarQueryParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2128,14 +2086,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2212,13 +2163,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2318,14 +2262,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = comment; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2418,13 +2355,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = comment; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2504,14 +2434,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2588,13 +2511,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2688,14 +2604,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = conf; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2784,13 +2693,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = conf; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -2873,14 +2775,7 @@ if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.Parame
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2962,13 +2857,6 @@ if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.Parame
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3049,14 +2937,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3134,13 +3015,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3166,9 +3040,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="restaurantId"></param> 
         /// <param name="area"> (optional)</param> 
         /// <returns>WaitingsStatistic</returns>
-        public WaitingsStatistic GetRestaurantReservationsStatistic (int? restaurantId, string area = null)
+        public WaitingsStatistic GetRestaurantWaitingsStatistic (int? restaurantId, string area = null)
         {
-             ApiResponse<WaitingsStatistic> localVarResponse = GetRestaurantReservationsStatisticWithHttpInfo(restaurantId, area);
+             ApiResponse<WaitingsStatistic> localVarResponse = GetRestaurantWaitingsStatisticWithHttpInfo(restaurantId, area);
              return localVarResponse.Data;
         }
 
@@ -3179,12 +3053,12 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="restaurantId"></param> 
         /// <param name="area"> (optional)</param> 
         /// <returns>ApiResponse of WaitingsStatistic</returns>
-        public ApiResponse< WaitingsStatistic > GetRestaurantReservationsStatisticWithHttpInfo (int? restaurantId, string area = null)
+        public ApiResponse< WaitingsStatistic > GetRestaurantWaitingsStatisticWithHttpInfo (int? restaurantId, string area = null)
         {
             
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitlistApi->GetRestaurantReservationsStatistic");
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitlistApi->GetRestaurantWaitingsStatistic");
             
     
             var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/waitings/stats";
@@ -3217,14 +3091,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3233,9 +3100,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantReservationsStatistic: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantWaitingsStatistic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantReservationsStatistic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantWaitingsStatistic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             return new ApiResponse<WaitingsStatistic>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3250,9 +3117,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>Task of WaitingsStatistic</returns>
-        public async System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantReservationsStatisticAsync (int? restaurantId, string area = null)
+        public async System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantWaitingsStatisticAsync (int? restaurantId, string area = null)
         {
-             ApiResponse<WaitingsStatistic> localVarResponse = await GetRestaurantReservationsStatisticAsyncWithHttpInfo(restaurantId, area);
+             ApiResponse<WaitingsStatistic> localVarResponse = await GetRestaurantWaitingsStatisticAsyncWithHttpInfo(restaurantId, area);
              return localVarResponse.Data;
 
         }
@@ -3264,10 +3131,10 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <param name="restaurantId"></param>
         /// <param name="area"> (optional)</param>
         /// <returns>Task of ApiResponse (WaitingsStatistic)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantReservationsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantWaitingsStatisticAsyncWithHttpInfo (int? restaurantId, string area = null)
         {
             // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRestaurantReservationsStatistic");
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRestaurantWaitingsStatistic");
             
     
             var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/waitings/stats";
@@ -3300,13 +3167,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3316,9 +3176,9 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantReservationsStatistic: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantWaitingsStatistic: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantReservationsStatistic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetRestaurantWaitingsStatistic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<WaitingsStatistic>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
@@ -3380,14 +3240,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3460,13 +3313,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3540,14 +3386,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3620,13 +3459,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3707,14 +3539,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3792,13 +3617,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -3872,14 +3690,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -3952,13 +3763,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4038,14 +3842,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4124,13 +3921,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4210,14 +4000,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4296,13 +4079,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4382,14 +4158,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4468,13 +4237,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4554,14 +4316,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4640,13 +4395,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4726,14 +4474,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4812,13 +4553,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -4898,14 +4632,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -4984,13 +4711,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5070,14 +4790,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -5156,13 +4869,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5249,14 +4955,7 @@ if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.Parame
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -5340,13 +5039,6 @@ if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.Parame
 if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5434,14 +5126,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (body != null) localVarQueryParams.Add("body", Configuration.ApiClient.ParameterToString(body)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -5524,13 +5209,6 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
 if (body != null) localVarQueryParams.Add("body", Configuration.ApiClient.ParameterToString(body)); // query parameter
                                     
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5610,14 +5288,7 @@ if (body != null) localVarQueryParams.Add("body", Configuration.ApiClient.Parame
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -5694,13 +5365,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5780,14 +5444,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -5864,13 +5521,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -5951,14 +5601,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -6036,13 +5679,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -6143,14 +5779,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -6244,13 +5873,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = body; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -6336,14 +5958,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -6426,13 +6041,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -6512,14 +6120,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -6596,13 +6197,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
 if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -6696,14 +6290,7 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = item; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
+                
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -6792,13 +6379,6 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
                 localVarPostBody = item; // byte array
             }
 
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 

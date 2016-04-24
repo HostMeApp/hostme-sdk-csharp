@@ -28,6 +28,12 @@ namespace HostMe.Sdk.Models
         public int? HoursInterval { get; set; }
     
         /// <summary>
+        /// Gets or Sets City
+        /// </summary>
+        [DataMember(Name="city", EmitDefaultValue=true)]
+        public string City { get; set; }
+    
+        /// <summary>
         /// Gets or Sets MaxPartySize
         /// </summary>
         [DataMember(Name="maxPartySize", EmitDefaultValue=true)]
@@ -148,12 +154,6 @@ namespace HostMe.Sdk.Models
         public double? Distance { get; set; }
     
         /// <summary>
-        /// Gets or Sets Rating
-        /// </summary>
-        [DataMember(Name="rating", EmitDefaultValue=true)]
-        public int? Rating { get; set; }
-    
-        /// <summary>
         /// Gets or Sets HasLoyaltyProgram
         /// </summary>
         [DataMember(Name="hasLoyaltyProgram", EmitDefaultValue=true)]
@@ -184,24 +184,6 @@ namespace HostMe.Sdk.Models
         public WaitingStats CurrentLineStats { get; set; }
     
         /// <summary>
-        /// Gets or Sets IsFavorite
-        /// </summary>
-        [DataMember(Name="isFavorite", EmitDefaultValue=true)]
-        public bool? IsFavorite { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets NumberOfDeals
-        /// </summary>
-        [DataMember(Name="numberOfDeals", EmitDefaultValue=true)]
-        public int? NumberOfDeals { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets NumberOfVotes
-        /// </summary>
-        [DataMember(Name="numberOfVotes", EmitDefaultValue=true)]
-        public int? NumberOfVotes { get; set; }
-    
-        /// <summary>
         /// Gets or Sets ReservationIncomeEmail
         /// </summary>
         [DataMember(Name="reservationIncomeEmail", EmitDefaultValue=true)]
@@ -216,6 +198,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RestaurantInfo {\n");
             sb.Append("  HoursInterval: ").Append(HoursInterval).Append("\n");
+sb.Append("  City: ").Append(City).Append("\n");
 sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
 sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
 sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
@@ -236,15 +219,11 @@ sb.Append("  Lat: ").Append(Lat).Append("\n");
 sb.Append("  Lon: ").Append(Lon).Append("\n");
 sb.Append("  HasHostmeSystem: ").Append(HasHostmeSystem).Append("\n");
 sb.Append("  Distance: ").Append(Distance).Append("\n");
-sb.Append("  Rating: ").Append(Rating).Append("\n");
 sb.Append("  HasLoyaltyProgram: ").Append(HasLoyaltyProgram).Append("\n");
 sb.Append("  AcceptRemouteLine: ").Append(AcceptRemouteLine).Append("\n");
 sb.Append("  AcceptReservation: ").Append(AcceptReservation).Append("\n");
 sb.Append("  AllowManualHold: ").Append(AllowManualHold).Append("\n");
 sb.Append("  CurrentLineStats: ").Append(CurrentLineStats).Append("\n");
-sb.Append("  IsFavorite: ").Append(IsFavorite).Append("\n");
-sb.Append("  NumberOfDeals: ").Append(NumberOfDeals).Append("\n");
-sb.Append("  NumberOfVotes: ").Append(NumberOfVotes).Append("\n");
 sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -286,6 +265,11 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     this.HoursInterval == other.HoursInterval ||
                     this.HoursInterval != null &&
                     this.HoursInterval.Equals(other.HoursInterval)
+                ) && 
+                (
+                    this.City == other.City ||
+                    this.City != null &&
+                    this.City.Equals(other.City)
                 ) && 
                 (
                     this.MaxPartySize == other.MaxPartySize ||
@@ -388,11 +372,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     this.Distance.Equals(other.Distance)
                 ) && 
                 (
-                    this.Rating == other.Rating ||
-                    this.Rating != null &&
-                    this.Rating.Equals(other.Rating)
-                ) && 
-                (
                     this.HasLoyaltyProgram == other.HasLoyaltyProgram ||
                     this.HasLoyaltyProgram != null &&
                     this.HasLoyaltyProgram.Equals(other.HasLoyaltyProgram)
@@ -418,21 +397,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     this.CurrentLineStats.Equals(other.CurrentLineStats)
                 ) && 
                 (
-                    this.IsFavorite == other.IsFavorite ||
-                    this.IsFavorite != null &&
-                    this.IsFavorite.Equals(other.IsFavorite)
-                ) && 
-                (
-                    this.NumberOfDeals == other.NumberOfDeals ||
-                    this.NumberOfDeals != null &&
-                    this.NumberOfDeals.Equals(other.NumberOfDeals)
-                ) && 
-                (
-                    this.NumberOfVotes == other.NumberOfVotes ||
-                    this.NumberOfVotes != null &&
-                    this.NumberOfVotes.Equals(other.NumberOfVotes)
-                ) && 
-                (
                     this.ReservationIncomeEmail == other.ReservationIncomeEmail ||
                     this.ReservationIncomeEmail != null &&
                     this.ReservationIncomeEmail.Equals(other.ReservationIncomeEmail)
@@ -452,6 +416,8 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                 // Suitable nullity checks etc, of course :)
                 if (this.HoursInterval != null)
                     hash = hash * 59 + this.HoursInterval.GetHashCode();
+                if (this.City != null)
+                    hash = hash * 59 + this.City.GetHashCode();
                 if (this.MaxPartySize != null)
                     hash = hash * 59 + this.MaxPartySize.GetHashCode();
                 if (this.MinPartySize != null)
@@ -492,8 +458,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     hash = hash * 59 + this.HasHostmeSystem.GetHashCode();
                 if (this.Distance != null)
                     hash = hash * 59 + this.Distance.GetHashCode();
-                if (this.Rating != null)
-                    hash = hash * 59 + this.Rating.GetHashCode();
                 if (this.HasLoyaltyProgram != null)
                     hash = hash * 59 + this.HasLoyaltyProgram.GetHashCode();
                 if (this.AcceptRemouteLine != null)
@@ -504,12 +468,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     hash = hash * 59 + this.AllowManualHold.GetHashCode();
                 if (this.CurrentLineStats != null)
                     hash = hash * 59 + this.CurrentLineStats.GetHashCode();
-                if (this.IsFavorite != null)
-                    hash = hash * 59 + this.IsFavorite.GetHashCode();
-                if (this.NumberOfDeals != null)
-                    hash = hash * 59 + this.NumberOfDeals.GetHashCode();
-                if (this.NumberOfVotes != null)
-                    hash = hash * 59 + this.NumberOfVotes.GetHashCode();
                 if (this.ReservationIncomeEmail != null)
                     hash = hash * 59 + this.ReservationIncomeEmail.GetHashCode();
                 return hash;
