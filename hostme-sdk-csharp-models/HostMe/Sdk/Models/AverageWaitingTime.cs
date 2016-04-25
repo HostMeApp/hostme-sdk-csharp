@@ -25,13 +25,13 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets ValueMinutes
         /// </summary>
         [DataMember(Name="valueMinutes", EmitDefaultValue=true)]
-        public int? ValueMinutes { get; set; }
+        public double? ValueMinutes { get; set; }
     
         /// <summary>
         /// Gets or Sets TotalMinutes
         /// </summary>
         [DataMember(Name="totalMinutes", EmitDefaultValue=true)]
-        public int? TotalMinutes { get; set; }
+        public double? TotalMinutes { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object

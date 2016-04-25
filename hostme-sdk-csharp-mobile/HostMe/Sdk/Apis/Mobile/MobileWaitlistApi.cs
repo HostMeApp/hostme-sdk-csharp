@@ -66,8 +66,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>WaitingItem</returns>
-        WaitingItem ConfirmWithApp (int? confirmationCode, PhoneConfirmationBindingModel conf);
+        /// <returns></returns>
+        void ConfirmWithApp (int? confirmationCode, PhoneConfirmationBindingModel conf);
   
         /// <summary>
         /// Confirm waiting record from HostMe mobile application
@@ -78,8 +78,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>ApiResponse of WaitingItem</returns>
-        ApiResponse<WaitingItem> ConfirmWithAppWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> ConfirmWithAppWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf);
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
         /// </summary>
@@ -88,8 +88,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>WaitingItem</returns>
-        WaitingItem GetInLine (NewRemoteWaitingBindingModel value);
+        /// <returns></returns>
+        void GetInLine (NewRemoteWaitingBindingModel value);
   
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
@@ -99,8 +99,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>ApiResponse of WaitingItem</returns>
-        ApiResponse<WaitingItem> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value);
         /// <summary>
         /// Returns current user waiting item
         /// </summary>
@@ -196,8 +196,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>Message</returns>
-        Message SendMessage (int? waitingItemId, string body);
+        /// <returns></returns>
+        void SendMessageToWaiting (int? waitingItemId, string body);
   
         /// <summary>
         /// Sends a message related to specified waiting item.
@@ -208,8 +208,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>ApiResponse of Message</returns>
-        ApiResponse<Message> SendMessageWithHttpInfo (int? waitingItemId, string body);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SendMessageToWaitingWithHttpInfo (int? waitingItemId, string body);
         /// <summary>
         /// Set waiting item off hold
         /// </summary>
@@ -286,8 +286,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>Task of WaitingItem</returns>
-        System.Threading.Tasks.Task<WaitingItem> ConfirmWithAppAsync (int? confirmationCode, PhoneConfirmationBindingModel conf);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ConfirmWithAppAsync (int? confirmationCode, PhoneConfirmationBindingModel conf);
 
         /// <summary>
         /// Confirm waiting record from HostMe mobile application
@@ -298,8 +298,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>Task of ApiResponse (WaitingItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WaitingItem>> ConfirmWithAppAsyncWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmWithAppAsyncWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf);
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
         /// </summary>
@@ -308,8 +308,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of WaitingItem</returns>
-        System.Threading.Tasks.Task<WaitingItem> GetInLineAsync (NewRemoteWaitingBindingModel value);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetInLineAsync (NewRemoteWaitingBindingModel value);
 
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
@@ -319,8 +319,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse (WaitingItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WaitingItem>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value);
         /// <summary>
         /// Returns current user waiting item
         /// </summary>
@@ -416,8 +416,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>Task of Message</returns>
-        System.Threading.Tasks.Task<Message> SendMessageAsync (int? waitingItemId, string body);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SendMessageToWaitingAsync (int? waitingItemId, string body);
 
         /// <summary>
         /// Sends a message related to specified waiting item.
@@ -428,8 +428,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Message>> SendMessageAsyncWithHttpInfo (int? waitingItemId, string body);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToWaitingAsyncWithHttpInfo (int? waitingItemId, string body);
         /// <summary>
         /// Set waiting item off hold
         /// </summary>
@@ -598,7 +598,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -671,6 +678,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -743,7 +757,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -815,6 +836,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -839,11 +867,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param> 
         /// <param name="conf">Conformation model</param> 
-        /// <returns>WaitingItem</returns>
-        public WaitingItem ConfirmWithApp (int? confirmationCode, PhoneConfirmationBindingModel conf)
+        /// <returns></returns>
+        public void ConfirmWithApp (int? confirmationCode, PhoneConfirmationBindingModel conf)
         {
-             ApiResponse<WaitingItem> localVarResponse = ConfirmWithAppWithHttpInfo(confirmationCode, conf);
-             return localVarResponse.Data;
+             ConfirmWithAppWithHttpInfo(confirmationCode, conf);
         }
 
         /// <summary>
@@ -852,8 +879,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param> 
         /// <param name="conf">Conformation model</param> 
-        /// <returns>ApiResponse of WaitingItem</returns>
-        public ApiResponse< WaitingItem > ConfirmWithAppWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ConfirmWithAppWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf)
         {
             
             // verify the required parameter 'confirmationCode' is set
@@ -901,7 +928,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = conf; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -914,10 +948,10 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfirmWithApp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<WaitingItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -926,11 +960,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>Task of WaitingItem</returns>
-        public async System.Threading.Tasks.Task<WaitingItem> ConfirmWithAppAsync (int? confirmationCode, PhoneConfirmationBindingModel conf)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ConfirmWithAppAsync (int? confirmationCode, PhoneConfirmationBindingModel conf)
         {
-             ApiResponse<WaitingItem> localVarResponse = await ConfirmWithAppAsyncWithHttpInfo(confirmationCode, conf);
-             return localVarResponse.Data;
+             await ConfirmWithAppAsyncWithHttpInfo(confirmationCode, conf);
 
         }
 
@@ -940,8 +973,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="confirmationCode">Confirmation code that has been generated during initial registration by hostess</param>
         /// <param name="conf">Conformation model</param>
-        /// <returns>Task of ApiResponse (WaitingItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WaitingItem>> ConfirmWithAppAsyncWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmWithAppAsyncWithHttpInfo (int? confirmationCode, PhoneConfirmationBindingModel conf)
         {
             // verify the required parameter 'confirmationCode' is set
             if (confirmationCode == null) throw new ApiException(400, "Missing required parameter 'confirmationCode' when calling ConfirmWithApp");
@@ -985,6 +1018,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = conf; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -998,21 +1038,20 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfirmWithApp: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WaitingItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold 
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
-        /// <returns>WaitingItem</returns>
-        public WaitingItem GetInLine (NewRemoteWaitingBindingModel value)
+        /// <returns></returns>
+        public void GetInLine (NewRemoteWaitingBindingModel value)
         {
-             ApiResponse<WaitingItem> localVarResponse = GetInLineWithHttpInfo(value);
-             return localVarResponse.Data;
+             GetInLineWithHttpInfo(value);
         }
 
         /// <summary>
@@ -1020,8 +1059,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
-        /// <returns>ApiResponse of WaitingItem</returns>
-        public ApiResponse< WaitingItem > GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value)
         {
             
             // verify the required parameter 'value' is set
@@ -1064,7 +1103,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1077,10 +1123,10 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<WaitingItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -1088,11 +1134,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of WaitingItem</returns>
-        public async System.Threading.Tasks.Task<WaitingItem> GetInLineAsync (NewRemoteWaitingBindingModel value)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetInLineAsync (NewRemoteWaitingBindingModel value)
         {
-             ApiResponse<WaitingItem> localVarResponse = await GetInLineAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
+             await GetInLineAsyncWithHttpInfo(value);
 
         }
 
@@ -1101,8 +1146,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse (WaitingItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WaitingItem>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value)
         {
             // verify the required parameter 'value' is set
             if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling GetInLine");
@@ -1143,6 +1188,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1156,10 +1208,10 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WaitingItem>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
         /// <summary>
         /// Returns current user waiting item 
@@ -1209,7 +1261,14 @@ namespace HostMe.Sdk.Apis.Mobile
             localVarPathParams.Add("format", "json");
                                                             
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1277,6 +1336,13 @@ namespace HostMe.Sdk.Apis.Mobile
             localVarPathParams.Add("format", "json");
                                                             
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1362,7 +1428,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = comment; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1445,6 +1518,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = comment; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1517,7 +1597,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1589,6 +1676,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration.ApiClient.ParameterToString(waitingItemId)); // path parameter
                                                 
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1668,7 +1762,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarQueryParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // query parameter
                                     
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1745,6 +1846,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarQueryParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // query parameter
                                     
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1769,11 +1877,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param> 
         /// <param name="body">The body of the message</param> 
-        /// <returns>Message</returns>
-        public Message SendMessage (int? waitingItemId, string body)
+        /// <returns></returns>
+        public void SendMessageToWaiting (int? waitingItemId, string body)
         {
-             ApiResponse<Message> localVarResponse = SendMessageWithHttpInfo(waitingItemId, body);
-             return localVarResponse.Data;
+             SendMessageToWaitingWithHttpInfo(waitingItemId, body);
         }
 
         /// <summary>
@@ -1782,17 +1889,17 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param> 
         /// <param name="body">The body of the message</param> 
-        /// <returns>ApiResponse of Message</returns>
-        public ApiResponse< Message > SendMessageWithHttpInfo (int? waitingItemId, string body)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SendMessageToWaitingWithHttpInfo (int? waitingItemId, string body)
         {
             
             // verify the required parameter 'waitingItemId' is set
             if (waitingItemId == null)
-                throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling MobileWaitlistApi->SendMessage");
+                throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling MobileWaitlistApi->SendMessageToWaiting");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling MobileWaitlistApi->SendMessage");
+                throw new ApiException(400, "Missing required parameter 'body' when calling MobileWaitlistApi->SendMessageToWaiting");
             
     
             var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/sendmessage";
@@ -1831,7 +1938,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = body; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1840,14 +1954,14 @@ namespace HostMe.Sdk.Apis.Mobile
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToWaiting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToWaiting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Message>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Message) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Message)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
 
         /// <summary>
@@ -1856,11 +1970,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>Task of Message</returns>
-        public async System.Threading.Tasks.Task<Message> SendMessageAsync (int? waitingItemId, string body)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SendMessageToWaitingAsync (int? waitingItemId, string body)
         {
-             ApiResponse<Message> localVarResponse = await SendMessageAsyncWithHttpInfo(waitingItemId, body);
-             return localVarResponse.Data;
+             await SendMessageToWaitingAsyncWithHttpInfo(waitingItemId, body);
 
         }
 
@@ -1870,13 +1983,13 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="body">The body of the message</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Message>> SendMessageAsyncWithHttpInfo (int? waitingItemId, string body)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToWaitingAsyncWithHttpInfo (int? waitingItemId, string body)
         {
             // verify the required parameter 'waitingItemId' is set
-            if (waitingItemId == null) throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling SendMessage");
+            if (waitingItemId == null) throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling SendMessageToWaiting");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMessage");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMessageToWaiting");
             
     
             var localVarPath = "/api/wm/mb/waitings/{waitingItemId}/sendmessage";
@@ -1915,6 +2028,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = body; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1924,14 +2044,14 @@ namespace HostMe.Sdk.Apis.Mobile
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToWaiting: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToWaiting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Message>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Message) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Message)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
         /// <summary>
         /// Set waiting item off hold 
@@ -1994,7 +2114,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarQueryParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // query parameter
                                     
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -2071,6 +2198,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarQueryParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // query parameter
                                     
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 

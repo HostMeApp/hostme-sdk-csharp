@@ -86,8 +86,8 @@ namespace HostMe.Sdk.Test
             // TODO: add unit test for the method 'ConfirmWithApp'
             int? confirmationCode = null; // TODO: replace null with proper value
 PhoneConfirmationBindingModel conf = null; // TODO: replace null with proper value
-            var response = instance.ConfirmWithApp(confirmationCode, conf);
-            Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
+            instance.ConfirmWithApp(confirmationCode, conf);
+             
         }
         
         /// <summary>
@@ -98,8 +98,8 @@ PhoneConfirmationBindingModel conf = null; // TODO: replace null with proper val
         {
             // TODO: add unit test for the method 'GetInLine'
             NewRemoteWaitingBindingModel value = null; // TODO: replace null with proper value
-            var response = instance.GetInLine(value);
-            Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
+            instance.GetInLine(value);
+             
         }
         
         /// <summary>
@@ -152,16 +152,16 @@ int? waitingItemId = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test SendMessage
+        /// Test SendMessageToWaiting
         /// </summary>
         [Test]
-        public void SendMessageTest()
+        public void SendMessageToWaitingTest()
         {
-            // TODO: add unit test for the method 'SendMessage'
+            // TODO: add unit test for the method 'SendMessageToWaiting'
             int? waitingItemId = null; // TODO: replace null with proper value
 string body = null; // TODO: replace null with proper value
-            var response = instance.SendMessage(waitingItemId, body);
-            Assert.IsInstanceOf<Message> (response, "response is Message"); 
+            instance.SendMessageToWaiting(waitingItemId, body);
+             
         }
         
         /// <summary>

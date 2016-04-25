@@ -115,15 +115,15 @@ string notes = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test SendMessage
+        /// Test SendMessageToReservation
         /// </summary>
         [Test]
-        public void SendMessageTest()
+        public void SendMessageToReservationTest()
         {
-            // TODO: add unit test for the method 'SendMessage'
+            // TODO: add unit test for the method 'SendMessageToReservation'
             string reservationId = null; // TODO: replace null with proper value
 string body = null; // TODO: replace null with proper value
-            instance.SendMessage(reservationId, body);
+            instance.SendMessageToReservation(reservationId, body);
              
         }
         

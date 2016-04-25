@@ -132,7 +132,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns></returns>
-        void SendMessage (string reservationId, string body);
+        void SendMessageToReservation (string reservationId, string body);
   
         /// <summary>
         /// Sends a message related to specified reservation
@@ -144,7 +144,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SendMessageWithHttpInfo (string reservationId, string body);
+        ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, string body);
         /// <summary>
         /// 
         /// </summary>
@@ -287,7 +287,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SendMessageAsync (string reservationId, string body);
+        System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, string body);
 
         /// <summary>
         /// Sends a message related to specified reservation
@@ -299,7 +299,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageAsyncWithHttpInfo (string reservationId, string body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, string body);
         /// <summary>
         /// 
         /// </summary>
@@ -474,7 +474,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -553,6 +560,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -638,7 +652,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = notes; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -721,6 +742,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = notes; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -794,7 +822,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -867,6 +902,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -936,7 +978,14 @@ namespace HostMe.Sdk.Apis.Mobile
                         if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
                                     
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1007,6 +1056,13 @@ namespace HostMe.Sdk.Apis.Mobile
                         if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
                                     
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1079,7 +1135,14 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1151,6 +1214,13 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1176,9 +1246,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param> 
         /// <param name="body">The body of the message</param> 
         /// <returns></returns>
-        public void SendMessage (string reservationId, string body)
+        public void SendMessageToReservation (string reservationId, string body)
         {
-             SendMessageWithHttpInfo(reservationId, body);
+             SendMessageToReservationWithHttpInfo(reservationId, body);
         }
 
         /// <summary>
@@ -1188,16 +1258,16 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param> 
         /// <param name="body">The body of the message</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SendMessageWithHttpInfo (string reservationId, string body)
+        public ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, string body)
         {
             
             // verify the required parameter 'reservationId' is set
             if (reservationId == null)
-                throw new ApiException(400, "Missing required parameter 'reservationId' when calling MobileReservationsApi->SendMessage");
+                throw new ApiException(400, "Missing required parameter 'reservationId' when calling MobileReservationsApi->SendMessageToReservation");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling MobileReservationsApi->SendMessage");
+                throw new ApiException(400, "Missing required parameter 'body' when calling MobileReservationsApi->SendMessageToReservation");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/messages";
@@ -1236,7 +1306,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = body; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1245,9 +1322,9 @@ namespace HostMe.Sdk.Apis.Mobile
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToReservation: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToReservation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -1262,9 +1339,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SendMessageAsync (string reservationId, string body)
+        public async System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, string body)
         {
-             await SendMessageAsyncWithHttpInfo(reservationId, body);
+             await SendMessageToReservationAsyncWithHttpInfo(reservationId, body);
 
         }
 
@@ -1275,12 +1352,12 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId">Reservation identifier</param>
         /// <param name="body">The body of the message</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageAsyncWithHttpInfo (string reservationId, string body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, string body)
         {
             // verify the required parameter 'reservationId' is set
-            if (reservationId == null) throw new ApiException(400, "Missing required parameter 'reservationId' when calling SendMessage");
+            if (reservationId == null) throw new ApiException(400, "Missing required parameter 'reservationId' when calling SendMessageToReservation");
             // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMessage");
+            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMessageToReservation");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/messages";
@@ -1319,6 +1396,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = body; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
@@ -1328,9 +1412,9 @@ namespace HostMe.Sdk.Apis.Mobile
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToReservation: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling SendMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling SendMessageToReservation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -1404,7 +1488,14 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-                
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
@@ -1487,6 +1578,13 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
