@@ -98,8 +98,8 @@ PhoneConfirmationBindingModel conf = null; // TODO: replace null with proper val
         {
             // TODO: add unit test for the method 'GetInLine'
             NewRemoteWaitingBindingModel value = null; // TODO: replace null with proper value
-            instance.GetInLine(value);
-             
+            var response = instance.GetInLine(value);
+            Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
         
         /// <summary>

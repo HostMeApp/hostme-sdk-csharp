@@ -88,8 +88,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns></returns>
-        void GetInLine (NewRemoteWaitingBindingModel value);
+        /// <returns>WaitingItem</returns>
+        WaitingItem GetInLine (NewRemoteWaitingBindingModel value);
   
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
@@ -99,8 +99,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value);
+        /// <returns>ApiResponse of WaitingItem</returns>
+        ApiResponse<WaitingItem> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value);
         /// <summary>
         /// Returns current user waiting item
         /// </summary>
@@ -308,8 +308,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task GetInLineAsync (NewRemoteWaitingBindingModel value);
+        /// <returns>Task of WaitingItem</returns>
+        System.Threading.Tasks.Task<WaitingItem> GetInLineAsync (NewRemoteWaitingBindingModel value);
 
         /// <summary>
         /// This method puts customer in a line on a fly. Thsi is remote registration in a line. Waiting item will be automaticaly put on hold
@@ -319,8 +319,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value);
+        /// <returns>Task of ApiResponse (WaitingItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WaitingItem>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value);
         /// <summary>
         /// Returns current user waiting item
         /// </summary>
@@ -1048,10 +1048,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
-        /// <returns></returns>
-        public void GetInLine (NewRemoteWaitingBindingModel value)
+        /// <returns>WaitingItem</returns>
+        public WaitingItem GetInLine (NewRemoteWaitingBindingModel value)
         {
-             GetInLineWithHttpInfo(value);
+             ApiResponse<WaitingItem> localVarResponse = GetInLineWithHttpInfo(value);
+             return localVarResponse.Data;
         }
 
         /// <summary>
@@ -1059,8 +1060,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value)
+        /// <returns>ApiResponse of WaitingItem</returns>
+        public ApiResponse< WaitingItem > GetInLineWithHttpInfo (NewRemoteWaitingBindingModel value)
         {
             
             // verify the required parameter 'value' is set
@@ -1123,10 +1124,10 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<WaitingItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
+            
         }
 
         /// <summary>
@@ -1134,10 +1135,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task GetInLineAsync (NewRemoteWaitingBindingModel value)
+        /// <returns>Task of WaitingItem</returns>
+        public async System.Threading.Tasks.Task<WaitingItem> GetInLineAsync (NewRemoteWaitingBindingModel value)
         {
-             await GetInLineAsyncWithHttpInfo(value);
+             ApiResponse<WaitingItem> localVarResponse = await GetInLineAsyncWithHttpInfo(value);
+             return localVarResponse.Data;
 
         }
 
@@ -1146,8 +1148,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value)
+        /// <returns>Task of ApiResponse (WaitingItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WaitingItem>> GetInLineAsyncWithHttpInfo (NewRemoteWaitingBindingModel value)
         {
             // verify the required parameter 'value' is set
             if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling GetInLine");
@@ -1208,10 +1210,10 @@ namespace HostMe.Sdk.Apis.Mobile
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInLine: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            
-            return new ApiResponse<Object>(localVarStatusCode,
+            return new ApiResponse<WaitingItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
+                (WaitingItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingItem)));
+            
         }
         /// <summary>
         /// Returns current user waiting item 
