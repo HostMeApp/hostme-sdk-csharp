@@ -191,10 +191,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>List&lt;WaitingItem&gt;</returns>
-        List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
+        List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null);
   
         /// <summary>
         /// Returns all waiting items for the selecetd restaurant
@@ -205,10 +205,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>ApiResponse of List&lt;WaitingItem&gt;</returns>
-        ApiResponse<List<WaitingItem>> GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
+        ApiResponse<List<WaitingItem>> GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null);
         /// <summary>
         /// 
         /// </summary>
@@ -913,10 +913,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>Task of List&lt;WaitingItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
+        System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null);
 
         /// <summary>
         /// Returns all waiting items for the selecetd restaurant
@@ -927,10 +927,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null);
+        System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2815,12 +2815,12 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param> 
         /// <param name="queryOptions">OData query (optional)</param> 
-        /// <param name="from"> (optional)</param> 
-        /// <param name="to"> (optional)</param> 
+        /// <param name="area"> (optional)</param> 
+        /// <param name="groupSize"> (optional)</param> 
         /// <returns>List&lt;WaitingItem&gt;</returns>
-        public List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
+        public List<WaitingItem> GetAllWaitings (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null)
         {
-             ApiResponse<List<WaitingItem>> localVarResponse = GetAllWaitingsWithHttpInfo(restaurantId, queryOptions, from, to);
+             ApiResponse<List<WaitingItem>> localVarResponse = GetAllWaitingsWithHttpInfo(restaurantId, queryOptions, area, groupSize);
              return localVarResponse.Data;
         }
 
@@ -2830,10 +2830,10 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param> 
         /// <param name="queryOptions">OData query (optional)</param> 
-        /// <param name="from"> (optional)</param> 
-        /// <param name="to"> (optional)</param> 
+        /// <param name="area"> (optional)</param> 
+        /// <param name="groupSize"> (optional)</param> 
         /// <returns>ApiResponse of List&lt;WaitingItem&gt;</returns>
-        public ApiResponse< List<WaitingItem> > GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
+        public ApiResponse< List<WaitingItem> > GetAllWaitingsWithHttpInfo (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2869,8 +2869,8 @@ if (waitingItemId != null) localVarPathParams.Add("waitingItemId", Configuration
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
             if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
-if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
+if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
+if (groupSize != null) localVarQueryParams.Add("groupSize", Configuration.ApiClient.ParameterToString(groupSize)); // query parameter
                                     
 
             // authentication (oauth2) required
@@ -2905,12 +2905,12 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>Task of List&lt;WaitingItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
+        public async System.Threading.Tasks.Task<List<WaitingItem>> GetAllWaitingsAsync (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null)
         {
-             ApiResponse<List<WaitingItem>> localVarResponse = await GetAllWaitingsAsyncWithHttpInfo(restaurantId, queryOptions, from, to);
+             ApiResponse<List<WaitingItem>> localVarResponse = await GetAllWaitingsAsyncWithHttpInfo(restaurantId, queryOptions, area, groupSize);
              return localVarResponse.Data;
 
         }
@@ -2921,10 +2921,10 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="queryOptions">OData query (optional)</param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
+        /// <param name="area"> (optional)</param>
+        /// <param name="groupSize"> (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;WaitingItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string from = null, int? to = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingItem>>> GetAllWaitingsAsyncWithHttpInfo (int? restaurantId, string queryOptions = null, string area = null, int? groupSize = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetAllWaitings");
@@ -2958,8 +2958,8 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
             if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
-if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
+if (area != null) localVarQueryParams.Add("area", Configuration.ApiClient.ParameterToString(area)); // query parameter
+if (groupSize != null) localVarQueryParams.Add("groupSize", Configuration.ApiClient.ParameterToString(groupSize)); // query parameter
                                     
 
             // authentication (oauth2) required
@@ -4351,7 +4351,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
                 throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitlistApi->GetWaitingTimeByLine");
             
     
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/line";
+            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/waitings/groupby/line";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4437,7 +4437,7 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetWaitingTimeByLine");
             
     
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/line";
+            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/waitings/groupby/line";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();

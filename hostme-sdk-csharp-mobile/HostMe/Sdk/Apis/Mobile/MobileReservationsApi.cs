@@ -102,7 +102,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
         ApiResponse<List<Reservation>> GetUserReservationsWithHttpInfo (string queryOptions = null);
         /// <summary>
-        /// Mark all message as read.
+        /// Mark all reservation message as read.
         /// </summary>
         /// <remarks>
         /// 
@@ -113,7 +113,7 @@ namespace HostMe.Sdk.Apis.Mobile
         void ReadAllMessage (string reservationId);
   
         /// <summary>
-        /// Mark all message as read.
+        /// Mark all reservation message as read.
         /// </summary>
         /// <remarks>
         /// 
@@ -257,7 +257,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions = null);
         /// <summary>
-        /// Mark all message as read.
+        /// Mark all reservation message as read.
         /// </summary>
         /// <remarks>
         /// 
@@ -268,7 +268,7 @@ namespace HostMe.Sdk.Apis.Mobile
         System.Threading.Tasks.Task ReadAllMessageAsync (string reservationId);
 
         /// <summary>
-        /// Mark all message as read.
+        /// Mark all reservation message as read.
         /// </summary>
         /// <remarks>
         /// 
@@ -1082,7 +1082,7 @@ namespace HostMe.Sdk.Apis.Mobile
             
         }
         /// <summary>
-        /// Mark all message as read. 
+        /// Mark all reservation message as read. 
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
@@ -1093,7 +1093,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all message as read. 
+        /// Mark all reservation message as read. 
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
@@ -1162,7 +1162,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all message as read. 
+        /// Mark all reservation message as read. 
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -1174,7 +1174,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all message as read. 
+        /// Mark all reservation message as read. 
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>

@@ -93,6 +93,19 @@ int? memberId = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test CreateRestaurantUser
+        /// </summary>
+        [Test]
+        public void CreateRestaurantUserTest()
+        {
+            // TODO: add unit test for the method 'CreateRestaurantUser'
+            int? restaurantId = null; // TODO: replace null with proper value
+CreateRestaurantCustomer model = null; // TODO: replace null with proper value
+            instance.CreateRestaurantUser(restaurantId, model);
+             
+        }
+        
+        /// <summary>
         /// Test DeleteReward
         /// </summary>
         [Test]
@@ -101,8 +114,21 @@ int? memberId = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'DeleteReward'
             int? restaurantId = null; // TODO: replace null with proper value
 string rewardId = null; // TODO: replace null with proper value
-            var response = instance.DeleteReward(restaurantId, rewardId);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+            instance.DeleteReward(restaurantId, rewardId);
+             
+        }
+        
+        /// <summary>
+        /// Test Filter
+        /// </summary>
+        [Test]
+        public void FilterTest()
+        {
+            // TODO: add unit test for the method 'Filter'
+            int? restaurantId = null; // TODO: replace null with proper value
+string token = null; // TODO: replace null with proper value
+            var response = instance.Filter(restaurantId, token);
+            Assert.IsInstanceOf<List<UserProfile>> (response, "response is List<UserProfile>"); 
         }
         
         /// <summary>

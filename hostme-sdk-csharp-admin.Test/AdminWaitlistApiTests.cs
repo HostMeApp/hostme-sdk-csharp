@@ -156,9 +156,9 @@ PanelConfirmationBindingModel conf = null; // TODO: replace null with proper val
             // TODO: add unit test for the method 'GetAllWaitings'
             int? restaurantId = null; // TODO: replace null with proper value
 string queryOptions = null; // TODO: replace null with proper value
-string from = null; // TODO: replace null with proper value
-int? to = null; // TODO: replace null with proper value
-            var response = instance.GetAllWaitings(restaurantId, queryOptions, from, to);
+string area = null; // TODO: replace null with proper value
+int? groupSize = null; // TODO: replace null with proper value
+            var response = instance.GetAllWaitings(restaurantId, queryOptions, area, groupSize);
             Assert.IsInstanceOf<List<WaitingItem>> (response, "response is List<WaitingItem>"); 
         }
         

@@ -90,18 +90,6 @@ namespace HostMe.Sdk.Test
         }
         
         /// <summary>
-        /// Test CreateRestaurantUser
-        /// </summary>
-        [Test]
-        public void CreateRestaurantUserTest()
-        {
-            // TODO: add unit test for the method 'CreateRestaurantUser'
-            CreateRestaurantCustomer model = null; // TODO: replace null with proper value
-            instance.CreateRestaurantUser(model);
-             
-        }
-        
-        /// <summary>
         /// Test FindRestaurants
         /// </summary>
         [Test]
@@ -290,8 +278,8 @@ string areas = null; // TODO: replace null with proper value
         public void ResetPasswordTest()
         {
             // TODO: add unit test for the method 'ResetPassword'
-            ResetPasswordBindingModel model = null; // TODO: replace null with proper value
-            instance.ResetPassword(model);
+            string modelEmail = null; // TODO: replace null with proper value
+            instance.ResetPassword(modelEmail);
              
         }
         

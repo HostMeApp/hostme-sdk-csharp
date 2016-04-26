@@ -24,8 +24,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>Object</returns>
-        Object ConfirmEmail (string userId, string code);
+        /// <returns></returns>
+        void ConfirmEmail (string userId, string code);
   
         /// <summary>
         /// 
@@ -36,7 +36,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> ConfirmEmailWithHttpInfo (string userId, string code);
         /// <summary>
         /// 
@@ -45,10 +45,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns></returns>
+        void GetExternalFacebookLogin (string accessToken);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> GetExternalFacebookLoginWithHttpInfo (string accessToken);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>Object</returns>
-        Object GetExternalLogin (string provider, string error = null);
+        /// <returns></returns>
+        void GetExternalLogin (string provider, string error = null);
   
         /// <summary>
         /// 
@@ -59,29 +80,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetExternalLoginWithHttpInfo (string provider, string error = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>Object</returns>
-        Object GetExternalLogin1 (string accessToken);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>ApiResponse of Object</returns>
-        ApiResponse<Object> GetExternalLogin1WithHttpInfo (string accessToken);
         /// <summary>
         /// 
         /// </summary>
@@ -116,8 +116,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> ConfirmEmailAsync (string userId, string code);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task ConfirmEmailAsync (string userId, string code);
 
         /// <summary>
         /// 
@@ -128,7 +128,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmEmailAsyncWithHttpInfo (string userId, string code);
         /// <summary>
         /// 
@@ -137,10 +137,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetExternalFacebookLoginAsync (string accessToken);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFacebookLoginAsyncWithHttpInfo (string accessToken);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task GetExternalLoginAsync (string provider, string error = null);
 
         /// <summary>
         /// 
@@ -151,29 +172,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> GetExternalLogin1Async (string accessToken);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLogin1AsyncWithHttpInfo (string accessToken);
         /// <summary>
         /// 
         /// </summary>
@@ -293,11 +293,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param> 
         /// <param name="code"></param> 
-        /// <returns>Object</returns>
-        public Object ConfirmEmail (string userId, string code)
+        /// <returns></returns>
+        public void ConfirmEmail (string userId, string code)
         {
-             ApiResponse<Object> localVarResponse = ConfirmEmailWithHttpInfo(userId, code);
-             return localVarResponse.Data;
+             ConfirmEmailWithHttpInfo(userId, code);
         }
 
         /// <summary>
@@ -306,8 +305,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param> 
         /// <param name="code"></param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > ConfirmEmailWithHttpInfo (string userId, string code)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> ConfirmEmailWithHttpInfo (string userId, string code)
         {
             
             // verify the required parameter 'userId' is set
@@ -369,10 +368,10 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfirmEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
 
         /// <summary>
@@ -381,11 +380,10 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> ConfirmEmailAsync (string userId, string code)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ConfirmEmailAsync (string userId, string code)
         {
-             ApiResponse<Object> localVarResponse = await ConfirmEmailAsyncWithHttpInfo(userId, code);
-             return localVarResponse.Data;
+             await ConfirmEmailAsyncWithHttpInfo(userId, code);
 
         }
 
@@ -395,7 +393,7 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="code"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> ConfirmEmailAsyncWithHttpInfo (string userId, string code)
         {
             // verify the required parameter 'userId' is set
@@ -454,10 +452,168 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling ConfirmEmail: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param> 
+        /// <returns></returns>
+        public void GetExternalFacebookLogin (string accessToken)
+        {
+             GetExternalFacebookLoginWithHttpInfo(accessToken);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetExternalFacebookLoginWithHttpInfo (string accessToken)
+        {
             
+            // verify the required parameter 'accessToken' is set
+            if (accessToken == null)
+                throw new ApiException(400, "Missing required parameter 'accessToken' when calling AdminAuthApi->GetExternalFacebookLogin");
+            
+    
+            var localVarPath = "/authorization/ExternalFacebookLogin";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
+                                    
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalFacebookLogin: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalFacebookLogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetExternalFacebookLoginAsync (string accessToken)
+        {
+             await GetExternalFacebookLoginAsyncWithHttpInfo(accessToken);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="accessToken"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalFacebookLoginAsyncWithHttpInfo (string accessToken)
+        {
+            // verify the required parameter 'accessToken' is set
+            if (accessToken == null) throw new ApiException(400, "Missing required parameter 'accessToken' when calling GetExternalFacebookLogin");
+            
+    
+            var localVarPath = "/authorization/ExternalFacebookLogin";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
+                                    
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalFacebookLogin: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalFacebookLogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
         }
         /// <summary>
         ///  
@@ -465,11 +621,10 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param> 
         /// <param name="error"> (optional)</param> 
-        /// <returns>Object</returns>
-        public Object GetExternalLogin (string provider, string error = null)
+        /// <returns></returns>
+        public void GetExternalLogin (string provider, string error = null)
         {
-             ApiResponse<Object> localVarResponse = GetExternalLoginWithHttpInfo(provider, error);
-             return localVarResponse.Data;
+             GetExternalLoginWithHttpInfo(provider, error);
         }
 
         /// <summary>
@@ -478,8 +633,8 @@ if (code != null) localVarQueryParams.Add("code", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param> 
         /// <param name="error"> (optional)</param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GetExternalLoginWithHttpInfo (string provider, string error = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> GetExternalLoginWithHttpInfo (string provider, string error = null)
         {
             
             // verify the required parameter 'provider' is set
@@ -537,10 +692,10 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
 
         /// <summary>
@@ -549,11 +704,10 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetExternalLoginAsync (string provider, string error = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task GetExternalLoginAsync (string provider, string error = null)
         {
-             ApiResponse<Object> localVarResponse = await GetExternalLoginAsyncWithHttpInfo(provider, error);
-             return localVarResponse.Data;
+             await GetExternalLoginAsyncWithHttpInfo(provider, error);
 
         }
 
@@ -563,7 +717,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="provider"></param>
         /// <param name="error"> (optional)</param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLoginAsyncWithHttpInfo (string provider, string error = null)
         {
             // verify the required parameter 'provider' is set
@@ -620,170 +774,10 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param> 
-        /// <returns>Object</returns>
-        public Object GetExternalLogin1 (string accessToken)
-        {
-             ApiResponse<Object> localVarResponse = GetExternalLogin1WithHttpInfo(accessToken);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > GetExternalLogin1WithHttpInfo (string accessToken)
-        {
-            
-            // verify the required parameter 'accessToken' is set
-            if (accessToken == null)
-                throw new ApiException(400, "Missing required parameter 'accessToken' when calling AdminAuthApi->GetExternalLogin1");
-            
-    
-            var localVarPath = "/authorization/ExternalFacebookLogin";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
-                                    
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> GetExternalLogin1Async (string accessToken)
-        {
-             ApiResponse<Object> localVarResponse = await GetExternalLogin1AsyncWithHttpInfo(accessToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="accessToken"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> GetExternalLogin1AsyncWithHttpInfo (string accessToken)
-        {
-            // verify the required parameter 'accessToken' is set
-            if (accessToken == null) throw new ApiException(400, "Missing required parameter 'accessToken' when calling GetExternalLogin1");
-            
-    
-            var localVarPath = "/authorization/ExternalFacebookLogin";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                        if (accessToken != null) localVarQueryParams.Add("access_token", Configuration.ApiClient.ParameterToString(accessToken)); // query parameter
-                                    
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin1: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetExternalLogin1: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
         /// <summary>
         ///  

@@ -414,8 +414,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>Object</returns>
-        Object SetReservationSettings (int? restaurantId, ReservationSettings settings);
+        /// <returns></returns>
+        void SetReservationSettings (int? restaurantId, ReservationSettings settings);
   
         /// <summary>
         /// 
@@ -426,7 +426,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SetReservationSettingsWithHttpInfo (int? restaurantId, ReservationSettings settings);
         /// <summary>
         /// 
@@ -457,8 +457,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>Object</returns>
-        Object UpdateReservation (int? restaurantId, string reservationId, AdminReservationBindingModel value);
+        /// <returns></returns>
+        void UpdateReservation (int? restaurantId, string reservationId, AdminReservationBindingModel value);
   
         /// <summary>
         /// 
@@ -470,7 +470,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>ApiResponse of Object</returns>
+        /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateReservationWithHttpInfo (int? restaurantId, string reservationId, AdminReservationBindingModel value);
         #endregion Synchronous Operations
         #region Asynchronous Operations
@@ -873,8 +873,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> SetReservationSettingsAsync (int? restaurantId, ReservationSettings settings);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetReservationSettingsAsync (int? restaurantId, ReservationSettings settings);
 
         /// <summary>
         /// 
@@ -885,7 +885,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetReservationSettingsAsyncWithHttpInfo (int? restaurantId, ReservationSettings settings);
         /// <summary>
         /// 
@@ -916,8 +916,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>Task of Object</returns>
-        System.Threading.Tasks.Task<Object> UpdateReservationAsync (int? restaurantId, string reservationId, AdminReservationBindingModel value);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateReservationAsync (int? restaurantId, string reservationId, AdminReservationBindingModel value);
 
         /// <summary>
         /// 
@@ -929,7 +929,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, AdminReservationBindingModel value);
         #endregion Asynchronous Operations
     }
@@ -3899,11 +3899,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="settings"></param> 
-        /// <returns>Object</returns>
-        public Object SetReservationSettings (int? restaurantId, ReservationSettings settings)
+        /// <returns></returns>
+        public void SetReservationSettings (int? restaurantId, ReservationSettings settings)
         {
-             ApiResponse<Object> localVarResponse = SetReservationSettingsWithHttpInfo(restaurantId, settings);
-             return localVarResponse.Data;
+             SetReservationSettingsWithHttpInfo(restaurantId, settings);
         }
 
         /// <summary>
@@ -3912,8 +3911,8 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="settings"></param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > SetReservationSettingsWithHttpInfo (int? restaurantId, ReservationSettings settings)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetReservationSettingsWithHttpInfo (int? restaurantId, ReservationSettings settings)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3981,10 +3980,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SetReservationSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
 
         /// <summary>
@@ -3993,11 +3992,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> SetReservationSettingsAsync (int? restaurantId, ReservationSettings settings)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetReservationSettingsAsync (int? restaurantId, ReservationSettings settings)
         {
-             ApiResponse<Object> localVarResponse = await SetReservationSettingsAsyncWithHttpInfo(restaurantId, settings);
-             return localVarResponse.Data;
+             await SetReservationSettingsAsyncWithHttpInfo(restaurantId, settings);
 
         }
 
@@ -4007,7 +4005,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> SetReservationSettingsAsyncWithHttpInfo (int? restaurantId, ReservationSettings settings)
         {
             // verify the required parameter 'restaurantId' is set
@@ -4072,10 +4070,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SetReservationSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
         /// <summary>
         ///  
@@ -4232,11 +4230,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="restaurantId"></param> 
         /// <param name="reservationId"></param> 
         /// <param name="value"></param> 
-        /// <returns>Object</returns>
-        public Object UpdateReservation (int? restaurantId, string reservationId, AdminReservationBindingModel value)
+        /// <returns></returns>
+        public void UpdateReservation (int? restaurantId, string reservationId, AdminReservationBindingModel value)
         {
-             ApiResponse<Object> localVarResponse = UpdateReservationWithHttpInfo(restaurantId, reservationId, value);
-             return localVarResponse.Data;
+             UpdateReservationWithHttpInfo(restaurantId, reservationId, value);
         }
 
         /// <summary>
@@ -4246,8 +4243,8 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="restaurantId"></param> 
         /// <param name="reservationId"></param> 
         /// <param name="value"></param> 
-        /// <returns>ApiResponse of Object</returns>
-        public ApiResponse< Object > UpdateReservationWithHttpInfo (int? restaurantId, string reservationId, AdminReservationBindingModel value)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateReservationWithHttpInfo (int? restaurantId, string reservationId, AdminReservationBindingModel value)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4320,10 +4317,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling UpdateReservation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
 
         /// <summary>
@@ -4333,11 +4330,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>Task of Object</returns>
-        public async System.Threading.Tasks.Task<Object> UpdateReservationAsync (int? restaurantId, string reservationId, AdminReservationBindingModel value)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateReservationAsync (int? restaurantId, string reservationId, AdminReservationBindingModel value)
         {
-             ApiResponse<Object> localVarResponse = await UpdateReservationAsyncWithHttpInfo(restaurantId, reservationId, value);
-             return localVarResponse.Data;
+             await UpdateReservationAsyncWithHttpInfo(restaurantId, reservationId, value);
 
         }
 
@@ -4348,7 +4344,7 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
-        /// <returns>Task of ApiResponse (Object)</returns>
+        /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, AdminReservationBindingModel value)
         {
             // verify the required parameter 'restaurantId' is set
@@ -4416,10 +4412,10 @@ if (reservationId != null) localVarPathParams.Add("reservationId", Configuration
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling UpdateReservation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
+            
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
-            
+                null);
         }
     }
 }

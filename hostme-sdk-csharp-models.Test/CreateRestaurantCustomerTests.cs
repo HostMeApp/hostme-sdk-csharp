@@ -51,14 +51,6 @@ namespace HostMe.Sdk.Test
         }
 
         /// <summary>
-        /// Test the property 'RestaurantId' 
-        /// </summary>
-        [Test]
-        public void RestaurantIdTest()
-        {
-            // TODO: unit test for the property 'RestaurantId' 
-        }
-        /// <summary>
         /// Test the property 'FullName' 
         /// </summary>
         [Test]

@@ -85,27 +85,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns></returns>
-        void CreateRestaurantUser (CreateRestaurantCustomer model);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateRestaurantUserWithHttpInfo (CreateRestaurantCustomer model);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="lat"> (optional)</param>
         /// <param name="lon"> (optional)</param>
         /// <param name="name"> (optional)</param>
@@ -425,9 +404,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns></returns>
-        void ResetPassword (ResetPasswordBindingModel model);
+        void ResetPassword (string modelEmail);
   
         /// <summary>
         /// 
@@ -436,9 +415,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPasswordBindingModel model);
+        ApiResponse<Object> ResetPasswordWithHttpInfo (string modelEmail);
         /// <summary>
         /// 
         /// </summary>
@@ -567,27 +546,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="token"></param>
         /// <returns>Task of ApiResponse (Transaction)</returns>
         System.Threading.Tasks.Task<ApiResponse<Transaction>> CheckInAsyncWithHttpInfo (string token);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateRestaurantUserAsync (CreateRestaurantCustomer model);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateRestaurantUserAsyncWithHttpInfo (CreateRestaurantCustomer model);
         /// <summary>
         /// 
         /// </summary>
@@ -914,9 +872,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ResetPasswordAsync (ResetPasswordBindingModel model);
+        System.Threading.Tasks.Task ResetPasswordAsync (string modelEmail);
 
         /// <summary>
         /// 
@@ -925,9 +883,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (string modelEmail);
         /// <summary>
         /// 
         /// </summary>
@@ -1592,176 +1550,6 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Transaction) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transaction)));
             
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param> 
-        /// <returns></returns>
-        public void CreateRestaurantUser (CreateRestaurantCustomer model)
-        {
-             CreateRestaurantUserWithHttpInfo(model);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateRestaurantUserWithHttpInfo (CreateRestaurantCustomer model)
-        {
-            
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->CreateRestaurantUser");
-            
-    
-            var localVarPath = "/api/core/mb/account";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            if (model.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = model; // byte array
-            }
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CreateRestaurantUser: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CreateRestaurantUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateRestaurantUserAsync (CreateRestaurantCustomer model)
-        {
-             await CreateRestaurantUserAsyncWithHttpInfo(model);
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateRestaurantUserAsyncWithHttpInfo (CreateRestaurantCustomer model)
-        {
-            // verify the required parameter 'model' is set
-            if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling CreateRestaurantUser");
-            
-    
-            var localVarPath = "/api/core/mb/account";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            if (model.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = model; // byte array
-            }
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CreateRestaurantUser: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CreateRestaurantUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
         /// <summary>
         ///  
@@ -3272,7 +3060,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -3346,7 +3134,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4193,25 +3981,25 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param> 
+        /// <param name="modelEmail"></param> 
         /// <returns></returns>
-        public void ResetPassword (ResetPasswordBindingModel model)
+        public void ResetPassword (string modelEmail)
         {
-             ResetPasswordWithHttpInfo(model);
+             ResetPasswordWithHttpInfo(modelEmail);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param> 
+        /// <param name="modelEmail"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPasswordBindingModel model)
+        public ApiResponse<Object> ResetPasswordWithHttpInfo (string modelEmail)
         {
             
-            // verify the required parameter 'model' is set
-            if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->ResetPassword");
+            // verify the required parameter 'modelEmail' is set
+            if (modelEmail == null)
+                throw new ApiException(400, "Missing required parameter 'modelEmail' when calling MobileCoreApi->ResetPassword");
             
     
             var localVarPath = "/api/core/mb/account/ResetPassword";
@@ -4240,14 +4028,8 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-                                                            if (model.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = model; // byte array
-            }
+                        if (modelEmail != null) localVarQueryParams.Add("model.email", Configuration.ApiClient.ParameterToString(modelEmail)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -4259,7 +4041,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -4279,11 +4061,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ResetPasswordAsync (ResetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task ResetPasswordAsync (string modelEmail)
         {
-             await ResetPasswordAsyncWithHttpInfo(model);
+             await ResetPasswordAsyncWithHttpInfo(modelEmail);
 
         }
 
@@ -4291,12 +4073,12 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="model"></param>
+        /// <param name="modelEmail"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (string modelEmail)
         {
-            // verify the required parameter 'model' is set
-            if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling ResetPassword");
+            // verify the required parameter 'modelEmail' is set
+            if (modelEmail == null) throw new ApiException(400, "Missing required parameter 'modelEmail' when calling ResetPassword");
             
     
             var localVarPath = "/api/core/mb/account/ResetPassword";
@@ -4325,14 +4107,8 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-                                                            if (model.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = model; // byte array
-            }
+                        if (modelEmail != null) localVarQueryParams.Add("model.email", Configuration.ApiClient.ParameterToString(modelEmail)); // query parameter
+                                    
 
             // authentication (oauth2) required
             
@@ -4344,7 +4120,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

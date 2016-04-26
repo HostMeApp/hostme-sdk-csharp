@@ -22,12 +22,6 @@ namespace HostMe.Sdk.Models
         
     
         /// <summary>
-        /// Gets or Sets RestaurantId
-        /// </summary>
-        [DataMember(Name="restaurantId", EmitDefaultValue=true)]
-        public int? RestaurantId { get; set; }
-    
-        /// <summary>
         /// Gets or Sets FullName
         /// </summary>
         [DataMember(Name="fullName", EmitDefaultValue=true)]
@@ -47,8 +41,7 @@ namespace HostMe.Sdk.Models
         {
             var sb = new StringBuilder();
             sb.Append("class CreateRestaurantCustomer {\n");
-            sb.Append("  RestaurantId: ").Append(RestaurantId).Append("\n");
-sb.Append("  FullName: ").Append(FullName).Append("\n");
+            sb.Append("  FullName: ").Append(FullName).Append("\n");
 sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -87,11 +80,6 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
 
             return 
                 (
-                    this.RestaurantId == other.RestaurantId ||
-                    this.RestaurantId != null &&
-                    this.RestaurantId.Equals(other.RestaurantId)
-                ) && 
-                (
                     this.FullName == other.FullName ||
                     this.FullName != null &&
                     this.FullName.Equals(other.FullName)
@@ -114,8 +102,6 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.RestaurantId != null)
-                    hash = hash * 59 + this.RestaurantId.GetHashCode();
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.PhoneNumber != null)

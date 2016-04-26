@@ -62,8 +62,20 @@ namespace HostMe.Sdk.Test
             // TODO: add unit test for the method 'ConfirmEmail'
             string userId = null; // TODO: replace null with proper value
 string code = null; // TODO: replace null with proper value
-            var response = instance.ConfirmEmail(userId, code);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+            instance.ConfirmEmail(userId, code);
+             
+        }
+        
+        /// <summary>
+        /// Test GetExternalFacebookLogin
+        /// </summary>
+        [Test]
+        public void GetExternalFacebookLoginTest()
+        {
+            // TODO: add unit test for the method 'GetExternalFacebookLogin'
+            string accessToken = null; // TODO: replace null with proper value
+            instance.GetExternalFacebookLogin(accessToken);
+             
         }
         
         /// <summary>
@@ -75,20 +87,8 @@ string code = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'GetExternalLogin'
             string provider = null; // TODO: replace null with proper value
 string error = null; // TODO: replace null with proper value
-            var response = instance.GetExternalLogin(provider, error);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
-        }
-        
-        /// <summary>
-        /// Test GetExternalLogin1
-        /// </summary>
-        [Test]
-        public void GetExternalLogin1Test()
-        {
-            // TODO: add unit test for the method 'GetExternalLogin1'
-            string accessToken = null; // TODO: replace null with proper value
-            var response = instance.GetExternalLogin1(accessToken);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+            instance.GetExternalLogin(provider, error);
+             
         }
         
         /// <summary>

@@ -281,8 +281,8 @@ string body = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'SetReservationSettings'
             int? restaurantId = null; // TODO: replace null with proper value
 ReservationSettings settings = null; // TODO: replace null with proper value
-            var response = instance.SetReservationSettings(restaurantId, settings);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+            instance.SetReservationSettings(restaurantId, settings);
+             
         }
         
         /// <summary>
@@ -306,8 +306,8 @@ ReservationSettings settings = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
 string reservationId = null; // TODO: replace null with proper value
 AdminReservationBindingModel value = null; // TODO: replace null with proper value
-            var response = instance.UpdateReservation(restaurantId, reservationId, value);
-            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+            instance.UpdateReservation(restaurantId, reservationId, value);
+             
         }
         
     }
