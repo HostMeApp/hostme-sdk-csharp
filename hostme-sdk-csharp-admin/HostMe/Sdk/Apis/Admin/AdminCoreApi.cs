@@ -110,8 +110,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>string</returns>
-        string CreateInvitationCode (int? restaurantId, Invitation invitation);
+        /// <returns>Token</returns>
+        Token CreateInvitationCode (int? restaurantId, Invitation invitation);
   
         /// <summary>
         /// 
@@ -122,8 +122,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation);
+        /// <returns>ApiResponse of Token</returns>
+        ApiResponse<Token> CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation);
         /// <summary>
         /// 
         /// </summary>
@@ -353,8 +353,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>string</returns>
-        string GetRegistrationToken (int? restaurantId, string tableNumber = null);
+        /// <returns>Token</returns>
+        Token GetRegistrationToken (int? restaurantId, string tableNumber = null);
   
         /// <summary>
         /// 
@@ -365,8 +365,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null);
+        /// <returns>ApiResponse of Token</returns>
+        ApiResponse<Token> GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -823,8 +823,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation);
+        /// <returns>Task of Token</returns>
+        System.Threading.Tasks.Task<Token> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation);
 
         /// <summary>
         /// 
@@ -835,8 +835,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation);
+        /// <returns>Task of ApiResponse (Token)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Token>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation);
         /// <summary>
         /// 
         /// </summary>
@@ -1066,8 +1066,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null);
+        /// <returns>Task of Token</returns>
+        System.Threading.Tasks.Task<Token> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null);
 
         /// <summary>
         /// 
@@ -1078,8 +1078,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null);
+        /// <returns>Task of ApiResponse (Token)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Token>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2219,10 +2219,10 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="invitation"></param> 
-        /// <returns>string</returns>
-        public string CreateInvitationCode (int? restaurantId, Invitation invitation)
+        /// <returns>Token</returns>
+        public Token CreateInvitationCode (int? restaurantId, Invitation invitation)
         {
-             ApiResponse<string> localVarResponse = CreateInvitationCodeWithHttpInfo(restaurantId, invitation);
+             ApiResponse<Token> localVarResponse = CreateInvitationCodeWithHttpInfo(restaurantId, invitation);
              return localVarResponse.Data;
         }
 
@@ -2232,8 +2232,8 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="invitation"></param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation)
+        /// <returns>ApiResponse of Token</returns>
+        public ApiResponse< Token > CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2301,9 +2301,9 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling CreateInvitationCode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<Token>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (Token) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Token)));
             
         }
 
@@ -2313,10 +2313,10 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation)
+        /// <returns>Task of Token</returns>
+        public async System.Threading.Tasks.Task<Token> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation)
         {
-             ApiResponse<string> localVarResponse = await CreateInvitationCodeAsyncWithHttpInfo(restaurantId, invitation);
+             ApiResponse<Token> localVarResponse = await CreateInvitationCodeAsyncWithHttpInfo(restaurantId, invitation);
              return localVarResponse.Data;
 
         }
@@ -2327,8 +2327,8 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation)
+        /// <returns>Task of ApiResponse (Token)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Token>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling CreateInvitationCode");
@@ -2392,9 +2392,9 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling CreateInvitationCode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<Token>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (Token) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Token)));
             
         }
         /// <summary>
@@ -4037,10 +4037,10 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
-        /// <returns>string</returns>
-        public string GetRegistrationToken (int? restaurantId, string tableNumber = null)
+        /// <returns>Token</returns>
+        public Token GetRegistrationToken (int? restaurantId, string tableNumber = null)
         {
-             ApiResponse<string> localVarResponse = GetRegistrationTokenWithHttpInfo(restaurantId, tableNumber);
+             ApiResponse<Token> localVarResponse = GetRegistrationTokenWithHttpInfo(restaurantId, tableNumber);
              return localVarResponse.Data;
         }
 
@@ -4050,8 +4050,8 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="tableNumber"> (optional)</param> 
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null)
+        /// <returns>ApiResponse of Token</returns>
+        public ApiResponse< Token > GetRegistrationTokenWithHttpInfo (int? restaurantId, string tableNumber = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -4109,9 +4109,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRegistrationToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<Token>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (Token) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Token)));
             
         }
 
@@ -4121,10 +4121,10 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null)
+        /// <returns>Task of Token</returns>
+        public async System.Threading.Tasks.Task<Token> GetRegistrationTokenAsync (int? restaurantId, string tableNumber = null)
         {
-             ApiResponse<string> localVarResponse = await GetRegistrationTokenAsyncWithHttpInfo(restaurantId, tableNumber);
+             ApiResponse<Token> localVarResponse = await GetRegistrationTokenAsyncWithHttpInfo(restaurantId, tableNumber);
              return localVarResponse.Data;
 
         }
@@ -4135,8 +4135,8 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null)
+        /// <returns>Task of ApiResponse (Token)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Token>> GetRegistrationTokenAsyncWithHttpInfo (int? restaurantId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetRegistrationToken");
@@ -4192,9 +4192,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRegistrationToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
+            return new ApiResponse<Token>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+                (Token) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Token)));
             
         }
         /// <summary>

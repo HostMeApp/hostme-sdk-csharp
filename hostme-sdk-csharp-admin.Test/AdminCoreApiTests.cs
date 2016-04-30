@@ -112,7 +112,7 @@ string restaurantId = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
 Invitation invitation = null; // TODO: replace null with proper value
             var response = instance.CreateInvitationCode(restaurantId, invitation);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<Token> (response, "response is Token"); 
         }
         
         /// <summary>
@@ -250,7 +250,7 @@ bool? generateState = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
 string tableNumber = null; // TODO: replace null with proper value
             var response = instance.GetRegistrationToken(restaurantId, tableNumber);
-            Assert.IsInstanceOf<string> (response, "response is string"); 
+            Assert.IsInstanceOf<Token> (response, "response is Token"); 
         }
         
         /// <summary>

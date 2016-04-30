@@ -208,7 +208,7 @@ string area = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'GetUnreadMessagesCount'
             int? restaurantId = null; // TODO: replace null with proper value
             var response = instance.GetUnreadMessagesCount(restaurantId);
-            Assert.IsInstanceOf<int?> (response, "response is int?"); 
+            Assert.IsInstanceOf<Count> (response, "response is Count"); 
         }
         
         /// <summary>

@@ -200,7 +200,7 @@ DateTimeOffset? date = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
 DateTimeOffset? from = null; // TODO: replace null with proper value
             var response = instance.GetUnreadMessagesCount(restaurantId, from);
-            Assert.IsInstanceOf<int?> (response, "response is int?"); 
+            Assert.IsInstanceOf<Count> (response, "response is Count"); 
         }
         
         /// <summary>

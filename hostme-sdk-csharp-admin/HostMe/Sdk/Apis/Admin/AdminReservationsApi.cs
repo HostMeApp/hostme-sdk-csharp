@@ -268,8 +268,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>int?</returns>
-        int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>Count</returns>
+        Count GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null);
   
         /// <summary>
         /// 
@@ -280,8 +280,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>ApiResponse of int?</returns>
-        ApiResponse<int?> GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>ApiResponse of Count</returns>
+        ApiResponse<Count> GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -727,8 +727,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of int?</returns>
-        System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>Task of Count</returns>
+        System.Threading.Tasks.Task<Count> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null);
 
         /// <summary>
         /// 
@@ -739,8 +739,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of ApiResponse (int?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>Task of ApiResponse (Count)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Count>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -2813,10 +2813,10 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="from"> (optional)</param> 
-        /// <returns>int?</returns>
-        public int? GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>Count</returns>
+        public Count GetUnreadMessagesCount (int? restaurantId, DateTimeOffset? from = null)
         {
-             ApiResponse<int?> localVarResponse = GetUnreadMessagesCountWithHttpInfo(restaurantId, from);
+             ApiResponse<Count> localVarResponse = GetUnreadMessagesCountWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
         }
 
@@ -2826,8 +2826,8 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
         /// <param name="from"> (optional)</param> 
-        /// <returns>ApiResponse of int?</returns>
-        public ApiResponse< int? > GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>ApiResponse of Count</returns>
+        public ApiResponse< Count > GetUnreadMessagesCountWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2885,9 +2885,9 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUnreadMessagesCount: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<int?>(localVarStatusCode,
+            return new ApiResponse<Count>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+                (Count) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Count)));
             
         }
 
@@ -2897,10 +2897,10 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of int?</returns>
-        public async System.Threading.Tasks.Task<int?> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>Task of Count</returns>
+        public async System.Threading.Tasks.Task<Count> GetUnreadMessagesCountAsync (int? restaurantId, DateTimeOffset? from = null)
         {
-             ApiResponse<int?> localVarResponse = await GetUnreadMessagesCountAsyncWithHttpInfo(restaurantId, from);
+             ApiResponse<Count> localVarResponse = await GetUnreadMessagesCountAsyncWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
 
         }
@@ -2911,8 +2911,8 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of ApiResponse (int?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<int?>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>Task of ApiResponse (Count)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Count>> GetUnreadMessagesCountAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetUnreadMessagesCount");
@@ -2968,9 +2968,9 @@ if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterT
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetUnreadMessagesCount: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<int?>(localVarStatusCode,
+            return new ApiResponse<Count>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (int?) Configuration.ApiClient.Deserialize(localVarResponse, typeof(int?)));
+                (Count) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Count)));
             
         }
         /// <summary>
