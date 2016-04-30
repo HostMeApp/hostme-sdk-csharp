@@ -51,12 +51,12 @@ namespace HostMe.Sdk.Test
         }
 
         /// <summary>
-        /// Test the property 'UserName' 
+        /// Test the property 'Email' 
         /// </summary>
         [Test]
-        public void UserNameTest()
+        public void EmailTest()
         {
-            // TODO: unit test for the property 'UserName' 
+            // TODO: unit test for the property 'Email' 
         }
         /// <summary>
         /// Test the property 'FullName' 

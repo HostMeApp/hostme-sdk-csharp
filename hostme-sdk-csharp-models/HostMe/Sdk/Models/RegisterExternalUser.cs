@@ -22,10 +22,10 @@ namespace HostMe.Sdk.Models
         
     
         /// <summary>
-        /// Gets or Sets UserName
+        /// Gets or Sets Email
         /// </summary>
-        [DataMember(Name="userName", EmitDefaultValue=true)]
-        public string UserName { get; set; }
+        [DataMember(Name="email", EmitDefaultValue=true)]
+        public string Email { get; set; }
     
         /// <summary>
         /// Gets or Sets FullName
@@ -47,7 +47,7 @@ namespace HostMe.Sdk.Models
         {
             var sb = new StringBuilder();
             sb.Append("class RegisterExternalUser {\n");
-            sb.Append("  UserName: ").Append(UserName).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
 sb.Append("  FullName: ").Append(FullName).Append("\n");
 sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("}\n");
@@ -87,9 +87,9 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
 
             return 
                 (
-                    this.UserName == other.UserName ||
-                    this.UserName != null &&
-                    this.UserName.Equals(other.UserName)
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
                 ) && 
                 (
                     this.FullName == other.FullName ||
@@ -114,8 +114,8 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.UserName != null)
-                    hash = hash * 59 + this.UserName.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.PhoneNumber != null)
