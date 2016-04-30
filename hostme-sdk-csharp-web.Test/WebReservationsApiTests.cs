@@ -61,7 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewReservation'
             int? restaurantId = null; // TODO: replace null with proper value
-CreateReservation value = null; // TODO: replace null with proper value
+CreateWebReservation value = null; // TODO: replace null with proper value
             var response = instance.AddNewReservation(restaurantId, value);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }

@@ -25,7 +25,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Reservation</returns>
-        Reservation AddNewReservation (int? restaurantId, CreateReservation value);
+        Reservation AddNewReservation (int? restaurantId, CreateWebReservation value);
   
         /// <summary>
         /// 
@@ -37,7 +37,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> AddNewReservationWithHttpInfo (int? restaurantId, CreateReservation value);
+        ApiResponse<Reservation> AddNewReservationWithHttpInfo (int? restaurantId, CreateWebReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -125,7 +125,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateReservation value);
+        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateWebReservation value);
 
         /// <summary>
         /// 
@@ -137,7 +137,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateReservation value);
+        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateWebReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -310,7 +310,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param> 
         /// <param name="value"></param> 
         /// <returns>Reservation</returns>
-        public Reservation AddNewReservation (int? restaurantId, CreateReservation value)
+        public Reservation AddNewReservation (int? restaurantId, CreateWebReservation value)
         {
              ApiResponse<Reservation> localVarResponse = AddNewReservationWithHttpInfo(restaurantId, value);
              return localVarResponse.Data;
@@ -323,7 +323,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param> 
         /// <param name="value"></param> 
         /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (int? restaurantId, CreateReservation value)
+        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (int? restaurantId, CreateWebReservation value)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -404,7 +404,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateReservation value)
+        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateWebReservation value)
         {
              ApiResponse<Reservation> localVarResponse = await AddNewReservationAsyncWithHttpInfo(restaurantId, value);
              return localVarResponse.Data;
@@ -418,7 +418,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateReservation value)
+        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateWebReservation value)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AddNewReservation");
