@@ -76,6 +76,12 @@ namespace HostMe.Sdk.Models
         public UserProfile Customer { get; set; }
     
         /// <summary>
+        /// Gets or Sets Profile
+        /// </summary>
+        [DataMember(Name="profile", EmitDefaultValue=true)]
+        public Profile Profile { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -92,6 +98,7 @@ sb.Append("  NumberOfVisits30Days: ").Append(NumberOfVisits30Days).Append("\n");
 sb.Append("  NumberOfVisitsTotal: ").Append(NumberOfVisitsTotal).Append("\n");
 sb.Append("  LastVisitDate: ").Append(LastVisitDate).Append("\n");
 sb.Append("  Customer: ").Append(Customer).Append("\n");
+sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +179,11 @@ sb.Append("  Customer: ").Append(Customer).Append("\n");
                     this.Customer == other.Customer ||
                     this.Customer != null &&
                     this.Customer.Equals(other.Customer)
+                ) && 
+                (
+                    this.Profile == other.Profile ||
+                    this.Profile != null &&
+                    this.Profile.Equals(other.Profile)
                 );
         }
 
@@ -204,6 +216,8 @@ sb.Append("  Customer: ").Append(Customer).Append("\n");
                     hash = hash * 59 + this.LastVisitDate.GetHashCode();
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
+                if (this.Profile != null)
+                    hash = hash * 59 + this.Profile.GetHashCode();
                 return hash;
             }
         }

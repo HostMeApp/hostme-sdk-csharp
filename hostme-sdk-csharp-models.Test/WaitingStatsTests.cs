@@ -51,14 +51,6 @@ namespace HostMe.Sdk.Test
         }
 
         /// <summary>
-        /// Test the property 'WaitByArea' 
-        /// </summary>
-        [Test]
-        public void WaitByAreaTest()
-        {
-            // TODO: unit test for the property 'WaitByArea' 
-        }
-        /// <summary>
         /// Test the property 'WaitByGroup' 
         /// </summary>
         [Test]

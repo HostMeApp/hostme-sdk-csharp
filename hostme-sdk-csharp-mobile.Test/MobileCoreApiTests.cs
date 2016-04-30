@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Test
         public void AddExternalLoginTest()
         {
             // TODO: add unit test for the method 'AddExternalLogin'
-            AddExternalLoginBindingModel model = null; // TODO: replace null with proper value
+            AddExternalLogin model = null; // TODO: replace null with proper value
             instance.AddExternalLogin(model);
              
         }
@@ -72,7 +72,7 @@ namespace HostMe.Sdk.Test
         public void ChangePasswordTest()
         {
             // TODO: add unit test for the method 'ChangePassword'
-            ChangePasswordBindingModel model = null; // TODO: replace null with proper value
+            ChangePassword model = null; // TODO: replace null with proper value
             instance.ChangePassword(model);
              
         }
@@ -84,8 +84,8 @@ namespace HostMe.Sdk.Test
         public void CheckInTest()
         {
             // TODO: add unit test for the method 'CheckIn'
-            string token = null; // TODO: replace null with proper value
-            var response = instance.CheckIn(token);
+            TransactionCheckin checkinContract = null; // TODO: replace null with proper value
+            var response = instance.CheckIn(checkinContract);
             Assert.IsInstanceOf<Transaction> (response, "response is Transaction"); 
         }
         
@@ -136,7 +136,7 @@ string city = null; // TODO: replace null with proper value
             string returnUrl = null; // TODO: replace null with proper value
 bool? generateState = null; // TODO: replace null with proper value
             var response = instance.GetManageInfo(returnUrl, generateState);
-            Assert.IsInstanceOf<ManageInfoViewModel> (response, "response is ManageInfoViewModel"); 
+            Assert.IsInstanceOf<ManageInfo> (response, "response is ManageInfo"); 
         }
         
         /// <summary>
@@ -177,17 +177,6 @@ string areas = null; // TODO: replace null with proper value
             int? id = null; // TODO: replace null with proper value
             var response = instance.GetRestaurantById(id);
             Assert.IsInstanceOf<RestaurantInfo> (response, "response is RestaurantInfo"); 
-        }
-        
-        /// <summary>
-        /// Test GetUserInfo
-        /// </summary>
-        [Test]
-        public void GetUserInfoTest()
-        {
-            // TODO: add unit test for the method 'GetUserInfo'
-                        var response = instance.GetUserInfo();
-            Assert.IsInstanceOf<UserInfoViewModel> (response, "response is UserInfoViewModel"); 
         }
         
         /// <summary>
@@ -242,7 +231,7 @@ string areas = null; // TODO: replace null with proper value
         public void RegisterTest()
         {
             // TODO: add unit test for the method 'Register'
-            RegisterBindingModel model = null; // TODO: replace null with proper value
+            RegisterUser model = null; // TODO: replace null with proper value
             instance.Register(model);
              
         }
@@ -254,7 +243,7 @@ string areas = null; // TODO: replace null with proper value
         public void RegisterExternalTest()
         {
             // TODO: add unit test for the method 'RegisterExternal'
-            RegisterExternalBindingModel model = null; // TODO: replace null with proper value
+            RegisterExternalUser model = null; // TODO: replace null with proper value
             instance.RegisterExternal(model);
              
         }
@@ -266,7 +255,7 @@ string areas = null; // TODO: replace null with proper value
         public void RemoveLoginTest()
         {
             // TODO: add unit test for the method 'RemoveLogin'
-            RemoveLoginBindingModel model = null; // TODO: replace null with proper value
+            RemoveLogin model = null; // TODO: replace null with proper value
             instance.RemoveLogin(model);
              
         }
@@ -278,8 +267,8 @@ string areas = null; // TODO: replace null with proper value
         public void ResetPasswordTest()
         {
             // TODO: add unit test for the method 'ResetPassword'
-            string modelEmail = null; // TODO: replace null with proper value
-            instance.ResetPassword(modelEmail);
+            ResetPassword model = null; // TODO: replace null with proper value
+            instance.ResetPassword(model);
              
         }
         
@@ -290,7 +279,7 @@ string areas = null; // TODO: replace null with proper value
         public void SetPasswordTest()
         {
             // TODO: add unit test for the method 'SetPassword'
-            SetPasswordBindingModel model = null; // TODO: replace null with proper value
+            SetPassword model = null; // TODO: replace null with proper value
             instance.SetPassword(model);
              
         }
@@ -302,7 +291,7 @@ string areas = null; // TODO: replace null with proper value
         public void SetPushChannelAsyncTest()
         {
             // TODO: add unit test for the method 'SetPushChannelAsync'
-            SetPushChannelBindingModel channel = null; // TODO: replace null with proper value
+            SetPushChannel channel = null; // TODO: replace null with proper value
             instance.SetPushChannelAsync(channel);
              
         }

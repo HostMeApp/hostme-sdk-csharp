@@ -75,12 +75,6 @@ namespace HostMe.Sdk.Models
         public string RewardId { get; set; }
     
         /// <summary>
-        /// Gets or Sets CustomerMembershipId
-        /// </summary>
-        [DataMember(Name="customerMembershipId", EmitDefaultValue=true)]
-        public int? CustomerMembershipId { get; set; }
-    
-        /// <summary>
         /// Gets or Sets TableNumber
         /// </summary>
         [DataMember(Name="tableNumber", EmitDefaultValue=true)]
@@ -112,7 +106,6 @@ sb.Append("  Status: ").Append(Status).Append("\n");
 sb.Append("  StatusComment: ").Append(StatusComment).Append("\n");
 sb.Append("  Closed: ").Append(Closed).Append("\n");
 sb.Append("  RewardId: ").Append(RewardId).Append("\n");
-sb.Append("  CustomerMembershipId: ").Append(CustomerMembershipId).Append("\n");
 sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
 sb.Append("  MemberInfo: ").Append(MemberInfo).Append("\n");
 sb.Append("  RewardDetails: ").Append(RewardDetails).Append("\n");
@@ -183,11 +176,6 @@ sb.Append("  RewardDetails: ").Append(RewardDetails).Append("\n");
                     this.RewardId.Equals(other.RewardId)
                 ) && 
                 (
-                    this.CustomerMembershipId == other.CustomerMembershipId ||
-                    this.CustomerMembershipId != null &&
-                    this.CustomerMembershipId.Equals(other.CustomerMembershipId)
-                ) && 
-                (
                     this.TableNumber == other.TableNumber ||
                     this.TableNumber != null &&
                     this.TableNumber.Equals(other.TableNumber)
@@ -227,8 +215,6 @@ sb.Append("  RewardDetails: ").Append(RewardDetails).Append("\n");
                     hash = hash * 59 + this.Closed.GetHashCode();
                 if (this.RewardId != null)
                     hash = hash * 59 + this.RewardId.GetHashCode();
-                if (this.CustomerMembershipId != null)
-                    hash = hash * 59 + this.CustomerMembershipId.GetHashCode();
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
                 if (this.MemberInfo != null)

@@ -34,12 +34,6 @@ namespace HostMe.Sdk.Models
         public double? TotalPartyCount { get; set; }
     
         /// <summary>
-        /// Gets or Sets TotalHeadCount
-        /// </summary>
-        [DataMember(Name="totalHeadCount", EmitDefaultValue=true)]
-        public double? TotalHeadCount { get; set; }
-    
-        /// <summary>
         /// Gets or Sets TotalSeatedCount
         /// </summary>
         [DataMember(Name="totalSeatedCount", EmitDefaultValue=true)]
@@ -106,9 +100,8 @@ namespace HostMe.Sdk.Models
         public double? MaxTimeToCancel { get; set; }
     
         /// <summary>
-        /// Maximum line position at a given period
+        /// Gets or Sets MaxLine
         /// </summary>
-        /// <value>Maximum line position at a given period</value>
         [DataMember(Name="maxLine", EmitDefaultValue=true)]
         public int? MaxLine { get; set; }
     
@@ -128,7 +121,6 @@ namespace HostMe.Sdk.Models
             sb.Append("class WaitingsStatReportItem {\n");
             sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
 sb.Append("  TotalPartyCount: ").Append(TotalPartyCount).Append("\n");
-sb.Append("  TotalHeadCount: ").Append(TotalHeadCount).Append("\n");
 sb.Append("  TotalSeatedCount: ").Append(TotalSeatedCount).Append("\n");
 sb.Append("  TotalCanceledCount: ").Append(TotalCanceledCount).Append("\n");
 sb.Append("  MinTimeToCall: ").Append(MinTimeToCall).Append("\n");
@@ -187,11 +179,6 @@ sb.Append("  AvgLine: ").Append(AvgLine).Append("\n");
                     this.TotalPartyCount == other.TotalPartyCount ||
                     this.TotalPartyCount != null &&
                     this.TotalPartyCount.Equals(other.TotalPartyCount)
-                ) && 
-                (
-                    this.TotalHeadCount == other.TotalHeadCount ||
-                    this.TotalHeadCount != null &&
-                    this.TotalHeadCount.Equals(other.TotalHeadCount)
                 ) && 
                 (
                     this.TotalSeatedCount == other.TotalSeatedCount ||
@@ -275,8 +262,6 @@ sb.Append("  AvgLine: ").Append(AvgLine).Append("\n");
                     hash = hash * 59 + this.Dimensions.GetHashCode();
                 if (this.TotalPartyCount != null)
                     hash = hash * 59 + this.TotalPartyCount.GetHashCode();
-                if (this.TotalHeadCount != null)
-                    hash = hash * 59 + this.TotalHeadCount.GetHashCode();
                 if (this.TotalSeatedCount != null)
                     hash = hash * 59 + this.TotalSeatedCount.GetHashCode();
                 if (this.TotalCanceledCount != null)

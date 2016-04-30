@@ -46,12 +46,6 @@ namespace HostMe.Sdk.Models
         public DateTimeOffset? Closed { get; set; }
     
         /// <summary>
-        /// Gets or Sets PhoneId
-        /// </summary>
-        [DataMember(Name="phoneId", EmitDefaultValue=true)]
-        public string PhoneId { get; set; }
-    
-        /// <summary>
         /// Gets or Sets ConfirmationCode
         /// </summary>
         [DataMember(Name="confirmationCode", EmitDefaultValue=true)]
@@ -213,7 +207,6 @@ namespace HostMe.Sdk.Models
 sb.Append("  Status: ").Append(Status).Append("\n");
 sb.Append("  Created: ").Append(Created).Append("\n");
 sb.Append("  Closed: ").Append(Closed).Append("\n");
-sb.Append("  PhoneId: ").Append(PhoneId).Append("\n");
 sb.Append("  ConfirmationCode: ").Append(ConfirmationCode).Append("\n");
 sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
 sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
@@ -294,11 +287,6 @@ sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
                     this.Closed == other.Closed ||
                     this.Closed != null &&
                     this.Closed.Equals(other.Closed)
-                ) && 
-                (
-                    this.PhoneId == other.PhoneId ||
-                    this.PhoneId != null &&
-                    this.PhoneId.Equals(other.PhoneId)
                 ) && 
                 (
                     this.ConfirmationCode == other.ConfirmationCode ||
@@ -446,8 +434,6 @@ sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
                     hash = hash * 59 + this.Created.GetHashCode();
                 if (this.Closed != null)
                     hash = hash * 59 + this.Closed.GetHashCode();
-                if (this.PhoneId != null)
-                    hash = hash * 59 + this.PhoneId.GetHashCode();
                 if (this.ConfirmationCode != null)
                     hash = hash * 59 + this.ConfirmationCode.GetHashCode();
                 if (this.CustomerName != null)

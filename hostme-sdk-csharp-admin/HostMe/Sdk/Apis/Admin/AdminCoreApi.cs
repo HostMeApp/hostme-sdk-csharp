@@ -24,7 +24,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void AddExternalLogin (AddExternalLoginBindingModel model);
+        void AddExternalLogin (AddExternalLogin model);
   
         /// <summary>
         /// 
@@ -35,7 +35,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLoginBindingModel model);
+        ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -45,7 +45,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>WithAccessTokenContract1RestaurantContract</returns>
-        WithAccessTokenContract1RestaurantContract AddNewRestaurant (NewRestaurantBindingModel value);
+        WithAccessTokenContract1RestaurantContract AddNewRestaurant (CreateRestaurant value);
   
         /// <summary>
         /// 
@@ -56,7 +56,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>ApiResponse of WithAccessTokenContract1RestaurantContract</returns>
-        ApiResponse<WithAccessTokenContract1RestaurantContract> AddNewRestaurantWithHttpInfo (NewRestaurantBindingModel value);
+        ApiResponse<WithAccessTokenContract1RestaurantContract> AddNewRestaurantWithHttpInfo (CreateRestaurant value);
         /// <summary>
         /// 
         /// </summary>
@@ -66,7 +66,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void ChangePassword (ChangePasswordBindingModel model);
+        void ChangePassword (ChangePassword model);
   
         /// <summary>
         /// 
@@ -77,7 +77,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordBindingModel model);
+        ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -87,8 +87,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>InvitationViewModel</returns>
-        InvitationViewModel CheckInvitationCode (string invitationCode, string restaurantId);
+        /// <returns>InvitationInfo</returns>
+        InvitationInfo CheckInvitationCode (string invitationCode, string restaurantId);
   
         /// <summary>
         /// 
@@ -99,8 +99,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>ApiResponse of InvitationViewModel</returns>
-        ApiResponse<InvitationViewModel> CheckInvitationCodeWithHttpInfo (string invitationCode, string restaurantId);
+        /// <returns>ApiResponse of InvitationInfo</returns>
+        ApiResponse<InvitationInfo> CheckInvitationCodeWithHttpInfo (string invitationCode, string restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -111,7 +111,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>string</returns>
-        string CreateInvitationCode (int? restaurantId, InvitationBindingModel invitation);
+        string CreateInvitationCode (int? restaurantId, Invitation invitation);
   
         /// <summary>
         /// 
@@ -123,7 +123,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> CreateInvitationCodeWithHttpInfo (int? restaurantId, InvitationBindingModel invitation);
+        ApiResponse<string> CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation);
         /// <summary>
         /// 
         /// </summary>
@@ -133,7 +133,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns></returns>
-        void CreateNewAccountWithRestaurant (NewAccountWithRestaurantBindingModel value);
+        void CreateNewAccountWithRestaurant (CreateAccountWithRestaurant value);
   
         /// <summary>
         /// 
@@ -144,7 +144,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateNewAccountWithRestaurantWithHttpInfo (NewAccountWithRestaurantBindingModel value);
+        ApiResponse<Object> CreateNewAccountWithRestaurantWithHttpInfo (CreateAccountWithRestaurant value);
         /// <summary>
         /// 
         /// </summary>
@@ -308,8 +308,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>List&lt;InvitationViewModel&gt;</returns>
-        List<InvitationViewModel> GetInvitations (int? restaurantId);
+        /// <returns>List&lt;InvitationInfo&gt;</returns>
+        List<InvitationInfo> GetInvitations (int? restaurantId);
   
         /// <summary>
         /// 
@@ -319,8 +319,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>ApiResponse of List&lt;InvitationViewModel&gt;</returns>
-        ApiResponse<List<InvitationViewModel>> GetInvitationsWithHttpInfo (int? restaurantId);
+        /// <returns>ApiResponse of List&lt;InvitationInfo&gt;</returns>
+        ApiResponse<List<InvitationInfo>> GetInvitationsWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -330,8 +330,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>ManageInfoViewModel</returns>
-        ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null);
+        /// <returns>ManageInfo</returns>
+        ManageInfo GetManageInfo (string returnUrl, bool? generateState = null);
   
         /// <summary>
         /// 
@@ -342,8 +342,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        ApiResponse<ManageInfoViewModel> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null);
+        /// <returns>ApiResponse of ManageInfo</returns>
+        ApiResponse<ManageInfo> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -430,44 +430,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of RestaurantSettings</returns>
         ApiResponse<RestaurantSettings> GetRestaurantSettingsWithHttpInfo (int? restaurantId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserInfoViewModel</returns>
-        UserInfoViewModel GetUserInfo ();
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserInfoViewModel</returns>
-        ApiResponse<UserInfoViewModel> GetUserInfoWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserProfile</returns>
-        UserProfile GetUserProfile ();
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserProfile</returns>
-        ApiResponse<UserProfile> GetUserProfileWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -576,7 +538,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void Register (RegisterBindingModel model);
+        void Register (RegisterUser model);
   
         /// <summary>
         /// 
@@ -587,7 +549,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RegisterWithHttpInfo (RegisterBindingModel model);
+        ApiResponse<Object> RegisterWithHttpInfo (RegisterUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -597,7 +559,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void RegisterExternal (RegisterExternalBindingModel model);
+        void RegisterExternal (RegisterExternalUser model);
   
         /// <summary>
         /// 
@@ -608,7 +570,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalBindingModel model);
+        ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -641,7 +603,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void ResetPassword (ResetPasswordBindingModel model);
+        void ResetPassword (ResetPassword model);
   
         /// <summary>
         /// 
@@ -652,7 +614,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPasswordBindingModel model);
+        ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -685,7 +647,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void SetPassword (SetPasswordBindingModel model);
+        void SetPassword (SetPassword model);
   
         /// <summary>
         /// 
@@ -696,7 +658,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetPasswordWithHttpInfo (SetPasswordBindingModel model);
+        ApiResponse<Object> SetPasswordWithHttpInfo (SetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -775,7 +737,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLoginBindingModel model);
+        System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLogin model);
 
         /// <summary>
         /// 
@@ -786,7 +748,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLoginBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -796,7 +758,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of WithAccessTokenContract1RestaurantContract</returns>
-        System.Threading.Tasks.Task<WithAccessTokenContract1RestaurantContract> AddNewRestaurantAsync (NewRestaurantBindingModel value);
+        System.Threading.Tasks.Task<WithAccessTokenContract1RestaurantContract> AddNewRestaurantAsync (CreateRestaurant value);
 
         /// <summary>
         /// 
@@ -807,7 +769,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (WithAccessTokenContract1RestaurantContract)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WithAccessTokenContract1RestaurantContract>> AddNewRestaurantAsyncWithHttpInfo (NewRestaurantBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<WithAccessTokenContract1RestaurantContract>> AddNewRestaurantAsyncWithHttpInfo (CreateRestaurant value);
         /// <summary>
         /// 
         /// </summary>
@@ -817,7 +779,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordBindingModel model);
+        System.Threading.Tasks.Task ChangePasswordAsync (ChangePassword model);
 
         /// <summary>
         /// 
@@ -828,7 +790,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -838,8 +800,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of InvitationViewModel</returns>
-        System.Threading.Tasks.Task<InvitationViewModel> CheckInvitationCodeAsync (string invitationCode, string restaurantId);
+        /// <returns>Task of InvitationInfo</returns>
+        System.Threading.Tasks.Task<InvitationInfo> CheckInvitationCodeAsync (string invitationCode, string restaurantId);
 
         /// <summary>
         /// 
@@ -850,8 +812,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (InvitationViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InvitationViewModel>> CheckInvitationCodeAsyncWithHttpInfo (string invitationCode, string restaurantId);
+        /// <returns>Task of ApiResponse (InvitationInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InvitationInfo>> CheckInvitationCodeAsyncWithHttpInfo (string invitationCode, string restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -862,7 +824,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, InvitationBindingModel invitation);
+        System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation);
 
         /// <summary>
         /// 
@@ -874,7 +836,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, InvitationBindingModel invitation);
+        System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation);
         /// <summary>
         /// 
         /// </summary>
@@ -884,7 +846,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateNewAccountWithRestaurantAsync (NewAccountWithRestaurantBindingModel value);
+        System.Threading.Tasks.Task CreateNewAccountWithRestaurantAsync (CreateAccountWithRestaurant value);
 
         /// <summary>
         /// 
@@ -895,7 +857,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewAccountWithRestaurantAsyncWithHttpInfo (NewAccountWithRestaurantBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewAccountWithRestaurantAsyncWithHttpInfo (CreateAccountWithRestaurant value);
         /// <summary>
         /// 
         /// </summary>
@@ -1059,8 +1021,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of List&lt;InvitationViewModel&gt;</returns>
-        System.Threading.Tasks.Task<List<InvitationViewModel>> GetInvitationsAsync (int? restaurantId);
+        /// <returns>Task of List&lt;InvitationInfo&gt;</returns>
+        System.Threading.Tasks.Task<List<InvitationInfo>> GetInvitationsAsync (int? restaurantId);
 
         /// <summary>
         /// 
@@ -1070,8 +1032,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (List&lt;InvitationViewModel&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InvitationViewModel>>> GetInvitationsAsyncWithHttpInfo (int? restaurantId);
+        /// <returns>Task of ApiResponse (List&lt;InvitationInfo&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<InvitationInfo>>> GetInvitationsAsyncWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -1081,8 +1043,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ManageInfoViewModel</returns>
-        System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null);
+        /// <returns>Task of ManageInfo</returns>
+        System.Threading.Tasks.Task<ManageInfo> GetManageInfoAsync (string returnUrl, bool? generateState = null);
 
         /// <summary>
         /// 
@@ -1093,8 +1055,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
+        /// <returns>Task of ApiResponse (ManageInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ManageInfo>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -1181,44 +1143,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (RestaurantSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestaurantSettings>> GetRestaurantSettingsAsyncWithHttpInfo (int? restaurantId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserInfoViewModel</returns>
-        System.Threading.Tasks.Task<UserInfoViewModel> GetUserInfoAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserInfoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserInfoViewModel>> GetUserInfoAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserProfile</returns>
-        System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -1327,7 +1251,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RegisterAsync (RegisterBindingModel model);
+        System.Threading.Tasks.Task RegisterAsync (RegisterUser model);
 
         /// <summary>
         /// 
@@ -1338,7 +1262,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -1348,7 +1272,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalBindingModel model);
+        System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalUser model);
 
         /// <summary>
         /// 
@@ -1359,7 +1283,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -1392,7 +1316,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ResetPasswordAsync (ResetPasswordBindingModel model);
+        System.Threading.Tasks.Task ResetPasswordAsync (ResetPassword model);
 
         /// <summary>
         /// 
@@ -1403,7 +1327,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -1436,7 +1360,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetPasswordAsync (SetPasswordBindingModel model);
+        System.Threading.Tasks.Task SetPasswordAsync (SetPassword model);
 
         /// <summary>
         /// 
@@ -1447,7 +1371,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -1611,7 +1535,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void AddExternalLogin (AddExternalLoginBindingModel model)
+        public void AddExternalLogin (AddExternalLogin model)
         {
              AddExternalLoginWithHttpInfo(model);
         }
@@ -1622,7 +1546,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLoginBindingModel model)
+        public ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLogin model)
         {
             
             // verify the required parameter 'model' is set
@@ -1630,7 +1554,7 @@ namespace HostMe.Sdk.Apis.Admin
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->AddExternalLogin");
             
     
-            var localVarPath = "/api/core/admin/account/AddExternalLogin";
+            var localVarPath = "/api/core/admin/account/addExternalLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1665,12 +1589,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1697,7 +1620,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLoginBindingModel model)
+        public async System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLogin model)
         {
              await AddExternalLoginAsyncWithHttpInfo(model);
 
@@ -1709,13 +1632,13 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLoginBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLogin model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling AddExternalLogin");
             
     
-            var localVarPath = "/api/core/admin/account/AddExternalLogin";
+            var localVarPath = "/api/core/admin/account/addExternalLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1750,12 +1673,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1781,7 +1703,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns>WithAccessTokenContract1RestaurantContract</returns>
-        public WithAccessTokenContract1RestaurantContract AddNewRestaurant (NewRestaurantBindingModel value)
+        public WithAccessTokenContract1RestaurantContract AddNewRestaurant (CreateRestaurant value)
         {
              ApiResponse<WithAccessTokenContract1RestaurantContract> localVarResponse = AddNewRestaurantWithHttpInfo(value);
              return localVarResponse.Data;
@@ -1793,7 +1715,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns>ApiResponse of WithAccessTokenContract1RestaurantContract</returns>
-        public ApiResponse< WithAccessTokenContract1RestaurantContract > AddNewRestaurantWithHttpInfo (NewRestaurantBindingModel value)
+        public ApiResponse< WithAccessTokenContract1RestaurantContract > AddNewRestaurantWithHttpInfo (CreateRestaurant value)
         {
             
             // verify the required parameter 'value' is set
@@ -1836,12 +1758,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1868,7 +1789,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of WithAccessTokenContract1RestaurantContract</returns>
-        public async System.Threading.Tasks.Task<WithAccessTokenContract1RestaurantContract> AddNewRestaurantAsync (NewRestaurantBindingModel value)
+        public async System.Threading.Tasks.Task<WithAccessTokenContract1RestaurantContract> AddNewRestaurantAsync (CreateRestaurant value)
         {
              ApiResponse<WithAccessTokenContract1RestaurantContract> localVarResponse = await AddNewRestaurantAsyncWithHttpInfo(value);
              return localVarResponse.Data;
@@ -1881,7 +1802,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (WithAccessTokenContract1RestaurantContract)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WithAccessTokenContract1RestaurantContract>> AddNewRestaurantAsyncWithHttpInfo (NewRestaurantBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<WithAccessTokenContract1RestaurantContract>> AddNewRestaurantAsyncWithHttpInfo (CreateRestaurant value)
         {
             // verify the required parameter 'value' is set
             if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling AddNewRestaurant");
@@ -1922,12 +1843,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1953,7 +1873,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void ChangePassword (ChangePasswordBindingModel model)
+        public void ChangePassword (ChangePassword model)
         {
              ChangePasswordWithHttpInfo(model);
         }
@@ -1964,7 +1884,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordBindingModel model)
+        public ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePassword model)
         {
             
             // verify the required parameter 'model' is set
@@ -1972,7 +1892,7 @@ namespace HostMe.Sdk.Apis.Admin
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->ChangePassword");
             
     
-            var localVarPath = "/api/core/admin/account/ChangePassword";
+            var localVarPath = "/api/core/admin/account/changePassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2007,12 +1927,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2039,7 +1958,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordBindingModel model)
+        public async System.Threading.Tasks.Task ChangePasswordAsync (ChangePassword model)
         {
              await ChangePasswordAsyncWithHttpInfo(model);
 
@@ -2051,13 +1970,13 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePassword model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling ChangePassword");
             
     
-            var localVarPath = "/api/core/admin/account/ChangePassword";
+            var localVarPath = "/api/core/admin/account/changePassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2092,12 +2011,11 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2123,10 +2041,10 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param> 
         /// <param name="restaurantId"></param> 
-        /// <returns>InvitationViewModel</returns>
-        public InvitationViewModel CheckInvitationCode (string invitationCode, string restaurantId)
+        /// <returns>InvitationInfo</returns>
+        public InvitationInfo CheckInvitationCode (string invitationCode, string restaurantId)
         {
-             ApiResponse<InvitationViewModel> localVarResponse = CheckInvitationCodeWithHttpInfo(invitationCode, restaurantId);
+             ApiResponse<InvitationInfo> localVarResponse = CheckInvitationCodeWithHttpInfo(invitationCode, restaurantId);
              return localVarResponse.Data;
         }
 
@@ -2136,8 +2054,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param> 
         /// <param name="restaurantId"></param> 
-        /// <returns>ApiResponse of InvitationViewModel</returns>
-        public ApiResponse< InvitationViewModel > CheckInvitationCodeWithHttpInfo (string invitationCode, string restaurantId)
+        /// <returns>ApiResponse of InvitationInfo</returns>
+        public ApiResponse< InvitationInfo > CheckInvitationCodeWithHttpInfo (string invitationCode, string restaurantId)
         {
             
             // verify the required parameter 'invitationCode' is set
@@ -2179,12 +2097,11 @@ namespace HostMe.Sdk.Apis.Admin
 if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2199,9 +2116,9 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling CheckInvitationCode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<InvitationViewModel>(localVarStatusCode,
+            return new ApiResponse<InvitationInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InvitationViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InvitationViewModel)));
+                (InvitationInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InvitationInfo)));
             
         }
 
@@ -2211,10 +2128,10 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of InvitationViewModel</returns>
-        public async System.Threading.Tasks.Task<InvitationViewModel> CheckInvitationCodeAsync (string invitationCode, string restaurantId)
+        /// <returns>Task of InvitationInfo</returns>
+        public async System.Threading.Tasks.Task<InvitationInfo> CheckInvitationCodeAsync (string invitationCode, string restaurantId)
         {
-             ApiResponse<InvitationViewModel> localVarResponse = await CheckInvitationCodeAsyncWithHttpInfo(invitationCode, restaurantId);
+             ApiResponse<InvitationInfo> localVarResponse = await CheckInvitationCodeAsyncWithHttpInfo(invitationCode, restaurantId);
              return localVarResponse.Data;
 
         }
@@ -2225,8 +2142,8 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="invitationCode"></param>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (InvitationViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InvitationViewModel>> CheckInvitationCodeAsyncWithHttpInfo (string invitationCode, string restaurantId)
+        /// <returns>Task of ApiResponse (InvitationInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InvitationInfo>> CheckInvitationCodeAsyncWithHttpInfo (string invitationCode, string restaurantId)
         {
             // verify the required parameter 'invitationCode' is set
             if (invitationCode == null) throw new ApiException(400, "Missing required parameter 'invitationCode' when calling CheckInvitationCode");
@@ -2264,12 +2181,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2284,9 +2200,9 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling CheckInvitationCode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<InvitationViewModel>(localVarStatusCode,
+            return new ApiResponse<InvitationInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (InvitationViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InvitationViewModel)));
+                (InvitationInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InvitationInfo)));
             
         }
         /// <summary>
@@ -2296,7 +2212,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <param name="restaurantId"></param> 
         /// <param name="invitation"></param> 
         /// <returns>string</returns>
-        public string CreateInvitationCode (int? restaurantId, InvitationBindingModel invitation)
+        public string CreateInvitationCode (int? restaurantId, Invitation invitation)
         {
              ApiResponse<string> localVarResponse = CreateInvitationCodeWithHttpInfo(restaurantId, invitation);
              return localVarResponse.Data;
@@ -2309,7 +2225,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <param name="restaurantId"></param> 
         /// <param name="invitation"></param> 
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > CreateInvitationCodeWithHttpInfo (int? restaurantId, InvitationBindingModel invitation)
+        public ApiResponse< string > CreateInvitationCodeWithHttpInfo (int? restaurantId, Invitation invitation)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -2357,12 +2273,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
                 localVarPostBody = invitation; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2390,7 +2305,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, InvitationBindingModel invitation)
+        public async System.Threading.Tasks.Task<string> CreateInvitationCodeAsync (int? restaurantId, Invitation invitation)
         {
              ApiResponse<string> localVarResponse = await CreateInvitationCodeAsyncWithHttpInfo(restaurantId, invitation);
              return localVarResponse.Data;
@@ -2404,7 +2319,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <param name="restaurantId"></param>
         /// <param name="invitation"></param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, InvitationBindingModel invitation)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> CreateInvitationCodeAsyncWithHttpInfo (int? restaurantId, Invitation invitation)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling CreateInvitationCode");
@@ -2448,12 +2363,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
                 localVarPostBody = invitation; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2479,7 +2393,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns></returns>
-        public void CreateNewAccountWithRestaurant (NewAccountWithRestaurantBindingModel value)
+        public void CreateNewAccountWithRestaurant (CreateAccountWithRestaurant value)
         {
              CreateNewAccountWithRestaurantWithHttpInfo(value);
         }
@@ -2490,7 +2404,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateNewAccountWithRestaurantWithHttpInfo (NewAccountWithRestaurantBindingModel value)
+        public ApiResponse<Object> CreateNewAccountWithRestaurantWithHttpInfo (CreateAccountWithRestaurant value)
         {
             
             // verify the required parameter 'value' is set
@@ -2533,12 +2447,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2565,7 +2478,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateNewAccountWithRestaurantAsync (NewAccountWithRestaurantBindingModel value)
+        public async System.Threading.Tasks.Task CreateNewAccountWithRestaurantAsync (CreateAccountWithRestaurant value)
         {
              await CreateNewAccountWithRestaurantAsyncWithHttpInfo(value);
 
@@ -2577,7 +2490,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewAccountWithRestaurantAsyncWithHttpInfo (NewAccountWithRestaurantBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateNewAccountWithRestaurantAsyncWithHttpInfo (CreateAccountWithRestaurant value)
         {
             // verify the required parameter 'value' is set
             if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling CreateNewAccountWithRestaurant");
@@ -2618,12 +2531,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2704,12 +2616,11 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 if (invitationCode != null) localVarPathParams.Add("invitationCode", Configuration.ApiClient.ParameterToString(invitationCode)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2788,12 +2699,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
 if (invitationCode != null) localVarPathParams.Add("invitationCode", Configuration.ApiClient.ParameterToString(invitationCode)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2867,12 +2777,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2946,12 +2855,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3039,12 +2947,11 @@ if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.Par
             if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3128,12 +3035,11 @@ if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.Par
             if (role != null) localVarQueryParams.Add("role", Configuration.ApiClient.ParameterToString(role)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3207,12 +3113,11 @@ if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.Par
 if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3288,12 +3193,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
 if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3367,12 +3271,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
 if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3448,12 +3351,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
 if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.ParameterToString(email)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3521,12 +3423,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3596,12 +3497,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3676,12 +3576,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3756,12 +3655,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3786,10 +3684,10 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <returns>List&lt;InvitationViewModel&gt;</returns>
-        public List<InvitationViewModel> GetInvitations (int? restaurantId)
+        /// <returns>List&lt;InvitationInfo&gt;</returns>
+        public List<InvitationInfo> GetInvitations (int? restaurantId)
         {
-             ApiResponse<List<InvitationViewModel>> localVarResponse = GetInvitationsWithHttpInfo(restaurantId);
+             ApiResponse<List<InvitationInfo>> localVarResponse = GetInvitationsWithHttpInfo(restaurantId);
              return localVarResponse.Data;
         }
 
@@ -3798,8 +3696,8 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <returns>ApiResponse of List&lt;InvitationViewModel&gt;</returns>
-        public ApiResponse< List<InvitationViewModel> > GetInvitationsWithHttpInfo (int? restaurantId)
+        /// <returns>ApiResponse of List&lt;InvitationInfo&gt;</returns>
+        public ApiResponse< List<InvitationInfo> > GetInvitationsWithHttpInfo (int? restaurantId)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3836,12 +3734,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3856,9 +3753,9 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInvitations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<List<InvitationViewModel>>(localVarStatusCode,
+            return new ApiResponse<List<InvitationInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InvitationViewModel>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InvitationViewModel>)));
+                (List<InvitationInfo>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InvitationInfo>)));
             
         }
 
@@ -3867,10 +3764,10 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of List&lt;InvitationViewModel&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InvitationViewModel>> GetInvitationsAsync (int? restaurantId)
+        /// <returns>Task of List&lt;InvitationInfo&gt;</returns>
+        public async System.Threading.Tasks.Task<List<InvitationInfo>> GetInvitationsAsync (int? restaurantId)
         {
-             ApiResponse<List<InvitationViewModel>> localVarResponse = await GetInvitationsAsyncWithHttpInfo(restaurantId);
+             ApiResponse<List<InvitationInfo>> localVarResponse = await GetInvitationsAsyncWithHttpInfo(restaurantId);
              return localVarResponse.Data;
 
         }
@@ -3880,8 +3777,8 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (List&lt;InvitationViewModel&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InvitationViewModel>>> GetInvitationsAsyncWithHttpInfo (int? restaurantId)
+        /// <returns>Task of ApiResponse (List&lt;InvitationInfo&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<InvitationInfo>>> GetInvitationsAsyncWithHttpInfo (int? restaurantId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling GetInvitations");
@@ -3916,12 +3813,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3936,9 +3832,9 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetInvitations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<InvitationViewModel>>(localVarStatusCode,
+            return new ApiResponse<List<InvitationInfo>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InvitationViewModel>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InvitationViewModel>)));
+                (List<InvitationInfo>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InvitationInfo>)));
             
         }
         /// <summary>
@@ -3947,10 +3843,10 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
-        /// <returns>ManageInfoViewModel</returns>
-        public ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null)
+        /// <returns>ManageInfo</returns>
+        public ManageInfo GetManageInfo (string returnUrl, bool? generateState = null)
         {
-             ApiResponse<ManageInfoViewModel> localVarResponse = GetManageInfoWithHttpInfo(returnUrl, generateState);
+             ApiResponse<ManageInfo> localVarResponse = GetManageInfoWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
         }
 
@@ -3960,8 +3856,8 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
-        /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        public ApiResponse< ManageInfoViewModel > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null)
+        /// <returns>ApiResponse of ManageInfo</returns>
+        public ApiResponse< ManageInfo > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             
             // verify the required parameter 'returnUrl' is set
@@ -3969,7 +3865,7 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
                 throw new ApiException(400, "Missing required parameter 'returnUrl' when calling AdminCoreApi->GetManageInfo");
             
     
-            var localVarPath = "/api/core/admin/account/ManageInfo";
+            var localVarPath = "/api/core/admin/account/manageInfo";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3999,12 +3895,11 @@ if (email != null) localVarQueryParams.Add("email", Configuration.ApiClient.Para
 if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4019,9 +3914,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManageInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ManageInfoViewModel>(localVarStatusCode,
+            return new ApiResponse<ManageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ManageInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfoViewModel)));
+                (ManageInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfo)));
             
         }
 
@@ -4031,10 +3926,10 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ManageInfoViewModel</returns>
-        public async System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null)
+        /// <returns>Task of ManageInfo</returns>
+        public async System.Threading.Tasks.Task<ManageInfo> GetManageInfoAsync (string returnUrl, bool? generateState = null)
         {
-             ApiResponse<ManageInfoViewModel> localVarResponse = await GetManageInfoAsyncWithHttpInfo(returnUrl, generateState);
+             ApiResponse<ManageInfo> localVarResponse = await GetManageInfoAsyncWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
 
         }
@@ -4045,14 +3940,14 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
+        /// <returns>Task of ApiResponse (ManageInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ManageInfo>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             // verify the required parameter 'returnUrl' is set
             if (returnUrl == null) throw new ApiException(400, "Missing required parameter 'returnUrl' when calling GetManageInfo");
             
     
-            var localVarPath = "/api/core/admin/account/ManageInfo";
+            var localVarPath = "/api/core/admin/account/manageInfo";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4082,12 +3977,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
 if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4102,9 +3996,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManageInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManageInfoViewModel>(localVarStatusCode,
+            return new ApiResponse<ManageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ManageInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfoViewModel)));
+                (ManageInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfo)));
             
         }
         /// <summary>
@@ -4165,12 +4059,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (tableNumber != null) localVarQueryParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4248,12 +4141,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (tableNumber != null) localVarQueryParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4328,12 +4220,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4408,12 +4299,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4488,12 +4378,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4568,12 +4457,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4648,12 +4536,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4728,12 +4615,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4751,302 +4637,6 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             return new ApiResponse<RestaurantSettings>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestaurantSettings) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestaurantSettings)));
-            
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserInfoViewModel</returns>
-        public UserInfoViewModel GetUserInfo ()
-        {
-             ApiResponse<UserInfoViewModel> localVarResponse = GetUserInfoWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserInfoViewModel</returns>
-        public ApiResponse< UserInfoViewModel > GetUserInfoWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/admin/account/UserInfo";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<UserInfoViewModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoViewModel)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserInfoViewModel</returns>
-        public async System.Threading.Tasks.Task<UserInfoViewModel> GetUserInfoAsync ()
-        {
-             ApiResponse<UserInfoViewModel> localVarResponse = await GetUserInfoAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserInfoViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserInfoViewModel>> GetUserInfoAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/admin/account/UserInfo";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UserInfoViewModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoViewModel)));
-            
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserProfile</returns>
-        public UserProfile GetUserProfile ()
-        {
-             ApiResponse<UserProfile> localVarResponse = GetUserProfileWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserProfile</returns>
-        public ApiResponse< UserProfile > GetUserProfileWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/admin/account/profile";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserProfile: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserProfile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<UserProfile>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserProfile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfile)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserProfile</returns>
-        public async System.Threading.Tasks.Task<UserProfile> GetUserProfileAsync ()
-        {
-             ApiResponse<UserProfile> localVarResponse = await GetUserProfileAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/admin/account/profile";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserProfile: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserProfile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UserProfile>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserProfile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfile)));
             
         }
         /// <summary>
@@ -5104,12 +4694,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5184,12 +4773,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5228,7 +4816,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         {
             
     
-            var localVarPath = "/api/core/admin/account/Logout";
+            var localVarPath = "/api/core/admin/account/logout";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5256,12 +4844,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5302,7 +4889,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         {
             
     
-            var localVarPath = "/api/core/admin/account/Logout";
+            var localVarPath = "/api/core/admin/account/logout";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5330,12 +4917,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5403,12 +4989,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5478,12 +5063,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5563,12 +5147,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = image; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5648,12 +5231,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = image; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5721,12 +5303,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5796,12 +5377,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5827,7 +5407,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void Register (RegisterBindingModel model)
+        public void Register (RegisterUser model)
         {
              RegisterWithHttpInfo(model);
         }
@@ -5838,7 +5418,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RegisterWithHttpInfo (RegisterBindingModel model)
+        public ApiResponse<Object> RegisterWithHttpInfo (RegisterUser model)
         {
             
             // verify the required parameter 'model' is set
@@ -5846,7 +5426,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->Register");
             
     
-            var localVarPath = "/api/core/admin/account/Register";
+            var localVarPath = "/api/core/admin/account/register";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5881,12 +5461,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -5913,7 +5492,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RegisterAsync (RegisterBindingModel model)
+        public async System.Threading.Tasks.Task RegisterAsync (RegisterUser model)
         {
              await RegisterAsyncWithHttpInfo(model);
 
@@ -5925,13 +5504,13 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterUser model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling Register");
             
     
-            var localVarPath = "/api/core/admin/account/Register";
+            var localVarPath = "/api/core/admin/account/register";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -5966,12 +5545,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -5997,7 +5575,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void RegisterExternal (RegisterExternalBindingModel model)
+        public void RegisterExternal (RegisterExternalUser model)
         {
              RegisterExternalWithHttpInfo(model);
         }
@@ -6008,7 +5586,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalBindingModel model)
+        public ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalUser model)
         {
             
             // verify the required parameter 'model' is set
@@ -6016,7 +5594,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->RegisterExternal");
             
     
-            var localVarPath = "/api/core/admin/account/RegisterExternal";
+            var localVarPath = "/api/core/admin/account/registerExternal";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6051,12 +5629,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -6083,7 +5660,7 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalBindingModel model)
+        public async System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalUser model)
         {
              await RegisterExternalAsyncWithHttpInfo(model);
 
@@ -6095,13 +5672,13 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalUser model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling RegisterExternal");
             
     
-            var localVarPath = "/api/core/admin/account/RegisterExternal";
+            var localVarPath = "/api/core/admin/account/registerExternal";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6136,12 +5713,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -6222,12 +5798,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
 if (invitationCode != null) localVarPathParams.Add("invitationCode", Configuration.ApiClient.ParameterToString(invitationCode)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -6306,12 +5881,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
 if (invitationCode != null) localVarPathParams.Add("invitationCode", Configuration.ApiClient.ParameterToString(invitationCode)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -6337,7 +5911,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void ResetPassword (ResetPasswordBindingModel model)
+        public void ResetPassword (ResetPassword model)
         {
              ResetPasswordWithHttpInfo(model);
         }
@@ -6348,7 +5922,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPasswordBindingModel model)
+        public ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPassword model)
         {
             
             // verify the required parameter 'model' is set
@@ -6356,7 +5930,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->ResetPassword");
             
     
-            var localVarPath = "/api/core/admin/account/ResetPassword";
+            var localVarPath = "/api/core/admin/account/resetPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6391,12 +5965,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -6423,7 +5996,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ResetPasswordAsync (ResetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task ResetPasswordAsync (ResetPassword model)
         {
              await ResetPasswordAsyncWithHttpInfo(model);
 
@@ -6435,13 +6008,13 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPassword model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling ResetPassword");
             
     
-            var localVarPath = "/api/core/admin/account/ResetPassword";
+            var localVarPath = "/api/core/admin/account/resetPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6476,12 +6049,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -6568,12 +6140,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -6658,12 +6229,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -6689,7 +6259,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void SetPassword (SetPasswordBindingModel model)
+        public void SetPassword (SetPassword model)
         {
              SetPasswordWithHttpInfo(model);
         }
@@ -6700,7 +6270,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetPasswordWithHttpInfo (SetPasswordBindingModel model)
+        public ApiResponse<Object> SetPasswordWithHttpInfo (SetPassword model)
         {
             
             // verify the required parameter 'model' is set
@@ -6708,7 +6278,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 throw new ApiException(400, "Missing required parameter 'model' when calling AdminCoreApi->SetPassword");
             
     
-            var localVarPath = "/api/core/admin/account/SetPassword";
+            var localVarPath = "/api/core/admin/account/setPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6743,12 +6313,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -6775,7 +6344,7 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetPasswordAsync (SetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task SetPasswordAsync (SetPassword model)
         {
              await SetPasswordAsyncWithHttpInfo(model);
 
@@ -6787,13 +6356,13 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPassword model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling SetPassword");
             
     
-            var localVarPath = "/api/core/admin/account/SetPassword";
+            var localVarPath = "/api/core/admin/account/setPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -6828,12 +6397,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -6920,12 +6488,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -7010,12 +6577,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = settings; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -7103,12 +6669,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -7194,12 +6759,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -7279,12 +6843,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = profile; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -7364,12 +6927,11 @@ if (invitationCode != null) localVarPathParams.Add("invitationCode", Configurati
                 localVarPostBody = profile; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request

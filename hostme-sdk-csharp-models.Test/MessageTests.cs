@@ -59,14 +59,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Id' 
         }
         /// <summary>
-        /// Test the property 'WaitItemId' 
-        /// </summary>
-        [Test]
-        public void WaitItemIdTest()
-        {
-            // TODO: unit test for the property 'WaitItemId' 
-        }
-        /// <summary>
         /// Test the property 'Body' 
         /// </summary>
         [Test]

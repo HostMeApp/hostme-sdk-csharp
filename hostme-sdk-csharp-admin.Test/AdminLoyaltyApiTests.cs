@@ -93,19 +93,6 @@ int? memberId = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test CreateRestaurantUser
-        /// </summary>
-        [Test]
-        public void CreateRestaurantUserTest()
-        {
-            // TODO: add unit test for the method 'CreateRestaurantUser'
-            int? restaurantId = null; // TODO: replace null with proper value
-CreateRestaurantCustomer model = null; // TODO: replace null with proper value
-            instance.CreateRestaurantUser(restaurantId, model);
-             
-        }
-        
-        /// <summary>
         /// Test DeleteReward
         /// </summary>
         [Test]
@@ -128,7 +115,7 @@ string rewardId = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
 string token = null; // TODO: replace null with proper value
             var response = instance.Filter(restaurantId, token);
-            Assert.IsInstanceOf<List<UserProfile>> (response, "response is List<UserProfile>"); 
+            Assert.IsInstanceOf<List<CustomerProfile>> (response, "response is List<CustomerProfile>"); 
         }
         
         /// <summary>
@@ -278,8 +265,8 @@ string rewardId = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'RejectRedeemRequest'
             int? restaurantId = null; // TODO: replace null with proper value
 string redeemId = null; // TODO: replace null with proper value
-string reason = null; // TODO: replace null with proper value
-            var response = instance.RejectRedeemRequest(restaurantId, redeemId, reason);
+RedeemRequestReject reject = null; // TODO: replace null with proper value
+            var response = instance.RejectRedeemRequest(restaurantId, redeemId, reject);
             Assert.IsInstanceOf<RedeemRequest> (response, "response is RedeemRequest"); 
         }
         

@@ -61,7 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewReservation'
             int? restaurantId = null; // TODO: replace null with proper value
-AdminReservationBindingModel value = null; // TODO: replace null with proper value
+CreateReservation value = null; // TODO: replace null with proper value
             var response = instance.AddNewReservation(restaurantId, value);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
@@ -75,8 +75,8 @@ AdminReservationBindingModel value = null; // TODO: replace null with proper val
             // TODO: add unit test for the method 'CancelReservation'
             int? restaurantId = null; // TODO: replace null with proper value
 string reservationId = null; // TODO: replace null with proper value
-string notes = null; // TODO: replace null with proper value
-            var response = instance.CancelReservation(restaurantId, reservationId, notes);
+CancelReservation cancelReservationContract = null; // TODO: replace null with proper value
+            var response = instance.CancelReservation(restaurantId, reservationId, cancelReservationContract);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
         
@@ -267,8 +267,8 @@ string subject = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'SendMessage'
             int? restaurantId = null; // TODO: replace null with proper value
 string reservationId = null; // TODO: replace null with proper value
-string body = null; // TODO: replace null with proper value
-            var response = instance.SendMessage(restaurantId, reservationId, body);
+CreateMessage createMessageContract = null; // TODO: replace null with proper value
+            var response = instance.SendMessage(restaurantId, reservationId, createMessageContract);
             Assert.IsInstanceOf<Message> (response, "response is Message"); 
         }
         
@@ -305,7 +305,7 @@ ReservationSettings settings = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'UpdateReservation'
             int? restaurantId = null; // TODO: replace null with proper value
 string reservationId = null; // TODO: replace null with proper value
-AdminReservationBindingModel value = null; // TODO: replace null with proper value
+CreateReservation value = null; // TODO: replace null with proper value
             instance.UpdateReservation(restaurantId, reservationId, value);
              
         }

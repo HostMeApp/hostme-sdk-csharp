@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Test
         public void AddExternalLoginTest()
         {
             // TODO: add unit test for the method 'AddExternalLogin'
-            AddExternalLoginBindingModel model = null; // TODO: replace null with proper value
+            AddExternalLogin model = null; // TODO: replace null with proper value
             instance.AddExternalLogin(model);
              
         }
@@ -72,7 +72,7 @@ namespace HostMe.Sdk.Test
         public void AddNewRestaurantTest()
         {
             // TODO: add unit test for the method 'AddNewRestaurant'
-            NewRestaurantBindingModel value = null; // TODO: replace null with proper value
+            CreateRestaurant value = null; // TODO: replace null with proper value
             var response = instance.AddNewRestaurant(value);
             Assert.IsInstanceOf<WithAccessTokenContract1RestaurantContract> (response, "response is WithAccessTokenContract1RestaurantContract"); 
         }
@@ -84,7 +84,7 @@ namespace HostMe.Sdk.Test
         public void ChangePasswordTest()
         {
             // TODO: add unit test for the method 'ChangePassword'
-            ChangePasswordBindingModel model = null; // TODO: replace null with proper value
+            ChangePassword model = null; // TODO: replace null with proper value
             instance.ChangePassword(model);
              
         }
@@ -99,7 +99,7 @@ namespace HostMe.Sdk.Test
             string invitationCode = null; // TODO: replace null with proper value
 string restaurantId = null; // TODO: replace null with proper value
             var response = instance.CheckInvitationCode(invitationCode, restaurantId);
-            Assert.IsInstanceOf<InvitationViewModel> (response, "response is InvitationViewModel"); 
+            Assert.IsInstanceOf<InvitationInfo> (response, "response is InvitationInfo"); 
         }
         
         /// <summary>
@@ -110,7 +110,7 @@ string restaurantId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'CreateInvitationCode'
             int? restaurantId = null; // TODO: replace null with proper value
-InvitationBindingModel invitation = null; // TODO: replace null with proper value
+Invitation invitation = null; // TODO: replace null with proper value
             var response = instance.CreateInvitationCode(restaurantId, invitation);
             Assert.IsInstanceOf<string> (response, "response is string"); 
         }
@@ -122,7 +122,7 @@ InvitationBindingModel invitation = null; // TODO: replace null with proper valu
         public void CreateNewAccountWithRestaurantTest()
         {
             // TODO: add unit test for the method 'CreateNewAccountWithRestaurant'
-            NewAccountWithRestaurantBindingModel value = null; // TODO: replace null with proper value
+            CreateAccountWithRestaurant value = null; // TODO: replace null with proper value
             instance.CreateNewAccountWithRestaurant(value);
              
         }
@@ -224,7 +224,7 @@ string email = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'GetInvitations'
             int? restaurantId = null; // TODO: replace null with proper value
             var response = instance.GetInvitations(restaurantId);
-            Assert.IsInstanceOf<List<InvitationViewModel>> (response, "response is List<InvitationViewModel>"); 
+            Assert.IsInstanceOf<List<InvitationInfo>> (response, "response is List<InvitationInfo>"); 
         }
         
         /// <summary>
@@ -237,7 +237,7 @@ string email = null; // TODO: replace null with proper value
             string returnUrl = null; // TODO: replace null with proper value
 bool? generateState = null; // TODO: replace null with proper value
             var response = instance.GetManageInfo(returnUrl, generateState);
-            Assert.IsInstanceOf<ManageInfoViewModel> (response, "response is ManageInfoViewModel"); 
+            Assert.IsInstanceOf<ManageInfo> (response, "response is ManageInfo"); 
         }
         
         /// <summary>
@@ -287,28 +287,6 @@ string tableNumber = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
             var response = instance.GetRestaurantSettings(restaurantId);
             Assert.IsInstanceOf<RestaurantSettings> (response, "response is RestaurantSettings"); 
-        }
-        
-        /// <summary>
-        /// Test GetUserInfo
-        /// </summary>
-        [Test]
-        public void GetUserInfoTest()
-        {
-            // TODO: add unit test for the method 'GetUserInfo'
-                        var response = instance.GetUserInfo();
-            Assert.IsInstanceOf<UserInfoViewModel> (response, "response is UserInfoViewModel"); 
-        }
-        
-        /// <summary>
-        /// Test GetUserProfile
-        /// </summary>
-        [Test]
-        public void GetUserProfileTest()
-        {
-            // TODO: add unit test for the method 'GetUserProfile'
-                        var response = instance.GetUserProfile();
-            Assert.IsInstanceOf<UserProfile> (response, "response is UserProfile"); 
         }
         
         /// <summary>
@@ -375,7 +353,7 @@ string tableNumber = null; // TODO: replace null with proper value
         public void RegisterTest()
         {
             // TODO: add unit test for the method 'Register'
-            RegisterBindingModel model = null; // TODO: replace null with proper value
+            RegisterUser model = null; // TODO: replace null with proper value
             instance.Register(model);
              
         }
@@ -387,7 +365,7 @@ string tableNumber = null; // TODO: replace null with proper value
         public void RegisterExternalTest()
         {
             // TODO: add unit test for the method 'RegisterExternal'
-            RegisterExternalBindingModel model = null; // TODO: replace null with proper value
+            RegisterExternalUser model = null; // TODO: replace null with proper value
             instance.RegisterExternal(model);
              
         }
@@ -412,7 +390,7 @@ string invitationCode = null; // TODO: replace null with proper value
         public void ResetPasswordTest()
         {
             // TODO: add unit test for the method 'ResetPassword'
-            ResetPasswordBindingModel model = null; // TODO: replace null with proper value
+            ResetPassword model = null; // TODO: replace null with proper value
             instance.ResetPassword(model);
              
         }
@@ -437,7 +415,7 @@ ModelObject settings = null; // TODO: replace null with proper value
         public void SetPasswordTest()
         {
             // TODO: add unit test for the method 'SetPassword'
-            SetPasswordBindingModel model = null; // TODO: replace null with proper value
+            SetPassword model = null; // TODO: replace null with proper value
             instance.SetPassword(model);
              
         }

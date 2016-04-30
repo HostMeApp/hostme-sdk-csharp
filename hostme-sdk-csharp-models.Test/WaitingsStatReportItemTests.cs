@@ -67,14 +67,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'TotalPartyCount' 
         }
         /// <summary>
-        /// Test the property 'TotalHeadCount' 
-        /// </summary>
-        [Test]
-        public void TotalHeadCountTest()
-        {
-            // TODO: unit test for the property 'TotalHeadCount' 
-        }
-        /// <summary>
         /// Test the property 'TotalSeatedCount' 
         /// </summary>
         [Test]

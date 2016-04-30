@@ -51,12 +51,6 @@ namespace HostMe.Sdk.Models
         public double? Amount { get; set; }
     
         /// <summary>
-        /// Gets or Sets Description
-        /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=true)]
-        public string Description { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Discount
         /// </summary>
         [DataMember(Name="discount", EmitDefaultValue=true)]
@@ -69,12 +63,6 @@ namespace HostMe.Sdk.Models
         public string FreeMeal { get; set; }
     
         /// <summary>
-        /// Gets or Sets ImageUrl
-        /// </summary>
-        [DataMember(Name="imageUrl", EmitDefaultValue=true)]
-        public string ImageUrl { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,10 +71,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RewardValue {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
-sb.Append("  Description: ").Append(Description).Append("\n");
 sb.Append("  Discount: ").Append(Discount).Append("\n");
 sb.Append("  FreeMeal: ").Append(FreeMeal).Append("\n");
-sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
 sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -130,11 +116,6 @@ sb.Append("  Type: ").Append(Type).Append("\n");
                     this.Amount.Equals(other.Amount)
                 ) && 
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
-                ) && 
-                (
                     this.Discount == other.Discount ||
                     this.Discount != null &&
                     this.Discount.Equals(other.Discount)
@@ -143,11 +124,6 @@ sb.Append("  Type: ").Append(Type).Append("\n");
                     this.FreeMeal == other.FreeMeal ||
                     this.FreeMeal != null &&
                     this.FreeMeal.Equals(other.FreeMeal)
-                ) && 
-                (
-                    this.ImageUrl == other.ImageUrl ||
-                    this.ImageUrl != null &&
-                    this.ImageUrl.Equals(other.ImageUrl)
                 ) && 
                 (
                     this.Type == other.Type ||
@@ -169,14 +145,10 @@ sb.Append("  Type: ").Append(Type).Append("\n");
                 // Suitable nullity checks etc, of course :)
                 if (this.Amount != null)
                     hash = hash * 59 + this.Amount.GetHashCode();
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
                 if (this.Discount != null)
                     hash = hash * 59 + this.Discount.GetHashCode();
                 if (this.FreeMeal != null)
                     hash = hash * 59 + this.FreeMeal.GetHashCode();
-                if (this.ImageUrl != null)
-                    hash = hash * 59 + this.ImageUrl.GetHashCode();
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 return hash;

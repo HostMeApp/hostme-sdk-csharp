@@ -99,14 +99,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'RewardId' 
         }
         /// <summary>
-        /// Test the property 'CustomerMembershipId' 
-        /// </summary>
-        [Test]
-        public void CustomerMembershipIdTest()
-        {
-            // TODO: unit test for the property 'CustomerMembershipId' 
-        }
-        /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
         [Test]

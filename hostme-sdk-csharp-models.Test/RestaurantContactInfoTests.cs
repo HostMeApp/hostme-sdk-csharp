@@ -99,14 +99,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Phone' 
         }
         /// <summary>
-        /// Test the property 'TimeOffSet' 
-        /// </summary>
-        [Test]
-        public void TimeOffSetTest()
-        {
-            // TODO: unit test for the property 'TimeOffSet' 
-        }
-        /// <summary>
         /// Test the property 'TimeZone' 
         /// </summary>
         [Test]

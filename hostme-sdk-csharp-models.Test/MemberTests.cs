@@ -122,6 +122,14 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Customer' 
         }
+        /// <summary>
+        /// Test the property 'Profile' 
+        /// </summary>
+        [Test]
+        public void ProfileTest()
+        {
+            // TODO: unit test for the property 'Profile' 
+        }
 
     }
 

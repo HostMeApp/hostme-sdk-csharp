@@ -83,14 +83,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Closed' 
         }
         /// <summary>
-        /// Test the property 'PhoneId' 
-        /// </summary>
-        [Test]
-        public void PhoneIdTest()
-        {
-            // TODO: unit test for the property 'PhoneId' 
-        }
-        /// <summary>
         /// Test the property 'ConfirmationCode' 
         /// </summary>
         [Test]

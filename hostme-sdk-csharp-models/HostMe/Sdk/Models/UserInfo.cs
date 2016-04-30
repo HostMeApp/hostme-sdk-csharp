@@ -58,18 +58,6 @@ namespace HostMe.Sdk.Models
         public List<RoleInfo> Roles { get; set; }
     
         /// <summary>
-        /// Gets or Sets Identities
-        /// </summary>
-        [DataMember(Name="identities", EmitDefaultValue=true)]
-        public List<UserIdentityInfo> Identities { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Subscriptions
-        /// </summary>
-        [DataMember(Name="subscriptions", EmitDefaultValue=true)]
-        public List<UserSubscriptionInfo> Subscriptions { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,8 +71,6 @@ sb.Append("  Email: ").Append(Email).Append("\n");
 sb.Append("  FullName: ").Append(FullName).Append("\n");
 sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
 sb.Append("  Roles: ").Append(Roles).Append("\n");
-sb.Append("  Identities: ").Append(Identities).Append("\n");
-sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,16 +136,6 @@ sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
                     this.Roles == other.Roles ||
                     this.Roles != null &&
                     this.Roles.SequenceEqual(other.Roles)
-                ) && 
-                (
-                    this.Identities == other.Identities ||
-                    this.Identities != null &&
-                    this.Identities.SequenceEqual(other.Identities)
-                ) && 
-                (
-                    this.Subscriptions == other.Subscriptions ||
-                    this.Subscriptions != null &&
-                    this.Subscriptions.SequenceEqual(other.Subscriptions)
                 );
         }
 
@@ -186,10 +162,6 @@ sb.Append("  Subscriptions: ").Append(Subscriptions).Append("\n");
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
-                if (this.Identities != null)
-                    hash = hash * 59 + this.Identities.GetHashCode();
-                if (this.Subscriptions != null)
-                    hash = hash * 59 + this.Subscriptions.GetHashCode();
                 return hash;
             }
         }

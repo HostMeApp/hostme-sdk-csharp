@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Test
         public void AddNewReservationTest()
         {
             // TODO: add unit test for the method 'AddNewReservation'
-            NewReservationBindingModel value = null; // TODO: replace null with proper value
+            CreateCustomerReservation value = null; // TODO: replace null with proper value
             var response = instance.AddNewReservation(value);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
@@ -73,8 +73,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CloseAsCanceled'
             string reservationId = null; // TODO: replace null with proper value
-string notes = null; // TODO: replace null with proper value
-            instance.CloseAsCanceled(reservationId, notes);
+CancelReservation cancelReservationContract = null; // TODO: replace null with proper value
+            instance.CloseAsCanceled(reservationId, cancelReservationContract);
              
         }
         
@@ -122,8 +122,8 @@ string notes = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SendMessageToReservation'
             string reservationId = null; // TODO: replace null with proper value
-string body = null; // TODO: replace null with proper value
-            instance.SendMessageToReservation(reservationId, body);
+CreateMessage createMessageContract = null; // TODO: replace null with proper value
+            instance.SendMessageToReservation(reservationId, createMessageContract);
              
         }
         
@@ -135,7 +135,7 @@ string body = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'UpdateReservation'
             string reservationId = null; // TODO: replace null with proper value
-UpdateReservationBindingModel value = null; // TODO: replace null with proper value
+UpdateReservation value = null; // TODO: replace null with proper value
             instance.UpdateReservation(reservationId, value);
              
         }

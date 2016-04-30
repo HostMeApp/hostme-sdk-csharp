@@ -73,8 +73,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'EnrollIntoLoyaltyProgram'
             int? restaurantId = null; // TODO: replace null with proper value
-JoinMembershipBindingModel value = null; // TODO: replace null with proper value
-            var response = instance.EnrollIntoLoyaltyProgram(restaurantId, value);
+            var response = instance.EnrollIntoLoyaltyProgram(restaurantId);
             Assert.IsInstanceOf<Membership> (response, "response is Membership"); 
         }
         

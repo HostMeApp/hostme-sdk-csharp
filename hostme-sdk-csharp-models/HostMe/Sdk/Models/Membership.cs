@@ -58,18 +58,6 @@ namespace HostMe.Sdk.Models
         public RestaurantInfo Restaurant { get; set; }
     
         /// <summary>
-        /// Gets or Sets IsMember
-        /// </summary>
-        [DataMember(Name="isMember", EmitDefaultValue=true)]
-        public bool? IsMember { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Profile
-        /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=true)]
-        public UserProfile Profile { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,8 +71,6 @@ sb.Append("  Points: ").Append(Points).Append("\n");
 sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
 sb.Append("  Status: ").Append(Status).Append("\n");
 sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
-sb.Append("  IsMember: ").Append(IsMember).Append("\n");
-sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,16 +136,6 @@ sb.Append("  Profile: ").Append(Profile).Append("\n");
                     this.Restaurant == other.Restaurant ||
                     this.Restaurant != null &&
                     this.Restaurant.Equals(other.Restaurant)
-                ) && 
-                (
-                    this.IsMember == other.IsMember ||
-                    this.IsMember != null &&
-                    this.IsMember.Equals(other.IsMember)
-                ) && 
-                (
-                    this.Profile == other.Profile ||
-                    this.Profile != null &&
-                    this.Profile.Equals(other.Profile)
                 );
         }
 
@@ -186,10 +162,6 @@ sb.Append("  Profile: ").Append(Profile).Append("\n");
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.Restaurant != null)
                     hash = hash * 59 + this.Restaurant.GetHashCode();
-                if (this.IsMember != null)
-                    hash = hash * 59 + this.IsMember.GetHashCode();
-                if (this.Profile != null)
-                    hash = hash * 59 + this.Profile.GetHashCode();
                 return hash;
             }
         }

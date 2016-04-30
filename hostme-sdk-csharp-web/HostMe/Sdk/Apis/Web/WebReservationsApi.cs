@@ -25,7 +25,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Reservation</returns>
-        Reservation AddNewReservation (int? restaurantId, NewWebReservationBindingModel value);
+        Reservation AddNewReservation (int? restaurantId, CreateReservation value);
   
         /// <summary>
         /// 
@@ -37,7 +37,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> AddNewReservationWithHttpInfo (int? restaurantId, NewWebReservationBindingModel value);
+        ApiResponse<Reservation> AddNewReservationWithHttpInfo (int? restaurantId, CreateReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -125,7 +125,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, NewWebReservationBindingModel value);
+        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateReservation value);
 
         /// <summary>
         /// 
@@ -137,7 +137,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, NewWebReservationBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -310,7 +310,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param> 
         /// <param name="value"></param> 
         /// <returns>Reservation</returns>
-        public Reservation AddNewReservation (int? restaurantId, NewWebReservationBindingModel value)
+        public Reservation AddNewReservation (int? restaurantId, CreateReservation value)
         {
              ApiResponse<Reservation> localVarResponse = AddNewReservationWithHttpInfo(restaurantId, value);
              return localVarResponse.Data;
@@ -323,7 +323,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param> 
         /// <param name="value"></param> 
         /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (int? restaurantId, NewWebReservationBindingModel value)
+        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (int? restaurantId, CreateReservation value)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -371,12 +371,11 @@ namespace HostMe.Sdk.Apis.Web
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -404,7 +403,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, NewWebReservationBindingModel value)
+        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (int? restaurantId, CreateReservation value)
         {
              ApiResponse<Reservation> localVarResponse = await AddNewReservationAsyncWithHttpInfo(restaurantId, value);
              return localVarResponse.Data;
@@ -418,7 +417,7 @@ namespace HostMe.Sdk.Apis.Web
         /// <param name="restaurantId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, NewWebReservationBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (int? restaurantId, CreateReservation value)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AddNewReservation");
@@ -462,12 +461,11 @@ namespace HostMe.Sdk.Apis.Web
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -544,12 +542,11 @@ if (lon != null) localVarQueryParams.Add("lon", Configuration.ApiClient.Paramete
 if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -628,12 +625,11 @@ if (lon != null) localVarQueryParams.Add("lon", Configuration.ApiClient.Paramete
 if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -732,12 +728,11 @@ if (rangeInMinutes != null) localVarQueryParams.Add("rangeInMinutes", Configurat
 if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.ParameterToString(areas)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -830,12 +825,11 @@ if (rangeInMinutes != null) localVarQueryParams.Add("rangeInMinutes", Configurat
 if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.ParameterToString(areas)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -910,12 +904,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -990,12 +983,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request

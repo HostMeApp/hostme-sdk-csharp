@@ -24,7 +24,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Reservation</returns>
-        Reservation AddNewReservation (NewReservationBindingModel value);
+        Reservation AddNewReservation (CreateCustomerReservation value);
   
         /// <summary>
         /// 
@@ -35,7 +35,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> AddNewReservationWithHttpInfo (NewReservationBindingModel value);
+        ApiResponse<Reservation> AddNewReservationWithHttpInfo (CreateCustomerReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -44,9 +44,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns></returns>
-        void CloseAsCanceled (string reservationId, string notes);
+        void CloseAsCanceled (string reservationId, CancelReservation cancelReservationContract);
   
         /// <summary>
         /// 
@@ -56,9 +56,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CloseAsCanceledWithHttpInfo (string reservationId, string notes);
+        ApiResponse<Object> CloseAsCanceledWithHttpInfo (string reservationId, CancelReservation cancelReservationContract);
         /// <summary>
         /// 
         /// </summary>
@@ -102,10 +102,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <returns>ApiResponse of List&lt;Reservation&gt;</returns>
         ApiResponse<List<Reservation>> GetUserReservationsWithHttpInfo (string queryOptions = null);
         /// <summary>
-        /// Mark all reservation message as read.
+        /// Mark all messages as read.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark all reservation messages as read.
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -113,10 +113,10 @@ namespace HostMe.Sdk.Apis.Mobile
         void ReadAllMessage (string reservationId);
   
         /// <summary>
-        /// Mark all reservation message as read.
+        /// Mark all messages as read.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark all reservation messages as read.
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -130,9 +130,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns></returns>
-        void SendMessageToReservation (string reservationId, string body);
+        void SendMessageToReservation (string reservationId, CreateMessage createMessageContract);
   
         /// <summary>
         /// Sends a message related to specified reservation
@@ -142,9 +142,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, string body);
+        ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, CreateMessage createMessageContract);
         /// <summary>
         /// 
         /// </summary>
@@ -155,7 +155,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        void UpdateReservation (string reservationId, UpdateReservationBindingModel value);
+        void UpdateReservation (string reservationId, UpdateReservation value);
   
         /// <summary>
         /// 
@@ -167,7 +167,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateReservationWithHttpInfo (string reservationId, UpdateReservationBindingModel value);
+        ApiResponse<Object> UpdateReservationWithHttpInfo (string reservationId, UpdateReservation value);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -179,7 +179,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (NewReservationBindingModel value);
+        System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (CreateCustomerReservation value);
 
         /// <summary>
         /// 
@@ -190,7 +190,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (NewReservationBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (CreateCustomerReservation value);
         /// <summary>
         /// 
         /// </summary>
@@ -199,9 +199,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CloseAsCanceledAsync (string reservationId, string notes);
+        System.Threading.Tasks.Task CloseAsCanceledAsync (string reservationId, CancelReservation cancelReservationContract);
 
         /// <summary>
         /// 
@@ -211,9 +211,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (string reservationId, string notes);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (string reservationId, CancelReservation cancelReservationContract);
         /// <summary>
         /// 
         /// </summary>
@@ -257,10 +257,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <returns>Task of ApiResponse (List&lt;Reservation&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Reservation>>> GetUserReservationsAsyncWithHttpInfo (string queryOptions = null);
         /// <summary>
-        /// Mark all reservation message as read.
+        /// Mark all messages as read.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark all reservation messages as read.
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -268,10 +268,10 @@ namespace HostMe.Sdk.Apis.Mobile
         System.Threading.Tasks.Task ReadAllMessageAsync (string reservationId);
 
         /// <summary>
-        /// Mark all reservation message as read.
+        /// Mark all messages as read.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Mark all reservation messages as read.
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -285,9 +285,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, string body);
+        System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, CreateMessage createMessageContract);
 
         /// <summary>
         /// Sends a message related to specified reservation
@@ -297,9 +297,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, string body);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, CreateMessage createMessageContract);
         /// <summary>
         /// 
         /// </summary>
@@ -310,7 +310,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateReservationAsync (string reservationId, UpdateReservationBindingModel value);
+        System.Threading.Tasks.Task UpdateReservationAsync (string reservationId, UpdateReservation value);
 
         /// <summary>
         /// 
@@ -322,7 +322,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (string reservationId, UpdateReservationBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (string reservationId, UpdateReservation value);
         #endregion Asynchronous Operations
     }
   
@@ -419,7 +419,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns>Reservation</returns>
-        public Reservation AddNewReservation (NewReservationBindingModel value)
+        public Reservation AddNewReservation (CreateCustomerReservation value)
         {
              ApiResponse<Reservation> localVarResponse = AddNewReservationWithHttpInfo(value);
              return localVarResponse.Data;
@@ -431,7 +431,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param> 
         /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (NewReservationBindingModel value)
+        public ApiResponse< Reservation > AddNewReservationWithHttpInfo (CreateCustomerReservation value)
         {
             
             // verify the required parameter 'value' is set
@@ -474,12 +474,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -506,7 +505,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (NewReservationBindingModel value)
+        public async System.Threading.Tasks.Task<Reservation> AddNewReservationAsync (CreateCustomerReservation value)
         {
              ApiResponse<Reservation> localVarResponse = await AddNewReservationAsyncWithHttpInfo(value);
              return localVarResponse.Data;
@@ -519,7 +518,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (NewReservationBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> AddNewReservationAsyncWithHttpInfo (CreateCustomerReservation value)
         {
             // verify the required parameter 'value' is set
             if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling AddNewReservation");
@@ -560,12 +559,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -590,11 +588,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param> 
-        /// <param name="notes"></param> 
+        /// <param name="cancelReservationContract"></param> 
         /// <returns></returns>
-        public void CloseAsCanceled (string reservationId, string notes)
+        public void CloseAsCanceled (string reservationId, CancelReservation cancelReservationContract)
         {
-             CloseAsCanceledWithHttpInfo(reservationId, notes);
+             CloseAsCanceledWithHttpInfo(reservationId, cancelReservationContract);
         }
 
         /// <summary>
@@ -602,18 +600,18 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param> 
-        /// <param name="notes"></param> 
+        /// <param name="cancelReservationContract"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CloseAsCanceledWithHttpInfo (string reservationId, string notes)
+        public ApiResponse<Object> CloseAsCanceledWithHttpInfo (string reservationId, CancelReservation cancelReservationContract)
         {
             
             // verify the required parameter 'reservationId' is set
             if (reservationId == null)
                 throw new ApiException(400, "Missing required parameter 'reservationId' when calling MobileReservationsApi->CloseAsCanceled");
             
-            // verify the required parameter 'notes' is set
-            if (notes == null)
-                throw new ApiException(400, "Missing required parameter 'notes' when calling MobileReservationsApi->CloseAsCanceled");
+            // verify the required parameter 'cancelReservationContract' is set
+            if (cancelReservationContract == null)
+                throw new ApiException(400, "Missing required parameter 'cancelReservationContract' when calling MobileReservationsApi->CloseAsCanceled");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/cancel";
@@ -643,21 +641,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-                                                if (notes.GetType() != typeof(byte[]))
+                                                if (cancelReservationContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(notes); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelReservationContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = notes; // byte array
+                localVarPostBody = cancelReservationContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -683,11 +680,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CloseAsCanceledAsync (string reservationId, string notes)
+        public async System.Threading.Tasks.Task CloseAsCanceledAsync (string reservationId, CancelReservation cancelReservationContract)
         {
-             await CloseAsCanceledAsyncWithHttpInfo(reservationId, notes);
+             await CloseAsCanceledAsyncWithHttpInfo(reservationId, cancelReservationContract);
 
         }
 
@@ -696,14 +693,14 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId"></param>
-        /// <param name="notes"></param>
+        /// <param name="cancelReservationContract"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (string reservationId, string notes)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (string reservationId, CancelReservation cancelReservationContract)
         {
             // verify the required parameter 'reservationId' is set
             if (reservationId == null) throw new ApiException(400, "Missing required parameter 'reservationId' when calling CloseAsCanceled");
-            // verify the required parameter 'notes' is set
-            if (notes == null) throw new ApiException(400, "Missing required parameter 'notes' when calling CloseAsCanceled");
+            // verify the required parameter 'cancelReservationContract' is set
+            if (cancelReservationContract == null) throw new ApiException(400, "Missing required parameter 'cancelReservationContract' when calling CloseAsCanceled");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/cancel";
@@ -733,21 +730,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-                                                if (notes.GetType() != typeof(byte[]))
+                                                if (cancelReservationContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(notes); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(cancelReservationContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = notes; // byte array
+                localVarPostBody = cancelReservationContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -822,12 +818,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -902,12 +897,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -978,12 +972,11 @@ namespace HostMe.Sdk.Apis.Mobile
                         if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1056,12 +1049,11 @@ namespace HostMe.Sdk.Apis.Mobile
                         if (queryOptions != null) localVarQueryParams.Add("queryOptions", Configuration.ApiClient.ParameterToString(queryOptions)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1082,7 +1074,7 @@ namespace HostMe.Sdk.Apis.Mobile
             
         }
         /// <summary>
-        /// Mark all reservation message as read. 
+        /// Mark all messages as read. Mark all reservation messages as read.
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
@@ -1093,7 +1085,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all reservation message as read. 
+        /// Mark all messages as read. Mark all reservation messages as read.
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
@@ -1135,12 +1127,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1162,7 +1153,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all reservation message as read. 
+        /// Mark all messages as read. Mark all reservation messages as read.
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -1174,7 +1165,7 @@ namespace HostMe.Sdk.Apis.Mobile
         }
 
         /// <summary>
-        /// Mark all reservation message as read. 
+        /// Mark all messages as read. Mark all reservation messages as read.
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
@@ -1214,12 +1205,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1244,11 +1234,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
-        /// <param name="body">The body of the message</param> 
+        /// <param name="createMessageContract">The message with body</param> 
         /// <returns></returns>
-        public void SendMessageToReservation (string reservationId, string body)
+        public void SendMessageToReservation (string reservationId, CreateMessage createMessageContract)
         {
-             SendMessageToReservationWithHttpInfo(reservationId, body);
+             SendMessageToReservationWithHttpInfo(reservationId, createMessageContract);
         }
 
         /// <summary>
@@ -1256,18 +1246,18 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param> 
-        /// <param name="body">The body of the message</param> 
+        /// <param name="createMessageContract">The message with body</param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, string body)
+        public ApiResponse<Object> SendMessageToReservationWithHttpInfo (string reservationId, CreateMessage createMessageContract)
         {
             
             // verify the required parameter 'reservationId' is set
             if (reservationId == null)
                 throw new ApiException(400, "Missing required parameter 'reservationId' when calling MobileReservationsApi->SendMessageToReservation");
             
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling MobileReservationsApi->SendMessageToReservation");
+            // verify the required parameter 'createMessageContract' is set
+            if (createMessageContract == null)
+                throw new ApiException(400, "Missing required parameter 'createMessageContract' when calling MobileReservationsApi->SendMessageToReservation");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/messages";
@@ -1297,21 +1287,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-                                                if (body.GetType() != typeof(byte[]))
+                                                if (createMessageContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(createMessageContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = createMessageContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1337,11 +1326,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, string body)
+        public async System.Threading.Tasks.Task SendMessageToReservationAsync (string reservationId, CreateMessage createMessageContract)
         {
-             await SendMessageToReservationAsyncWithHttpInfo(reservationId, body);
+             await SendMessageToReservationAsyncWithHttpInfo(reservationId, createMessageContract);
 
         }
 
@@ -1350,14 +1339,14 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="reservationId">Reservation identifier</param>
-        /// <param name="body">The body of the message</param>
+        /// <param name="createMessageContract">The message with body</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, string body)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageToReservationAsyncWithHttpInfo (string reservationId, CreateMessage createMessageContract)
         {
             // verify the required parameter 'reservationId' is set
             if (reservationId == null) throw new ApiException(400, "Missing required parameter 'reservationId' when calling SendMessageToReservation");
-            // verify the required parameter 'body' is set
-            if (body == null) throw new ApiException(400, "Missing required parameter 'body' when calling SendMessageToReservation");
+            // verify the required parameter 'createMessageContract' is set
+            if (createMessageContract == null) throw new ApiException(400, "Missing required parameter 'createMessageContract' when calling SendMessageToReservation");
             
     
             var localVarPath = "/api/rsv/mb/reservations/{reservationId}/messages";
@@ -1387,21 +1376,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (reservationId != null) localVarPathParams.Add("reservationId", Configuration.ApiClient.ParameterToString(reservationId)); // path parameter
-                                                if (body.GetType() != typeof(byte[]))
+                                                if (createMessageContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(createMessageContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = body; // byte array
+                localVarPostBody = createMessageContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1428,7 +1416,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param> 
         /// <param name="value"></param> 
         /// <returns></returns>
-        public void UpdateReservation (string reservationId, UpdateReservationBindingModel value)
+        public void UpdateReservation (string reservationId, UpdateReservation value)
         {
              UpdateReservationWithHttpInfo(reservationId, value);
         }
@@ -1440,7 +1428,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param> 
         /// <param name="value"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateReservationWithHttpInfo (string reservationId, UpdateReservationBindingModel value)
+        public ApiResponse<Object> UpdateReservationWithHttpInfo (string reservationId, UpdateReservation value)
         {
             
             // verify the required parameter 'reservationId' is set
@@ -1488,12 +1476,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1521,7 +1508,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateReservationAsync (string reservationId, UpdateReservationBindingModel value)
+        public async System.Threading.Tasks.Task UpdateReservationAsync (string reservationId, UpdateReservation value)
         {
              await UpdateReservationAsyncWithHttpInfo(reservationId, value);
 
@@ -1534,7 +1521,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="reservationId"></param>
         /// <param name="value"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (string reservationId, UpdateReservationBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateReservationAsyncWithHttpInfo (string reservationId, UpdateReservation value)
         {
             // verify the required parameter 'reservationId' is set
             if (reservationId == null) throw new ApiException(400, "Missing required parameter 'reservationId' when calling UpdateReservation");
@@ -1578,12 +1565,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = value; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request

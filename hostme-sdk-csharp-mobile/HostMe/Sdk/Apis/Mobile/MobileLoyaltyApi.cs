@@ -44,9 +44,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>Membership</returns>
-        Membership EnrollIntoLoyaltyProgram (int? restaurantId, JoinMembershipBindingModel value);
+        Membership EnrollIntoLoyaltyProgram (int? restaurantId);
   
         /// <summary>
         /// 
@@ -56,9 +55,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>ApiResponse of Membership</returns>
-        ApiResponse<Membership> EnrollIntoLoyaltyProgramWithHttpInfo (int? restaurantId, JoinMembershipBindingModel value);
+        ApiResponse<Membership> EnrollIntoLoyaltyProgramWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -239,9 +237,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>Task of Membership</returns>
-        System.Threading.Tasks.Task<Membership> EnrollIntoLoyaltyProgramAsync (int? restaurantId, JoinMembershipBindingModel value);
+        System.Threading.Tasks.Task<Membership> EnrollIntoLoyaltyProgramAsync (int? restaurantId);
 
         /// <summary>
         /// 
@@ -251,9 +248,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Membership)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Membership>> EnrollIntoLoyaltyProgramAsyncWithHttpInfo (int? restaurantId, JoinMembershipBindingModel value);
+        System.Threading.Tasks.Task<ApiResponse<Membership>> EnrollIntoLoyaltyProgramAsyncWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -547,12 +543,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -626,12 +621,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -656,11 +650,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <param name="value"></param> 
         /// <returns>Membership</returns>
-        public Membership EnrollIntoLoyaltyProgram (int? restaurantId, JoinMembershipBindingModel value)
+        public Membership EnrollIntoLoyaltyProgram (int? restaurantId)
         {
-             ApiResponse<Membership> localVarResponse = EnrollIntoLoyaltyProgramWithHttpInfo(restaurantId, value);
+             ApiResponse<Membership> localVarResponse = EnrollIntoLoyaltyProgramWithHttpInfo(restaurantId);
              return localVarResponse.Data;
         }
 
@@ -669,18 +662,13 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param> 
-        /// <param name="value"></param> 
         /// <returns>ApiResponse of Membership</returns>
-        public ApiResponse< Membership > EnrollIntoLoyaltyProgramWithHttpInfo (int? restaurantId, JoinMembershipBindingModel value)
+        public ApiResponse< Membership > EnrollIntoLoyaltyProgramWithHttpInfo (int? restaurantId)
         {
             
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
                 throw new ApiException(400, "Missing required parameter 'restaurantId' when calling MobileLoyaltyApi->EnrollIntoLoyaltyProgram");
-            
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling MobileLoyaltyApi->EnrollIntoLoyaltyProgram");
             
     
             var localVarPath = "/api/loyalty/mb/membership/{restaurantId}";
@@ -694,7 +682,7 @@ namespace HostMe.Sdk.Apis.Mobile
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -710,21 +698,13 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
+                                                
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -750,11 +730,10 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>Task of Membership</returns>
-        public async System.Threading.Tasks.Task<Membership> EnrollIntoLoyaltyProgramAsync (int? restaurantId, JoinMembershipBindingModel value)
+        public async System.Threading.Tasks.Task<Membership> EnrollIntoLoyaltyProgramAsync (int? restaurantId)
         {
-             ApiResponse<Membership> localVarResponse = await EnrollIntoLoyaltyProgramAsyncWithHttpInfo(restaurantId, value);
+             ApiResponse<Membership> localVarResponse = await EnrollIntoLoyaltyProgramAsyncWithHttpInfo(restaurantId);
              return localVarResponse.Data;
 
         }
@@ -764,14 +743,11 @@ namespace HostMe.Sdk.Apis.Mobile
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="value"></param>
         /// <returns>Task of ApiResponse (Membership)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Membership>> EnrollIntoLoyaltyProgramAsyncWithHttpInfo (int? restaurantId, JoinMembershipBindingModel value)
+        public async System.Threading.Tasks.Task<ApiResponse<Membership>> EnrollIntoLoyaltyProgramAsyncWithHttpInfo (int? restaurantId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling EnrollIntoLoyaltyProgram");
-            // verify the required parameter 'value' is set
-            if (value == null) throw new ApiException(400, "Missing required parameter 'value' when calling EnrollIntoLoyaltyProgram");
             
     
             var localVarPath = "/api/loyalty/mb/membership/{restaurantId}";
@@ -785,7 +761,7 @@ namespace HostMe.Sdk.Apis.Mobile
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -801,21 +777,13 @@ namespace HostMe.Sdk.Apis.Mobile
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
+                                                
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -883,12 +851,11 @@ namespace HostMe.Sdk.Apis.Mobile
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -958,12 +925,11 @@ namespace HostMe.Sdk.Apis.Mobile
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1038,12 +1004,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1118,12 +1083,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1198,12 +1162,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1278,12 +1241,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1358,12 +1320,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1438,12 +1399,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1518,12 +1478,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1598,12 +1557,11 @@ namespace HostMe.Sdk.Apis.Mobile
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1685,12 +1643,11 @@ namespace HostMe.Sdk.Apis.Mobile
 if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1770,12 +1727,11 @@ if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient
 if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient.ParameterToString(redeemId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1857,12 +1813,11 @@ if (redeemId != null) localVarPathParams.Add("redeemId", Configuration.ApiClient
 if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1942,12 +1897,11 @@ if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient
 if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient.ParameterToString(rewardId)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request

@@ -24,7 +24,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void AddExternalLogin (AddExternalLoginBindingModel model);
+        void AddExternalLogin (AddExternalLogin model);
   
         /// <summary>
         /// 
@@ -35,7 +35,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLoginBindingModel model);
+        ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -45,7 +45,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void ChangePassword (ChangePasswordBindingModel model);
+        void ChangePassword (ChangePassword model);
   
         /// <summary>
         /// 
@@ -56,7 +56,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordBindingModel model);
+        ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -64,9 +64,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>Transaction</returns>
-        Transaction CheckIn (string token);
+        Transaction CheckIn (TransactionCheckin checkinContract);
   
         /// <summary>
         /// 
@@ -75,9 +75,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>ApiResponse of Transaction</returns>
-        ApiResponse<Transaction> CheckInWithHttpInfo (string token);
+        ApiResponse<Transaction> CheckInWithHttpInfo (TransactionCheckin checkinContract);
         /// <summary>
         /// 
         /// </summary>
@@ -152,8 +152,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>ManageInfoViewModel</returns>
-        ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null);
+        /// <returns>ManageInfo</returns>
+        ManageInfo GetManageInfo (string returnUrl, bool? generateState = null);
   
         /// <summary>
         /// 
@@ -164,8 +164,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        ApiResponse<ManageInfoViewModel> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null);
+        /// <returns>ApiResponse of ManageInfo</returns>
+        ApiResponse<ManageInfo> GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -237,25 +237,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="id"></param>
         /// <returns>ApiResponse of RestaurantInfo</returns>
         ApiResponse<RestaurantInfo> GetRestaurantByIdWithHttpInfo (int? id);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserInfoViewModel</returns>
-        UserInfoViewModel GetUserInfo ();
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserInfoViewModel</returns>
-        ApiResponse<UserInfoViewModel> GetUserInfoWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -343,7 +324,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void Register (RegisterBindingModel model);
+        void Register (RegisterUser model);
   
         /// <summary>
         /// 
@@ -354,7 +335,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RegisterWithHttpInfo (RegisterBindingModel model);
+        ApiResponse<Object> RegisterWithHttpInfo (RegisterUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -364,7 +345,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void RegisterExternal (RegisterExternalBindingModel model);
+        void RegisterExternal (RegisterExternalUser model);
   
         /// <summary>
         /// 
@@ -375,7 +356,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalBindingModel model);
+        ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -385,7 +366,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void RemoveLogin (RemoveLoginBindingModel model);
+        void RemoveLogin (RemoveLogin model);
   
         /// <summary>
         /// 
@@ -396,28 +377,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> RemoveLoginWithHttpInfo (RemoveLoginBindingModel model);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns></returns>
-        void ResetPassword (string modelEmail);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> ResetPasswordWithHttpInfo (string modelEmail);
+        ApiResponse<Object> RemoveLoginWithHttpInfo (RemoveLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -427,7 +387,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
-        void SetPassword (SetPasswordBindingModel model);
+        void ResetPassword (ResetPassword model);
   
         /// <summary>
         /// 
@@ -438,7 +398,28 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetPasswordWithHttpInfo (SetPasswordBindingModel model);
+        ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPassword model);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        void SetPassword (SetPassword model);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetPasswordWithHttpInfo (SetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -448,7 +429,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns></returns>
-        void SetPushChannelAsync (SetPushChannelBindingModel channel);
+        void SetPushChannelAsync (SetPushChannel channel);
   
         /// <summary>
         /// 
@@ -459,7 +440,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetPushChannelAsyncWithHttpInfo (SetPushChannelBindingModel channel);
+        ApiResponse<Object> SetPushChannelAsyncWithHttpInfo (SetPushChannel channel);
         /// <summary>
         /// 
         /// </summary>
@@ -492,7 +473,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLoginBindingModel model);
+        System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLogin model);
 
         /// <summary>
         /// 
@@ -503,7 +484,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLoginBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -513,7 +494,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordBindingModel model);
+        System.Threading.Tasks.Task ChangePasswordAsync (ChangePassword model);
 
         /// <summary>
         /// 
@@ -524,7 +505,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -532,9 +513,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>Task of Transaction</returns>
-        System.Threading.Tasks.Task<Transaction> CheckInAsync (string token);
+        System.Threading.Tasks.Task<Transaction> CheckInAsync (TransactionCheckin checkinContract);
 
         /// <summary>
         /// 
@@ -543,9 +524,9 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>Task of ApiResponse (Transaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Transaction>> CheckInAsyncWithHttpInfo (string token);
+        System.Threading.Tasks.Task<ApiResponse<Transaction>> CheckInAsyncWithHttpInfo (TransactionCheckin checkinContract);
         /// <summary>
         /// 
         /// </summary>
@@ -620,8 +601,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ManageInfoViewModel</returns>
-        System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null);
+        /// <returns>Task of ManageInfo</returns>
+        System.Threading.Tasks.Task<ManageInfo> GetManageInfoAsync (string returnUrl, bool? generateState = null);
 
         /// <summary>
         /// 
@@ -632,8 +613,8 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
+        /// <returns>Task of ApiResponse (ManageInfo)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ManageInfo>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null);
         /// <summary>
         /// 
         /// </summary>
@@ -705,25 +686,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <param name="id"></param>
         /// <returns>Task of ApiResponse (RestaurantInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<RestaurantInfo>> GetRestaurantByIdAsyncWithHttpInfo (int? id);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserInfoViewModel</returns>
-        System.Threading.Tasks.Task<UserInfoViewModel> GetUserInfoAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserInfoViewModel)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserInfoViewModel>> GetUserInfoAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -811,7 +773,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RegisterAsync (RegisterBindingModel model);
+        System.Threading.Tasks.Task RegisterAsync (RegisterUser model);
 
         /// <summary>
         /// 
@@ -822,7 +784,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -832,7 +794,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalBindingModel model);
+        System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalUser model);
 
         /// <summary>
         /// 
@@ -843,7 +805,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalUser model);
         /// <summary>
         /// 
         /// </summary>
@@ -853,7 +815,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task RemoveLoginAsync (RemoveLoginBindingModel model);
+        System.Threading.Tasks.Task RemoveLoginAsync (RemoveLogin model);
 
         /// <summary>
         /// 
@@ -864,28 +826,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveLoginAsyncWithHttpInfo (RemoveLoginBindingModel model);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task ResetPasswordAsync (string modelEmail);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (string modelEmail);
+        System.Threading.Tasks.Task<ApiResponse<Object>> RemoveLoginAsyncWithHttpInfo (RemoveLogin model);
         /// <summary>
         /// 
         /// </summary>
@@ -895,7 +836,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetPasswordAsync (SetPasswordBindingModel model);
+        System.Threading.Tasks.Task ResetPasswordAsync (ResetPassword model);
 
         /// <summary>
         /// 
@@ -906,7 +847,28 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPasswordBindingModel model);
+        System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPassword model);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetPasswordAsync (SetPassword model);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPassword model);
         /// <summary>
         /// 
         /// </summary>
@@ -916,7 +878,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetPushChannelAsyncAsync (SetPushChannelBindingModel channel);
+        System.Threading.Tasks.Task SetPushChannelAsyncAsync (SetPushChannel channel);
 
         /// <summary>
         /// 
@@ -927,7 +889,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetPushChannelAsyncAsyncWithHttpInfo (SetPushChannelBindingModel channel);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetPushChannelAsyncAsyncWithHttpInfo (SetPushChannel channel);
         /// <summary>
         /// 
         /// </summary>
@@ -1045,7 +1007,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void AddExternalLogin (AddExternalLoginBindingModel model)
+        public void AddExternalLogin (AddExternalLogin model)
         {
              AddExternalLoginWithHttpInfo(model);
         }
@@ -1056,7 +1018,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLoginBindingModel model)
+        public ApiResponse<Object> AddExternalLoginWithHttpInfo (AddExternalLogin model)
         {
             
             // verify the required parameter 'model' is set
@@ -1064,7 +1026,7 @@ namespace HostMe.Sdk.Apis.Mobile
                 throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->AddExternalLogin");
             
     
-            var localVarPath = "/api/core/mb/account/AddExternalLogin";
+            var localVarPath = "/api/core/mb/account/addExternalLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1099,12 +1061,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1131,7 +1092,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLoginBindingModel model)
+        public async System.Threading.Tasks.Task AddExternalLoginAsync (AddExternalLogin model)
         {
              await AddExternalLoginAsyncWithHttpInfo(model);
 
@@ -1143,13 +1104,13 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLoginBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AddExternalLoginAsyncWithHttpInfo (AddExternalLogin model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling AddExternalLogin");
             
     
-            var localVarPath = "/api/core/mb/account/AddExternalLogin";
+            var localVarPath = "/api/core/mb/account/addExternalLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1184,12 +1145,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1215,7 +1175,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void ChangePassword (ChangePasswordBindingModel model)
+        public void ChangePassword (ChangePassword model)
         {
              ChangePasswordWithHttpInfo(model);
         }
@@ -1226,7 +1186,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePasswordBindingModel model)
+        public ApiResponse<Object> ChangePasswordWithHttpInfo (ChangePassword model)
         {
             
             // verify the required parameter 'model' is set
@@ -1234,7 +1194,7 @@ namespace HostMe.Sdk.Apis.Mobile
                 throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->ChangePassword");
             
     
-            var localVarPath = "/api/core/mb/account/ChangePassword";
+            var localVarPath = "/api/core/mb/account/changePassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1269,12 +1229,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1301,7 +1260,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ChangePasswordAsync (ChangePasswordBindingModel model)
+        public async System.Threading.Tasks.Task ChangePasswordAsync (ChangePassword model)
         {
              await ChangePasswordAsyncWithHttpInfo(model);
 
@@ -1313,13 +1272,13 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ChangePasswordAsyncWithHttpInfo (ChangePassword model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling ChangePassword");
             
     
-            var localVarPath = "/api/core/mb/account/ChangePassword";
+            var localVarPath = "/api/core/mb/account/changePassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -1354,12 +1313,11 @@ namespace HostMe.Sdk.Apis.Mobile
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1383,11 +1341,11 @@ namespace HostMe.Sdk.Apis.Mobile
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param> 
+        /// <param name="checkinContract"></param> 
         /// <returns>Transaction</returns>
-        public Transaction CheckIn (string token)
+        public Transaction CheckIn (TransactionCheckin checkinContract)
         {
-             ApiResponse<Transaction> localVarResponse = CheckInWithHttpInfo(token);
+             ApiResponse<Transaction> localVarResponse = CheckInWithHttpInfo(checkinContract);
              return localVarResponse.Data;
         }
 
@@ -1395,14 +1353,14 @@ namespace HostMe.Sdk.Apis.Mobile
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param> 
+        /// <param name="checkinContract"></param> 
         /// <returns>ApiResponse of Transaction</returns>
-        public ApiResponse< Transaction > CheckInWithHttpInfo (string token)
+        public ApiResponse< Transaction > CheckInWithHttpInfo (TransactionCheckin checkinContract)
         {
             
-            // verify the required parameter 'token' is set
-            if (token == null)
-                throw new ApiException(400, "Missing required parameter 'token' when calling MobileCoreApi->CheckIn");
+            // verify the required parameter 'checkinContract' is set
+            if (checkinContract == null)
+                throw new ApiException(400, "Missing required parameter 'checkinContract' when calling MobileCoreApi->CheckIn");
             
     
             var localVarPath = "/api/core/mb/restaurant/checkin";
@@ -1431,21 +1389,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-                                                            if (token.GetType() != typeof(byte[]))
+                                                            if (checkinContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(token); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(checkinContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = token; // byte array
+                localVarPostBody = checkinContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1470,11 +1427,11 @@ namespace HostMe.Sdk.Apis.Mobile
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>Task of Transaction</returns>
-        public async System.Threading.Tasks.Task<Transaction> CheckInAsync (string token)
+        public async System.Threading.Tasks.Task<Transaction> CheckInAsync (TransactionCheckin checkinContract)
         {
-             ApiResponse<Transaction> localVarResponse = await CheckInAsyncWithHttpInfo(token);
+             ApiResponse<Transaction> localVarResponse = await CheckInAsyncWithHttpInfo(checkinContract);
              return localVarResponse.Data;
 
         }
@@ -1483,12 +1440,12 @@ namespace HostMe.Sdk.Apis.Mobile
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="token"></param>
+        /// <param name="checkinContract"></param>
         /// <returns>Task of ApiResponse (Transaction)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Transaction>> CheckInAsyncWithHttpInfo (string token)
+        public async System.Threading.Tasks.Task<ApiResponse<Transaction>> CheckInAsyncWithHttpInfo (TransactionCheckin checkinContract)
         {
-            // verify the required parameter 'token' is set
-            if (token == null) throw new ApiException(400, "Missing required parameter 'token' when calling CheckIn");
+            // verify the required parameter 'checkinContract' is set
+            if (checkinContract == null) throw new ApiException(400, "Missing required parameter 'checkinContract' when calling CheckIn");
             
     
             var localVarPath = "/api/core/mb/restaurant/checkin";
@@ -1517,21 +1474,20 @@ namespace HostMe.Sdk.Apis.Mobile
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-                                                            if (token.GetType() != typeof(byte[]))
+                                                            if (checkinContract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(token); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(checkinContract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = token; // byte array
+                localVarPostBody = checkinContract; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1611,12 +1567,11 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
 if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.ParameterToString(city)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1698,12 +1653,11 @@ if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.Parame
 if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.ParameterToString(city)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1771,12 +1725,11 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1846,12 +1799,11 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -1919,12 +1871,11 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -1994,12 +1945,11 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2025,10 +1975,10 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
-        /// <returns>ManageInfoViewModel</returns>
-        public ManageInfoViewModel GetManageInfo (string returnUrl, bool? generateState = null)
+        /// <returns>ManageInfo</returns>
+        public ManageInfo GetManageInfo (string returnUrl, bool? generateState = null)
         {
-             ApiResponse<ManageInfoViewModel> localVarResponse = GetManageInfoWithHttpInfo(returnUrl, generateState);
+             ApiResponse<ManageInfo> localVarResponse = GetManageInfoWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
         }
 
@@ -2038,8 +1988,8 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param> 
         /// <param name="generateState"> (optional)</param> 
-        /// <returns>ApiResponse of ManageInfoViewModel</returns>
-        public ApiResponse< ManageInfoViewModel > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null)
+        /// <returns>ApiResponse of ManageInfo</returns>
+        public ApiResponse< ManageInfo > GetManageInfoWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             
             // verify the required parameter 'returnUrl' is set
@@ -2047,7 +1997,7 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
                 throw new ApiException(400, "Missing required parameter 'returnUrl' when calling MobileCoreApi->GetManageInfo");
             
     
-            var localVarPath = "/api/core/mb/account/ManageInfo";
+            var localVarPath = "/api/core/mb/account/manageInfo";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2077,12 +2027,11 @@ if (city != null) localVarQueryParams.Add("city", Configuration.ApiClient.Parame
 if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2097,9 +2046,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManageInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<ManageInfoViewModel>(localVarStatusCode,
+            return new ApiResponse<ManageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ManageInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfoViewModel)));
+                (ManageInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfo)));
             
         }
 
@@ -2109,10 +2058,10 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ManageInfoViewModel</returns>
-        public async System.Threading.Tasks.Task<ManageInfoViewModel> GetManageInfoAsync (string returnUrl, bool? generateState = null)
+        /// <returns>Task of ManageInfo</returns>
+        public async System.Threading.Tasks.Task<ManageInfo> GetManageInfoAsync (string returnUrl, bool? generateState = null)
         {
-             ApiResponse<ManageInfoViewModel> localVarResponse = await GetManageInfoAsyncWithHttpInfo(returnUrl, generateState);
+             ApiResponse<ManageInfo> localVarResponse = await GetManageInfoAsyncWithHttpInfo(returnUrl, generateState);
              return localVarResponse.Data;
 
         }
@@ -2123,14 +2072,14 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="returnUrl"></param>
         /// <param name="generateState"> (optional)</param>
-        /// <returns>Task of ApiResponse (ManageInfoViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManageInfoViewModel>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
+        /// <returns>Task of ApiResponse (ManageInfo)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ManageInfo>> GetManageInfoAsyncWithHttpInfo (string returnUrl, bool? generateState = null)
         {
             // verify the required parameter 'returnUrl' is set
             if (returnUrl == null) throw new ApiException(400, "Missing required parameter 'returnUrl' when calling GetManageInfo");
             
     
-            var localVarPath = "/api/core/mb/account/ManageInfo";
+            var localVarPath = "/api/core/mb/account/manageInfo";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -2160,12 +2109,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
 if (generateState != null) localVarQueryParams.Add("generateState", Configuration.ApiClient.ParameterToString(generateState)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2180,9 +2128,9 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetManageInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ManageInfoViewModel>(localVarStatusCode,
+            return new ApiResponse<ManageInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ManageInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfoViewModel)));
+                (ManageInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ManageInfo)));
             
         }
         /// <summary>
@@ -2240,12 +2188,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (token != null) localVarPathParams.Add("token", Configuration.ApiClient.ParameterToString(token)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2320,12 +2267,11 @@ if (generateState != null) localVarQueryParams.Add("generateState", Configuratio
             if (token != null) localVarPathParams.Add("token", Configuration.ApiClient.ParameterToString(token)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2424,12 +2370,11 @@ if (rangeInMinutes != null) localVarQueryParams.Add("rangeInMinutes", Configurat
 if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.ParameterToString(areas)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2522,12 +2467,11 @@ if (rangeInMinutes != null) localVarQueryParams.Add("rangeInMinutes", Configurat
 if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.ParameterToString(areas)); // query parameter
                                     
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2602,12 +2546,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2682,12 +2625,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
                                                 
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -2705,154 +2647,6 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             return new ApiResponse<RestaurantInfo>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (RestaurantInfo) Configuration.ApiClient.Deserialize(localVarResponse, typeof(RestaurantInfo)));
-            
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>UserInfoViewModel</returns>
-        public UserInfoViewModel GetUserInfo ()
-        {
-             ApiResponse<UserInfoViewModel> localVarResponse = GetUserInfoWithHttpInfo();
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of UserInfoViewModel</returns>
-        public ApiResponse< UserInfoViewModel > GetUserInfoWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/mb/account/UserInfo";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            return new ApiResponse<UserInfoViewModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoViewModel)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of UserInfoViewModel</returns>
-        public async System.Threading.Tasks.Task<UserInfoViewModel> GetUserInfoAsync ()
-        {
-             ApiResponse<UserInfoViewModel> localVarResponse = await GetUserInfoAsyncWithHttpInfo();
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (UserInfoViewModel)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserInfoViewModel>> GetUserInfoAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/mb/account/UserInfo";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetUserInfo: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<UserInfoViewModel>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (UserInfoViewModel) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserInfoViewModel)));
             
         }
         /// <summary>
@@ -2903,12 +2697,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -2978,12 +2771,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3022,7 +2814,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         {
             
     
-            var localVarPath = "/api/core/mb/account/Logout";
+            var localVarPath = "/api/core/mb/account/logout";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3050,12 +2842,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3096,7 +2887,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         {
             
     
-            var localVarPath = "/api/core/mb/account/Logout";
+            var localVarPath = "/api/core/mb/account/logout";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3124,12 +2915,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3209,12 +2999,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = image; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3294,12 +3083,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = image; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3367,12 +3155,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3442,12 +3229,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
             localVarPathParams.Add("format", "json");
                                                             
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3473,7 +3259,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void Register (RegisterBindingModel model)
+        public void Register (RegisterUser model)
         {
              RegisterWithHttpInfo(model);
         }
@@ -3484,7 +3270,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RegisterWithHttpInfo (RegisterBindingModel model)
+        public ApiResponse<Object> RegisterWithHttpInfo (RegisterUser model)
         {
             
             // verify the required parameter 'model' is set
@@ -3492,7 +3278,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->Register");
             
     
-            var localVarPath = "/api/core/mb/account/Register";
+            var localVarPath = "/api/core/mb/account/register";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3527,12 +3313,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3559,7 +3344,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RegisterAsync (RegisterBindingModel model)
+        public async System.Threading.Tasks.Task RegisterAsync (RegisterUser model)
         {
              await RegisterAsyncWithHttpInfo(model);
 
@@ -3571,13 +3356,13 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterAsyncWithHttpInfo (RegisterUser model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling Register");
             
     
-            var localVarPath = "/api/core/mb/account/Register";
+            var localVarPath = "/api/core/mb/account/register";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3612,12 +3397,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3643,7 +3427,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void RegisterExternal (RegisterExternalBindingModel model)
+        public void RegisterExternal (RegisterExternalUser model)
         {
              RegisterExternalWithHttpInfo(model);
         }
@@ -3654,7 +3438,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalBindingModel model)
+        public ApiResponse<Object> RegisterExternalWithHttpInfo (RegisterExternalUser model)
         {
             
             // verify the required parameter 'model' is set
@@ -3662,7 +3446,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->RegisterExternal");
             
     
-            var localVarPath = "/api/core/mb/account/RegisterExternal";
+            var localVarPath = "/api/core/mb/account/registerExternal";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3697,12 +3481,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3729,7 +3512,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalBindingModel model)
+        public async System.Threading.Tasks.Task RegisterExternalAsync (RegisterExternalUser model)
         {
              await RegisterExternalAsyncWithHttpInfo(model);
 
@@ -3741,13 +3524,13 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RegisterExternalAsyncWithHttpInfo (RegisterExternalUser model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling RegisterExternal");
             
     
-            var localVarPath = "/api/core/mb/account/RegisterExternal";
+            var localVarPath = "/api/core/mb/account/registerExternal";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3782,12 +3565,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3813,7 +3595,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void RemoveLogin (RemoveLoginBindingModel model)
+        public void RemoveLogin (RemoveLogin model)
         {
              RemoveLoginWithHttpInfo(model);
         }
@@ -3824,7 +3606,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> RemoveLoginWithHttpInfo (RemoveLoginBindingModel model)
+        public ApiResponse<Object> RemoveLoginWithHttpInfo (RemoveLogin model)
         {
             
             // verify the required parameter 'model' is set
@@ -3832,7 +3614,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->RemoveLogin");
             
     
-            var localVarPath = "/api/core/mb/account/RemoveLogin";
+            var localVarPath = "/api/core/mb/account/removeLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3867,12 +3649,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -3899,7 +3680,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task RemoveLoginAsync (RemoveLoginBindingModel model)
+        public async System.Threading.Tasks.Task RemoveLoginAsync (RemoveLogin model)
         {
              await RemoveLoginAsyncWithHttpInfo(model);
 
@@ -3911,13 +3692,13 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveLoginAsyncWithHttpInfo (RemoveLoginBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> RemoveLoginAsyncWithHttpInfo (RemoveLogin model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling RemoveLogin");
             
     
-            var localVarPath = "/api/core/mb/account/RemoveLogin";
+            var localVarPath = "/api/core/mb/account/removeLogin";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -3952,12 +3733,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -3981,169 +3761,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param> 
-        /// <returns></returns>
-        public void ResetPassword (string modelEmail)
-        {
-             ResetPasswordWithHttpInfo(modelEmail);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> ResetPasswordWithHttpInfo (string modelEmail)
-        {
-            
-            // verify the required parameter 'modelEmail' is set
-            if (modelEmail == null)
-                throw new ApiException(400, "Missing required parameter 'modelEmail' when calling MobileCoreApi->ResetPassword");
-            
-    
-            var localVarPath = "/api/core/mb/account/ResetPassword";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                        if (modelEmail != null) localVarQueryParams.Add("model.email", Configuration.ApiClient.ParameterToString(modelEmail)); // query parameter
-                                    
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task ResetPasswordAsync (string modelEmail)
-        {
-             await ResetPasswordAsyncWithHttpInfo(modelEmail);
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="modelEmail"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (string modelEmail)
-        {
-            // verify the required parameter 'modelEmail' is set
-            if (modelEmail == null) throw new ApiException(400, "Missing required parameter 'modelEmail' when calling ResetPassword");
-            
-    
-            var localVarPath = "/api/core/mb/account/ResetPassword";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                        if (modelEmail != null) localVarQueryParams.Add("model.email", Configuration.ApiClient.ParameterToString(modelEmail)); // query parameter
-                                    
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
-        public void SetPassword (SetPasswordBindingModel model)
+        public void ResetPassword (ResetPassword model)
         {
-             SetPasswordWithHttpInfo(model);
+             ResetPasswordWithHttpInfo(model);
         }
 
         /// <summary>
@@ -4152,15 +3774,15 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetPasswordWithHttpInfo (SetPasswordBindingModel model)
+        public ApiResponse<Object> ResetPasswordWithHttpInfo (ResetPassword model)
         {
             
             // verify the required parameter 'model' is set
             if (model == null)
-                throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->SetPassword");
+                throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->ResetPassword");
             
     
-            var localVarPath = "/api/core/mb/account/SetPassword";
+            var localVarPath = "/api/core/mb/account/resetPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4195,12 +3817,179 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task ResetPasswordAsync (ResetPassword model)
+        {
+             await ResetPasswordAsyncWithHttpInfo(model);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ResetPasswordAsyncWithHttpInfo (ResetPassword model)
+        {
+            // verify the required parameter 'model' is set
+            if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling ResetPassword");
+            
+    
+            var localVarPath = "/api/core/mb/account/resetPassword";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+                                                            if (model.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = model; // byte array
+            }
+
+            // authentication (bearer) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ResetPassword: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param> 
+        /// <returns></returns>
+        public void SetPassword (SetPassword model)
+        {
+             SetPasswordWithHttpInfo(model);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="model"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetPasswordWithHttpInfo (SetPassword model)
+        {
+            
+            // verify the required parameter 'model' is set
+            if (model == null)
+                throw new ApiException(400, "Missing required parameter 'model' when calling MobileCoreApi->SetPassword");
+            
+    
+            var localVarPath = "/api/core/mb/account/setPassword";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+                                                            if (model.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(model); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = model; // byte array
+            }
+
+            // authentication (bearer) required
+            
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4227,7 +4016,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetPasswordAsync (SetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task SetPasswordAsync (SetPassword model)
         {
              await SetPasswordAsyncWithHttpInfo(model);
 
@@ -4239,13 +4028,13 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPasswordBindingModel model)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPasswordAsyncWithHttpInfo (SetPassword model)
         {
             // verify the required parameter 'model' is set
             if (model == null) throw new ApiException(400, "Missing required parameter 'model' when calling SetPassword");
             
     
-            var localVarPath = "/api/core/mb/account/SetPassword";
+            var localVarPath = "/api/core/mb/account/setPassword";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -4280,12 +4069,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = model; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4311,7 +4099,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param> 
         /// <returns></returns>
-        public void SetPushChannelAsync (SetPushChannelBindingModel channel)
+        public void SetPushChannelAsync (SetPushChannel channel)
         {
              SetPushChannelAsyncWithHttpInfo(channel);
         }
@@ -4322,7 +4110,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetPushChannelAsyncWithHttpInfo (SetPushChannelBindingModel channel)
+        public ApiResponse<Object> SetPushChannelAsyncWithHttpInfo (SetPushChannel channel)
         {
             
             // verify the required parameter 'channel' is set
@@ -4365,12 +4153,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = channel; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4397,7 +4184,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetPushChannelAsyncAsync (SetPushChannelBindingModel channel)
+        public async System.Threading.Tasks.Task SetPushChannelAsyncAsync (SetPushChannel channel)
         {
              await SetPushChannelAsyncAsyncWithHttpInfo(channel);
 
@@ -4409,7 +4196,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="channel"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPushChannelAsyncAsyncWithHttpInfo (SetPushChannelBindingModel channel)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetPushChannelAsyncAsyncWithHttpInfo (SetPushChannel channel)
         {
             // verify the required parameter 'channel' is set
             if (channel == null) throw new ApiException(400, "Missing required parameter 'channel' when calling SetPushChannelAsync");
@@ -4450,12 +4237,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = channel; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request
@@ -4535,12 +4321,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = profile; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
     
             // make the HTTP request
@@ -4620,12 +4405,11 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarPostBody = profile; // byte array
             }
 
-            // authentication (oauth2) required
+            // authentication (bearer) required
             
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("Authorization")))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = Configuration.GetApiKeyWithPrefix("Authorization");
             }
 
             // make the HTTP request

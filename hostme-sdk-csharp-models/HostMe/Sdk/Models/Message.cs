@@ -28,12 +28,6 @@ namespace HostMe.Sdk.Models
         public int? Id { get; set; }
     
         /// <summary>
-        /// Gets or Sets WaitItemId
-        /// </summary>
-        [DataMember(Name="waitItemId", EmitDefaultValue=true)]
-        public int? WaitItemId { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=true)]
@@ -90,7 +84,6 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Message {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  WaitItemId: ").Append(WaitItemId).Append("\n");
 sb.Append("  Body: ").Append(Body).Append("\n");
 sb.Append("  Time: ").Append(Time).Append("\n");
 sb.Append("  Origin: ").Append(Origin).Append("\n");
@@ -139,11 +132,6 @@ sb.Append("  IsRead: ").Append(IsRead).Append("\n");
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.WaitItemId == other.WaitItemId ||
-                    this.WaitItemId != null &&
-                    this.WaitItemId.Equals(other.WaitItemId)
                 ) && 
                 (
                     this.Body == other.Body ||
@@ -200,8 +188,6 @@ sb.Append("  IsRead: ").Append(IsRead).Append("\n");
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                if (this.WaitItemId != null)
-                    hash = hash * 59 + this.WaitItemId.GetHashCode();
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
                 if (this.Time != null)

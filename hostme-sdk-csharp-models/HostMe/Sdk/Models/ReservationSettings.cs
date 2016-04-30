@@ -141,12 +141,6 @@ namespace HostMe.Sdk.Models
         public int? ReservationHoursStep { get; set; }
     
         /// <summary>
-        /// Gets or Sets ReservationInboxEmail
-        /// </summary>
-        [DataMember(Name="reservationInboxEmail", EmitDefaultValue=true)]
-        public string ReservationInboxEmail { get; set; }
-    
-        /// <summary>
         /// Gets or Sets StatusMessages
         /// </summary>
         [DataMember(Name="statusMessages", EmitDefaultValue=true)]
@@ -195,7 +189,6 @@ sb.Append("  RequireReservationConfirmation: ").Append(RequireReservationConfirm
 sb.Append("  ReservationEmail: ").Append(ReservationEmail).Append("\n");
 sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
 sb.Append("  ReservationHoursStep: ").Append(ReservationHoursStep).Append("\n");
-sb.Append("  ReservationInboxEmail: ").Append(ReservationInboxEmail).Append("\n");
 sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
 sb.Append("  TableTurnOver: ").Append(TableTurnOver).Append("\n");
 sb.Append("  TableTurnOverByGroup: ").Append(TableTurnOverByGroup).Append("\n");
@@ -322,11 +315,6 @@ sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
                     this.ReservationHoursStep.Equals(other.ReservationHoursStep)
                 ) && 
                 (
-                    this.ReservationInboxEmail == other.ReservationInboxEmail ||
-                    this.ReservationInboxEmail != null &&
-                    this.ReservationInboxEmail.Equals(other.ReservationInboxEmail)
-                ) && 
-                (
                     this.StatusMessages == other.StatusMessages ||
                     this.StatusMessages != null &&
                     this.StatusMessages.SequenceEqual(other.StatusMessages)
@@ -393,8 +381,6 @@ sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
                     hash = hash * 59 + this.ReservationHours.GetHashCode();
                 if (this.ReservationHoursStep != null)
                     hash = hash * 59 + this.ReservationHoursStep.GetHashCode();
-                if (this.ReservationInboxEmail != null)
-                    hash = hash * 59 + this.ReservationInboxEmail.GetHashCode();
                 if (this.StatusMessages != null)
                     hash = hash * 59 + this.StatusMessages.GetHashCode();
                 if (this.TableTurnOver != null)

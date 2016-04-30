@@ -98,22 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Restaurant' 
         }
-        /// <summary>
-        /// Test the property 'IsMember' 
-        /// </summary>
-        [Test]
-        public void IsMemberTest()
-        {
-            // TODO: unit test for the property 'IsMember' 
-        }
-        /// <summary>
-        /// Test the property 'Profile' 
-        /// </summary>
-        [Test]
-        public void ProfileTest()
-        {
-            // TODO: unit test for the property 'Profile' 
-        }
 
     }
 

@@ -187,14 +187,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'ReservationHoursStep' 
         }
         /// <summary>
-        /// Test the property 'ReservationInboxEmail' 
-        /// </summary>
-        [Test]
-        public void ReservationInboxEmailTest()
-        {
-            // TODO: unit test for the property 'ReservationInboxEmail' 
-        }
-        /// <summary>
         /// Test the property 'StatusMessages' 
         /// </summary>
         [Test]

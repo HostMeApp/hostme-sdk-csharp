@@ -59,14 +59,6 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'Amount' 
         }
         /// <summary>
-        /// Test the property 'Description' 
-        /// </summary>
-        [Test]
-        public void DescriptionTest()
-        {
-            // TODO: unit test for the property 'Description' 
-        }
-        /// <summary>
         /// Test the property 'Discount' 
         /// </summary>
         [Test]
@@ -81,14 +73,6 @@ namespace HostMe.Sdk.Test
         public void FreeMealTest()
         {
             // TODO: unit test for the property 'FreeMeal' 
-        }
-        /// <summary>
-        /// Test the property 'ImageUrl' 
-        /// </summary>
-        [Test]
-        public void ImageUrlTest()
-        {
-            // TODO: unit test for the property 'ImageUrl' 
         }
         /// <summary>
         /// Test the property 'Type' 

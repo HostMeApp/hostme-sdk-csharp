@@ -58,12 +58,6 @@ namespace HostMe.Sdk.Models
         public string Phone { get; set; }
     
         /// <summary>
-        /// Gets or Sets TimeOffSet
-        /// </summary>
-        [DataMember(Name="timeOffSet", EmitDefaultValue=true)]
-        public double? TimeOffSet { get; set; }
-    
-        /// <summary>
         /// Gets or Sets TimeZone
         /// </summary>
         [DataMember(Name="timeZone", EmitDefaultValue=true)]
@@ -83,7 +77,6 @@ sb.Append("  Address: ").Append(Address).Append("\n");
 sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
 sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
 sb.Append("  Phone: ").Append(Phone).Append("\n");
-sb.Append("  TimeOffSet: ").Append(TimeOffSet).Append("\n");
 sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,11 +145,6 @@ sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
                     this.Phone.Equals(other.Phone)
                 ) && 
                 (
-                    this.TimeOffSet == other.TimeOffSet ||
-                    this.TimeOffSet != null &&
-                    this.TimeOffSet.Equals(other.TimeOffSet)
-                ) && 
-                (
                     this.TimeZone == other.TimeZone ||
                     this.TimeZone != null &&
                     this.TimeZone.Equals(other.TimeZone)
@@ -186,8 +174,6 @@ sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
                     hash = hash * 59 + this.WebsiteUrl.GetHashCode();
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                if (this.TimeOffSet != null)
-                    hash = hash * 59 + this.TimeOffSet.GetHashCode();
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
                 return hash;
