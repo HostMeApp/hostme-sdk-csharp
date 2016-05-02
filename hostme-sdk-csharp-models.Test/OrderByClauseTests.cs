@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<OrderByClause> (instance, "instance is a OrderByClause");
         }
 
+        
         /// <summary>
         /// Test the property 'ThenBy' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ThenBy' 
         }
+        
         /// <summary>
         /// Test the property 'Expression' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Expression' 
         }
+        
         /// <summary>
         /// Test the property 'Direction' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Direction' 
         }
+        
         /// <summary>
         /// Test the property 'RangeVariable' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RangeVariable' 
         }
+        
         /// <summary>
         /// Test the property 'ItemType' 
         /// </summary>
@@ -90,7 +97,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ItemType' 
         }
+        
 
     }
 
 }
+
+

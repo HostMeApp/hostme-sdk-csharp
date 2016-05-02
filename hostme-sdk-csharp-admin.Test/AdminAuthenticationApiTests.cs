@@ -11,6 +11,7 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -61,7 +62,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ConfirmEmail'
             string userId = null; // TODO: replace null with proper value
-string code = null; // TODO: replace null with proper value
+            string code = null; // TODO: replace null with proper value
+            
             instance.ConfirmEmail(userId, code);
              
         }
@@ -74,6 +76,7 @@ string code = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetExternalFacebookLogin'
             string accessToken = null; // TODO: replace null with proper value
+            
             instance.GetExternalFacebookLogin(accessToken);
              
         }
@@ -86,7 +89,8 @@ string code = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetExternalLogin'
             string provider = null; // TODO: replace null with proper value
-string error = null; // TODO: replace null with proper value
+            string error = null; // TODO: replace null with proper value
+            
             instance.GetExternalLogin(provider, error);
              
         }
@@ -99,7 +103,8 @@ string error = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetExternalLogins'
             string returnUrl = null; // TODO: replace null with proper value
-bool? generateState = null; // TODO: replace null with proper value
+            bool? generateState = null; // TODO: replace null with proper value
+            
             var response = instance.GetExternalLogins(returnUrl, generateState);
             Assert.IsInstanceOf<List<ExternalLogin>> (response, "response is List<ExternalLogin>"); 
         }

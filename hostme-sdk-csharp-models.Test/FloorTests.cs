@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Floor> (instance, "instance is a Floor");
         }
 
+        
         /// <summary>
         /// Test the property 'FloorId' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FloorId' 
         }
+        
         /// <summary>
         /// Test the property 'Name' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Name' 
         }
+        
         /// <summary>
         /// Test the property 'Map' 
         /// </summary>
@@ -74,7 +79,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Map' 
         }
+        
 
     }
 
 }
+
+

@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<MinutesToPoints> (instance, "instance is a MinutesToPoints");
         }
 
+        
         /// <summary>
         /// Test the property 'FlatPoints' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FlatPoints' 
         }
+        
         /// <summary>
         /// Test the property 'MaxMinutes' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxMinutes' 
         }
+        
         /// <summary>
         /// Test the property 'Method' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Method' 
         }
+        
         /// <summary>
         /// Test the property 'MinMinutes' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinMinutes' 
         }
+        
         /// <summary>
         /// Test the property 'PointsPerMinutes' 
         /// </summary>
@@ -90,7 +97,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PointsPerMinutes' 
         }
+        
 
     }
 
 }
+
+

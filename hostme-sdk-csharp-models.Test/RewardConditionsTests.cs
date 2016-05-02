@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RewardConditions> (instance, "instance is a RewardConditions");
         }
 
+        
         /// <summary>
         /// Test the property 'AvailableHours' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvailableHours' 
         }
+        
         /// <summary>
         /// Test the property 'MembershipLevel' 
         /// </summary>
@@ -66,7 +70,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MembershipLevel' 
         }
+        
 
     }
 
 }
+
+

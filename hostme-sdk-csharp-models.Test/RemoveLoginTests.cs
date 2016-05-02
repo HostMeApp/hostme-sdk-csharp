@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RemoveLogin> (instance, "instance is a RemoveLogin");
         }
 
+        
         /// <summary>
         /// Test the property 'Email' 
         /// </summary>
@@ -58,7 +61,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Email' 
         }
+        
 
     }
 
 }
+
+

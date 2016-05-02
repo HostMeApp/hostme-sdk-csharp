@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class SelectExpandClause {\n");
             sb.Append("  SelectedItems: ").Append(SelectedItems).Append("\n");
-sb.Append("  AllSelected: ").Append(AllSelected).Append("\n");
+            sb.Append("  AllSelected: ").Append(AllSelected).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  AllSelected: ").Append(AllSelected).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SelectedItems != null)
                     hash = hash * 59 + this.SelectedItems.GetHashCode();
+                
                 if (this.AllSelected != null)
                     hash = hash * 59 + this.AllSelected.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

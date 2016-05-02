@@ -11,6 +11,7 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -61,6 +62,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddExternalLogin'
             AddExternalLogin model = null; // TODO: replace null with proper value
+            
             instance.AddExternalLogin(model);
              
         }
@@ -73,6 +75,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewRestaurant'
             CreateRestaurant value = null; // TODO: replace null with proper value
+            
             var response = instance.AddNewRestaurant(value);
             Assert.IsInstanceOf<WithAccessTokenContract1RestaurantContract> (response, "response is WithAccessTokenContract1RestaurantContract"); 
         }
@@ -85,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ChangePassword'
             ChangePassword model = null; // TODO: replace null with proper value
+            
             instance.ChangePassword(model);
              
         }
@@ -97,7 +101,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CheckInvitationCode'
             string invitationCode = null; // TODO: replace null with proper value
-string restaurantId = null; // TODO: replace null with proper value
+            string restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.CheckInvitationCode(invitationCode, restaurantId);
             Assert.IsInstanceOf<InvitationInfo> (response, "response is InvitationInfo"); 
         }
@@ -110,7 +115,8 @@ string restaurantId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'CreateInvitationCode'
             int? restaurantId = null; // TODO: replace null with proper value
-Invitation invitation = null; // TODO: replace null with proper value
+            Invitation invitation = null; // TODO: replace null with proper value
+            
             var response = instance.CreateInvitationCode(restaurantId, invitation);
             Assert.IsInstanceOf<Token> (response, "response is Token"); 
         }
@@ -123,6 +129,7 @@ Invitation invitation = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'CreateNewAccountWithRestaurant'
             CreateAccountWithRestaurant value = null; // TODO: replace null with proper value
+            
             instance.CreateNewAccountWithRestaurant(value);
              
         }
@@ -135,7 +142,8 @@ Invitation invitation = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'DeleteInvitation'
             int? restaurantId = null; // TODO: replace null with proper value
-string invitationCode = null; // TODO: replace null with proper value
+            string invitationCode = null; // TODO: replace null with proper value
+            
             instance.DeleteInvitation(restaurantId, invitationCode);
              
         }
@@ -148,6 +156,7 @@ string invitationCode = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'DeleteRestaurant'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             instance.DeleteRestaurant(restaurantId);
              
         }
@@ -160,8 +169,9 @@ string invitationCode = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'DeleteUser'
             int? restaurantId = null; // TODO: replace null with proper value
-string userId = null; // TODO: replace null with proper value
-string role = null; // TODO: replace null with proper value
+            string userId = null; // TODO: replace null with proper value
+            string role = null; // TODO: replace null with proper value
+            
             instance.DeleteUser(restaurantId, userId, role);
              
         }
@@ -174,7 +184,8 @@ string role = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'FindRestaurantsByUserPhone'
             string phone = null; // TODO: replace null with proper value
-string email = null; // TODO: replace null with proper value
+            string email = null; // TODO: replace null with proper value
+            
             var response = instance.FindRestaurantsByUserPhone(phone, email);
             Assert.IsInstanceOf<List<Restaurant>> (response, "response is List<Restaurant>"); 
         }
@@ -187,7 +198,8 @@ string email = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'FindUserByPhoneAsync'
             string phone = null; // TODO: replace null with proper value
-string email = null; // TODO: replace null with proper value
+            string email = null; // TODO: replace null with proper value
+            
             var response = instance.FindUserByPhoneAsync(phone, email);
             Assert.IsInstanceOf<UserInfo> (response, "response is UserInfo"); 
         }
@@ -199,7 +211,8 @@ string email = null; // TODO: replace null with proper value
         public void GetAllUserRestaurantsTest()
         {
             // TODO: add unit test for the method 'GetAllUserRestaurants'
-                        var response = instance.GetAllUserRestaurants();
+            
+            var response = instance.GetAllUserRestaurants();
             Assert.IsInstanceOf<List<Restaurant>> (response, "response is List<Restaurant>"); 
         }
         
@@ -211,6 +224,7 @@ string email = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetCustomSettings'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetCustomSettings(restaurantId);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
@@ -223,6 +237,7 @@ string email = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetInvitations'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetInvitations(restaurantId);
             Assert.IsInstanceOf<List<InvitationInfo>> (response, "response is List<InvitationInfo>"); 
         }
@@ -235,7 +250,8 @@ string email = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetManageInfo'
             string returnUrl = null; // TODO: replace null with proper value
-bool? generateState = null; // TODO: replace null with proper value
+            bool? generateState = null; // TODO: replace null with proper value
+            
             var response = instance.GetManageInfo(returnUrl, generateState);
             Assert.IsInstanceOf<ManageInfo> (response, "response is ManageInfo"); 
         }
@@ -248,7 +264,8 @@ bool? generateState = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRegistrationToken'
             int? restaurantId = null; // TODO: replace null with proper value
-string tableNumber = null; // TODO: replace null with proper value
+            string tableNumber = null; // TODO: replace null with proper value
+            
             var response = instance.GetRegistrationToken(restaurantId, tableNumber);
             Assert.IsInstanceOf<Token> (response, "response is Token"); 
         }
@@ -261,6 +278,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantById'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetRestaurantById(restaurantId);
             Assert.IsInstanceOf<Restaurant> (response, "response is Restaurant"); 
         }
@@ -273,6 +291,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantConfiguration'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetRestaurantConfiguration(restaurantId);
             Assert.IsInstanceOf<RestaurantConfiguration> (response, "response is RestaurantConfiguration"); 
         }
@@ -285,6 +304,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantSettings'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetRestaurantSettings(restaurantId);
             Assert.IsInstanceOf<RestaurantSettings> (response, "response is RestaurantSettings"); 
         }
@@ -297,6 +317,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetUsers'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetUsers(restaurantId);
             Assert.IsInstanceOf<List<RestaurantUserInfo>> (response, "response is List<RestaurantUserInfo>"); 
         }
@@ -308,7 +329,8 @@ string tableNumber = null; // TODO: replace null with proper value
         public void LogoutTest()
         {
             // TODO: add unit test for the method 'Logout'
-                        instance.Logout();
+            
+            instance.Logout();
              
         }
         
@@ -319,7 +341,8 @@ string tableNumber = null; // TODO: replace null with proper value
         public void MeTest()
         {
             // TODO: add unit test for the method 'Me'
-                        var response = instance.Me();
+            
+            var response = instance.Me();
             Assert.IsInstanceOf<UserInfo> (response, "response is UserInfo"); 
         }
         
@@ -331,6 +354,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'PostProfileImage'
             byte[] image = null; // TODO: replace null with proper value
+            
             instance.PostProfileImage(image);
              
         }
@@ -342,7 +366,8 @@ string tableNumber = null; // TODO: replace null with proper value
         public void ProfileImageTest()
         {
             // TODO: add unit test for the method 'ProfileImage'
-                        var response = instance.ProfileImage();
+            
+            var response = instance.ProfileImage();
             Assert.IsInstanceOf<byte[]> (response, "response is byte[]"); 
         }
         
@@ -354,6 +379,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'Register'
             RegisterUser model = null; // TODO: replace null with proper value
+            
             instance.Register(model);
              
         }
@@ -366,6 +392,7 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'RegisterExternal'
             RegisterExternalUser model = null; // TODO: replace null with proper value
+            
             instance.RegisterExternal(model);
              
         }
@@ -378,7 +405,8 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'Reinvite'
             int? restaurantId = null; // TODO: replace null with proper value
-string invitationCode = null; // TODO: replace null with proper value
+            string invitationCode = null; // TODO: replace null with proper value
+            
             instance.Reinvite(restaurantId, invitationCode);
              
         }
@@ -391,6 +419,7 @@ string invitationCode = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'ResetPassword'
             ResetPassword model = null; // TODO: replace null with proper value
+            
             instance.ResetPassword(model);
              
         }
@@ -403,7 +432,8 @@ string invitationCode = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SetCustomSettings'
             int? restaurantId = null; // TODO: replace null with proper value
-ModelObject settings = null; // TODO: replace null with proper value
+            ModelObject settings = null; // TODO: replace null with proper value
+            
             instance.SetCustomSettings(restaurantId, settings);
              
         }
@@ -416,6 +446,7 @@ ModelObject settings = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SetPassword'
             SetPassword model = null; // TODO: replace null with proper value
+            
             instance.SetPassword(model);
              
         }
@@ -428,7 +459,8 @@ ModelObject settings = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SetRestaurantSettings'
             int? restaurantId = null; // TODO: replace null with proper value
-RestaurantSettings settings = null; // TODO: replace null with proper value
+            RestaurantSettings settings = null; // TODO: replace null with proper value
+            
             instance.SetRestaurantSettings(restaurantId, settings);
              
         }
@@ -441,7 +473,8 @@ RestaurantSettings settings = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'UpdateRestaurant'
             int? restaurantId = null; // TODO: replace null with proper value
-Restaurant value = null; // TODO: replace null with proper value
+            Restaurant value = null; // TODO: replace null with proper value
+            
             var response = instance.UpdateRestaurant(restaurantId, value);
             Assert.IsInstanceOf<Restaurant> (response, "response is Restaurant"); 
         }
@@ -454,6 +487,7 @@ Restaurant value = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'UpdateUserProfile'
             UserProfile profile = null; // TODO: replace null with proper value
+            
             instance.UpdateUserProfile(profile);
              
         }

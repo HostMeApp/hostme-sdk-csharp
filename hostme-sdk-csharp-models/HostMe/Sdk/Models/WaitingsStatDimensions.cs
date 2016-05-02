@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -60,10 +62,11 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingsStatDimensions {\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-sb.Append("  TopSize: ").Append(TopSize).Append("\n");
-sb.Append("  LinePosition: ").Append(LinePosition).Append("\n");
-sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+            sb.Append("  TopSize: ").Append(TopSize).Append("\n");
+            sb.Append("  LinePosition: ").Append(LinePosition).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,19 +141,27 @@ sb.Append("  Status: ").Append(Status).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
+                
                 if (this.TopSize != null)
                     hash = hash * 59 + this.TopSize.GetHashCode();
+                
                 if (this.LinePosition != null)
                     hash = hash * 59 + this.LinePosition.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

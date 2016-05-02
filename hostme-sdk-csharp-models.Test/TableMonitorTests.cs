@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TableMonitor> (instance, "instance is a TableMonitor");
         }
 
+        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
+        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
+        
         /// <summary>
         /// Test the property 'WaitingItemId' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WaitingItemId' 
         }
+        
         /// <summary>
         /// Test the property 'ReservationId' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationId' 
         }
+        
         /// <summary>
         /// Test the property 'RegistrationId' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RegistrationId' 
         }
+        
         /// <summary>
         /// Test the property 'PartySize' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PartySize' 
         }
+        
         /// <summary>
         /// Test the property 'Membership' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Membership' 
         }
+        
         /// <summary>
         /// Test the property 'NextReservationTime' 
         /// </summary>
@@ -114,6 +124,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NextReservationTime' 
         }
+        
         /// <summary>
         /// Test the property 'AssignmentTime' 
         /// </summary>
@@ -122,6 +133,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AssignmentTime' 
         }
+        
         /// <summary>
         /// Test the property 'RegistrationTime' 
         /// </summary>
@@ -130,6 +142,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RegistrationTime' 
         }
+        
         /// <summary>
         /// Test the property 'EstimatedReleaseTime' 
         /// </summary>
@@ -138,7 +151,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EstimatedReleaseTime' 
         }
+        
 
     }
 
 }
+
+

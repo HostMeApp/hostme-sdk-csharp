@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<CreateReservation> (instance, "instance is a CreateReservation");
         }
 
+        
         /// <summary>
         /// Test the property 'ReservationTime' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationTime' 
         }
+        
         /// <summary>
         /// Test the property 'CustomerName' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CustomerName' 
         }
+        
         /// <summary>
         /// Test the property 'PhoneNumber' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
+        
         /// <summary>
         /// Test the property 'GroupSize' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'GroupSize' 
         }
+        
         /// <summary>
         /// Test the property 'Areas' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Areas' 
         }
+        
         /// <summary>
         /// Test the property 'Note' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Note' 
         }
+        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
+        
         /// <summary>
         /// Test the property 'HighChair' 
         /// </summary>
@@ -114,6 +124,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'HighChair' 
         }
+        
         /// <summary>
         /// Test the property 'Stroller' 
         /// </summary>
@@ -122,6 +133,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Stroller' 
         }
+        
         /// <summary>
         /// Test the property 'EstimatedTurnOverTime' 
         /// </summary>
@@ -130,6 +142,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EstimatedTurnOverTime' 
         }
+        
         /// <summary>
         /// Test the property 'Type' 
         /// </summary>
@@ -138,7 +151,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Type' 
         }
+        
 
     }
 
 }
+
+

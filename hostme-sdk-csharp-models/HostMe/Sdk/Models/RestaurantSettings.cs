@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -48,8 +50,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RestaurantSettings {\n");
             sb.Append("  Areas: ").Append(Areas).Append("\n");
-sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
-sb.Append("  TableSizes: ").Append(TableSizes).Append("\n");
+            sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
+            sb.Append("  TableSizes: ").Append(TableSizes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +117,21 @@ sb.Append("  TableSizes: ").Append(TableSizes).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Areas != null)
                     hash = hash * 59 + this.Areas.GetHashCode();
+                
                 if (this.OpeningHours != null)
                     hash = hash * 59 + this.OpeningHours.GetHashCode();
+                
                 if (this.TableSizes != null)
                     hash = hash * 59 + this.TableSizes.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

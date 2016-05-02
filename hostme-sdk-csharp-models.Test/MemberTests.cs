@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Member> (instance, "instance is a Member");
         }
 
+        
         /// <summary>
         /// Test the property 'Id' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Id' 
         }
+        
         /// <summary>
         /// Test the property 'MembershipLevel' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MembershipLevel' 
         }
+        
         /// <summary>
         /// Test the property 'Points' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Points' 
         }
+        
         /// <summary>
         /// Test the property 'JoinDate' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'JoinDate' 
         }
+        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
+        
         /// <summary>
         /// Test the property 'NumberOfVisits30Days' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NumberOfVisits30Days' 
         }
+        
         /// <summary>
         /// Test the property 'NumberOfVisitsTotal' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NumberOfVisitsTotal' 
         }
+        
         /// <summary>
         /// Test the property 'LastVisitDate' 
         /// </summary>
@@ -114,6 +124,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'LastVisitDate' 
         }
+        
         /// <summary>
         /// Test the property 'Customer' 
         /// </summary>
@@ -122,6 +133,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Customer' 
         }
+        
         /// <summary>
         /// Test the property 'Profile' 
         /// </summary>
@@ -130,7 +142,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Profile' 
         }
+        
 
     }
 
 }
+
+

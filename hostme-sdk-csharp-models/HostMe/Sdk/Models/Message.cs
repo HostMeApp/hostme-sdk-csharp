@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -84,14 +86,15 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Message {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  Body: ").Append(Body).Append("\n");
-sb.Append("  Time: ").Append(Time).Append("\n");
-sb.Append("  Origin: ").Append(Origin).Append("\n");
-sb.Append("  IsAutoMessage: ").Append(IsAutoMessage).Append("\n");
-sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
-sb.Append("  DeliveryTime: ").Append(DeliveryTime).Append("\n");
-sb.Append("  DeliveryFailureReason: ").Append(DeliveryFailureReason).Append("\n");
-sb.Append("  IsRead: ").Append(IsRead).Append("\n");
+            sb.Append("  Body: ").Append(Body).Append("\n");
+            sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  Origin: ").Append(Origin).Append("\n");
+            sb.Append("  IsAutoMessage: ").Append(IsAutoMessage).Append("\n");
+            sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
+            sb.Append("  DeliveryTime: ").Append(DeliveryTime).Append("\n");
+            sb.Append("  DeliveryFailureReason: ").Append(DeliveryFailureReason).Append("\n");
+            sb.Append("  IsRead: ").Append(IsRead).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,27 +189,39 @@ sb.Append("  IsRead: ").Append(IsRead).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
                 if (this.Origin != null)
                     hash = hash * 59 + this.Origin.GetHashCode();
+                
                 if (this.IsAutoMessage != null)
                     hash = hash * 59 + this.IsAutoMessage.GetHashCode();
+                
                 if (this.DeliveryStatus != null)
                     hash = hash * 59 + this.DeliveryStatus.GetHashCode();
+                
                 if (this.DeliveryTime != null)
                     hash = hash * 59 + this.DeliveryTime.GetHashCode();
+                
                 if (this.DeliveryFailureReason != null)
                     hash = hash * 59 + this.DeliveryFailureReason.GetHashCode();
+                
                 if (this.IsRead != null)
                     hash = hash * 59 + this.IsRead.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

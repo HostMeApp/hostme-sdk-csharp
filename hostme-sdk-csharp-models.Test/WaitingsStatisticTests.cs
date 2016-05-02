@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingsStatistic> (instance, "instance is a WaitingsStatistic");
         }
 
+        
         /// <summary>
         /// Test the property 'InList' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'InList' 
         }
+        
         /// <summary>
         /// Test the property 'Called' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Called' 
         }
+        
         /// <summary>
         /// Test the property 'TablesAvailable' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TablesAvailable' 
         }
+        
         /// <summary>
         /// Test the property 'OneTwoGroup' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'OneTwoGroup' 
         }
+        
         /// <summary>
         /// Test the property 'ThreeFourGroup' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ThreeFourGroup' 
         }
+        
         /// <summary>
         /// Test the property 'FiveSixGroup' 
         /// </summary>
@@ -98,7 +106,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FiveSixGroup' 
         }
+        
 
     }
 
 }
+
+

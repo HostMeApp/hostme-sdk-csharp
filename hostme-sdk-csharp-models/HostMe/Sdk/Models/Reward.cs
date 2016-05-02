@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -86,12 +88,13 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Reward {\n");
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
-sb.Append("  Description: ").Append(Description).Append("\n");
-sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-sb.Append("  PriceInPoints: ").Append(PriceInPoints).Append("\n");
-sb.Append("  Value: ").Append(Value).Append("\n");
-sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  PriceInPoints: ").Append(PriceInPoints).Append("\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,23 +179,33 @@ sb.Append("  Status: ").Append(Status).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
+                
                 if (this.PriceInPoints != null)
                     hash = hash * 59 + this.PriceInPoints.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

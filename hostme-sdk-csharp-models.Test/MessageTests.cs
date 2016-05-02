@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Message> (instance, "instance is a Message");
         }
 
+        
         /// <summary>
         /// Test the property 'Id' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Id' 
         }
+        
         /// <summary>
         /// Test the property 'Body' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Body' 
         }
+        
         /// <summary>
         /// Test the property 'Time' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Time' 
         }
+        
         /// <summary>
         /// Test the property 'Origin' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Origin' 
         }
+        
         /// <summary>
         /// Test the property 'IsAutoMessage' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsAutoMessage' 
         }
+        
         /// <summary>
         /// Test the property 'DeliveryStatus' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DeliveryStatus' 
         }
+        
         /// <summary>
         /// Test the property 'DeliveryTime' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DeliveryTime' 
         }
+        
         /// <summary>
         /// Test the property 'DeliveryFailureReason' 
         /// </summary>
@@ -114,6 +124,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DeliveryFailureReason' 
         }
+        
         /// <summary>
         /// Test the property 'IsRead' 
         /// </summary>
@@ -122,7 +133,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsRead' 
         }
+        
 
     }
 
 }
+
+

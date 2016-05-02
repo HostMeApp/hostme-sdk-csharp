@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<PanelConfirmation> (instance, "instance is a PanelConfirmation");
         }
 
+        
         /// <summary>
         /// Test the property 'CustomerName' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CustomerName' 
         }
+        
         /// <summary>
         /// Test the property 'PhoneNumber' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
+        
         /// <summary>
         /// Test the property 'ConfirmationMethod' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ConfirmationMethod' 
         }
+        
         /// <summary>
         /// Test the property 'GroupSize' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'GroupSize' 
         }
+        
         /// <summary>
         /// Test the property 'Areas' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Areas' 
         }
+        
         /// <summary>
         /// Test the property 'Note' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Note' 
         }
+        
         /// <summary>
         /// Test the property 'HighChair' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'HighChair' 
         }
+        
         /// <summary>
         /// Test the property 'Stroller' 
         /// </summary>
@@ -114,7 +124,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Stroller' 
         }
+        
 
     }
 
 }
+
+

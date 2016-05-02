@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmTypeReference> (instance, "instance is a IEdmTypeReference");
         }
 
+        
         /// <summary>
         /// Test the property 'IsNullable' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsNullable' 
         }
+        
         /// <summary>
         /// Test the property 'Definition' 
         /// </summary>
@@ -66,7 +70,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Definition' 
         }
+        
 
     }
 
 }
+
+

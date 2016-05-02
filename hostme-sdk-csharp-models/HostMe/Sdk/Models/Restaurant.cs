@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -150,25 +152,26 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Restaurant {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  Name: ").Append(Name).Append("\n");
-sb.Append("  Address: ").Append(Address).Append("\n");
-sb.Append("  Location: ").Append(Location).Append("\n");
-sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-sb.Append("  Lat: ").Append(Lat).Append("\n");
-sb.Append("  Lon: ").Append(Lon).Append("\n");
-sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
-sb.Append("  TwitterAccount: ").Append(TwitterAccount).Append("\n");
-sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
-sb.Append("  FoursquareId: ").Append(FoursquareId).Append("\n");
-sb.Append("  Phone: ").Append(Phone).Append("\n");
-sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-sb.Append("  Settings: ").Append(Settings).Append("\n");
-sb.Append("  GooglePlaceId: ").Append(GooglePlaceId).Append("\n");
-sb.Append("  YelpId: ").Append(YelpId).Append("\n");
-sb.Append("  City: ").Append(City).Append("\n");
-sb.Append("  State: ").Append(State).Append("\n");
-sb.Append("  Country: ").Append(Country).Append("\n");
-sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Address: ").Append(Address).Append("\n");
+            sb.Append("  Location: ").Append(Location).Append("\n");
+            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+            sb.Append("  Lat: ").Append(Lat).Append("\n");
+            sb.Append("  Lon: ").Append(Lon).Append("\n");
+            sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
+            sb.Append("  TwitterAccount: ").Append(TwitterAccount).Append("\n");
+            sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
+            sb.Append("  FoursquareId: ").Append(FoursquareId).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  GooglePlaceId: ").Append(GooglePlaceId).Append("\n");
+            sb.Append("  YelpId: ").Append(YelpId).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Country: ").Append(Country).Append("\n");
+            sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -318,49 +321,72 @@ sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
+                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
+                
                 if (this.Lat != null)
                     hash = hash * 59 + this.Lat.GetHashCode();
+                
                 if (this.Lon != null)
                     hash = hash * 59 + this.Lon.GetHashCode();
+                
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
+                
                 if (this.TwitterAccount != null)
                     hash = hash * 59 + this.TwitterAccount.GetHashCode();
+                
                 if (this.WebsiteUrl != null)
                     hash = hash * 59 + this.WebsiteUrl.GetHashCode();
+                
                 if (this.FoursquareId != null)
                     hash = hash * 59 + this.FoursquareId.GetHashCode();
+                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
+                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
+                
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
+                
                 if (this.GooglePlaceId != null)
                     hash = hash * 59 + this.GooglePlaceId.GetHashCode();
+                
                 if (this.YelpId != null)
                     hash = hash * 59 + this.YelpId.GetHashCode();
+                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
+                
                 if (this.IsPublished != null)
                     hash = hash * 59 + this.IsPublished.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

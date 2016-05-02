@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -48,8 +50,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class PositionMessage {\n");
             sb.Append("  MinPos: ").Append(MinPos).Append("\n");
-sb.Append("  MaxPos: ").Append(MaxPos).Append("\n");
-sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
+            sb.Append("  MaxPos: ").Append(MaxPos).Append("\n");
+            sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +117,21 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MinPos != null)
                     hash = hash * 59 + this.MinPos.GetHashCode();
+                
                 if (this.MaxPos != null)
                     hash = hash * 59 + this.MaxPos.GetHashCode();
+                
                 if (this.MessageTemplate != null)
                     hash = hash * 59 + this.MessageTemplate.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

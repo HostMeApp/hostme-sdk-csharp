@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WithAccessTokenContract1RestaurantContract> (instance, "instance is a WithAccessTokenContract1RestaurantContract");
         }
 
+        
         /// <summary>
         /// Test the property 'Data' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Data' 
         }
+        
         /// <summary>
         /// Test the property 'AccessToken' 
         /// </summary>
@@ -66,7 +70,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AccessToken' 
         }
+        
 
     }
 
 }
+
+

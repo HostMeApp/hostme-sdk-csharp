@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -54,9 +56,10 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RestaurantConfiguration {\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
-sb.Append("  WaitingSettings: ").Append(WaitingSettings).Append("\n");
-sb.Append("  LoyaltySettings: ").Append(LoyaltySettings).Append("\n");
-sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
+            sb.Append("  WaitingSettings: ").Append(WaitingSettings).Append("\n");
+            sb.Append("  LoyaltySettings: ").Append(LoyaltySettings).Append("\n");
+            sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,17 +129,24 @@ sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
+                
                 if (this.WaitingSettings != null)
                     hash = hash * 59 + this.WaitingSettings.GetHashCode();
+                
                 if (this.LoyaltySettings != null)
                     hash = hash * 59 + this.LoyaltySettings.GetHashCode();
+                
                 if (this.ReservationSettings != null)
                     hash = hash * 59 + this.ReservationSettings.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ReservationSettings> (instance, "instance is a ReservationSettings");
         }
 
+        
         /// <summary>
         /// Test the property 'AvailabilityMethod' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvailabilityMethod' 
         }
+        
         /// <summary>
         /// Test the property 'ConfirmationMessageRequestTemplate' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ConfirmationMessageRequestTemplate' 
         }
+        
         /// <summary>
         /// Test the property 'CoversAvailableForWait' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CoversAvailableForWait' 
         }
+        
         /// <summary>
         /// Test the property 'CoversAvaliableForReservation' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CoversAvaliableForReservation' 
         }
+        
         /// <summary>
         /// Test the property 'DefaultMaxCoversPerSlot' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DefaultMaxCoversPerSlot' 
         }
+        
         /// <summary>
         /// Test the property 'EnableAutoScheduling' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EnableAutoScheduling' 
         }
+        
         /// <summary>
         /// Test the property 'IsEnabled' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsEnabled' 
         }
+        
         /// <summary>
         /// Test the property 'MaxCoversPerSlotExceptions' 
         /// </summary>
@@ -114,6 +124,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxCoversPerSlotExceptions' 
         }
+        
         /// <summary>
         /// Test the property 'MaxMinutesLate' 
         /// </summary>
@@ -122,6 +133,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxMinutesLate' 
         }
+        
         /// <summary>
         /// Test the property 'MaxPartySize' 
         /// </summary>
@@ -130,6 +142,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxPartySize' 
         }
+        
         /// <summary>
         /// Test the property 'MiniutesToConfirm' 
         /// </summary>
@@ -138,6 +151,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MiniutesToConfirm' 
         }
+        
         /// <summary>
         /// Test the property 'MinPartySize' 
         /// </summary>
@@ -146,6 +160,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinPartySize' 
         }
+        
         /// <summary>
         /// Test the property 'MinutesToNotifyManager' 
         /// </summary>
@@ -154,6 +169,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinutesToNotifyManager' 
         }
+        
         /// <summary>
         /// Test the property 'RequireReservationConfirmation' 
         /// </summary>
@@ -162,6 +178,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RequireReservationConfirmation' 
         }
+        
         /// <summary>
         /// Test the property 'ReservationEmail' 
         /// </summary>
@@ -170,6 +187,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationEmail' 
         }
+        
         /// <summary>
         /// Test the property 'ReservationHours' 
         /// </summary>
@@ -178,6 +196,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationHours' 
         }
+        
         /// <summary>
         /// Test the property 'ReservationHoursStep' 
         /// </summary>
@@ -186,6 +205,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationHoursStep' 
         }
+        
         /// <summary>
         /// Test the property 'StatusMessages' 
         /// </summary>
@@ -194,6 +214,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StatusMessages' 
         }
+        
         /// <summary>
         /// Test the property 'TableTurnOver' 
         /// </summary>
@@ -202,6 +223,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableTurnOver' 
         }
+        
         /// <summary>
         /// Test the property 'TableTurnOverByGroup' 
         /// </summary>
@@ -210,6 +232,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableTurnOverByGroup' 
         }
+        
         /// <summary>
         /// Test the property 'TotalCovers' 
         /// </summary>
@@ -218,7 +241,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TotalCovers' 
         }
+        
 
     }
 
 }
+
+
