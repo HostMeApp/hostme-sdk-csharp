@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Transaction> (instance, "instance is a Transaction");
         }
 
+        
         /// <summary>
         /// Test the property 'Id' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Id' 
         }
+        
         /// <summary>
         /// Test the property 'Time' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Time' 
         }
+        
         /// <summary>
         /// Test the property 'Type' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Type' 
         }
+        
         /// <summary>
         /// Test the property 'Points' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Points' 
         }
+        
         /// <summary>
         /// Test the property 'Note' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Note' 
         }
+        
         /// <summary>
         /// Test the property 'Units' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Units' 
         }
+        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -106,6 +115,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
+        
         /// <summary>
         /// Test the property 'StatusReason' 
         /// </summary>
@@ -114,7 +124,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StatusReason' 
         }
+        
 
     }
 
 }
+
+

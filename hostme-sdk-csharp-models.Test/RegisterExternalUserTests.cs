@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RegisterExternalUser> (instance, "instance is a RegisterExternalUser");
         }
 
+        
         /// <summary>
         /// Test the property 'Email' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Email' 
         }
+        
         /// <summary>
         /// Test the property 'FullName' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FullName' 
         }
+        
         /// <summary>
         /// Test the property 'PhoneNumber' 
         /// </summary>
@@ -74,7 +79,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
+        
 
     }
 
 }
+
+

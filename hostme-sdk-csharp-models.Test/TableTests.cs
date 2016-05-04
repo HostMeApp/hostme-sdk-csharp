@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Table> (instance, "instance is a Table");
         }
 
+        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
+        
         /// <summary>
         /// Test the property 'TableTopSize' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableTopSize' 
         }
+        
         /// <summary>
         /// Test the property 'Area' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Area' 
         }
+        
         /// <summary>
         /// Test the property 'Tags' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Tags' 
         }
+        
         /// <summary>
         /// Test the property 'Reservability' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Reservability' 
         }
+        
         /// <summary>
         /// Test the property 'Waitability' 
         /// </summary>
@@ -98,7 +106,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Waitability' 
         }
+        
 
     }
 
 }
+
+

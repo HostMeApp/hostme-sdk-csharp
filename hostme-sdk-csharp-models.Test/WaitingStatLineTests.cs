@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingStatLine> (instance, "instance is a WaitingStatLine");
         }
 
+        
         /// <summary>
         /// Test the property 'Area' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Area' 
         }
+        
         /// <summary>
         /// Test the property 'AvgCallTime' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgCallTime' 
         }
+        
         /// <summary>
         /// Test the property 'AvgSeatTime' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvgSeatTime' 
         }
+        
         /// <summary>
         /// Test the property 'TopSize' 
         /// </summary>
@@ -82,7 +88,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TopSize' 
         }
+        
 
     }
 
 }
+
+

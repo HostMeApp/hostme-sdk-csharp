@@ -11,6 +11,7 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -61,6 +62,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewReservation'
             CreateCustomerReservation value = null; // TODO: replace null with proper value
+            
             var response = instance.AddNewReservation(value);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
@@ -73,7 +75,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CloseAsCanceled'
             string reservationId = null; // TODO: replace null with proper value
-CancelReservation cancelReservationContract = null; // TODO: replace null with proper value
+            CancelReservation cancelReservationContract = null; // TODO: replace null with proper value
+            
             instance.CloseAsCanceled(reservationId, cancelReservationContract);
              
         }
@@ -86,6 +89,7 @@ CancelReservation cancelReservationContract = null; // TODO: replace null with p
         {
             // TODO: add unit test for the method 'GetReservationById'
             string reservationId = null; // TODO: replace null with proper value
+            
             var response = instance.GetReservationById(reservationId);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
@@ -98,6 +102,7 @@ CancelReservation cancelReservationContract = null; // TODO: replace null with p
         {
             // TODO: add unit test for the method 'GetUserReservations'
             string queryOptions = null; // TODO: replace null with proper value
+            
             var response = instance.GetUserReservations(queryOptions);
             Assert.IsInstanceOf<List<Reservation>> (response, "response is List<Reservation>"); 
         }
@@ -110,6 +115,7 @@ CancelReservation cancelReservationContract = null; // TODO: replace null with p
         {
             // TODO: add unit test for the method 'ReadAllMessage'
             string reservationId = null; // TODO: replace null with proper value
+            
             instance.ReadAllMessage(reservationId);
              
         }
@@ -122,7 +128,8 @@ CancelReservation cancelReservationContract = null; // TODO: replace null with p
         {
             // TODO: add unit test for the method 'SendMessageToReservation'
             string reservationId = null; // TODO: replace null with proper value
-CreateMessage createMessageContract = null; // TODO: replace null with proper value
+            CreateMessage createMessageContract = null; // TODO: replace null with proper value
+            
             instance.SendMessageToReservation(reservationId, createMessageContract);
              
         }
@@ -135,7 +142,8 @@ CreateMessage createMessageContract = null; // TODO: replace null with proper va
         {
             // TODO: add unit test for the method 'UpdateReservation'
             string reservationId = null; // TODO: replace null with proper value
-UpdateReservation value = null; // TODO: replace null with proper value
+            UpdateReservation value = null; // TODO: replace null with proper value
+            
             instance.UpdateReservation(reservationId, value);
              
         }

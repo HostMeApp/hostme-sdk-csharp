@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -48,8 +50,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class FilterClause {\n");
             sb.Append("  Expression: ").Append(Expression).Append("\n");
-sb.Append("  RangeVariable: ").Append(RangeVariable).Append("\n");
-sb.Append("  ItemType: ").Append(ItemType).Append("\n");
+            sb.Append("  RangeVariable: ").Append(RangeVariable).Append("\n");
+            sb.Append("  ItemType: ").Append(ItemType).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,15 +117,21 @@ sb.Append("  ItemType: ").Append(ItemType).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Expression != null)
                     hash = hash * 59 + this.Expression.GetHashCode();
+                
                 if (this.RangeVariable != null)
                     hash = hash * 59 + this.RangeVariable.GetHashCode();
+                
                 if (this.ItemType != null)
                     hash = hash * 59 + this.ItemType.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

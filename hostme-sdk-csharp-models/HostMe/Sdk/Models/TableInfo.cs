@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -54,9 +56,10 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class TableInfo {\n");
             sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
-sb.Append("  IsComb: ").Append(IsComb).Append("\n");
-sb.Append("  TableTopSize: ").Append(TableTopSize).Append("\n");
-sb.Append("  Area: ").Append(Area).Append("\n");
+            sb.Append("  IsComb: ").Append(IsComb).Append("\n");
+            sb.Append("  TableTopSize: ").Append(TableTopSize).Append("\n");
+            sb.Append("  Area: ").Append(Area).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,17 +129,24 @@ sb.Append("  Area: ").Append(Area).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
+                
                 if (this.IsComb != null)
                     hash = hash * 59 + this.IsComb.GetHashCode();
+                
                 if (this.TableTopSize != null)
                     hash = hash * 59 + this.TableTopSize.GetHashCode();
+                
                 if (this.Area != null)
                     hash = hash * 59 + this.Area.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

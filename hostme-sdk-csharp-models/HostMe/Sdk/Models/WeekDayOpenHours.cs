@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WeekDayOpenHours {\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
-sb.Append("  WeekDay: ").Append(WeekDay).Append("\n");
+            sb.Append("  WeekDay: ").Append(WeekDay).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  WeekDay: ").Append(WeekDay).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
                 if (this.WeekDay != null)
                     hash = hash * 59 + this.WeekDay.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

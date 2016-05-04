@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RedeemRequestReject> (instance, "instance is a RedeemRequestReject");
         }
 
+        
         /// <summary>
         /// Test the property 'Reason' 
         /// </summary>
@@ -58,7 +61,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Reason' 
         }
+        
 
     }
 
 }
+
+

@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class MembershipUpdate {\n");
             sb.Append("  Note: ").Append(Note).Append("\n");
-sb.Append("  Profile: ").Append(Profile).Append("\n");
+            sb.Append("  Profile: ").Append(Profile).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  Profile: ").Append(Profile).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
+                
                 if (this.Profile != null)
                     hash = hash * 59 + this.Profile.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

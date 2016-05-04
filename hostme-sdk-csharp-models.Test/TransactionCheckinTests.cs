@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TransactionCheckin> (instance, "instance is a TransactionCheckin");
         }
 
+        
         /// <summary>
         /// Test the property 'Token' 
         /// </summary>
@@ -58,7 +61,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Token' 
         }
+        
 
     }
 
 }
+
+

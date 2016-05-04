@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -78,13 +80,14 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Transaction {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  Time: ").Append(Time).Append("\n");
-sb.Append("  Type: ").Append(Type).Append("\n");
-sb.Append("  Points: ").Append(Points).Append("\n");
-sb.Append("  Note: ").Append(Note).Append("\n");
-sb.Append("  Units: ").Append(Units).Append("\n");
-sb.Append("  Status: ").Append(Status).Append("\n");
-sb.Append("  StatusReason: ").Append(StatusReason).Append("\n");
+            sb.Append("  Time: ").Append(Time).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Points: ").Append(Points).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  Units: ").Append(Units).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  StatusReason: ").Append(StatusReason).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,25 +177,36 @@ sb.Append("  StatusReason: ").Append(StatusReason).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
+                
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
+                
                 if (this.Units != null)
                     hash = hash * 59 + this.Units.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.StatusReason != null)
                     hash = hash * 59 + this.StatusReason.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class UserLoginInfo {\n");
             sb.Append("  LoginProvider: ").Append(LoginProvider).Append("\n");
-sb.Append("  ProviderKey: ").Append(ProviderKey).Append("\n");
+            sb.Append("  ProviderKey: ").Append(ProviderKey).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  ProviderKey: ").Append(ProviderKey).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.LoginProvider != null)
                     hash = hash * 59 + this.LoginProvider.GetHashCode();
+                
                 if (this.ProviderKey != null)
                     hash = hash * 59 + this.ProviderKey.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

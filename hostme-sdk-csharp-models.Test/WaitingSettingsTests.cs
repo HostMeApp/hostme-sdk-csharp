@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingSettings> (instance, "instance is a WaitingSettings");
         }
 
+        
         /// <summary>
         /// Test the property 'AcceptRemoteRegistration' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AcceptRemoteRegistration' 
         }
+        
         /// <summary>
         /// Test the property 'EnableManualHold' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EnableManualHold' 
         }
+        
         /// <summary>
         /// Test the property 'MaximumHoldTime' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaximumHoldTime' 
         }
+        
         /// <summary>
         /// Test the property 'PositionMessages' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PositionMessages' 
         }
+        
         /// <summary>
         /// Test the property 'StatusMessages' 
         /// </summary>
@@ -90,7 +97,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StatusMessages' 
         }
+        
 
     }
 
 }
+
+

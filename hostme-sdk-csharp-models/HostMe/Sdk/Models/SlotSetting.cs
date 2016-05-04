@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class SlotSetting {\n");
             sb.Append("  Interval: ").Append(Interval).Append("\n");
-sb.Append("  MaxCoversPerSlot: ").Append(MaxCoversPerSlot).Append("\n");
+            sb.Append("  MaxCoversPerSlot: ").Append(MaxCoversPerSlot).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  MaxCoversPerSlot: ").Append(MaxCoversPerSlot).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
+                
                 if (this.MaxCoversPerSlot != null)
                     hash = hash * 59 + this.MaxCoversPerSlot.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

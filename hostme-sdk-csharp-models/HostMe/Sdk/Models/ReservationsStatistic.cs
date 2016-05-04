@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -66,11 +68,12 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ReservationsStatistic {\n");
             sb.Append("  Today: ").Append(Today).Append("\n");
-sb.Append("  Week: ").Append(Week).Append("\n");
-sb.Append("  Canceled: ").Append(Canceled).Append("\n");
-sb.Append("  Breakfast: ").Append(Breakfast).Append("\n");
-sb.Append("  Lunch: ").Append(Lunch).Append("\n");
-sb.Append("  Dinner: ").Append(Dinner).Append("\n");
+            sb.Append("  Week: ").Append(Week).Append("\n");
+            sb.Append("  Canceled: ").Append(Canceled).Append("\n");
+            sb.Append("  Breakfast: ").Append(Breakfast).Append("\n");
+            sb.Append("  Lunch: ").Append(Lunch).Append("\n");
+            sb.Append("  Dinner: ").Append(Dinner).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,21 +153,30 @@ sb.Append("  Dinner: ").Append(Dinner).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Today != null)
                     hash = hash * 59 + this.Today.GetHashCode();
+                
                 if (this.Week != null)
                     hash = hash * 59 + this.Week.GetHashCode();
+                
                 if (this.Canceled != null)
                     hash = hash * 59 + this.Canceled.GetHashCode();
+                
                 if (this.Breakfast != null)
                     hash = hash * 59 + this.Breakfast.GetHashCode();
+                
                 if (this.Lunch != null)
                     hash = hash * 59 + this.Lunch.GetHashCode();
+                
                 if (this.Dinner != null)
                     hash = hash * 59 + this.Dinner.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

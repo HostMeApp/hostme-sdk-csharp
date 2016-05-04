@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RewardValue> (instance, "instance is a RewardValue");
         }
 
+        
         /// <summary>
         /// Test the property 'Amount' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Amount' 
         }
+        
         /// <summary>
         /// Test the property 'Discount' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Discount' 
         }
+        
         /// <summary>
         /// Test the property 'FreeMeal' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FreeMeal' 
         }
+        
         /// <summary>
         /// Test the property 'Type' 
         /// </summary>
@@ -82,7 +88,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Type' 
         }
+        
 
     }
 
 }
+
+

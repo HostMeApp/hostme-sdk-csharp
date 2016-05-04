@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -176,27 +178,28 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Reservation {\n");
             sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
-sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
-sb.Append("  Created: ").Append(Created).Append("\n");
-sb.Append("  Closed: ").Append(Closed).Append("\n");
-sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
-sb.Append("  Status: ").Append(Status).Append("\n");
-sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
-sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-sb.Append("  Phone: ").Append(Phone).Append("\n");
-sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
-sb.Append("  Areas: ").Append(Areas).Append("\n");
-sb.Append("  Note: ").Append(Note).Append("\n");
-sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
-sb.Append("  HighChair: ").Append(HighChair).Append("\n");
-sb.Append("  Stroller: ").Append(Stroller).Append("\n");
-sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
-sb.Append("  Messages: ").Append(Messages).Append("\n");
-sb.Append("  Membership: ").Append(Membership).Append("\n");
-sb.Append("  Type: ").Append(Type).Append("\n");
-sb.Append("  Party: ").Append(Party).Append("\n");
-sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Restaurant: ").Append(Restaurant).Append("\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  Closed: ").Append(Closed).Append("\n");
+            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
+            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
+            sb.Append("  Areas: ").Append(Areas).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
+            sb.Append("  HighChair: ").Append(HighChair).Append("\n");
+            sb.Append("  Stroller: ").Append(Stroller).Append("\n");
+            sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
+            sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  Membership: ").Append(Membership).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Party: ").Append(Party).Append("\n");
+            sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -356,53 +359,78 @@ sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UnreadMessageCount != null)
                     hash = hash * 59 + this.UnreadMessageCount.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Restaurant != null)
                     hash = hash * 59 + this.Restaurant.GetHashCode();
+                
                 if (this.Created != null)
                     hash = hash * 59 + this.Created.GetHashCode();
+                
                 if (this.Closed != null)
                     hash = hash * 59 + this.Closed.GetHashCode();
+                
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
+                
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
+                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
+                
                 if (this.NotificationUrl != null)
                     hash = hash * 59 + this.NotificationUrl.GetHashCode();
+                
                 if (this.Areas != null)
                     hash = hash * 59 + this.Areas.GetHashCode();
+                
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
+                
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
+                
                 if (this.HighChair != null)
                     hash = hash * 59 + this.HighChair.GetHashCode();
+                
                 if (this.Stroller != null)
                     hash = hash * 59 + this.Stroller.GetHashCode();
+                
                 if (this.EstimatedTurnOverTime != null)
                     hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
+                
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
+                
                 if (this.Membership != null)
                     hash = hash * 59 + this.Membership.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
+                
                 if (this.CustomerProfile != null)
                     hash = hash * 59 + this.CustomerProfile.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

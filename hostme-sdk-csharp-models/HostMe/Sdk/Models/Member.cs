@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -96,16 +98,17 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Member {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
-sb.Append("  Points: ").Append(Points).Append("\n");
-sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
-sb.Append("  Status: ").Append(Status).Append("\n");
-sb.Append("  NumberOfVisits30Days: ").Append(NumberOfVisits30Days).Append("\n");
-sb.Append("  NumberOfVisitsTotal: ").Append(NumberOfVisitsTotal).Append("\n");
-sb.Append("  LastVisitDate: ").Append(LastVisitDate).Append("\n");
-sb.Append("  Customer: ").Append(Customer).Append("\n");
-sb.Append("  Profile: ").Append(Profile).Append("\n");
-sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
+            sb.Append("  Points: ").Append(Points).Append("\n");
+            sb.Append("  JoinDate: ").Append(JoinDate).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  NumberOfVisits30Days: ").Append(NumberOfVisits30Days).Append("\n");
+            sb.Append("  NumberOfVisitsTotal: ").Append(NumberOfVisitsTotal).Append("\n");
+            sb.Append("  LastVisitDate: ").Append(LastVisitDate).Append("\n");
+            sb.Append("  Customer: ").Append(Customer).Append("\n");
+            sb.Append("  Profile: ").Append(Profile).Append("\n");
+            sb.Append("  Note: ").Append(Note).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,31 +213,45 @@ sb.Append("  Note: ").Append(Note).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.MembershipLevel != null)
                     hash = hash * 59 + this.MembershipLevel.GetHashCode();
+                
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
+                
                 if (this.JoinDate != null)
                     hash = hash * 59 + this.JoinDate.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.NumberOfVisits30Days != null)
                     hash = hash * 59 + this.NumberOfVisits30Days.GetHashCode();
+                
                 if (this.NumberOfVisitsTotal != null)
                     hash = hash * 59 + this.NumberOfVisitsTotal.GetHashCode();
+                
                 if (this.LastVisitDate != null)
                     hash = hash * 59 + this.LastVisitDate.GetHashCode();
+                
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
+                
                 if (this.Profile != null)
                     hash = hash * 59 + this.Profile.GetHashCode();
+                
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

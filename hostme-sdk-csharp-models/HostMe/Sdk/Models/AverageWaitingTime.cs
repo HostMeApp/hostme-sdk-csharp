@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class AverageWaitingTime {\n");
             sb.Append("  ValueMinutes: ").Append(ValueMinutes).Append("\n");
-sb.Append("  TotalMinutes: ").Append(TotalMinutes).Append("\n");
+            sb.Append("  TotalMinutes: ").Append(TotalMinutes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  TotalMinutes: ").Append(TotalMinutes).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ValueMinutes != null)
                     hash = hash * 59 + this.ValueMinutes.GetHashCode();
+                
                 if (this.TotalMinutes != null)
                     hash = hash * 59 + this.TotalMinutes.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

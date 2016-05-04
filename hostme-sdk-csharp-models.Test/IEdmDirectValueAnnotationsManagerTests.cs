@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,7 +52,10 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmDirectValueAnnotationsManager> (instance, "instance is a IEdmDirectValueAnnotationsManager");
         }
 
+        
 
     }
 
 }
+
+

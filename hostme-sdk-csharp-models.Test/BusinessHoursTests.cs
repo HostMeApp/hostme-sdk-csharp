@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<BusinessHours> (instance, "instance is a BusinessHours");
         }
 
+        
         /// <summary>
         /// Test the property 'OpeningHours' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'OpeningHours' 
         }
+        
         /// <summary>
         /// Test the property 'IsOpenNow' 
         /// </summary>
@@ -66,7 +70,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'IsOpenNow' 
         }
+        
 
     }
 
 }
+
+

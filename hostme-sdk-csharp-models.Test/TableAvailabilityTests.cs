@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TableAvailability> (instance, "instance is a TableAvailability");
         }
 
+        
         /// <summary>
         /// Test the property 'MinCoversRequired' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinCoversRequired' 
         }
+        
         /// <summary>
         /// Test the property 'Reservable' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Reservable' 
         }
+        
         /// <summary>
         /// Test the property 'Hours' 
         /// </summary>
@@ -74,7 +79,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Hours' 
         }
+        
 
     }
 
 }
+
+

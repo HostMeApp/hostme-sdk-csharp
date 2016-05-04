@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -66,11 +68,12 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingsStatistic {\n");
             sb.Append("  InList: ").Append(InList).Append("\n");
-sb.Append("  Called: ").Append(Called).Append("\n");
-sb.Append("  TablesAvailable: ").Append(TablesAvailable).Append("\n");
-sb.Append("  OneTwoGroup: ").Append(OneTwoGroup).Append("\n");
-sb.Append("  ThreeFourGroup: ").Append(ThreeFourGroup).Append("\n");
-sb.Append("  FiveSixGroup: ").Append(FiveSixGroup).Append("\n");
+            sb.Append("  Called: ").Append(Called).Append("\n");
+            sb.Append("  TablesAvailable: ").Append(TablesAvailable).Append("\n");
+            sb.Append("  OneTwoGroup: ").Append(OneTwoGroup).Append("\n");
+            sb.Append("  ThreeFourGroup: ").Append(ThreeFourGroup).Append("\n");
+            sb.Append("  FiveSixGroup: ").Append(FiveSixGroup).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,21 +153,30 @@ sb.Append("  FiveSixGroup: ").Append(FiveSixGroup).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.InList != null)
                     hash = hash * 59 + this.InList.GetHashCode();
+                
                 if (this.Called != null)
                     hash = hash * 59 + this.Called.GetHashCode();
+                
                 if (this.TablesAvailable != null)
                     hash = hash * 59 + this.TablesAvailable.GetHashCode();
+                
                 if (this.OneTwoGroup != null)
                     hash = hash * 59 + this.OneTwoGroup.GetHashCode();
+                
                 if (this.ThreeFourGroup != null)
                     hash = hash * 59 + this.ThreeFourGroup.GetHashCode();
+                
                 if (this.FiveSixGroup != null)
                     hash = hash * 59 + this.FiveSixGroup.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

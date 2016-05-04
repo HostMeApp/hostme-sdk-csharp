@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -42,7 +44,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ModelState {\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
-sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,13 +105,18 @@ sb.Append("  Errors: ").Append(Errors).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

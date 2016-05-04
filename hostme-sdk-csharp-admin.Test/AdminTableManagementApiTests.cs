@@ -11,6 +11,7 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -61,7 +62,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CreateNewFloor'
             int? restaurantId = null; // TODO: replace null with proper value
-Floor floor = null; // TODO: replace null with proper value
+            Floor floor = null; // TODO: replace null with proper value
+            
             var response = instance.CreateNewFloor(restaurantId, floor);
             Assert.IsInstanceOf<Floor> (response, "response is Floor"); 
         }
@@ -74,7 +76,8 @@ Floor floor = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'CreateOrUpdateTableConfiguration'
             int? restaurantId = null; // TODO: replace null with proper value
-List<Table> tables = null; // TODO: replace null with proper value
+            List<Table> tables = null; // TODO: replace null with proper value
+            
             instance.CreateOrUpdateTableConfiguration(restaurantId, tables);
              
         }
@@ -87,7 +90,8 @@ List<Table> tables = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'DeleteFloor'
             int? restaurantId = null; // TODO: replace null with proper value
-string floorId = null; // TODO: replace null with proper value
+            string floorId = null; // TODO: replace null with proper value
+            
             instance.DeleteFloor(restaurantId, floorId);
              
         }
@@ -100,6 +104,7 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetAllTableCombinations'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetAllTableCombinations(restaurantId);
             Assert.IsInstanceOf<List<TableInfo>> (response, "response is List<TableInfo>"); 
         }
@@ -112,6 +117,7 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetApprovedTableCombinations'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetApprovedTableCombinations(restaurantId);
             Assert.IsInstanceOf<List<TableInfo>> (response, "response is List<TableInfo>"); 
         }
@@ -124,9 +130,10 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetAvailableTables'
             int? restaurantId = null; // TODO: replace null with proper value
-DateTimeOffset? date = null; // TODO: replace null with proper value
-int? partySize = null; // TODO: replace null with proper value
-string areas = null; // TODO: replace null with proper value
+            DateTimeOffset? date = null; // TODO: replace null with proper value
+            int? partySize = null; // TODO: replace null with proper value
+            string areas = null; // TODO: replace null with proper value
+            
             var response = instance.GetAvailableTables(restaurantId, date, partySize, areas);
             Assert.IsInstanceOf<List<TableInfo>> (response, "response is List<TableInfo>"); 
         }
@@ -139,7 +146,8 @@ string areas = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetFloorDetails'
             int? restaurantId = null; // TODO: replace null with proper value
-string floorId = null; // TODO: replace null with proper value
+            string floorId = null; // TODO: replace null with proper value
+            
             var response = instance.GetFloorDetails(restaurantId, floorId);
             Assert.IsInstanceOf<Floor> (response, "response is Floor"); 
         }
@@ -152,6 +160,7 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantFloors'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetRestaurantFloors(restaurantId);
             Assert.IsInstanceOf<List<FloorInfo>> (response, "response is List<FloorInfo>"); 
         }
@@ -164,8 +173,9 @@ string floorId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetTableMonitors'
             int? restaurantId = null; // TODO: replace null with proper value
-double? tableTurnOver = null; // TODO: replace null with proper value
-DateTimeOffset? time = null; // TODO: replace null with proper value
+            double? tableTurnOver = null; // TODO: replace null with proper value
+            DateTimeOffset? time = null; // TODO: replace null with proper value
+            
             var response = instance.GetTableMonitors(restaurantId, tableTurnOver, time);
             Assert.IsInstanceOf<List<TableMonitor>> (response, "response is List<TableMonitor>"); 
         }
@@ -178,8 +188,9 @@ DateTimeOffset? time = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetTableUsersList'
             int? restaurantId = null; // TODO: replace null with proper value
-int? partySize = null; // TODO: replace null with proper value
-DateTimeOffset? time = null; // TODO: replace null with proper value
+            int? partySize = null; // TODO: replace null with proper value
+            DateTimeOffset? time = null; // TODO: replace null with proper value
+            
             var response = instance.GetTableUsersList(restaurantId, partySize, time);
             Assert.IsInstanceOf<List<TableUser>> (response, "response is List<TableUser>"); 
         }
@@ -192,6 +203,7 @@ DateTimeOffset? time = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetTables'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetTables(restaurantId);
             Assert.IsInstanceOf<List<Table>> (response, "response is List<Table>"); 
         }
@@ -204,7 +216,8 @@ DateTimeOffset? time = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'ReleaseTable'
             int? restaurantId = null; // TODO: replace null with proper value
-string tableNumber = null; // TODO: replace null with proper value
+            string tableNumber = null; // TODO: replace null with proper value
+            
             var response = instance.ReleaseTable(restaurantId, tableNumber);
             Assert.IsInstanceOf<TableMonitor> (response, "response is TableMonitor"); 
         }
@@ -217,8 +230,9 @@ string tableNumber = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SeatPartyAtTable'
             int? restaurantId = null; // TODO: replace null with proper value
-string tableNumber = null; // TODO: replace null with proper value
-int? partySize = null; // TODO: replace null with proper value
+            string tableNumber = null; // TODO: replace null with proper value
+            int? partySize = null; // TODO: replace null with proper value
+            
             var response = instance.SeatPartyAtTable(restaurantId, tableNumber, partySize);
             Assert.IsInstanceOf<TableMonitor> (response, "response is TableMonitor"); 
         }
@@ -231,7 +245,8 @@ int? partySize = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SetApprovedTableCombinations'
             int? restaurantId = null; // TODO: replace null with proper value
-List<Table> combinations = null; // TODO: replace null with proper value
+            List<Table> combinations = null; // TODO: replace null with proper value
+            
             instance.SetApprovedTableCombinations(restaurantId, combinations);
              
         }
@@ -244,8 +259,9 @@ List<Table> combinations = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'UpdateFloor'
             int? restaurantId = null; // TODO: replace null with proper value
-string floorId = null; // TODO: replace null with proper value
-Floor floor = null; // TODO: replace null with proper value
+            string floorId = null; // TODO: replace null with proper value
+            Floor floor = null; // TODO: replace null with proper value
+            
             var response = instance.UpdateFloor(restaurantId, floorId, floor);
             Assert.IsInstanceOf<Floor> (response, "response is Floor"); 
         }

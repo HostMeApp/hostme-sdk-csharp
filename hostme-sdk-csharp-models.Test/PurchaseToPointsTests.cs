@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<PurchaseToPoints> (instance, "instance is a PurchaseToPoints");
         }
 
+        
         /// <summary>
         /// Test the property 'FlatPoints' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FlatPoints' 
         }
+        
         /// <summary>
         /// Test the property 'MaxAmount' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxAmount' 
         }
+        
         /// <summary>
         /// Test the property 'Method' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Method' 
         }
+        
         /// <summary>
         /// Test the property 'MinAmount' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MinAmount' 
         }
+        
         /// <summary>
         /// Test the property 'PointsPerCent' 
         /// </summary>
@@ -90,7 +97,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PointsPerCent' 
         }
+        
 
     }
 
 }
+
+

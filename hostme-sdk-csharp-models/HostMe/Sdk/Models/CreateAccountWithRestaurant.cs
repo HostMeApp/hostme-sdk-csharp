@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -66,11 +68,12 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class CreateAccountWithRestaurant {\n");
             sb.Append("  FullName: ").Append(FullName).Append("\n");
-sb.Append("  UserPhone: ").Append(UserPhone).Append("\n");
-sb.Append("  UserEmail: ").Append(UserEmail).Append("\n");
-sb.Append("  RestaurantName: ").Append(RestaurantName).Append("\n");
-sb.Append("  RestaurantAddress: ").Append(RestaurantAddress).Append("\n");
-sb.Append("  RestaurantPhone: ").Append(RestaurantPhone).Append("\n");
+            sb.Append("  UserPhone: ").Append(UserPhone).Append("\n");
+            sb.Append("  UserEmail: ").Append(UserEmail).Append("\n");
+            sb.Append("  RestaurantName: ").Append(RestaurantName).Append("\n");
+            sb.Append("  RestaurantAddress: ").Append(RestaurantAddress).Append("\n");
+            sb.Append("  RestaurantPhone: ").Append(RestaurantPhone).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,21 +153,30 @@ sb.Append("  RestaurantPhone: ").Append(RestaurantPhone).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
+                
                 if (this.UserPhone != null)
                     hash = hash * 59 + this.UserPhone.GetHashCode();
+                
                 if (this.UserEmail != null)
                     hash = hash * 59 + this.UserEmail.GetHashCode();
+                
                 if (this.RestaurantName != null)
                     hash = hash * 59 + this.RestaurantName.GetHashCode();
+                
                 if (this.RestaurantAddress != null)
                     hash = hash * 59 + this.RestaurantAddress.GetHashCode();
+                
                 if (this.RestaurantPhone != null)
                     hash = hash * 59 + this.RestaurantPhone.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }

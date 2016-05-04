@@ -11,6 +11,7 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -61,7 +62,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewReservation'
             int? restaurantId = null; // TODO: replace null with proper value
-CreateWebReservation value = null; // TODO: replace null with proper value
+            CreateWebReservation value = null; // TODO: replace null with proper value
+            
             var response = instance.AddNewReservation(restaurantId, value);
             Assert.IsInstanceOf<Reservation> (response, "response is Reservation"); 
         }
@@ -74,8 +76,9 @@ CreateWebReservation value = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'FindRestaurants'
             double? lat = null; // TODO: replace null with proper value
-double? lon = null; // TODO: replace null with proper value
-string name = null; // TODO: replace null with proper value
+            double? lon = null; // TODO: replace null with proper value
+            string name = null; // TODO: replace null with proper value
+            
             var response = instance.FindRestaurants(lat, lon, name);
             Assert.IsInstanceOf<List<RestaurantInfo>> (response, "response is List<RestaurantInfo>"); 
         }
@@ -88,10 +91,11 @@ string name = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetReservationAvailability'
             int? restaurantId = null; // TODO: replace null with proper value
-DateTimeOffset? date = null; // TODO: replace null with proper value
-int? partySize = null; // TODO: replace null with proper value
-int? rangeInMinutes = null; // TODO: replace null with proper value
-string areas = null; // TODO: replace null with proper value
+            DateTimeOffset? date = null; // TODO: replace null with proper value
+            int? partySize = null; // TODO: replace null with proper value
+            int? rangeInMinutes = null; // TODO: replace null with proper value
+            string areas = null; // TODO: replace null with proper value
+            
             var response = instance.GetReservationAvailability(restaurantId, date, partySize, rangeInMinutes, areas);
             Assert.IsInstanceOf<List<OnlineAvailability>> (response, "response is List<OnlineAvailability>"); 
         }
@@ -104,6 +108,7 @@ string areas = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'GetRestaurantById'
             int? restaurantId = null; // TODO: replace null with proper value
+            
             var response = instance.GetRestaurantById(restaurantId);
             Assert.IsInstanceOf<RestaurantInfo> (response, "response is RestaurantInfo"); 
         }

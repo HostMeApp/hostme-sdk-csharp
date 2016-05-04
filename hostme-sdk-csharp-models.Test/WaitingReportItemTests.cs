@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingReportItem> (instance, "instance is a WaitingReportItem");
         }
 
+        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
+        
         /// <summary>
         /// Test the property 'Created' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Created' 
         }
+        
         /// <summary>
         /// Test the property 'GroupSize' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'GroupSize' 
         }
+        
         /// <summary>
         /// Test the property 'StartPosition' 
         /// </summary>
@@ -82,6 +88,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StartPosition' 
         }
+        
         /// <summary>
         /// Test the property 'TimeToCall' 
         /// </summary>
@@ -90,6 +97,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TimeToCall' 
         }
+        
         /// <summary>
         /// Test the property 'TimeToSeat' 
         /// </summary>
@@ -98,6 +106,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TimeToSeat' 
         }
+        
         /// <summary>
         /// Test the property 'TimeToCancel' 
         /// </summary>
@@ -106,7 +115,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TimeToCancel' 
         }
+        
 
     }
 
 }
+
+

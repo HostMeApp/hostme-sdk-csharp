@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RedeemRequestInfo> (instance, "instance is a RedeemRequestInfo");
         }
 
+        
         /// <summary>
         /// Test the property 'Id' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Id' 
         }
+        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
+        
         /// <summary>
         /// Test the property 'StatusComment' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'StatusComment' 
         }
+        
         /// <summary>
         /// Test the property 'TableNumber' 
         /// </summary>
@@ -82,7 +88,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TableNumber' 
         }
+        
 
     }
 
 }
+
+

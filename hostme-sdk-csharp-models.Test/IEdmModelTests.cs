@@ -9,6 +9,8 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
+
+
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -50,6 +52,7 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmModel> (instance, "instance is a IEdmModel");
         }
 
+        
         /// <summary>
         /// Test the property 'SchemaElements' 
         /// </summary>
@@ -58,6 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'SchemaElements' 
         }
+        
         /// <summary>
         /// Test the property 'VocabularyAnnotations' 
         /// </summary>
@@ -66,6 +70,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'VocabularyAnnotations' 
         }
+        
         /// <summary>
         /// Test the property 'ReferencedModels' 
         /// </summary>
@@ -74,6 +79,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReferencedModels' 
         }
+        
         /// <summary>
         /// Test the property 'DirectValueAnnotationsManager' 
         /// </summary>
@@ -82,7 +88,10 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DirectValueAnnotationsManager' 
         }
+        
 
     }
 
 }
+
+

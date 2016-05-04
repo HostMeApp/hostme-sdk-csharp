@@ -9,6 +9,8 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
+
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -66,11 +68,12 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Table {\n");
             sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
-sb.Append("  TableTopSize: ").Append(TableTopSize).Append("\n");
-sb.Append("  Area: ").Append(Area).Append("\n");
-sb.Append("  Tags: ").Append(Tags).Append("\n");
-sb.Append("  Reservability: ").Append(Reservability).Append("\n");
-sb.Append("  Waitability: ").Append(Waitability).Append("\n");
+            sb.Append("  TableTopSize: ").Append(TableTopSize).Append("\n");
+            sb.Append("  Area: ").Append(Area).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  Reservability: ").Append(Reservability).Append("\n");
+            sb.Append("  Waitability: ").Append(Waitability).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,21 +153,30 @@ sb.Append("  Waitability: ").Append(Waitability).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
+                
                 if (this.TableTopSize != null)
                     hash = hash * 59 + this.TableTopSize.GetHashCode();
+                
                 if (this.Area != null)
                     hash = hash * 59 + this.Area.GetHashCode();
+                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
+                
                 if (this.Reservability != null)
                     hash = hash * 59 + this.Reservability.GetHashCode();
+                
                 if (this.Waitability != null)
                     hash = hash * 59 + this.Waitability.GetHashCode();
+                
                 return hash;
             }
         }
 
     }
+
+
 }
