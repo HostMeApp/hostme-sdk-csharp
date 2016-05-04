@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -27,13 +25,13 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets Close
         /// </summary>
         [DataMember(Name="close", EmitDefaultValue=true)]
-        public string Close { get; set; }
+        public TimeSpan? Close { get; set; }
     
         /// <summary>
         /// Gets or Sets Open
         /// </summary>
         [DataMember(Name="open", EmitDefaultValue=true)]
-        public string Open { get; set; }
+        public TimeSpan? Open { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -44,8 +42,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class HourlyInterval {\n");
             sb.Append("  Close: ").Append(Close).Append("\n");
-            sb.Append("  Open: ").Append(Open).Append("\n");
-            
+sb.Append("  Open: ").Append(Open).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,18 +102,13 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Close != null)
                     hash = hash * 59 + this.Close.GetHashCode();
-                
                 if (this.Open != null)
                     hash = hash * 59 + this.Open.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

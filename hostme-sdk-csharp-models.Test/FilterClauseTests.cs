@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<FilterClause> (instance, "instance is a FilterClause");
         }
 
-        
         /// <summary>
         /// Test the property 'Expression' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Expression' 
         }
-        
         /// <summary>
         /// Test the property 'RangeVariable' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RangeVariable' 
         }
-        
         /// <summary>
         /// Test the property 'ItemType' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ItemType' 
         }
-        
 
     }
 
 }
-
-

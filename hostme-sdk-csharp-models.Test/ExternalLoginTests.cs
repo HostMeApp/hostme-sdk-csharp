@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ExternalLogin> (instance, "instance is a ExternalLogin");
         }
 
-        
         /// <summary>
         /// Test the property 'Name' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Name' 
         }
-        
         /// <summary>
         /// Test the property 'Url' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Url' 
         }
-        
         /// <summary>
         /// Test the property 'State' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'State' 
         }
-        
 
     }
 
 }
-
-

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ReservationsStatistic> (instance, "instance is a ReservationsStatistic");
         }
 
-        
         /// <summary>
         /// Test the property 'Today' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Today' 
         }
-        
         /// <summary>
         /// Test the property 'Week' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Week' 
         }
-        
         /// <summary>
         /// Test the property 'Canceled' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Canceled' 
         }
-        
         /// <summary>
         /// Test the property 'Breakfast' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Breakfast' 
         }
-        
         /// <summary>
         /// Test the property 'Lunch' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Lunch' 
         }
-        
         /// <summary>
         /// Test the property 'Dinner' 
         /// </summary>
@@ -106,10 +98,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Dinner' 
         }
-        
 
     }
 
 }
-
-

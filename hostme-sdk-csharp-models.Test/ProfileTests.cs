@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Profile> (instance, "instance is a Profile");
         }
 
-        
         /// <summary>
         /// Test the property 'Allergy' 
         /// </summary>
@@ -61,16 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Allergy' 
         }
-        
-        /// <summary>
-        /// Test the property 'Note' 
-        /// </summary>
-        [Test]
-        public void NoteTest()
-        {
-            // TODO: unit test for the property 'Note' 
-        }
-        
         /// <summary>
         /// Test the property 'Vegetarian' 
         /// </summary>
@@ -79,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Vegetarian' 
         }
-        
 
     }
 
 }
-
-

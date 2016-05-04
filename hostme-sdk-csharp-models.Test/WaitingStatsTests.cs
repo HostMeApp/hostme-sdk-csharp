@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingStats> (instance, "instance is a WaitingStats");
         }
 
-        
         /// <summary>
         /// Test the property 'WaitByGroup' 
         /// </summary>
@@ -61,10 +58,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WaitByGroup' 
         }
-        
 
     }
 
 }
-
-

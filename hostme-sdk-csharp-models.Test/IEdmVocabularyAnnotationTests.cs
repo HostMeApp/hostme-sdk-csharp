@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmVocabularyAnnotation> (instance, "instance is a IEdmVocabularyAnnotation");
         }
 
-        
         /// <summary>
         /// Test the property 'Qualifier' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Qualifier' 
         }
-        
         /// <summary>
         /// Test the property 'Term' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Term' 
         }
-        
         /// <summary>
         /// Test the property 'Target' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Target' 
         }
-        
 
     }
 
 }
-
-

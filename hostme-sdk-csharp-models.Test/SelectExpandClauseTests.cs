@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<SelectExpandClause> (instance, "instance is a SelectExpandClause");
         }
 
-        
         /// <summary>
         /// Test the property 'SelectedItems' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'SelectedItems' 
         }
-        
         /// <summary>
         /// Test the property 'AllSelected' 
         /// </summary>
@@ -70,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AllSelected' 
         }
-        
 
     }
 
 }
-
-

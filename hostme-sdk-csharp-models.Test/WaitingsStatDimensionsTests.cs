@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<WaitingsStatDimensions> (instance, "instance is a WaitingsStatDimensions");
         }
 
-        
         /// <summary>
         /// Test the property 'Time' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Time' 
         }
-        
         /// <summary>
         /// Test the property 'GroupSize' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'GroupSize' 
         }
-        
         /// <summary>
         /// Test the property 'TopSize' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TopSize' 
         }
-        
         /// <summary>
         /// Test the property 'LinePosition' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'LinePosition' 
         }
-        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -97,10 +90,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
-        
 
     }
 
 }
-
-

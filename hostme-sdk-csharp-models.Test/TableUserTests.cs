@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<TableUser> (instance, "instance is a TableUser");
         }
 
-        
         /// <summary>
         /// Test the property 'Table' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Table' 
         }
-        
         /// <summary>
         /// Test the property 'User' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'User' 
         }
-        
         /// <summary>
         /// Test the property 'RegistrationTime' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RegistrationTime' 
         }
-        
         /// <summary>
         /// Test the property 'EstimatedReleaseTime' 
         /// </summary>
@@ -88,10 +82,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EstimatedReleaseTime' 
         }
-        
 
     }
 
 }
-
-

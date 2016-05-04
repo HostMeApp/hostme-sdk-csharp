@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -73,9 +71,8 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class IEdmSchemaElement {\n");
             sb.Append("  SchemaElementKind: ").Append(SchemaElementKind).Append("\n");
-            sb.Append("  _Namespace: ").Append(_Namespace).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            
+sb.Append("  _Namespace: ").Append(_Namespace).Append("\n");
+sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,21 +137,15 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SchemaElementKind != null)
                     hash = hash * 59 + this.SchemaElementKind.GetHashCode();
-                
                 if (this._Namespace != null)
                     hash = hash * 59 + this._Namespace.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

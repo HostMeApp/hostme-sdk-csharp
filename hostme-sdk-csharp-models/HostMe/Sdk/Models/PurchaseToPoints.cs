@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -62,11 +60,10 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class PurchaseToPoints {\n");
             sb.Append("  FlatPoints: ").Append(FlatPoints).Append("\n");
-            sb.Append("  MaxAmount: ").Append(MaxAmount).Append("\n");
-            sb.Append("  Method: ").Append(Method).Append("\n");
-            sb.Append("  MinAmount: ").Append(MinAmount).Append("\n");
-            sb.Append("  PointsPerCent: ").Append(PointsPerCent).Append("\n");
-            
+sb.Append("  MaxAmount: ").Append(MaxAmount).Append("\n");
+sb.Append("  Method: ").Append(Method).Append("\n");
+sb.Append("  MinAmount: ").Append(MinAmount).Append("\n");
+sb.Append("  PointsPerCent: ").Append(PointsPerCent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,27 +138,19 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.FlatPoints != null)
                     hash = hash * 59 + this.FlatPoints.GetHashCode();
-                
                 if (this.MaxAmount != null)
                     hash = hash * 59 + this.MaxAmount.GetHashCode();
-                
                 if (this.Method != null)
                     hash = hash * 59 + this.Method.GetHashCode();
-                
                 if (this.MinAmount != null)
                     hash = hash * 59 + this.MinAmount.GetHashCode();
-                
                 if (this.PointsPerCent != null)
                     hash = hash * 59 + this.PointsPerCent.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

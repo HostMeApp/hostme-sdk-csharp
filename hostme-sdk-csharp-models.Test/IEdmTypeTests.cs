@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmType> (instance, "instance is a IEdmType");
         }
 
-        
         /// <summary>
         /// Test the property 'TypeKind' 
         /// </summary>
@@ -61,10 +58,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TypeKind' 
         }
-        
 
     }
 
 }
-
-

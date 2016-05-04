@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -103,15 +101,14 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RedeemRequest {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Submited: ").Append(Submited).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  StatusComment: ").Append(StatusComment).Append("\n");
-            sb.Append("  Closed: ").Append(Closed).Append("\n");
-            sb.Append("  RewardId: ").Append(RewardId).Append("\n");
-            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
-            sb.Append("  MemberInfo: ").Append(MemberInfo).Append("\n");
-            sb.Append("  RewardDetails: ").Append(RewardDetails).Append("\n");
-            
+sb.Append("  Submited: ").Append(Submited).Append("\n");
+sb.Append("  Status: ").Append(Status).Append("\n");
+sb.Append("  StatusComment: ").Append(StatusComment).Append("\n");
+sb.Append("  Closed: ").Append(Closed).Append("\n");
+sb.Append("  RewardId: ").Append(RewardId).Append("\n");
+sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
+sb.Append("  MemberInfo: ").Append(MemberInfo).Append("\n");
+sb.Append("  RewardDetails: ").Append(RewardDetails).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -206,39 +203,27 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Submited != null)
                     hash = hash * 59 + this.Submited.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.StatusComment != null)
                     hash = hash * 59 + this.StatusComment.GetHashCode();
-                
                 if (this.Closed != null)
                     hash = hash * 59 + this.Closed.GetHashCode();
-                
                 if (this.RewardId != null)
                     hash = hash * 59 + this.RewardId.GetHashCode();
-                
                 if (this.TableNumber != null)
                     hash = hash * 59 + this.TableNumber.GetHashCode();
-                
                 if (this.MemberInfo != null)
                     hash = hash * 59 + this.MemberInfo.GetHashCode();
-                
                 if (this.RewardDetails != null)
                     hash = hash * 59 + this.RewardDetails.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

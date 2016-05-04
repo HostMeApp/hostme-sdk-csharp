@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -30,12 +28,6 @@ namespace HostMe.Sdk.Models
         public List<string> Allergy { get; set; }
     
         /// <summary>
-        /// Gets or Sets Note
-        /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=true)]
-        public string Note { get; set; }
-    
-        /// <summary>
         /// Gets or Sets Vegetarian
         /// </summary>
         [DataMember(Name="vegetarian", EmitDefaultValue=true)]
@@ -50,9 +42,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Profile {\n");
             sb.Append("  Allergy: ").Append(Allergy).Append("\n");
-            sb.Append("  Note: ").Append(Note).Append("\n");
-            sb.Append("  Vegetarian: ").Append(Vegetarian).Append("\n");
-            
+sb.Append("  Vegetarian: ").Append(Vegetarian).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,11 +85,6 @@ namespace HostMe.Sdk.Models
                     this.Allergy.SequenceEqual(other.Allergy)
                 ) && 
                 (
-                    this.Note == other.Note ||
-                    this.Note != null &&
-                    this.Note.Equals(other.Note)
-                ) && 
-                (
                     this.Vegetarian == other.Vegetarian ||
                     this.Vegetarian != null &&
                     this.Vegetarian.Equals(other.Vegetarian)
@@ -117,21 +102,13 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Allergy != null)
                     hash = hash * 59 + this.Allergy.GetHashCode();
-                
-                if (this.Note != null)
-                    hash = hash * 59 + this.Note.GetHashCode();
-                
                 if (this.Vegetarian != null)
                     hash = hash * 59 + this.Vegetarian.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Count> (instance, "instance is a Count");
         }
 
-        
         /// <summary>
         /// Test the property '_Count' 
         /// </summary>
@@ -61,10 +58,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property '_Count' 
         }
-        
 
     }
 
 }
-
-

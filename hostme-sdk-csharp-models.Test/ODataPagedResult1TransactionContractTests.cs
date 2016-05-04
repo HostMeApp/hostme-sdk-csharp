@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ODataPagedResult1TransactionContract> (instance, "instance is a ODataPagedResult1TransactionContract");
         }
 
-        
         /// <summary>
         /// Test the property 'Results' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Results' 
         }
-        
         /// <summary>
         /// Test the property 'Count' 
         /// </summary>
@@ -70,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Count' 
         }
-        
 
     }
 
 }
-
-

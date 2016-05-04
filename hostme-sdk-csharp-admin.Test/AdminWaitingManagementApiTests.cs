@@ -11,7 +11,6 @@ using HostMe.Sdk.Client;
 using HostMe.Sdk.Api;
 using HostMe.Sdk.Model;
 
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -62,8 +61,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddConfirmedWaiting'
             int? restaurantId = null; // TODO: replace null with proper value
-            PanelConfirmation conf = null; // TODO: replace null with proper value
-            
+PanelConfirmation conf = null; // TODO: replace null with proper value
             var response = instance.AddConfirmedWaiting(restaurantId, conf);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -76,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'AddNewWaiting'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.AddNewWaiting(restaurantId);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -89,9 +86,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CallWaitingParty'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            string tableNumber = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
+string tableNumber = null; // TODO: replace null with proper value
             instance.CallWaitingParty(restaurantId, waitingItemId, tableNumber);
              
         }
@@ -104,8 +100,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'Close'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.Close(restaurantId, waitingItemId);
              
         }
@@ -118,9 +113,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CloseAsCanceled'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            string origin = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
+string origin = null; // TODO: replace null with proper value
             instance.CloseAsCanceled(restaurantId, waitingItemId, origin);
              
         }
@@ -133,8 +127,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'CloseAsSeated'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.CloseAsSeated(restaurantId, waitingItemId);
              
         }
@@ -147,9 +140,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'Confirm'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            PanelConfirmation conf = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
+PanelConfirmation conf = null; // TODO: replace null with proper value
             var response = instance.Confirm(restaurantId, waitingItemId, conf);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -162,10 +154,9 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetAllWaitings'
             int? restaurantId = null; // TODO: replace null with proper value
-            string queryOptions = null; // TODO: replace null with proper value
-            string area = null; // TODO: replace null with proper value
-            int? groupSize = null; // TODO: replace null with proper value
-            
+string queryOptions = null; // TODO: replace null with proper value
+string area = null; // TODO: replace null with proper value
+int? groupSize = null; // TODO: replace null with proper value
             var response = instance.GetAllWaitings(restaurantId, queryOptions, area, groupSize);
             Assert.IsInstanceOf<List<WaitingItem>> (response, "response is List<WaitingItem>"); 
         }
@@ -178,8 +169,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetMessages'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             var response = instance.GetMessages(restaurantId, waitingItemId);
             Assert.IsInstanceOf<List<Message>> (response, "response is List<Message>"); 
         }
@@ -192,8 +182,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetRestaurantWaitingsStatistic'
             int? restaurantId = null; // TODO: replace null with proper value
-            string area = null; // TODO: replace null with proper value
-            
+string area = null; // TODO: replace null with proper value
             var response = instance.GetRestaurantWaitingsStatistic(restaurantId, area);
             Assert.IsInstanceOf<WaitingsStatistic> (response, "response is WaitingsStatistic"); 
         }
@@ -206,7 +195,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetTodayStats'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetTodayStats(restaurantId);
             Assert.IsInstanceOf<WaitingStats> (response, "response is WaitingStats"); 
         }
@@ -219,7 +207,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetUnreadMessagesCount'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetUnreadMessagesCount(restaurantId);
             Assert.IsInstanceOf<Count> (response, "response is Count"); 
         }
@@ -232,8 +219,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingById'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             var response = instance.GetWaitingById(restaurantId, waitingItemId);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -246,7 +232,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingSettings'
             int? restaurantId = null; // TODO: replace null with proper value
-            
             var response = instance.GetWaitingSettings(restaurantId);
             Assert.IsInstanceOf<WaitingSettings> (response, "response is WaitingSettings"); 
         }
@@ -259,9 +244,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByGroup'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByGroup(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -274,9 +258,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByHour'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByHour(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -289,9 +272,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByLine'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByLine(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -304,9 +286,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByMeal'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByMeal(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -319,9 +300,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByWeek'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByWeek(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -334,9 +314,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingTimeByWeekDay'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingTimeByWeekDay(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -349,9 +328,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingsForPeriod'
             int? restaurantId = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingsForPeriod(restaurantId, from, to);
             Assert.IsInstanceOf<List<WaitingReportItem>> (response, "response is List<WaitingReportItem>"); 
         }
@@ -364,10 +342,9 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'GetWaitingsGroupBy'
             int? restaurantId = null; // TODO: replace null with proper value
-            string groupBy = null; // TODO: replace null with proper value
-            DateTimeOffset? from = null; // TODO: replace null with proper value
-            DateTimeOffset? to = null; // TODO: replace null with proper value
-            
+string groupBy = null; // TODO: replace null with proper value
+DateTimeOffset? from = null; // TODO: replace null with proper value
+DateTimeOffset? to = null; // TODO: replace null with proper value
             var response = instance.GetWaitingsGroupBy(restaurantId, groupBy, from, to);
             Assert.IsInstanceOf<List<WaitingsStatReportItem>> (response, "response is List<WaitingsStatReportItem>"); 
         }
@@ -380,9 +357,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'Incoming'
             string from = null; // TODO: replace null with proper value
-            string to = null; // TODO: replace null with proper value
-            string body = null; // TODO: replace null with proper value
-            
+string to = null; // TODO: replace null with proper value
+string body = null; // TODO: replace null with proper value
             var response = instance.Incoming(from, to, body);
             Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
@@ -395,8 +371,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'MarkAllMessagesAsRead'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.MarkAllMessagesAsRead(restaurantId, waitingItemId);
              
         }
@@ -409,8 +384,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'PutOnHold'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.PutOnHold(restaurantId, waitingItemId);
              
         }
@@ -423,8 +397,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'ReOpenWaiting'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             var response = instance.ReOpenWaiting(restaurantId, waitingItemId);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
@@ -437,10 +410,9 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SendMessage'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            string origin = null; // TODO: replace null with proper value
-            CreateMessage createMessage = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
+string origin = null; // TODO: replace null with proper value
+CreateMessage createMessage = null; // TODO: replace null with proper value
             var response = instance.SendMessage(restaurantId, waitingItemId, origin, createMessage);
             Assert.IsInstanceOf<Message> (response, "response is Message"); 
         }
@@ -453,8 +425,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'SetWaitingSettings'
             int? restaurantId = null; // TODO: replace null with proper value
-            WaitingSettings settings = null; // TODO: replace null with proper value
-            
+WaitingSettings settings = null; // TODO: replace null with proper value
             instance.SetWaitingSettings(restaurantId, settings);
              
         }
@@ -467,8 +438,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'TakeOffHold'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
             instance.TakeOffHold(restaurantId, waitingItemId);
              
         }
@@ -481,9 +451,8 @@ namespace HostMe.Sdk.Test
         {
             // TODO: add unit test for the method 'UpdateWaiting'
             int? restaurantId = null; // TODO: replace null with proper value
-            int? waitingItemId = null; // TODO: replace null with proper value
-            UpdateWaitingItem item = null; // TODO: replace null with proper value
-            
+int? waitingItemId = null; // TODO: replace null with proper value
+UpdateWaitingItem item = null; // TODO: replace null with proper value
             var response = instance.UpdateWaiting(restaurantId, waitingItemId, item);
             Assert.IsInstanceOf<WaitingItem> (response, "response is WaitingItem"); 
         }
