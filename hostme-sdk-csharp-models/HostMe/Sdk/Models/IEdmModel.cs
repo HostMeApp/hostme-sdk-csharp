@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -56,10 +54,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class IEdmModel {\n");
             sb.Append("  SchemaElements: ").Append(SchemaElements).Append("\n");
-            sb.Append("  VocabularyAnnotations: ").Append(VocabularyAnnotations).Append("\n");
-            sb.Append("  ReferencedModels: ").Append(ReferencedModels).Append("\n");
-            sb.Append("  DirectValueAnnotationsManager: ").Append(DirectValueAnnotationsManager).Append("\n");
-            
+sb.Append("  VocabularyAnnotations: ").Append(VocabularyAnnotations).Append("\n");
+sb.Append("  ReferencedModels: ").Append(ReferencedModels).Append("\n");
+sb.Append("  DirectValueAnnotationsManager: ").Append(DirectValueAnnotationsManager).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,24 +126,17 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.SchemaElements != null)
                     hash = hash * 59 + this.SchemaElements.GetHashCode();
-                
                 if (this.VocabularyAnnotations != null)
                     hash = hash * 59 + this.VocabularyAnnotations.GetHashCode();
-                
                 if (this.ReferencedModels != null)
                     hash = hash * 59 + this.ReferencedModels.GetHashCode();
-                
                 if (this.DirectValueAnnotationsManager != null)
                     hash = hash * 59 + this.DirectValueAnnotationsManager.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

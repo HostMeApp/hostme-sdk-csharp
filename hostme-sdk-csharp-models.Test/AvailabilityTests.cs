@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<Availability> (instance, "instance is a Availability");
         }
 
-        
         /// <summary>
         /// Test the property 'AcceptReservations' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AcceptReservations' 
         }
-        
         /// <summary>
         /// Test the property 'AvailabilityLevel' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AvailabilityLevel' 
         }
-        
         /// <summary>
         /// Test the property 'InWaitCovers' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'InWaitCovers' 
         }
-        
         /// <summary>
         /// Test the property 'MaxCoversForSlot' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MaxCoversForSlot' 
         }
-        
         /// <summary>
         /// Test the property 'Open' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Open' 
         }
-        
         /// <summary>
         /// Test the property 'RecommendedTables' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RecommendedTables' 
         }
-        
         /// <summary>
         /// Test the property 'RequestedTime' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RequestedTime' 
         }
-        
         /// <summary>
         /// Test the property 'ReservedCovers' 
         /// </summary>
@@ -124,7 +114,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservedCovers' 
         }
-        
         /// <summary>
         /// Test the property 'Time' 
         /// </summary>
@@ -133,10 +122,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Time' 
         }
-        
 
     }
 
 }
-
-

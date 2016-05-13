@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -95,7 +93,7 @@ namespace HostMe.Sdk.Models
         /// Gets or Sets Time
         /// </summary>
         [DataMember(Name="time", EmitDefaultValue=true)]
-        public string Time { get; set; }
+        public TimeSpan? Time { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -106,15 +104,14 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class Availability {\n");
             sb.Append("  AcceptReservations: ").Append(AcceptReservations).Append("\n");
-            sb.Append("  AvailabilityLevel: ").Append(AvailabilityLevel).Append("\n");
-            sb.Append("  InWaitCovers: ").Append(InWaitCovers).Append("\n");
-            sb.Append("  MaxCoversForSlot: ").Append(MaxCoversForSlot).Append("\n");
-            sb.Append("  Open: ").Append(Open).Append("\n");
-            sb.Append("  RecommendedTables: ").Append(RecommendedTables).Append("\n");
-            sb.Append("  RequestedTime: ").Append(RequestedTime).Append("\n");
-            sb.Append("  ReservedCovers: ").Append(ReservedCovers).Append("\n");
-            sb.Append("  Time: ").Append(Time).Append("\n");
-            
+sb.Append("  AvailabilityLevel: ").Append(AvailabilityLevel).Append("\n");
+sb.Append("  InWaitCovers: ").Append(InWaitCovers).Append("\n");
+sb.Append("  MaxCoversForSlot: ").Append(MaxCoversForSlot).Append("\n");
+sb.Append("  Open: ").Append(Open).Append("\n");
+sb.Append("  RecommendedTables: ").Append(RecommendedTables).Append("\n");
+sb.Append("  RequestedTime: ").Append(RequestedTime).Append("\n");
+sb.Append("  ReservedCovers: ").Append(ReservedCovers).Append("\n");
+sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -209,39 +206,27 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AcceptReservations != null)
                     hash = hash * 59 + this.AcceptReservations.GetHashCode();
-                
                 if (this.AvailabilityLevel != null)
                     hash = hash * 59 + this.AvailabilityLevel.GetHashCode();
-                
                 if (this.InWaitCovers != null)
                     hash = hash * 59 + this.InWaitCovers.GetHashCode();
-                
                 if (this.MaxCoversForSlot != null)
                     hash = hash * 59 + this.MaxCoversForSlot.GetHashCode();
-                
                 if (this.Open != null)
                     hash = hash * 59 + this.Open.GetHashCode();
-                
                 if (this.RecommendedTables != null)
                     hash = hash * 59 + this.RecommendedTables.GetHashCode();
-                
                 if (this.RequestedTime != null)
                     hash = hash * 59 + this.RequestedTime.GetHashCode();
-                
                 if (this.ReservedCovers != null)
                     hash = hash * 59 + this.ReservedCovers.GetHashCode();
-                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

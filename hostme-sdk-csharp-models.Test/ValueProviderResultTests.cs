@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ValueProviderResult> (instance, "instance is a ValueProviderResult");
         }
 
-        
         /// <summary>
         /// Test the property 'AttemptedValue' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'AttemptedValue' 
         }
-        
         /// <summary>
         /// Test the property 'Culture' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Culture' 
         }
-        
         /// <summary>
         /// Test the property 'RawValue' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'RawValue' 
         }
-        
 
     }
 
 }
-
-

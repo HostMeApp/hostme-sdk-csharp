@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<PhoneConfirmation> (instance, "instance is a PhoneConfirmation");
         }
 
-        
         /// <summary>
         /// Test the property 'DeviceType' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'DeviceType' 
         }
-        
         /// <summary>
         /// Test the property 'CustomerName' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CustomerName' 
         }
-        
         /// <summary>
         /// Test the property 'NotificationUrl' 
         /// </summary>
@@ -79,10 +74,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'NotificationUrl' 
         }
-        
 
     }
 
 }
-
-

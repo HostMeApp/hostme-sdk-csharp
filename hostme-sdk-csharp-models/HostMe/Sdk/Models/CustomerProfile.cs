@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -80,14 +78,13 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class CustomerProfile {\n");
             sb.Append("  LastVisitDate: ").Append(LastVisitDate).Append("\n");
-            sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
-            sb.Append("  VisitsCount: ").Append(VisitsCount).Append("\n");
-            sb.Append("  FullName: ").Append(FullName).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
-            sb.Append("  Points: ").Append(Points).Append("\n");
-            sb.Append("  _CustomerProfile: ").Append(_CustomerProfile).Append("\n");
-            
+sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+sb.Append("  VisitsCount: ").Append(VisitsCount).Append("\n");
+sb.Append("  FullName: ").Append(FullName).Append("\n");
+sb.Append("  Status: ").Append(Status).Append("\n");
+sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
+sb.Append("  Points: ").Append(Points).Append("\n");
+sb.Append("  _CustomerProfile: ").Append(_CustomerProfile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,36 +174,25 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.LastVisitDate != null)
                     hash = hash * 59 + this.LastVisitDate.GetHashCode();
-                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
-                
                 if (this.VisitsCount != null)
                     hash = hash * 59 + this.VisitsCount.GetHashCode();
-                
                 if (this.FullName != null)
                     hash = hash * 59 + this.FullName.GetHashCode();
-                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                
                 if (this.MembershipLevel != null)
                     hash = hash * 59 + this.MembershipLevel.GetHashCode();
-                
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                
                 if (this._CustomerProfile != null)
                     hash = hash * 59 + this._CustomerProfile.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

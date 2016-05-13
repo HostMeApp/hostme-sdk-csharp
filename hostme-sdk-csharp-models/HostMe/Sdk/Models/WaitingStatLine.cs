@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -56,10 +54,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingStatLine {\n");
             sb.Append("  Area: ").Append(Area).Append("\n");
-            sb.Append("  AvgCallTime: ").Append(AvgCallTime).Append("\n");
-            sb.Append("  AvgSeatTime: ").Append(AvgSeatTime).Append("\n");
-            sb.Append("  TopSize: ").Append(TopSize).Append("\n");
-            
+sb.Append("  AvgCallTime: ").Append(AvgCallTime).Append("\n");
+sb.Append("  AvgSeatTime: ").Append(AvgSeatTime).Append("\n");
+sb.Append("  TopSize: ").Append(TopSize).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -129,24 +126,17 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Area != null)
                     hash = hash * 59 + this.Area.GetHashCode();
-                
                 if (this.AvgCallTime != null)
                     hash = hash * 59 + this.AvgCallTime.GetHashCode();
-                
                 if (this.AvgSeatTime != null)
                     hash = hash * 59 + this.AvgSeatTime.GetHashCode();
-                
                 if (this.TopSize != null)
                     hash = hash * 59 + this.TopSize.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

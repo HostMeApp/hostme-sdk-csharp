@@ -15,29 +15,35 @@ namespace HostMe.Sdk.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class StatusMessage :  IEquatable<StatusMessage>
+    public partial class MembershipVisitItem :  IEquatable<MembershipVisitItem>
     { 
     
        
         
     
         /// <summary>
-        /// Gets or Sets FromStatus
+        /// Gets or Sets Areas
         /// </summary>
-        [DataMember(Name="fromStatus", EmitDefaultValue=true)]
-        public string FromStatus { get; set; }
+        [DataMember(Name="areas", EmitDefaultValue=true)]
+        public string Areas { get; set; }
     
         /// <summary>
-        /// Gets or Sets ToStatus
+        /// Gets or Sets Table
         /// </summary>
-        [DataMember(Name="toStatus", EmitDefaultValue=true)]
-        public string ToStatus { get; set; }
+        [DataMember(Name="table", EmitDefaultValue=true)]
+        public string Table { get; set; }
     
         /// <summary>
-        /// Gets or Sets MessageTemplate
+        /// Gets or Sets GroupSize
         /// </summary>
-        [DataMember(Name="messageTemplate", EmitDefaultValue=true)]
-        public string MessageTemplate { get; set; }
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
+        public int? GroupSize { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets VisitDate
+        /// </summary>
+        [DataMember(Name="visitDate", EmitDefaultValue=true)]
+        public DateTimeOffset? VisitDate { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,10 +52,11 @@ namespace HostMe.Sdk.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StatusMessage {\n");
-            sb.Append("  FromStatus: ").Append(FromStatus).Append("\n");
-sb.Append("  ToStatus: ").Append(ToStatus).Append("\n");
-sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
+            sb.Append("class MembershipVisitItem {\n");
+            sb.Append("  Areas: ").Append(Areas).Append("\n");
+sb.Append("  Table: ").Append(Table).Append("\n");
+sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+sb.Append("  VisitDate: ").Append(VisitDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,15 +78,15 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StatusMessage);
+            return this.Equals(obj as MembershipVisitItem);
         }
 
         /// <summary>
-        /// Returns true if StatusMessage instances are equal
+        /// Returns true if MembershipVisitItem instances are equal
         /// </summary>
-        /// <param name="other">Instance of StatusMessage to be compared</param>
+        /// <param name="other">Instance of MembershipVisitItem to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StatusMessage other)
+        public bool Equals(MembershipVisitItem other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -87,19 +94,24 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
 
             return 
                 (
-                    this.FromStatus == other.FromStatus ||
-                    this.FromStatus != null &&
-                    this.FromStatus.Equals(other.FromStatus)
+                    this.Areas == other.Areas ||
+                    this.Areas != null &&
+                    this.Areas.Equals(other.Areas)
                 ) && 
                 (
-                    this.ToStatus == other.ToStatus ||
-                    this.ToStatus != null &&
-                    this.ToStatus.Equals(other.ToStatus)
+                    this.Table == other.Table ||
+                    this.Table != null &&
+                    this.Table.Equals(other.Table)
                 ) && 
                 (
-                    this.MessageTemplate == other.MessageTemplate ||
-                    this.MessageTemplate != null &&
-                    this.MessageTemplate.Equals(other.MessageTemplate)
+                    this.GroupSize == other.GroupSize ||
+                    this.GroupSize != null &&
+                    this.GroupSize.Equals(other.GroupSize)
+                ) && 
+                (
+                    this.VisitDate == other.VisitDate ||
+                    this.VisitDate != null &&
+                    this.VisitDate.Equals(other.VisitDate)
                 );
         }
 
@@ -114,12 +126,14 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.FromStatus != null)
-                    hash = hash * 59 + this.FromStatus.GetHashCode();
-                if (this.ToStatus != null)
-                    hash = hash * 59 + this.ToStatus.GetHashCode();
-                if (this.MessageTemplate != null)
-                    hash = hash * 59 + this.MessageTemplate.GetHashCode();
+                if (this.Areas != null)
+                    hash = hash * 59 + this.Areas.GetHashCode();
+                if (this.Table != null)
+                    hash = hash * 59 + this.Table.GetHashCode();
+                if (this.GroupSize != null)
+                    hash = hash * 59 + this.GroupSize.GetHashCode();
+                if (this.VisitDate != null)
+                    hash = hash * 59 + this.VisitDate.GetHashCode();
                 return hash;
             }
         }

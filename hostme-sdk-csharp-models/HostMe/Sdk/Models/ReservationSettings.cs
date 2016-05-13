@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -175,27 +173,26 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ReservationSettings {\n");
             sb.Append("  AvailabilityMethod: ").Append(AvailabilityMethod).Append("\n");
-            sb.Append("  ConfirmationMessageRequestTemplate: ").Append(ConfirmationMessageRequestTemplate).Append("\n");
-            sb.Append("  CoversAvailableForWait: ").Append(CoversAvailableForWait).Append("\n");
-            sb.Append("  CoversAvaliableForReservation: ").Append(CoversAvaliableForReservation).Append("\n");
-            sb.Append("  DefaultMaxCoversPerSlot: ").Append(DefaultMaxCoversPerSlot).Append("\n");
-            sb.Append("  EnableAutoScheduling: ").Append(EnableAutoScheduling).Append("\n");
-            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  MaxCoversPerSlotExceptions: ").Append(MaxCoversPerSlotExceptions).Append("\n");
-            sb.Append("  MaxMinutesLate: ").Append(MaxMinutesLate).Append("\n");
-            sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
-            sb.Append("  MiniutesToConfirm: ").Append(MiniutesToConfirm).Append("\n");
-            sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
-            sb.Append("  MinutesToNotifyManager: ").Append(MinutesToNotifyManager).Append("\n");
-            sb.Append("  RequireReservationConfirmation: ").Append(RequireReservationConfirmation).Append("\n");
-            sb.Append("  ReservationEmail: ").Append(ReservationEmail).Append("\n");
-            sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
-            sb.Append("  ReservationHoursStep: ").Append(ReservationHoursStep).Append("\n");
-            sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
-            sb.Append("  TableTurnOver: ").Append(TableTurnOver).Append("\n");
-            sb.Append("  TableTurnOverByGroup: ").Append(TableTurnOverByGroup).Append("\n");
-            sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
-            
+sb.Append("  ConfirmationMessageRequestTemplate: ").Append(ConfirmationMessageRequestTemplate).Append("\n");
+sb.Append("  CoversAvailableForWait: ").Append(CoversAvailableForWait).Append("\n");
+sb.Append("  CoversAvaliableForReservation: ").Append(CoversAvaliableForReservation).Append("\n");
+sb.Append("  DefaultMaxCoversPerSlot: ").Append(DefaultMaxCoversPerSlot).Append("\n");
+sb.Append("  EnableAutoScheduling: ").Append(EnableAutoScheduling).Append("\n");
+sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
+sb.Append("  MaxCoversPerSlotExceptions: ").Append(MaxCoversPerSlotExceptions).Append("\n");
+sb.Append("  MaxMinutesLate: ").Append(MaxMinutesLate).Append("\n");
+sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
+sb.Append("  MiniutesToConfirm: ").Append(MiniutesToConfirm).Append("\n");
+sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
+sb.Append("  MinutesToNotifyManager: ").Append(MinutesToNotifyManager).Append("\n");
+sb.Append("  RequireReservationConfirmation: ").Append(RequireReservationConfirmation).Append("\n");
+sb.Append("  ReservationEmail: ").Append(ReservationEmail).Append("\n");
+sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
+sb.Append("  ReservationHoursStep: ").Append(ReservationHoursStep).Append("\n");
+sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
+sb.Append("  TableTurnOver: ").Append(TableTurnOver).Append("\n");
+sb.Append("  TableTurnOverByGroup: ").Append(TableTurnOverByGroup).Append("\n");
+sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -350,75 +347,51 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.AvailabilityMethod != null)
                     hash = hash * 59 + this.AvailabilityMethod.GetHashCode();
-                
                 if (this.ConfirmationMessageRequestTemplate != null)
                     hash = hash * 59 + this.ConfirmationMessageRequestTemplate.GetHashCode();
-                
                 if (this.CoversAvailableForWait != null)
                     hash = hash * 59 + this.CoversAvailableForWait.GetHashCode();
-                
                 if (this.CoversAvaliableForReservation != null)
                     hash = hash * 59 + this.CoversAvaliableForReservation.GetHashCode();
-                
                 if (this.DefaultMaxCoversPerSlot != null)
                     hash = hash * 59 + this.DefaultMaxCoversPerSlot.GetHashCode();
-                
                 if (this.EnableAutoScheduling != null)
                     hash = hash * 59 + this.EnableAutoScheduling.GetHashCode();
-                
                 if (this.IsEnabled != null)
                     hash = hash * 59 + this.IsEnabled.GetHashCode();
-                
                 if (this.MaxCoversPerSlotExceptions != null)
                     hash = hash * 59 + this.MaxCoversPerSlotExceptions.GetHashCode();
-                
                 if (this.MaxMinutesLate != null)
                     hash = hash * 59 + this.MaxMinutesLate.GetHashCode();
-                
                 if (this.MaxPartySize != null)
                     hash = hash * 59 + this.MaxPartySize.GetHashCode();
-                
                 if (this.MiniutesToConfirm != null)
                     hash = hash * 59 + this.MiniutesToConfirm.GetHashCode();
-                
                 if (this.MinPartySize != null)
                     hash = hash * 59 + this.MinPartySize.GetHashCode();
-                
                 if (this.MinutesToNotifyManager != null)
                     hash = hash * 59 + this.MinutesToNotifyManager.GetHashCode();
-                
                 if (this.RequireReservationConfirmation != null)
                     hash = hash * 59 + this.RequireReservationConfirmation.GetHashCode();
-                
                 if (this.ReservationEmail != null)
                     hash = hash * 59 + this.ReservationEmail.GetHashCode();
-                
                 if (this.ReservationHours != null)
                     hash = hash * 59 + this.ReservationHours.GetHashCode();
-                
                 if (this.ReservationHoursStep != null)
                     hash = hash * 59 + this.ReservationHoursStep.GetHashCode();
-                
                 if (this.StatusMessages != null)
                     hash = hash * 59 + this.StatusMessages.GetHashCode();
-                
                 if (this.TableTurnOver != null)
                     hash = hash * 59 + this.TableTurnOver.GetHashCode();
-                
                 if (this.TableTurnOverByGroup != null)
                     hash = hash * 59 + this.TableTurnOverByGroup.GetHashCode();
-                
                 if (this.TotalCovers != null)
                     hash = hash * 59 + this.TotalCovers.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

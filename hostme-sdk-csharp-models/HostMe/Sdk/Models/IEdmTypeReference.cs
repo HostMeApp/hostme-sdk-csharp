@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -44,8 +42,7 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class IEdmTypeReference {\n");
             sb.Append("  IsNullable: ").Append(IsNullable).Append("\n");
-            sb.Append("  Definition: ").Append(Definition).Append("\n");
-            
+sb.Append("  Definition: ").Append(Definition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,18 +102,13 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.IsNullable != null)
                     hash = hash * 59 + this.IsNullable.GetHashCode();
-                
                 if (this.Definition != null)
                     hash = hash * 59 + this.Definition.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<RestaurantConfiguration> (instance, "instance is a RestaurantConfiguration");
         }
 
-        
         /// <summary>
         /// Test the property 'Settings' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Settings' 
         }
-        
         /// <summary>
         /// Test the property 'WaitingSettings' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WaitingSettings' 
         }
-        
         /// <summary>
         /// Test the property 'LoyaltySettings' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'LoyaltySettings' 
         }
-        
         /// <summary>
         /// Test the property 'ReservationSettings' 
         /// </summary>
@@ -88,10 +82,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ReservationSettings' 
         }
-        
 
     }
 
 }
-
-

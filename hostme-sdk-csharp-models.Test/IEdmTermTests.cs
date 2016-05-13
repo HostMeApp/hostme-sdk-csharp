@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<IEdmTerm> (instance, "instance is a IEdmTerm");
         }
 
-        
         /// <summary>
         /// Test the property 'TermKind' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'TermKind' 
         }
-        
         /// <summary>
         /// Test the property 'SchemaElementKind' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'SchemaElementKind' 
         }
-        
         /// <summary>
         /// Test the property '_Namespace' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property '_Namespace' 
         }
-        
         /// <summary>
         /// Test the property 'Name' 
         /// </summary>
@@ -88,10 +82,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Name' 
         }
-        
 
     }
 
 }
-
-

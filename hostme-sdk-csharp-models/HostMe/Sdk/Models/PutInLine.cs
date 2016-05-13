@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -92,16 +90,15 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class PutInLine {\n");
             sb.Append("  RestaurantId: ").Append(RestaurantId).Append("\n");
-            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
-            sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
-            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-            sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
-            sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
-            sb.Append("  Areas: ").Append(Areas).Append("\n");
-            sb.Append("  Note: ").Append(Note).Append("\n");
-            sb.Append("  HighChair: ").Append(HighChair).Append("\n");
-            sb.Append("  Stroller: ").Append(Stroller).Append("\n");
-            
+sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
+sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+sb.Append("  NotificationUrl: ").Append(NotificationUrl).Append("\n");
+sb.Append("  DeviceType: ").Append(DeviceType).Append("\n");
+sb.Append("  Areas: ").Append(Areas).Append("\n");
+sb.Append("  Note: ").Append(Note).Append("\n");
+sb.Append("  HighChair: ").Append(HighChair).Append("\n");
+sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,42 +198,29 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.RestaurantId != null)
                     hash = hash * 59 + this.RestaurantId.GetHashCode();
-                
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
-                
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
-                
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
-                
                 if (this.NotificationUrl != null)
                     hash = hash * 59 + this.NotificationUrl.GetHashCode();
-                
                 if (this.DeviceType != null)
                     hash = hash * 59 + this.DeviceType.GetHashCode();
-                
                 if (this.Areas != null)
                     hash = hash * 59 + this.Areas.GetHashCode();
-                
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
-                
                 if (this.HighChair != null)
                     hash = hash * 59 + this.HighChair.GetHashCode();
-                
                 if (this.Stroller != null)
                     hash = hash * 59 + this.Stroller.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

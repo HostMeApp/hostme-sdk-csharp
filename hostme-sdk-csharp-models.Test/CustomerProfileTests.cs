@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<CustomerProfile> (instance, "instance is a CustomerProfile");
         }
 
-        
         /// <summary>
         /// Test the property 'LastVisitDate' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'LastVisitDate' 
         }
-        
         /// <summary>
         /// Test the property 'PhoneNumber' 
         /// </summary>
@@ -70,7 +66,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
-        
         /// <summary>
         /// Test the property 'VisitsCount' 
         /// </summary>
@@ -79,7 +74,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'VisitsCount' 
         }
-        
         /// <summary>
         /// Test the property 'FullName' 
         /// </summary>
@@ -88,7 +82,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'FullName' 
         }
-        
         /// <summary>
         /// Test the property 'Status' 
         /// </summary>
@@ -97,7 +90,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Status' 
         }
-        
         /// <summary>
         /// Test the property 'MembershipLevel' 
         /// </summary>
@@ -106,7 +98,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'MembershipLevel' 
         }
-        
         /// <summary>
         /// Test the property 'Points' 
         /// </summary>
@@ -115,7 +106,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Points' 
         }
-        
         /// <summary>
         /// Test the property '_CustomerProfile' 
         /// </summary>
@@ -124,10 +114,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property '_CustomerProfile' 
         }
-        
 
     }
 
 }
-
-

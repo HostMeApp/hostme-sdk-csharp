@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -38,7 +36,6 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class ResetPassword {\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
-            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -93,15 +90,11 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

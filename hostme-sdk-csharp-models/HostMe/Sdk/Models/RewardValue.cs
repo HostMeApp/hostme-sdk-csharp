@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -73,10 +71,9 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RewardValue {\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Discount: ").Append(Discount).Append("\n");
-            sb.Append("  FreeMeal: ").Append(FreeMeal).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            
+sb.Append("  Discount: ").Append(Discount).Append("\n");
+sb.Append("  FreeMeal: ").Append(FreeMeal).Append("\n");
+sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,24 +143,17 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Amount != null)
                     hash = hash * 59 + this.Amount.GetHashCode();
-                
                 if (this.Discount != null)
                     hash = hash * 59 + this.Discount.GetHashCode();
-                
                 if (this.FreeMeal != null)
                     hash = hash * 59 + this.FreeMeal.GetHashCode();
-                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

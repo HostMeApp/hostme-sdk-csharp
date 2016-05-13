@@ -15,29 +15,23 @@ namespace HostMe.Sdk.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class StatusMessage :  IEquatable<StatusMessage>
+    public partial class ODataPagedResult1MembershipVisitItemContract :  IEquatable<ODataPagedResult1MembershipVisitItemContract>
     { 
     
        
         
     
         /// <summary>
-        /// Gets or Sets FromStatus
+        /// Gets or Sets Results
         /// </summary>
-        [DataMember(Name="fromStatus", EmitDefaultValue=true)]
-        public string FromStatus { get; set; }
+        [DataMember(Name="results", EmitDefaultValue=true)]
+        public List<MembershipVisitItem> Results { get; set; }
     
         /// <summary>
-        /// Gets or Sets ToStatus
+        /// Gets or Sets Count
         /// </summary>
-        [DataMember(Name="toStatus", EmitDefaultValue=true)]
-        public string ToStatus { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets MessageTemplate
-        /// </summary>
-        [DataMember(Name="messageTemplate", EmitDefaultValue=true)]
-        public string MessageTemplate { get; set; }
+        [DataMember(Name="count", EmitDefaultValue=true)]
+        public int? Count { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,10 +40,9 @@ namespace HostMe.Sdk.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StatusMessage {\n");
-            sb.Append("  FromStatus: ").Append(FromStatus).Append("\n");
-sb.Append("  ToStatus: ").Append(ToStatus).Append("\n");
-sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
+            sb.Append("class ODataPagedResult1MembershipVisitItemContract {\n");
+            sb.Append("  Results: ").Append(Results).Append("\n");
+sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,15 +64,15 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StatusMessage);
+            return this.Equals(obj as ODataPagedResult1MembershipVisitItemContract);
         }
 
         /// <summary>
-        /// Returns true if StatusMessage instances are equal
+        /// Returns true if ODataPagedResult1MembershipVisitItemContract instances are equal
         /// </summary>
-        /// <param name="other">Instance of StatusMessage to be compared</param>
+        /// <param name="other">Instance of ODataPagedResult1MembershipVisitItemContract to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StatusMessage other)
+        public bool Equals(ODataPagedResult1MembershipVisitItemContract other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -87,19 +80,14 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
 
             return 
                 (
-                    this.FromStatus == other.FromStatus ||
-                    this.FromStatus != null &&
-                    this.FromStatus.Equals(other.FromStatus)
+                    this.Results == other.Results ||
+                    this.Results != null &&
+                    this.Results.SequenceEqual(other.Results)
                 ) && 
                 (
-                    this.ToStatus == other.ToStatus ||
-                    this.ToStatus != null &&
-                    this.ToStatus.Equals(other.ToStatus)
-                ) && 
-                (
-                    this.MessageTemplate == other.MessageTemplate ||
-                    this.MessageTemplate != null &&
-                    this.MessageTemplate.Equals(other.MessageTemplate)
+                    this.Count == other.Count ||
+                    this.Count != null &&
+                    this.Count.Equals(other.Count)
                 );
         }
 
@@ -114,12 +102,10 @@ sb.Append("  MessageTemplate: ").Append(MessageTemplate).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.FromStatus != null)
-                    hash = hash * 59 + this.FromStatus.GetHashCode();
-                if (this.ToStatus != null)
-                    hash = hash * 59 + this.ToStatus.GetHashCode();
-                if (this.MessageTemplate != null)
-                    hash = hash * 59 + this.MessageTemplate.GetHashCode();
+                if (this.Results != null)
+                    hash = hash * 59 + this.Results.GetHashCode();
+                if (this.Count != null)
+                    hash = hash * 59 + this.Count.GetHashCode();
                 return hash;
             }
         }

@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -122,21 +120,20 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class WaitingsStatReportItem {\n");
             sb.Append("  Dimensions: ").Append(Dimensions).Append("\n");
-            sb.Append("  TotalPartyCount: ").Append(TotalPartyCount).Append("\n");
-            sb.Append("  TotalSeatedCount: ").Append(TotalSeatedCount).Append("\n");
-            sb.Append("  TotalCanceledCount: ").Append(TotalCanceledCount).Append("\n");
-            sb.Append("  MinTimeToCall: ").Append(MinTimeToCall).Append("\n");
-            sb.Append("  AvgTimeToCall: ").Append(AvgTimeToCall).Append("\n");
-            sb.Append("  MaxTimeToCall: ").Append(MaxTimeToCall).Append("\n");
-            sb.Append("  MinTimeToSeat: ").Append(MinTimeToSeat).Append("\n");
-            sb.Append("  AvgTimeToSeat: ").Append(AvgTimeToSeat).Append("\n");
-            sb.Append("  MaxTimeToSeat: ").Append(MaxTimeToSeat).Append("\n");
-            sb.Append("  MinTimeToCancel: ").Append(MinTimeToCancel).Append("\n");
-            sb.Append("  AvgTimeToCancel: ").Append(AvgTimeToCancel).Append("\n");
-            sb.Append("  MaxTimeToCancel: ").Append(MaxTimeToCancel).Append("\n");
-            sb.Append("  MaxLine: ").Append(MaxLine).Append("\n");
-            sb.Append("  AvgLine: ").Append(AvgLine).Append("\n");
-            
+sb.Append("  TotalPartyCount: ").Append(TotalPartyCount).Append("\n");
+sb.Append("  TotalSeatedCount: ").Append(TotalSeatedCount).Append("\n");
+sb.Append("  TotalCanceledCount: ").Append(TotalCanceledCount).Append("\n");
+sb.Append("  MinTimeToCall: ").Append(MinTimeToCall).Append("\n");
+sb.Append("  AvgTimeToCall: ").Append(AvgTimeToCall).Append("\n");
+sb.Append("  MaxTimeToCall: ").Append(MaxTimeToCall).Append("\n");
+sb.Append("  MinTimeToSeat: ").Append(MinTimeToSeat).Append("\n");
+sb.Append("  AvgTimeToSeat: ").Append(AvgTimeToSeat).Append("\n");
+sb.Append("  MaxTimeToSeat: ").Append(MaxTimeToSeat).Append("\n");
+sb.Append("  MinTimeToCancel: ").Append(MinTimeToCancel).Append("\n");
+sb.Append("  AvgTimeToCancel: ").Append(AvgTimeToCancel).Append("\n");
+sb.Append("  MaxTimeToCancel: ").Append(MaxTimeToCancel).Append("\n");
+sb.Append("  MaxLine: ").Append(MaxLine).Append("\n");
+sb.Append("  AvgLine: ").Append(AvgLine).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -261,57 +258,39 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.Dimensions != null)
                     hash = hash * 59 + this.Dimensions.GetHashCode();
-                
                 if (this.TotalPartyCount != null)
                     hash = hash * 59 + this.TotalPartyCount.GetHashCode();
-                
                 if (this.TotalSeatedCount != null)
                     hash = hash * 59 + this.TotalSeatedCount.GetHashCode();
-                
                 if (this.TotalCanceledCount != null)
                     hash = hash * 59 + this.TotalCanceledCount.GetHashCode();
-                
                 if (this.MinTimeToCall != null)
                     hash = hash * 59 + this.MinTimeToCall.GetHashCode();
-                
                 if (this.AvgTimeToCall != null)
                     hash = hash * 59 + this.AvgTimeToCall.GetHashCode();
-                
                 if (this.MaxTimeToCall != null)
                     hash = hash * 59 + this.MaxTimeToCall.GetHashCode();
-                
                 if (this.MinTimeToSeat != null)
                     hash = hash * 59 + this.MinTimeToSeat.GetHashCode();
-                
                 if (this.AvgTimeToSeat != null)
                     hash = hash * 59 + this.AvgTimeToSeat.GetHashCode();
-                
                 if (this.MaxTimeToSeat != null)
                     hash = hash * 59 + this.MaxTimeToSeat.GetHashCode();
-                
                 if (this.MinTimeToCancel != null)
                     hash = hash * 59 + this.MinTimeToCancel.GetHashCode();
-                
                 if (this.AvgTimeToCancel != null)
                     hash = hash * 59 + this.AvgTimeToCancel.GetHashCode();
-                
                 if (this.MaxTimeToCancel != null)
                     hash = hash * 59 + this.MaxTimeToCancel.GetHashCode();
-                
                 if (this.MaxLine != null)
                     hash = hash * 59 + this.MaxLine.GetHashCode();
-                
                 if (this.AvgLine != null)
                     hash = hash * 59 + this.AvgLine.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

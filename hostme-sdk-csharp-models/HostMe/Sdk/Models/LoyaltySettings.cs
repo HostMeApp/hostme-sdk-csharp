@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -68,12 +66,11 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class LoyaltySettings {\n");
             sb.Append("  CheckinPoints: ").Append(CheckinPoints).Append("\n");
-            sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
-            sb.Append("  MembershipLevelRules: ").Append(MembershipLevelRules).Append("\n");
-            sb.Append("  PurchasePointsRules: ").Append(PurchasePointsRules).Append("\n");
-            sb.Append("  SignupPoints: ").Append(SignupPoints).Append("\n");
-            sb.Append("  WaitingPointsRules: ").Append(WaitingPointsRules).Append("\n");
-            
+sb.Append("  IsEnabled: ").Append(IsEnabled).Append("\n");
+sb.Append("  MembershipLevelRules: ").Append(MembershipLevelRules).Append("\n");
+sb.Append("  PurchasePointsRules: ").Append(PurchasePointsRules).Append("\n");
+sb.Append("  SignupPoints: ").Append(SignupPoints).Append("\n");
+sb.Append("  WaitingPointsRules: ").Append(WaitingPointsRules).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,30 +150,21 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.CheckinPoints != null)
                     hash = hash * 59 + this.CheckinPoints.GetHashCode();
-                
                 if (this.IsEnabled != null)
                     hash = hash * 59 + this.IsEnabled.GetHashCode();
-                
                 if (this.MembershipLevelRules != null)
                     hash = hash * 59 + this.MembershipLevelRules.GetHashCode();
-                
                 if (this.PurchasePointsRules != null)
                     hash = hash * 59 + this.PurchasePointsRules.GetHashCode();
-                
                 if (this.SignupPoints != null)
                     hash = hash * 59 + this.SignupPoints.GetHashCode();
-                
                 if (this.WaitingPointsRules != null)
                     hash = hash * 59 + this.WaitingPointsRules.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }

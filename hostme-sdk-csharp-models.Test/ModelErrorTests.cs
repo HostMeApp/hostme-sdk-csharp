@@ -9,8 +9,6 @@ using HostMe.Sdk.Model;
 using HostMe.Sdk.Client;
 using System.Reflection;
 
-
-
 namespace HostMe.Sdk.Test
 {
     /// <summary>
@@ -52,7 +50,6 @@ namespace HostMe.Sdk.Test
             Assert.IsInstanceOf<ModelError> (instance, "instance is a ModelError");
         }
 
-        
         /// <summary>
         /// Test the property 'Exception' 
         /// </summary>
@@ -61,7 +58,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Exception' 
         }
-        
         /// <summary>
         /// Test the property 'ErrorMessage' 
         /// </summary>
@@ -70,10 +66,7 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'ErrorMessage' 
         }
-        
 
     }
 
 }
-
-

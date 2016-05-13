@@ -9,8 +9,6 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-
-
 namespace HostMe.Sdk.Models
 {
     /// <summary>
@@ -194,33 +192,32 @@ namespace HostMe.Sdk.Models
             var sb = new StringBuilder();
             sb.Append("class RestaurantInfo {\n");
             sb.Append("  HoursInterval: ").Append(HoursInterval).Append("\n");
-            sb.Append("  City: ").Append(City).Append("\n");
-            sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
-            sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
-            sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
-            sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
-            sb.Append("  SeatingZones: ").Append(SeatingZones).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Address: ").Append(Address).Append("\n");
-            sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
-            sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
-            sb.Append("  TwitterAccount: ").Append(TwitterAccount).Append("\n");
-            sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
-            sb.Append("  FoursquareId: ").Append(FoursquareId).Append("\n");
-            sb.Append("  Phone: ").Append(Phone).Append("\n");
-            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            sb.Append("  Lat: ").Append(Lat).Append("\n");
-            sb.Append("  Lon: ").Append(Lon).Append("\n");
-            sb.Append("  HasHostmeSystem: ").Append(HasHostmeSystem).Append("\n");
-            sb.Append("  Distance: ").Append(Distance).Append("\n");
-            sb.Append("  HasLoyaltyProgram: ").Append(HasLoyaltyProgram).Append("\n");
-            sb.Append("  AcceptRemouteLine: ").Append(AcceptRemouteLine).Append("\n");
-            sb.Append("  AcceptReservation: ").Append(AcceptReservation).Append("\n");
-            sb.Append("  AllowManualHold: ").Append(AllowManualHold).Append("\n");
-            sb.Append("  CurrentLineStats: ").Append(CurrentLineStats).Append("\n");
-            sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\n");
-            
+sb.Append("  City: ").Append(City).Append("\n");
+sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
+sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
+sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
+sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
+sb.Append("  SeatingZones: ").Append(SeatingZones).Append("\n");
+sb.Append("  Id: ").Append(Id).Append("\n");
+sb.Append("  Name: ").Append(Name).Append("\n");
+sb.Append("  Address: ").Append(Address).Append("\n");
+sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
+sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
+sb.Append("  TwitterAccount: ").Append(TwitterAccount).Append("\n");
+sb.Append("  WebsiteUrl: ").Append(WebsiteUrl).Append("\n");
+sb.Append("  FoursquareId: ").Append(FoursquareId).Append("\n");
+sb.Append("  Phone: ").Append(Phone).Append("\n");
+sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+sb.Append("  Lat: ").Append(Lat).Append("\n");
+sb.Append("  Lon: ").Append(Lon).Append("\n");
+sb.Append("  HasHostmeSystem: ").Append(HasHostmeSystem).Append("\n");
+sb.Append("  Distance: ").Append(Distance).Append("\n");
+sb.Append("  HasLoyaltyProgram: ").Append(HasLoyaltyProgram).Append("\n");
+sb.Append("  AcceptRemouteLine: ").Append(AcceptRemouteLine).Append("\n");
+sb.Append("  AcceptReservation: ").Append(AcceptReservation).Append("\n");
+sb.Append("  AllowManualHold: ").Append(AllowManualHold).Append("\n");
+sb.Append("  CurrentLineStats: ").Append(CurrentLineStats).Append("\n");
+sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -405,93 +402,63 @@ namespace HostMe.Sdk.Models
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                
                 if (this.HoursInterval != null)
                     hash = hash * 59 + this.HoursInterval.GetHashCode();
-                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
-                
                 if (this.MaxPartySize != null)
                     hash = hash * 59 + this.MaxPartySize.GetHashCode();
-                
                 if (this.MinPartySize != null)
                     hash = hash * 59 + this.MinPartySize.GetHashCode();
-                
                 if (this.OpeningHours != null)
                     hash = hash * 59 + this.OpeningHours.GetHashCode();
-                
                 if (this.ReservationHours != null)
                     hash = hash * 59 + this.ReservationHours.GetHashCode();
-                
                 if (this.SeatingZones != null)
                     hash = hash * 59 + this.SeatingZones.GetHashCode();
-                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
-                
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();
-                
                 if (this.FacebookId != null)
                     hash = hash * 59 + this.FacebookId.GetHashCode();
-                
                 if (this.TwitterAccount != null)
                     hash = hash * 59 + this.TwitterAccount.GetHashCode();
-                
                 if (this.WebsiteUrl != null)
                     hash = hash * 59 + this.WebsiteUrl.GetHashCode();
-                
                 if (this.FoursquareId != null)
                     hash = hash * 59 + this.FoursquareId.GetHashCode();
-                
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
-                
                 if (this.Lat != null)
                     hash = hash * 59 + this.Lat.GetHashCode();
-                
                 if (this.Lon != null)
                     hash = hash * 59 + this.Lon.GetHashCode();
-                
                 if (this.HasHostmeSystem != null)
                     hash = hash * 59 + this.HasHostmeSystem.GetHashCode();
-                
                 if (this.Distance != null)
                     hash = hash * 59 + this.Distance.GetHashCode();
-                
                 if (this.HasLoyaltyProgram != null)
                     hash = hash * 59 + this.HasLoyaltyProgram.GetHashCode();
-                
                 if (this.AcceptRemouteLine != null)
                     hash = hash * 59 + this.AcceptRemouteLine.GetHashCode();
-                
                 if (this.AcceptReservation != null)
                     hash = hash * 59 + this.AcceptReservation.GetHashCode();
-                
                 if (this.AllowManualHold != null)
                     hash = hash * 59 + this.AllowManualHold.GetHashCode();
-                
                 if (this.CurrentLineStats != null)
                     hash = hash * 59 + this.CurrentLineStats.GetHashCode();
-                
                 if (this.ReservationIncomeEmail != null)
                     hash = hash * 59 + this.ReservationIncomeEmail.GetHashCode();
-                
                 return hash;
             }
         }
 
     }
-
-
 }
