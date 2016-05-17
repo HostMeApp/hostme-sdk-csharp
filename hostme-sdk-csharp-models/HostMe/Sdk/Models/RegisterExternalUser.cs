@@ -40,6 +40,12 @@ namespace HostMe.Sdk.Models
         public string PhoneNumber { get; set; }
     
         /// <summary>
+        /// Gets or Sets ExternalAccessToken
+        /// </summary>
+        [DataMember(Name="externalAccessToken", EmitDefaultValue=true)]
+        public string ExternalAccessToken { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -50,6 +56,7 @@ namespace HostMe.Sdk.Models
             sb.Append("  Email: ").Append(Email).Append("\n");
 sb.Append("  FullName: ").Append(FullName).Append("\n");
 sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+sb.Append("  ExternalAccessToken: ").Append(ExternalAccessToken).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -100,6 +107,11 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
                     this.PhoneNumber == other.PhoneNumber ||
                     this.PhoneNumber != null &&
                     this.PhoneNumber.Equals(other.PhoneNumber)
+                ) && 
+                (
+                    this.ExternalAccessToken == other.ExternalAccessToken ||
+                    this.ExternalAccessToken != null &&
+                    this.ExternalAccessToken.Equals(other.ExternalAccessToken)
                 );
         }
 
@@ -120,6 +132,8 @@ sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
                     hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                if (this.ExternalAccessToken != null)
+                    hash = hash * 59 + this.ExternalAccessToken.GetHashCode();
                 return hash;
             }
         }

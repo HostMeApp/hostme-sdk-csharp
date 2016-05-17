@@ -15,29 +15,23 @@ namespace HostMe.Sdk.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class MembershipUpdate :  IEquatable<MembershipUpdate>
+    public partial class WebHookFilter :  IEquatable<WebHookFilter>
     { 
     
        
         
     
         /// <summary>
-        /// Gets or Sets Note
+        /// Gets or Sets Name
         /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=true)]
-        public string Note { get; set; }
+        [DataMember(Name="name", EmitDefaultValue=true)]
+        public string Name { get; set; }
     
         /// <summary>
-        /// Gets or Sets Profile
+        /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=true)]
-        public Profile Profile { get; set; }
-    
-        /// <summary>
-        /// Gets or Sets Customer
-        /// </summary>
-        [DataMember(Name="customer", EmitDefaultValue=true)]
-        public UserProfile Customer { get; set; }
+        [DataMember(Name="description", EmitDefaultValue=true)]
+        public string Description { get; set; }
     
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,10 +40,9 @@ namespace HostMe.Sdk.Models
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class MembershipUpdate {\n");
-            sb.Append("  Note: ").Append(Note).Append("\n");
-sb.Append("  Profile: ").Append(Profile).Append("\n");
-sb.Append("  Customer: ").Append(Customer).Append("\n");
+            sb.Append("class WebHookFilter {\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -71,15 +64,15 @@ sb.Append("  Customer: ").Append(Customer).Append("\n");
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as MembershipUpdate);
+            return this.Equals(obj as WebHookFilter);
         }
 
         /// <summary>
-        /// Returns true if MembershipUpdate instances are equal
+        /// Returns true if WebHookFilter instances are equal
         /// </summary>
-        /// <param name="other">Instance of MembershipUpdate to be compared</param>
+        /// <param name="other">Instance of WebHookFilter to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(MembershipUpdate other)
+        public bool Equals(WebHookFilter other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -87,19 +80,14 @@ sb.Append("  Customer: ").Append(Customer).Append("\n");
 
             return 
                 (
-                    this.Note == other.Note ||
-                    this.Note != null &&
-                    this.Note.Equals(other.Note)
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.Profile == other.Profile ||
-                    this.Profile != null &&
-                    this.Profile.Equals(other.Profile)
-                ) && 
-                (
-                    this.Customer == other.Customer ||
-                    this.Customer != null &&
-                    this.Customer.Equals(other.Customer)
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 );
         }
 
@@ -114,12 +102,10 @@ sb.Append("  Customer: ").Append(Customer).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Note != null)
-                    hash = hash * 59 + this.Note.GetHashCode();
-                if (this.Profile != null)
-                    hash = hash * 59 + this.Profile.GetHashCode();
-                if (this.Customer != null)
-                    hash = hash * 59 + this.Customer.GetHashCode();
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
                 return hash;
             }
         }

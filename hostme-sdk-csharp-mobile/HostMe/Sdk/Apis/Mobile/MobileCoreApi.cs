@@ -263,25 +263,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        void Logout ();
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> LogoutWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns></returns>
         void PostProfileImage (byte[] image);
@@ -705,25 +686,6 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (UserProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserProfile>> GetUserProfileAsyncWithHttpInfo ();
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task LogoutAsync ();
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> LogoutAsyncWithHttpInfo ();
         /// <summary>
         /// 
         /// </summary>
@@ -2816,152 +2778,6 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (UserProfile) Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserProfile)));
             
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns></returns>
-        public void Logout ()
-        {
-             LogoutWithHttpInfo();
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> LogoutWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/mb/account/logout";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Logout: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Logout: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task LogoutAsync ()
-        {
-             await LogoutAsyncWithHttpInfo();
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> LogoutAsyncWithHttpInfo ()
-        {
-            
-    
-            var localVarPath = "/api/core/mb/account/logout";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-                                                            
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling Logout: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling Logout: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
         /// <summary>
         ///  

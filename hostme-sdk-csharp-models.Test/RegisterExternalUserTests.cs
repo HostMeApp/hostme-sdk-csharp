@@ -74,6 +74,14 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'PhoneNumber' 
         }
+        /// <summary>
+        /// Test the property 'ExternalAccessToken' 
+        /// </summary>
+        [Test]
+        public void ExternalAccessTokenTest()
+        {
+            // TODO: unit test for the property 'ExternalAccessToken' 
+        }
 
     }
 

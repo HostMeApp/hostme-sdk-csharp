@@ -191,17 +191,6 @@ string areas = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test Logout
-        /// </summary>
-        [Test]
-        public void LogoutTest()
-        {
-            // TODO: add unit test for the method 'Logout'
-                        instance.Logout();
-             
-        }
-        
-        /// <summary>
         /// Test PostProfileImage
         /// </summary>
         [Test]
