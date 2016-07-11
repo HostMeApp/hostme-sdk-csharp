@@ -108,6 +108,18 @@ namespace HostMe.Sdk.Models
         public DateTimeOffset? EstimatedReleaseTime { get; set; }
     
         /// <summary>
+        /// Gets or Sets Waiter
+        /// </summary>
+        [DataMember(Name="waiter", EmitDefaultValue=true)]
+        public WaiterMonitor Waiter { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=true)]
+        public string State { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -126,6 +138,8 @@ sb.Append("  NextReservationTime: ").Append(NextReservationTime).Append("\n");
 sb.Append("  AssignmentTime: ").Append(AssignmentTime).Append("\n");
 sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
 sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
+sb.Append("  Waiter: ").Append(Waiter).Append("\n");
+sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -216,6 +230,16 @@ sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
                     this.EstimatedReleaseTime == other.EstimatedReleaseTime ||
                     this.EstimatedReleaseTime != null &&
                     this.EstimatedReleaseTime.Equals(other.EstimatedReleaseTime)
+                ) && 
+                (
+                    this.Waiter == other.Waiter ||
+                    this.Waiter != null &&
+                    this.Waiter.Equals(other.Waiter)
+                ) && 
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 );
         }
 
@@ -252,6 +276,10 @@ sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
                     hash = hash * 59 + this.RegistrationTime.GetHashCode();
                 if (this.EstimatedReleaseTime != null)
                     hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
+                if (this.Waiter != null)
+                    hash = hash * 59 + this.Waiter.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 return hash;
             }
         }

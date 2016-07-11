@@ -138,6 +138,22 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'EstimatedReleaseTime' 
         }
+        /// <summary>
+        /// Test the property 'Waiter' 
+        /// </summary>
+        [Test]
+        public void WaiterTest()
+        {
+            // TODO: unit test for the property 'Waiter' 
+        }
+        /// <summary>
+        /// Test the property 'State' 
+        /// </summary>
+        [Test]
+        public void StateTest()
+        {
+            // TODO: unit test for the property 'State' 
+        }
 
     }
 

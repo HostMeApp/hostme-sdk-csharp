@@ -237,6 +237,20 @@ List<Table> combinations = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test SetTableState
+        /// </summary>
+        [Test]
+        public void SetTableStateTest()
+        {
+            // TODO: add unit test for the method 'SetTableState'
+            int? restaurantId = null; // TODO: replace null with proper value
+string tableNumber = null; // TODO: replace null with proper value
+ChangeTableState stateContract = null; // TODO: replace null with proper value
+            instance.SetTableState(restaurantId, tableNumber, stateContract);
+             
+        }
+        
+        /// <summary>
         /// Test UpdateFloor
         /// </summary>
         [Test]

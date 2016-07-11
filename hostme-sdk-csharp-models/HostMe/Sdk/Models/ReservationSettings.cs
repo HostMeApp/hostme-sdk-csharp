@@ -147,6 +147,12 @@ namespace HostMe.Sdk.Models
         public List<StatusMessage> StatusMessages { get; set; }
     
         /// <summary>
+        /// Gets or Sets TableStates
+        /// </summary>
+        [DataMember(Name="tableStates", EmitDefaultValue=true)]
+        public List<TableState> TableStates { get; set; }
+    
+        /// <summary>
         /// Gets or Sets TableTurnOver
         /// </summary>
         [DataMember(Name="tableTurnOver", EmitDefaultValue=true)]
@@ -190,6 +196,7 @@ sb.Append("  ReservationEmail: ").Append(ReservationEmail).Append("\n");
 sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
 sb.Append("  ReservationHoursStep: ").Append(ReservationHoursStep).Append("\n");
 sb.Append("  StatusMessages: ").Append(StatusMessages).Append("\n");
+sb.Append("  TableStates: ").Append(TableStates).Append("\n");
 sb.Append("  TableTurnOver: ").Append(TableTurnOver).Append("\n");
 sb.Append("  TableTurnOverByGroup: ").Append(TableTurnOverByGroup).Append("\n");
 sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
@@ -320,6 +327,11 @@ sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
                     this.StatusMessages.SequenceEqual(other.StatusMessages)
                 ) && 
                 (
+                    this.TableStates == other.TableStates ||
+                    this.TableStates != null &&
+                    this.TableStates.SequenceEqual(other.TableStates)
+                ) && 
+                (
                     this.TableTurnOver == other.TableTurnOver ||
                     this.TableTurnOver != null &&
                     this.TableTurnOver.Equals(other.TableTurnOver)
@@ -383,6 +395,8 @@ sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
                     hash = hash * 59 + this.ReservationHoursStep.GetHashCode();
                 if (this.StatusMessages != null)
                     hash = hash * 59 + this.StatusMessages.GetHashCode();
+                if (this.TableStates != null)
+                    hash = hash * 59 + this.TableStates.GetHashCode();
                 if (this.TableTurnOver != null)
                     hash = hash * 59 + this.TableTurnOver.GetHashCode();
                 if (this.TableTurnOverByGroup != null)

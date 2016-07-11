@@ -51,6 +51,30 @@ namespace HostMe.Sdk.Test
         }
 
         /// <summary>
+        /// Test the property 'Name' 
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO: unit test for the property 'Name' 
+        }
+        /// <summary>
+        /// Test the property 'TimeZone' 
+        /// </summary>
+        [Test]
+        public void TimeZoneTest()
+        {
+            // TODO: unit test for the property 'TimeZone' 
+        }
+        /// <summary>
+        /// Test the property 'Address' 
+        /// </summary>
+        [Test]
+        public void AddressTest()
+        {
+            // TODO: unit test for the property 'Address' 
+        }
+        /// <summary>
         /// Test the property 'Settings' 
         /// </summary>
         [Test]
@@ -81,6 +105,14 @@ namespace HostMe.Sdk.Test
         public void ReservationSettingsTest()
         {
             // TODO: unit test for the property 'ReservationSettings' 
+        }
+        /// <summary>
+        /// Test the property 'TableStates' 
+        /// </summary>
+        [Test]
+        public void TableStatesTest()
+        {
+            // TODO: unit test for the property 'TableStates' 
         }
 
     }

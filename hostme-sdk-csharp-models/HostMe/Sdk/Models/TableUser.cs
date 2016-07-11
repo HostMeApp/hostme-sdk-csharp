@@ -46,6 +46,12 @@ namespace HostMe.Sdk.Models
         public DateTimeOffset? EstimatedReleaseTime { get; set; }
     
         /// <summary>
+        /// Gets or Sets State
+        /// </summary>
+        [DataMember(Name="state", EmitDefaultValue=true)]
+        public string State { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -57,6 +63,7 @@ namespace HostMe.Sdk.Models
 sb.Append("  User: ").Append(User).Append("\n");
 sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
 sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
+sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -112,6 +119,11 @@ sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
                     this.EstimatedReleaseTime == other.EstimatedReleaseTime ||
                     this.EstimatedReleaseTime != null &&
                     this.EstimatedReleaseTime.Equals(other.EstimatedReleaseTime)
+                ) && 
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
                 );
         }
 
@@ -134,6 +146,8 @@ sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
                     hash = hash * 59 + this.RegistrationTime.GetHashCode();
                 if (this.EstimatedReleaseTime != null)
                     hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 return hash;
             }
         }

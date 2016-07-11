@@ -142,6 +142,12 @@ namespace HostMe.Sdk.Models
         public bool? IsPublished { get; set; }
     
         /// <summary>
+        /// Gets or Sets ReservationIncomeEmail
+        /// </summary>
+        [DataMember(Name="reservationIncomeEmail", EmitDefaultValue=true)]
+        public string ReservationIncomeEmail { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -169,6 +175,7 @@ sb.Append("  City: ").Append(City).Append("\n");
 sb.Append("  State: ").Append(State).Append("\n");
 sb.Append("  Country: ").Append(Country).Append("\n");
 sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
+sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -304,6 +311,11 @@ sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
                     this.IsPublished == other.IsPublished ||
                     this.IsPublished != null &&
                     this.IsPublished.Equals(other.IsPublished)
+                ) && 
+                (
+                    this.ReservationIncomeEmail == other.ReservationIncomeEmail ||
+                    this.ReservationIncomeEmail != null &&
+                    this.ReservationIncomeEmail.Equals(other.ReservationIncomeEmail)
                 );
         }
 
@@ -358,6 +370,8 @@ sb.Append("  IsPublished: ").Append(IsPublished).Append("\n");
                     hash = hash * 59 + this.Country.GetHashCode();
                 if (this.IsPublished != null)
                     hash = hash * 59 + this.IsPublished.GetHashCode();
+                if (this.ReservationIncomeEmail != null)
+                    hash = hash * 59 + this.ReservationIncomeEmail.GetHashCode();
                 return hash;
             }
         }

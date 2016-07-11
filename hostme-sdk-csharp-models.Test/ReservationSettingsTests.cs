@@ -195,6 +195,14 @@ namespace HostMe.Sdk.Test
             // TODO: unit test for the property 'StatusMessages' 
         }
         /// <summary>
+        /// Test the property 'TableStates' 
+        /// </summary>
+        [Test]
+        public void TableStatesTest()
+        {
+            // TODO: unit test for the property 'TableStates' 
+        }
+        /// <summary>
         /// Test the property 'TableTurnOver' 
         /// </summary>
         [Test]

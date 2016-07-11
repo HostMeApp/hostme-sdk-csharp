@@ -66,6 +66,46 @@ namespace HostMe.Sdk.Test
         }
         
         /// <summary>
+        /// Test AddRestaurantZone
+        /// </summary>
+        [Test]
+        public void AddRestaurantZoneTest()
+        {
+            // TODO: add unit test for the method 'AddRestaurantZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+ZoneCreate contract = null; // TODO: replace null with proper value
+            instance.AddRestaurantZone(restaurantId, contract);
+             
+        }
+        
+        /// <summary>
+        /// Test AddWaiter
+        /// </summary>
+        [Test]
+        public void AddWaiterTest()
+        {
+            // TODO: add unit test for the method 'AddWaiter'
+            int? restaurantId = null; // TODO: replace null with proper value
+WaiterCreate contract = null; // TODO: replace null with proper value
+            instance.AddWaiter(restaurantId, contract);
+             
+        }
+        
+        /// <summary>
+        /// Test AddWaiterToZone
+        /// </summary>
+        [Test]
+        public void AddWaiterToZoneTest()
+        {
+            // TODO: add unit test for the method 'AddWaiterToZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? zoneId = null; // TODO: replace null with proper value
+WaiterAssign contract = null; // TODO: replace null with proper value
+            instance.AddWaiterToZone(restaurantId, zoneId, contract);
+             
+        }
+        
+        /// <summary>
         /// Test ChangePassword
         /// </summary>
         [Test]
@@ -151,6 +191,32 @@ string invitationCode = null; // TODO: replace null with proper value
 string userId = null; // TODO: replace null with proper value
 string role = null; // TODO: replace null with proper value
             instance.DeleteUser(restaurantId, userId, role);
+             
+        }
+        
+        /// <summary>
+        /// Test DeleteWaiter
+        /// </summary>
+        [Test]
+        public void DeleteWaiterTest()
+        {
+            // TODO: add unit test for the method 'DeleteWaiter'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? waiterId = null; // TODO: replace null with proper value
+            instance.DeleteWaiter(restaurantId, waiterId);
+             
+        }
+        
+        /// <summary>
+        /// Test DeleteZone
+        /// </summary>
+        [Test]
+        public void DeleteZoneTest()
+        {
+            // TODO: add unit test for the method 'DeleteZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? zoneId = null; // TODO: replace null with proper value
+            instance.DeleteZone(restaurantId, zoneId);
              
         }
         
@@ -265,6 +331,18 @@ string tableNumber = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test GetRestaurantZones
+        /// </summary>
+        [Test]
+        public void GetRestaurantZonesTest()
+        {
+            // TODO: add unit test for the method 'GetRestaurantZones'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.GetRestaurantZones(restaurantId);
+            Assert.IsInstanceOf<List<Zone>> (response, "response is List<Zone>"); 
+        }
+        
+        /// <summary>
         /// Test GetUserProfile
         /// </summary>
         [Test]
@@ -285,6 +363,31 @@ string tableNumber = null; // TODO: replace null with proper value
             int? restaurantId = null; // TODO: replace null with proper value
             var response = instance.GetUsers(restaurantId);
             Assert.IsInstanceOf<List<RestaurantUserInfo>> (response, "response is List<RestaurantUserInfo>"); 
+        }
+        
+        /// <summary>
+        /// Test GetWaiterZones
+        /// </summary>
+        [Test]
+        public void GetWaiterZonesTest()
+        {
+            // TODO: add unit test for the method 'GetWaiterZones'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? waiterId = null; // TODO: replace null with proper value
+            var response = instance.GetWaiterZones(restaurantId, waiterId);
+            Assert.IsInstanceOf<List<Zone>> (response, "response is List<Zone>"); 
+        }
+        
+        /// <summary>
+        /// Test GetWaiters
+        /// </summary>
+        [Test]
+        public void GetWaitersTest()
+        {
+            // TODO: add unit test for the method 'GetWaiters'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.GetWaiters(restaurantId);
+            Assert.IsInstanceOf<List<Waiter>> (response, "response is List<Waiter>"); 
         }
         
         /// <summary>
@@ -347,6 +450,19 @@ string invitationCode = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test RemoveWaiterFromZone
+        /// </summary>
+        [Test]
+        public void RemoveWaiterFromZoneTest()
+        {
+            // TODO: add unit test for the method 'RemoveWaiterFromZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? zoneId = null; // TODO: replace null with proper value
+            instance.RemoveWaiterFromZone(restaurantId, zoneId);
+             
+        }
+        
+        /// <summary>
         /// Test ResetPassword
         /// </summary>
         [Test]
@@ -398,6 +514,20 @@ Restaurant value = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test UpdateRestaurantZone
+        /// </summary>
+        [Test]
+        public void UpdateRestaurantZoneTest()
+        {
+            // TODO: add unit test for the method 'UpdateRestaurantZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? zoneId = null; // TODO: replace null with proper value
+ZoneCreate contract = null; // TODO: replace null with proper value
+            instance.UpdateRestaurantZone(restaurantId, zoneId, contract);
+             
+        }
+        
+        /// <summary>
         /// Test UpdateUserProfile
         /// </summary>
         [Test]
@@ -406,6 +536,20 @@ Restaurant value = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'UpdateUserProfile'
             UserProfile profile = null; // TODO: replace null with proper value
             instance.UpdateUserProfile(profile);
+             
+        }
+        
+        /// <summary>
+        /// Test UpdateWaiterZone
+        /// </summary>
+        [Test]
+        public void UpdateWaiterZoneTest()
+        {
+            // TODO: add unit test for the method 'UpdateWaiterZone'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? waiterId = null; // TODO: replace null with proper value
+ZoneCreate contract = null; // TODO: replace null with proper value
+            instance.UpdateWaiterZone(restaurantId, waiterId, contract);
              
         }
         

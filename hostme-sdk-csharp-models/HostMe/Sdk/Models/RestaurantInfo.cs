@@ -178,12 +178,6 @@ namespace HostMe.Sdk.Models
         public WaitingStats CurrentLineStats { get; set; }
     
         /// <summary>
-        /// Gets or Sets ReservationIncomeEmail
-        /// </summary>
-        [DataMember(Name="reservationIncomeEmail", EmitDefaultValue=true)]
-        public string ReservationIncomeEmail { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -217,7 +211,6 @@ sb.Append("  AcceptRemouteLine: ").Append(AcceptRemouteLine).Append("\n");
 sb.Append("  AcceptReservation: ").Append(AcceptReservation).Append("\n");
 sb.Append("  AllowManualHold: ").Append(AllowManualHold).Append("\n");
 sb.Append("  CurrentLineStats: ").Append(CurrentLineStats).Append("\n");
-sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -383,11 +376,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     this.CurrentLineStats == other.CurrentLineStats ||
                     this.CurrentLineStats != null &&
                     this.CurrentLineStats.Equals(other.CurrentLineStats)
-                ) && 
-                (
-                    this.ReservationIncomeEmail == other.ReservationIncomeEmail ||
-                    this.ReservationIncomeEmail != null &&
-                    this.ReservationIncomeEmail.Equals(other.ReservationIncomeEmail)
                 );
         }
 
@@ -454,8 +442,6 @@ sb.Append("  ReservationIncomeEmail: ").Append(ReservationIncomeEmail).Append("\
                     hash = hash * 59 + this.AllowManualHold.GetHashCode();
                 if (this.CurrentLineStats != null)
                     hash = hash * 59 + this.CurrentLineStats.GetHashCode();
-                if (this.ReservationIncomeEmail != null)
-                    hash = hash * 59 + this.ReservationIncomeEmail.GetHashCode();
                 return hash;
             }
         }

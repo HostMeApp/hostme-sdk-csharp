@@ -347,6 +347,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns></returns>
+        void SetTableState (int? restaurantId, string tableNumber, ChangeTableState stateContract);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SetTableStateWithHttpInfo (int? restaurantId, string tableNumber, ChangeTableState stateContract);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
         /// <returns>Floor</returns>
@@ -690,6 +715,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="combinations"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> SetApprovedTableCombinationsAsyncWithHttpInfo (int? restaurantId, List<Table> combinations);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task SetTableStateAsync (int? restaurantId, string tableNumber, ChangeTableState stateContract);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetTableStateAsyncWithHttpInfo (int? restaurantId, string tableNumber, ChangeTableState stateContract);
         /// <summary>
         /// 
         /// </summary>
@@ -3219,6 +3269,200 @@ if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.Api
                 throw new ApiException (localVarStatusCode, "Error calling SetApprovedTableCombinations: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling SetApprovedTableCombinations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <param name="tableNumber"></param> 
+        /// <param name="stateContract"></param> 
+        /// <returns></returns>
+        public void SetTableState (int? restaurantId, string tableNumber, ChangeTableState stateContract)
+        {
+             SetTableStateWithHttpInfo(restaurantId, tableNumber, stateContract);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <param name="tableNumber"></param> 
+        /// <param name="stateContract"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SetTableStateWithHttpInfo (int? restaurantId, string tableNumber, ChangeTableState stateContract)
+        {
+            
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null)
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminTableManagementApi->SetTableState");
+            
+            // verify the required parameter 'tableNumber' is set
+            if (tableNumber == null)
+                throw new ApiException(400, "Missing required parameter 'tableNumber' when calling AdminTableManagementApi->SetTableState");
+            
+            // verify the required parameter 'stateContract' is set
+            if (stateContract == null)
+                throw new ApiException(400, "Missing required parameter 'stateContract' when calling AdminTableManagementApi->SetTableState");
+            
+    
+            var localVarPath = "/api/tm/admin/restaurants/{restaurantId}/tables/{tableNumber}/state";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // path parameter
+                                                if (stateContract.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(stateContract); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stateContract; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SetTableState: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SetTableState: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task SetTableStateAsync (int? restaurantId, string tableNumber, ChangeTableState stateContract)
+        {
+             await SetTableStateAsyncWithHttpInfo(restaurantId, tableNumber, stateContract);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="stateContract"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetTableStateAsyncWithHttpInfo (int? restaurantId, string tableNumber, ChangeTableState stateContract)
+        {
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling SetTableState");
+            // verify the required parameter 'tableNumber' is set
+            if (tableNumber == null) throw new ApiException(400, "Missing required parameter 'tableNumber' when calling SetTableState");
+            // verify the required parameter 'stateContract' is set
+            if (stateContract == null) throw new ApiException(400, "Missing required parameter 'stateContract' when calling SetTableState");
+            
+    
+            var localVarPath = "/api/tm/admin/restaurants/{restaurantId}/tables/{tableNumber}/state";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // path parameter
+                                                if (stateContract.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(stateContract); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = stateContract; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling SetTableState: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling SetTableState: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,

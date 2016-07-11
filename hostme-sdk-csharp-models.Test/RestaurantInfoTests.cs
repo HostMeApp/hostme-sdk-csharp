@@ -258,14 +258,6 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'CurrentLineStats' 
         }
-        /// <summary>
-        /// Test the property 'ReservationIncomeEmail' 
-        /// </summary>
-        [Test]
-        public void ReservationIncomeEmailTest()
-        {
-            // TODO: unit test for the property 'ReservationIncomeEmail' 
-        }
 
     }
 

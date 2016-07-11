@@ -22,6 +22,24 @@ namespace HostMe.Sdk.Models
         
     
         /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=true)]
+        public string Name { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets TimeZone
+        /// </summary>
+        [DataMember(Name="timeZone", EmitDefaultValue=true)]
+        public string TimeZone { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets Address
+        /// </summary>
+        [DataMember(Name="address", EmitDefaultValue=true)]
+        public string Address { get; set; }
+    
+        /// <summary>
         /// Gets or Sets Settings
         /// </summary>
         [DataMember(Name="settings", EmitDefaultValue=true)]
@@ -46,6 +64,12 @@ namespace HostMe.Sdk.Models
         public ReservationSettings ReservationSettings { get; set; }
     
         /// <summary>
+        /// Gets or Sets TableStates
+        /// </summary>
+        [DataMember(Name="tableStates", EmitDefaultValue=true)]
+        public List<TableState> TableStates { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -53,10 +77,14 @@ namespace HostMe.Sdk.Models
         {
             var sb = new StringBuilder();
             sb.Append("class RestaurantConfiguration {\n");
-            sb.Append("  Settings: ").Append(Settings).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+sb.Append("  Address: ").Append(Address).Append("\n");
+sb.Append("  Settings: ").Append(Settings).Append("\n");
 sb.Append("  WaitingSettings: ").Append(WaitingSettings).Append("\n");
 sb.Append("  LoyaltySettings: ").Append(LoyaltySettings).Append("\n");
 sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
+sb.Append("  TableStates: ").Append(TableStates).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,6 +122,21 @@ sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
 
             return 
                 (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) && 
+                (
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
+                ) && 
+                (
+                    this.Address == other.Address ||
+                    this.Address != null &&
+                    this.Address.Equals(other.Address)
+                ) && 
+                (
                     this.Settings == other.Settings ||
                     this.Settings != null &&
                     this.Settings.Equals(other.Settings)
@@ -112,6 +155,11 @@ sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
                     this.ReservationSettings == other.ReservationSettings ||
                     this.ReservationSettings != null &&
                     this.ReservationSettings.Equals(other.ReservationSettings)
+                ) && 
+                (
+                    this.TableStates == other.TableStates ||
+                    this.TableStates != null &&
+                    this.TableStates.SequenceEqual(other.TableStates)
                 );
         }
 
@@ -126,6 +174,12 @@ sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
+                if (this.Address != null)
+                    hash = hash * 59 + this.Address.GetHashCode();
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
                 if (this.WaitingSettings != null)
@@ -134,6 +188,8 @@ sb.Append("  ReservationSettings: ").Append(ReservationSettings).Append("\n");
                     hash = hash * 59 + this.LoyaltySettings.GetHashCode();
                 if (this.ReservationSettings != null)
                     hash = hash * 59 + this.ReservationSettings.GetHashCode();
+                if (this.TableStates != null)
+                    hash = hash * 59 + this.TableStates.GetHashCode();
                 return hash;
             }
         }
