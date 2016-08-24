@@ -661,7 +661,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns></returns>
-        void PostProfileImage (byte[] image);
+        void PostProfileImage (string image);
   
         /// <summary>
         /// 
@@ -672,7 +672,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostProfileImageWithHttpInfo (byte[] image);
+        ApiResponse<Object> PostProfileImageWithHttpInfo (string image);
         /// <summary>
         /// 
         /// </summary>
@@ -1593,7 +1593,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostProfileImageAsync (byte[] image);
+        System.Threading.Tasks.Task PostProfileImageAsync (string image);
 
         /// <summary>
         /// 
@@ -1604,7 +1604,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (byte[] image);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (string image);
         /// <summary>
         /// 
         /// </summary>
@@ -6783,7 +6783,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param> 
         /// <returns></returns>
-        public void PostProfileImage (byte[] image)
+        public void PostProfileImage (string image)
         {
              PostProfileImageWithHttpInfo(image);
         }
@@ -6794,7 +6794,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostProfileImageWithHttpInfo (byte[] image)
+        public ApiResponse<Object> PostProfileImageWithHttpInfo (string image)
         {
             
             // verify the required parameter 'image' is set
@@ -6813,7 +6813,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6869,7 +6869,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostProfileImageAsync (byte[] image)
+        public async System.Threading.Tasks.Task PostProfileImageAsync (string image)
         {
              await PostProfileImageAsyncWithHttpInfo(image);
 
@@ -6881,7 +6881,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (byte[] image)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (string image)
         {
             // verify the required parameter 'image' is set
             if (image == null) throw new ApiException(400, "Missing required parameter 'image' when calling PostProfileImage");
@@ -6898,7 +6898,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8735,7 +8735,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "image/jpg"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8830,7 +8830,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "image/jpg"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

@@ -284,7 +284,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns></returns>
-        void PostProfileImage (byte[] image);
+        void PostProfileImage (string image);
   
         /// <summary>
         /// 
@@ -295,7 +295,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PostProfileImageWithHttpInfo (byte[] image);
+        ApiResponse<Object> PostProfileImageWithHttpInfo (string image);
         /// <summary>
         /// 
         /// </summary>
@@ -733,7 +733,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PostProfileImageAsync (byte[] image);
+        System.Threading.Tasks.Task PostProfileImageAsync (string image);
 
         /// <summary>
         /// 
@@ -744,7 +744,7 @@ namespace HostMe.Sdk.Apis.Mobile
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (byte[] image);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (string image);
         /// <summary>
         /// 
         /// </summary>
@@ -2971,7 +2971,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param> 
         /// <returns></returns>
-        public void PostProfileImage (byte[] image)
+        public void PostProfileImage (string image)
         {
              PostProfileImageWithHttpInfo(image);
         }
@@ -2982,7 +2982,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PostProfileImageWithHttpInfo (byte[] image)
+        public ApiResponse<Object> PostProfileImageWithHttpInfo (string image)
         {
             
             // verify the required parameter 'image' is set
@@ -3001,7 +3001,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -3057,7 +3057,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PostProfileImageAsync (byte[] image)
+        public async System.Threading.Tasks.Task PostProfileImageAsync (string image)
         {
              await PostProfileImageAsyncWithHttpInfo(image);
 
@@ -3069,7 +3069,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="image"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (byte[] image)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostProfileImageAsyncWithHttpInfo (string image)
         {
             // verify the required parameter 'image' is set
             if (image == null) throw new ApiException(400, "Missing required parameter 'image' when calling PostProfileImage");
@@ -3086,7 +3086,7 @@ if (areas != null) localVarQueryParams.Add("areas", Configuration.ApiClient.Para
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
+                "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

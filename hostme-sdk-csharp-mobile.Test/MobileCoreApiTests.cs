@@ -208,7 +208,7 @@ string areas = null; // TODO: replace null with proper value
         public void PostProfileImageTest()
         {
             // TODO: add unit test for the method 'PostProfileImage'
-            byte[] image = null; // TODO: replace null with proper value
+            string image = null; // TODO: replace null with proper value
             instance.PostProfileImage(image);
              
         }
