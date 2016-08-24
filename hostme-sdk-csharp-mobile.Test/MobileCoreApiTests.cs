@@ -180,6 +180,17 @@ string areas = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test GetUserInfo
+        /// </summary>
+        [Test]
+        public void GetUserInfoTest()
+        {
+            // TODO: add unit test for the method 'GetUserInfo'
+                        var response = instance.GetUserInfo();
+            Assert.IsInstanceOf<UserExternal> (response, "response is UserExternal"); 
+        }
+        
+        /// <summary>
         /// Test GetUserProfile
         /// </summary>
         [Test]

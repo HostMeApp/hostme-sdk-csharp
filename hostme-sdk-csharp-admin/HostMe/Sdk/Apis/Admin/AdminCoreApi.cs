@@ -114,6 +114,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns></returns>
+        void AssignWaiterToTable (int? restaurantId, string tableNumber, WaiterAssign contract);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> AssignWaiterToTableWithHttpInfo (int? restaurantId, string tableNumber, WaiterAssign contract);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param>
         /// <returns></returns>
         void ChangePassword (ChangePassword model);
@@ -765,7 +790,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns></returns>
-        void SetCustomSettings (int? restaurantId, ModelObject settings);
+        void SetCustomSettings (int? restaurantId, Object settings);
   
         /// <summary>
         /// 
@@ -777,7 +802,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> SetCustomSettingsWithHttpInfo (int? restaurantId, ModelObject settings);
+        ApiResponse<Object> SetCustomSettingsWithHttpInfo (int? restaurantId, Object settings);
         /// <summary>
         /// 
         /// </summary>
@@ -870,6 +895,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="profile"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateUserProfileWithHttpInfo (UserProfile profile);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns></returns>
+        void UpdateWaiterProfileImage (int? waiterId, string content, string restaurantId);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> UpdateWaiterProfileImageWithHttpInfo (int? waiterId, string content, string restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -989,6 +1039,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="contract"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> AddWaiterToZoneAsyncWithHttpInfo (int? restaurantId, int? zoneId, WaiterAssign contract);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task AssignWaiterToTableAsync (int? restaurantId, string tableNumber, WaiterAssign contract);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> AssignWaiterToTableAsyncWithHttpInfo (int? restaurantId, string tableNumber, WaiterAssign contract);
         /// <summary>
         /// 
         /// </summary>
@@ -1647,7 +1722,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task SetCustomSettingsAsync (int? restaurantId, ModelObject settings);
+        System.Threading.Tasks.Task SetCustomSettingsAsync (int? restaurantId, Object settings);
 
         /// <summary>
         /// 
@@ -1659,7 +1734,7 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomSettingsAsyncWithHttpInfo (int? restaurantId, ModelObject settings);
+        System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomSettingsAsyncWithHttpInfo (int? restaurantId, Object settings);
         /// <summary>
         /// 
         /// </summary>
@@ -1752,6 +1827,31 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="profile"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> UpdateUserProfileAsyncWithHttpInfo (UserProfile profile);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task UpdateWaiterProfileImageAsync (int? waiterId, string content, string restaurantId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterProfileImageAsyncWithHttpInfo (int? waiterId, string content, string restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -1904,7 +2004,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1990,7 +2090,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2081,7 +2181,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2171,7 +2271,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2263,7 +2363,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2353,7 +2453,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2451,7 +2551,7 @@ namespace HostMe.Sdk.Apis.Admin
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2546,7 +2646,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2601,6 +2701,200 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <param name="tableNumber"></param> 
+        /// <param name="contract"></param> 
+        /// <returns></returns>
+        public void AssignWaiterToTable (int? restaurantId, string tableNumber, WaiterAssign contract)
+        {
+             AssignWaiterToTableWithHttpInfo(restaurantId, tableNumber, contract);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <param name="tableNumber"></param> 
+        /// <param name="contract"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> AssignWaiterToTableWithHttpInfo (int? restaurantId, string tableNumber, WaiterAssign contract)
+        {
+            
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null)
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminCoreApi->AssignWaiterToTable");
+            
+            // verify the required parameter 'tableNumber' is set
+            if (tableNumber == null)
+                throw new ApiException(400, "Missing required parameter 'tableNumber' when calling AdminCoreApi->AssignWaiterToTable");
+            
+            // verify the required parameter 'contract' is set
+            if (contract == null)
+                throw new ApiException(400, "Missing required parameter 'contract' when calling AdminCoreApi->AssignWaiterToTable");
+            
+    
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/tables/{tableNumber}/waiter";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // path parameter
+                                                if (contract.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contract); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contract; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AssignWaiterToTable: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AssignWaiterToTable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task AssignWaiterToTableAsync (int? restaurantId, string tableNumber, WaiterAssign contract)
+        {
+             await AssignWaiterToTableAsyncWithHttpInfo(restaurantId, tableNumber, contract);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="tableNumber"></param>
+        /// <param name="contract"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> AssignWaiterToTableAsyncWithHttpInfo (int? restaurantId, string tableNumber, WaiterAssign contract)
+        {
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AssignWaiterToTable");
+            // verify the required parameter 'tableNumber' is set
+            if (tableNumber == null) throw new ApiException(400, "Missing required parameter 'tableNumber' when calling AssignWaiterToTable");
+            // verify the required parameter 'contract' is set
+            if (contract == null) throw new ApiException(400, "Missing required parameter 'contract' when calling AssignWaiterToTable");
+            
+    
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/tables/{tableNumber}/waiter";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.ApiClient.ParameterToString(tableNumber)); // path parameter
+                                                if (contract.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(contract); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = contract; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling AssignWaiterToTable: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling AssignWaiterToTable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="model"></param> 
         /// <returns></returns>
         public void ChangePassword (ChangePassword model)
@@ -2633,7 +2927,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2718,7 +3012,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2982,7 +3276,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -3073,7 +3367,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -3159,7 +3453,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -3237,7 +3531,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6519,7 +6813,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "application/octet-stream"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6604,7 +6898,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "application/octet-stream"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png", "application/octet-stream"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6837,7 +7131,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -6922,7 +7216,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7347,7 +7641,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7432,7 +7726,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7488,7 +7782,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         /// <param name="restaurantId"></param> 
         /// <param name="settings"></param> 
         /// <returns></returns>
-        public void SetCustomSettings (int? restaurantId, ModelObject settings)
+        public void SetCustomSettings (int? restaurantId, Object settings)
         {
              SetCustomSettingsWithHttpInfo(restaurantId, settings);
         }
@@ -7500,7 +7794,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         /// <param name="restaurantId"></param> 
         /// <param name="settings"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> SetCustomSettingsWithHttpInfo (int? restaurantId, ModelObject settings)
+        public ApiResponse<Object> SetCustomSettingsWithHttpInfo (int? restaurantId, Object settings)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -7523,7 +7817,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7581,7 +7875,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task SetCustomSettingsAsync (int? restaurantId, ModelObject settings)
+        public async System.Threading.Tasks.Task SetCustomSettingsAsync (int? restaurantId, Object settings)
         {
              await SetCustomSettingsAsyncWithHttpInfo(restaurantId, settings);
 
@@ -7594,7 +7888,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         /// <param name="restaurantId"></param>
         /// <param name="settings"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomSettingsAsyncWithHttpInfo (int? restaurantId, ModelObject settings)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SetCustomSettingsAsyncWithHttpInfo (int? restaurantId, Object settings)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling SetCustomSettings");
@@ -7613,7 +7907,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7705,7 +7999,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7795,7 +8089,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7888,7 +8182,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -7979,7 +8273,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8077,7 +8371,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8172,7 +8466,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8259,7 +8553,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8344,7 +8638,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8387,6 +8681,200 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
                 throw new ApiException (localVarStatusCode, "Error calling UpdateUserProfile: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling UpdateUserProfile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param> 
+        /// <param name="content"></param> 
+        /// <param name="restaurantId"></param> 
+        /// <returns></returns>
+        public void UpdateWaiterProfileImage (int? waiterId, string content, string restaurantId)
+        {
+             UpdateWaiterProfileImageWithHttpInfo(waiterId, content, restaurantId);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param> 
+        /// <param name="content"></param> 
+        /// <param name="restaurantId"></param> 
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> UpdateWaiterProfileImageWithHttpInfo (int? waiterId, string content, string restaurantId)
+        {
+            
+            // verify the required parameter 'waiterId' is set
+            if (waiterId == null)
+                throw new ApiException(400, "Missing required parameter 'waiterId' when calling AdminCoreApi->UpdateWaiterProfileImage");
+            
+            // verify the required parameter 'content' is set
+            if (content == null)
+                throw new ApiException(400, "Missing required parameter 'content' when calling AdminCoreApi->UpdateWaiterProfileImage");
+            
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null)
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminCoreApi->UpdateWaiterProfileImage");
+            
+    
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiter/{waiterId}/image";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "image/jpg"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
+if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+                                                if (content.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(content); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = content; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task UpdateWaiterProfileImageAsync (int? waiterId, string content, string restaurantId)
+        {
+             await UpdateWaiterProfileImageAsyncWithHttpInfo(waiterId, content, restaurantId);
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="waiterId"></param>
+        /// <param name="content"></param>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterProfileImageAsyncWithHttpInfo (int? waiterId, string content, string restaurantId)
+        {
+            // verify the required parameter 'waiterId' is set
+            if (waiterId == null) throw new ApiException(400, "Missing required parameter 'waiterId' when calling UpdateWaiterProfileImage");
+            // verify the required parameter 'content' is set
+            if (content == null) throw new ApiException(400, "Missing required parameter 'content' when calling UpdateWaiterProfileImage");
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling UpdateWaiterProfileImage");
+            
+    
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiter/{waiterId}/image";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "image/jpg"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
+if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+                                                if (content.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(content); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = content; // byte array
+            }
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -8441,7 +8929,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8536,7 +9024,7 @@ if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

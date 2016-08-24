@@ -64,6 +64,12 @@ namespace HostMe.Sdk.Models
         public int? WorkLoad { get; set; }
     
         /// <summary>
+        /// Gets or Sets Image
+        /// </summary>
+        [DataMember(Name="image", EmitDefaultValue=true)]
+        public string Image { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -78,6 +84,7 @@ sb.Append("  Email: ").Append(Email).Append("\n");
 sb.Append("  Color: ").Append(Color).Append("\n");
 sb.Append("  Tables: ").Append(Tables).Append("\n");
 sb.Append("  WorkLoad: ").Append(WorkLoad).Append("\n");
+sb.Append("  Image: ").Append(Image).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -148,6 +155,11 @@ sb.Append("  WorkLoad: ").Append(WorkLoad).Append("\n");
                     this.WorkLoad == other.WorkLoad ||
                     this.WorkLoad != null &&
                     this.WorkLoad.Equals(other.WorkLoad)
+                ) && 
+                (
+                    this.Image == other.Image ||
+                    this.Image != null &&
+                    this.Image.Equals(other.Image)
                 );
         }
 
@@ -176,6 +188,8 @@ sb.Append("  WorkLoad: ").Append(WorkLoad).Append("\n");
                     hash = hash * 59 + this.Tables.GetHashCode();
                 if (this.WorkLoad != null)
                     hash = hash * 59 + this.WorkLoad.GetHashCode();
+                if (this.Image != null)
+                    hash = hash * 59 + this.Image.GetHashCode();
                 return hash;
             }
         }

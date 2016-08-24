@@ -106,6 +106,20 @@ WaiterAssign contract = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test AssignWaiterToTable
+        /// </summary>
+        [Test]
+        public void AssignWaiterToTableTest()
+        {
+            // TODO: add unit test for the method 'AssignWaiterToTable'
+            int? restaurantId = null; // TODO: replace null with proper value
+string tableNumber = null; // TODO: replace null with proper value
+WaiterAssign contract = null; // TODO: replace null with proper value
+            instance.AssignWaiterToTable(restaurantId, tableNumber, contract);
+             
+        }
+        
+        /// <summary>
         /// Test ChangePassword
         /// </summary>
         [Test]
@@ -482,7 +496,7 @@ int? zoneId = null; // TODO: replace null with proper value
         {
             // TODO: add unit test for the method 'SetCustomSettings'
             int? restaurantId = null; // TODO: replace null with proper value
-ModelObject settings = null; // TODO: replace null with proper value
+Object settings = null; // TODO: replace null with proper value
             instance.SetCustomSettings(restaurantId, settings);
              
         }
@@ -536,6 +550,20 @@ ZoneCreate contract = null; // TODO: replace null with proper value
             // TODO: add unit test for the method 'UpdateUserProfile'
             UserProfile profile = null; // TODO: replace null with proper value
             instance.UpdateUserProfile(profile);
+             
+        }
+        
+        /// <summary>
+        /// Test UpdateWaiterProfileImage
+        /// </summary>
+        [Test]
+        public void UpdateWaiterProfileImageTest()
+        {
+            // TODO: add unit test for the method 'UpdateWaiterProfileImage'
+            int? waiterId = null; // TODO: replace null with proper value
+string content = null; // TODO: replace null with proper value
+string restaurantId = null; // TODO: replace null with proper value
+            instance.UpdateWaiterProfileImage(waiterId, content, restaurantId);
              
         }
         

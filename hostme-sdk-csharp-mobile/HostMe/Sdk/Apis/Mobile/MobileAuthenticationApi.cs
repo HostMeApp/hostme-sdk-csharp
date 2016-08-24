@@ -7,12 +7,12 @@ using RestSharp;
 using HostMe.Sdk.Client;
 using HostMe.Sdk.Models;
 
-namespace HostMe.Sdk.Apis.Admin
+namespace HostMe.Sdk.Apis.Mobile
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface IExternalAuthenticationApi
+    public interface IMobileAuthenticationApi
     {
         #region Synchronous Operations
         /// <summary>
@@ -157,13 +157,13 @@ namespace HostMe.Sdk.Apis.Admin
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public class ExternalAuthenticationApi : IExternalAuthenticationApi
+    public class MobileAuthenticationApi : IMobileAuthenticationApi
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalAuthenticationApi"/> class.
+        /// Initializes a new instance of the <see cref="MobileAuthenticationApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public ExternalAuthenticationApi(String basePath)
+        public MobileAuthenticationApi(String basePath)
         {
             this.Configuration = new Configuration(new ApiClient(basePath));
 
@@ -175,12 +175,12 @@ namespace HostMe.Sdk.Apis.Admin
         }
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ExternalAuthenticationApi"/> class
+        /// Initializes a new instance of the <see cref="MobileAuthenticationApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ExternalAuthenticationApi(Configuration configuration = null)
+        public MobileAuthenticationApi(Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Configuration.Default; 
@@ -263,7 +263,7 @@ namespace HostMe.Sdk.Apis.Admin
             
             // verify the required parameter 'accessToken' is set
             if (accessToken == null)
-                throw new ApiException(400, "Missing required parameter 'accessToken' when calling ExternalAuthenticationApi->GetExternalFacebookLogin");
+                throw new ApiException(400, "Missing required parameter 'accessToken' when calling MobileAuthenticationApi->GetExternalFacebookLogin");
             
     
             var localVarPath = "/authorization/externalFacebookLogin";
@@ -409,7 +409,7 @@ namespace HostMe.Sdk.Apis.Admin
             
             // verify the required parameter 'provider' is set
             if (provider == null)
-                throw new ApiException(400, "Missing required parameter 'provider' when calling ExternalAuthenticationApi->GetExternalLogin");
+                throw new ApiException(400, "Missing required parameter 'provider' when calling MobileAuthenticationApi->GetExternalLogin");
             
     
             var localVarPath = "/authorization/externalLogin";
@@ -560,7 +560,7 @@ if (error != null) localVarQueryParams.Add("error", Configuration.ApiClient.Para
             
             // verify the required parameter 'returnUrl' is set
             if (returnUrl == null)
-                throw new ApiException(400, "Missing required parameter 'returnUrl' when calling ExternalAuthenticationApi->GetExternalLogins");
+                throw new ApiException(400, "Missing required parameter 'returnUrl' when calling MobileAuthenticationApi->GetExternalLogins");
             
     
             var localVarPath = "/authorization/externalLogins";

@@ -106,6 +106,14 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'WorkLoad' 
         }
+        /// <summary>
+        /// Test the property 'Image' 
+        /// </summary>
+        [Test]
+        public void ImageTest()
+        {
+            // TODO: unit test for the property 'Image' 
+        }
 
     }
 
