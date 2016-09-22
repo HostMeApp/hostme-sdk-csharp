@@ -67,19 +67,6 @@ Floor floor = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test CreateOrUpdateTableConfiguration
-        /// </summary>
-        [Test]
-        public void CreateOrUpdateTableConfigurationTest()
-        {
-            // TODO: add unit test for the method 'CreateOrUpdateTableConfiguration'
-            int? restaurantId = null; // TODO: replace null with proper value
-List<Table> tables = null; // TODO: replace null with proper value
-            instance.CreateOrUpdateTableConfiguration(restaurantId, tables);
-             
-        }
-        
-        /// <summary>
         /// Test DeleteFloor
         /// </summary>
         [Test]
@@ -261,7 +248,7 @@ ChangeTableState stateContract = null; // TODO: replace null with proper value
 string floorId = null; // TODO: replace null with proper value
 Floor floor = null; // TODO: replace null with proper value
             var response = instance.UpdateFloor(restaurantId, floorId, floor);
-            Assert.IsInstanceOf<Floor> (response, "response is Floor"); 
+            Assert.IsInstanceOf<Object> (response, "response is Object"); 
         }
         
     }

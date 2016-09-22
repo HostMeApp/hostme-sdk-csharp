@@ -119,6 +119,18 @@ string rewardId = null; // TODO: replace null with proper value
         }
         
         /// <summary>
+        /// Test ExportMembers
+        /// </summary>
+        [Test]
+        public void ExportMembersTest()
+        {
+            // TODO: add unit test for the method 'ExportMembers'
+            int? restaurantId = null; // TODO: replace null with proper value
+            var response = instance.ExportMembers(restaurantId);
+            Assert.IsInstanceOf<Object> (response, "response is Object"); 
+        }
+        
+        /// <summary>
         /// Test Filter
         /// </summary>
         [Test]

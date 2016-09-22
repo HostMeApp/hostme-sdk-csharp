@@ -15,7 +15,7 @@ namespace HostMe.Sdk.Models
     /// 
     /// </summary>
     [DataContract]
-    public partial class WaiterCreate :  IEquatable<WaiterCreate>
+    public partial class WaiterUpdate :  IEquatable<WaiterUpdate>
     { 
     
        
@@ -40,23 +40,16 @@ namespace HostMe.Sdk.Models
         public string Base64DataUrl { get; set; }
     
         /// <summary>
-        /// Gets or Sets Invitation
-        /// </summary>
-        [DataMember(Name="invitation", EmitDefaultValue=true)]
-        public WaiterInvitation Invitation { get; set; }
-    
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WaiterCreate {\n");
+            sb.Append("class WaiterUpdate {\n");
             sb.Append("  Color: ").Append(Color).Append("\n");
 sb.Append("  FullName: ").Append(FullName).Append("\n");
 sb.Append("  Base64DataUrl: ").Append(Base64DataUrl).Append("\n");
-sb.Append("  Invitation: ").Append(Invitation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -78,15 +71,15 @@ sb.Append("  Invitation: ").Append(Invitation).Append("\n");
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WaiterCreate);
+            return this.Equals(obj as WaiterUpdate);
         }
 
         /// <summary>
-        /// Returns true if WaiterCreate instances are equal
+        /// Returns true if WaiterUpdate instances are equal
         /// </summary>
-        /// <param name="other">Instance of WaiterCreate to be compared</param>
+        /// <param name="other">Instance of WaiterUpdate to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WaiterCreate other)
+        public bool Equals(WaiterUpdate other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -107,11 +100,6 @@ sb.Append("  Invitation: ").Append(Invitation).Append("\n");
                     this.Base64DataUrl == other.Base64DataUrl ||
                     this.Base64DataUrl != null &&
                     this.Base64DataUrl.Equals(other.Base64DataUrl)
-                ) && 
-                (
-                    this.Invitation == other.Invitation ||
-                    this.Invitation != null &&
-                    this.Invitation.Equals(other.Invitation)
                 );
         }
 
@@ -132,8 +120,6 @@ sb.Append("  Invitation: ").Append(Invitation).Append("\n");
                     hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.Base64DataUrl != null)
                     hash = hash * 59 + this.Base64DataUrl.GetHashCode();
-                if (this.Invitation != null)
-                    hash = hash * 59 + this.Invitation.GetHashCode();
                 return hash;
             }
         }

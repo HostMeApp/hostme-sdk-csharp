@@ -902,11 +902,11 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns></returns>
-        void UpdateWaiterProfileImage (int? waiterId, string content, string restaurantId);
+        void UpdateWaiter (int? restaurantId, int? waiterId, WaiterUpdate contract);
   
         /// <summary>
         /// 
@@ -915,11 +915,11 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateWaiterProfileImageWithHttpInfo (int? waiterId, string content, string restaurantId);
+        ApiResponse<Object> UpdateWaiterWithHttpInfo (int? restaurantId, int? waiterId, WaiterUpdate contract);
         /// <summary>
         /// 
         /// </summary>
@@ -1834,11 +1834,11 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task UpdateWaiterProfileImageAsync (int? waiterId, string content, string restaurantId);
+        System.Threading.Tasks.Task UpdateWaiterAsync (int? restaurantId, int? waiterId, WaiterUpdate contract);
 
         /// <summary>
         /// 
@@ -1847,11 +1847,11 @@ namespace HostMe.Sdk.Apis.Admin
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterProfileImageAsyncWithHttpInfo (int? waiterId, string content, string restaurantId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterAsyncWithHttpInfo (int? restaurantId, int? waiterId, WaiterUpdate contract);
         /// <summary>
         /// 
         /// </summary>
@@ -8691,40 +8691,40 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param> 
-        /// <param name="content"></param> 
         /// <param name="restaurantId"></param> 
+        /// <param name="waiterId"></param> 
+        /// <param name="contract"></param> 
         /// <returns></returns>
-        public void UpdateWaiterProfileImage (int? waiterId, string content, string restaurantId)
+        public void UpdateWaiter (int? restaurantId, int? waiterId, WaiterUpdate contract)
         {
-             UpdateWaiterProfileImageWithHttpInfo(waiterId, content, restaurantId);
+             UpdateWaiterWithHttpInfo(restaurantId, waiterId, contract);
         }
 
         /// <summary>
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param> 
-        /// <param name="content"></param> 
         /// <param name="restaurantId"></param> 
+        /// <param name="waiterId"></param> 
+        /// <param name="contract"></param> 
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateWaiterProfileImageWithHttpInfo (int? waiterId, string content, string restaurantId)
+        public ApiResponse<Object> UpdateWaiterWithHttpInfo (int? restaurantId, int? waiterId, WaiterUpdate contract)
         {
-            
-            // verify the required parameter 'waiterId' is set
-            if (waiterId == null)
-                throw new ApiException(400, "Missing required parameter 'waiterId' when calling AdminCoreApi->UpdateWaiterProfileImage");
-            
-            // verify the required parameter 'content' is set
-            if (content == null)
-                throw new ApiException(400, "Missing required parameter 'content' when calling AdminCoreApi->UpdateWaiterProfileImage");
             
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminCoreApi->UpdateWaiterProfileImage");
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminCoreApi->UpdateWaiter");
+            
+            // verify the required parameter 'waiterId' is set
+            if (waiterId == null)
+                throw new ApiException(400, "Missing required parameter 'waiterId' when calling AdminCoreApi->UpdateWaiter");
+            
+            // verify the required parameter 'contract' is set
+            if (contract == null)
+                throw new ApiException(400, "Missing required parameter 'contract' when calling AdminCoreApi->UpdateWaiter");
             
     
-            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiter/{waiterId}/image";
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiters/{waiterId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8735,7 +8735,7 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "image/jpg", "image/jpeg", "image/png"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8750,15 +8750,15 @@ if (zoneId != null) localVarPathParams.Add("zoneId", Configuration.ApiClient.Par
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
-if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (content.GetType() != typeof(byte[]))
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
+                                                if (contract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(content); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(contract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = content; // byte array
+                localVarPostBody = contract; // byte array
             }
 
             // authentication (oauth2) required
@@ -8771,15 +8771,15 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
     
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
     
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiter: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -8791,13 +8791,13 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task UpdateWaiterProfileImageAsync (int? waiterId, string content, string restaurantId)
+        public async System.Threading.Tasks.Task UpdateWaiterAsync (int? restaurantId, int? waiterId, WaiterUpdate contract)
         {
-             await UpdateWaiterProfileImageAsyncWithHttpInfo(waiterId, content, restaurantId);
+             await UpdateWaiterAsyncWithHttpInfo(restaurantId, waiterId, contract);
 
         }
 
@@ -8805,21 +8805,21 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="waiterId"></param>
-        /// <param name="content"></param>
         /// <param name="restaurantId"></param>
+        /// <param name="waiterId"></param>
+        /// <param name="contract"></param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterProfileImageAsyncWithHttpInfo (int? waiterId, string content, string restaurantId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateWaiterAsyncWithHttpInfo (int? restaurantId, int? waiterId, WaiterUpdate contract)
         {
-            // verify the required parameter 'waiterId' is set
-            if (waiterId == null) throw new ApiException(400, "Missing required parameter 'waiterId' when calling UpdateWaiterProfileImage");
-            // verify the required parameter 'content' is set
-            if (content == null) throw new ApiException(400, "Missing required parameter 'content' when calling UpdateWaiterProfileImage");
             // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling UpdateWaiterProfileImage");
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling UpdateWaiter");
+            // verify the required parameter 'waiterId' is set
+            if (waiterId == null) throw new ApiException(400, "Missing required parameter 'waiterId' when calling UpdateWaiter");
+            // verify the required parameter 'contract' is set
+            if (contract == null) throw new ApiException(400, "Missing required parameter 'contract' when calling UpdateWaiter");
             
     
-            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiter/{waiterId}/image";
+            var localVarPath = "/api/core/admin/restaurants/{restaurantId}/waiters/{waiterId}";
     
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
@@ -8830,7 +8830,7 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "image/jpg", "image/jpeg", "image/png"
+                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -8845,15 +8845,15 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
-            if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
-if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (content.GetType() != typeof(byte[]))
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+if (waiterId != null) localVarPathParams.Add("waiterId", Configuration.ApiClient.ParameterToString(waiterId)); // path parameter
+                                                if (contract.GetType() != typeof(byte[]))
             {
-                localVarPostBody = Configuration.ApiClient.Serialize(content); // http body (model) parameter
+                localVarPostBody = Configuration.ApiClient.Serialize(contract); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = content; // byte array
+                localVarPostBody = contract; // byte array
             }
 
             // authentication (oauth2) required
@@ -8866,15 +8866,15 @@ if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.A
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
  
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.Content, localVarResponse.Content);
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiter: " + localVarResponse.Content, localVarResponse.Content);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiterProfileImage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling UpdateWaiter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,

@@ -554,16 +554,16 @@ ZoneCreate contract = null; // TODO: replace null with proper value
         }
         
         /// <summary>
-        /// Test UpdateWaiterProfileImage
+        /// Test UpdateWaiter
         /// </summary>
         [Test]
-        public void UpdateWaiterProfileImageTest()
+        public void UpdateWaiterTest()
         {
-            // TODO: add unit test for the method 'UpdateWaiterProfileImage'
-            int? waiterId = null; // TODO: replace null with proper value
-string content = null; // TODO: replace null with proper value
-string restaurantId = null; // TODO: replace null with proper value
-            instance.UpdateWaiterProfileImage(waiterId, content, restaurantId);
+            // TODO: add unit test for the method 'UpdateWaiter'
+            int? restaurantId = null; // TODO: replace null with proper value
+int? waiterId = null; // TODO: replace null with proper value
+WaiterUpdate contract = null; // TODO: replace null with proper value
+            instance.UpdateWaiter(restaurantId, waiterId, contract);
              
         }
         

@@ -138,6 +138,27 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <returns>Object</returns>
+        Object ExportMembers (int? restaurantId);
+  
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ExportMembersWithHttpInfo (int? restaurantId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
         /// <param name="take"></param>
         /// <param name="token"></param>
         /// <returns>List&lt;CustomerProfile&gt;</returns>
@@ -659,6 +680,27 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="rewardId"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRewardAsyncWithHttpInfo (int? restaurantId, string rewardId);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ExportMembersAsync (int? restaurantId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ExportMembersAsyncWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -2042,6 +2084,166 @@ if (rewardId != null) localVarPathParams.Add("rewardId", Configuration.ApiClient
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <returns>Object</returns>
+        public Object ExportMembers (int? restaurantId)
+        {
+             ApiResponse<Object> localVarResponse = ExportMembersWithHttpInfo(restaurantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param> 
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ExportMembersWithHttpInfo (int? restaurantId)
+        {
+            
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null)
+                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminLoyaltyApi->ExportMembers");
+            
+    
+            var localVarPath = "/api/loyalty/admin/restaurants/{restaurantId}/members/export";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+                                                
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+    
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+    
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ExportMembers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ExportMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+    
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ExportMembersAsync (int? restaurantId)
+        {
+             ApiResponse<Object> localVarResponse = await ExportMembersAsyncWithHttpInfo(restaurantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        ///  
+        /// </summary>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ExportMembersAsyncWithHttpInfo (int? restaurantId)
+        {
+            // verify the required parameter 'restaurantId' is set
+            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling ExportMembers");
+            
+    
+            var localVarPath = "/api/loyalty/admin/restaurants/{restaurantId}/members/export";
+    
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json", "text/json", "application/xml", "text/xml"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+                                                
+
+            // authentication (oauth2) required
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+ 
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling ExportMembers: " + localVarResponse.Content, localVarResponse.Content);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling ExportMembers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
         }
         /// <summary>
         ///  

@@ -46,29 +46,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns></returns>
-        void CreateOrUpdateTableConfiguration (int? restaurantId, List<Table> tables);
-  
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CreateOrUpdateTableConfigurationWithHttpInfo (int? restaurantId, List<Table> tables);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <returns></returns>
         void DeleteFloor (int? restaurantId, string floorId);
@@ -374,8 +351,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>Floor</returns>
-        Floor UpdateFloor (int? restaurantId, string floorId, Floor floor);
+        /// <returns>Object</returns>
+        Object UpdateFloor (int? restaurantId, string floorId, Floor floor);
   
         /// <summary>
         /// 
@@ -387,8 +364,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>ApiResponse of Floor</returns>
-        ApiResponse<Floor> UpdateFloorWithHttpInfo (int? restaurantId, string floorId, Floor floor);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> UpdateFloorWithHttpInfo (int? restaurantId, string floorId, Floor floor);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -414,29 +391,6 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="floor"></param>
         /// <returns>Task of ApiResponse (Floor)</returns>
         System.Threading.Tasks.Task<ApiResponse<Floor>> CreateNewFloorAsyncWithHttpInfo (int? restaurantId, Floor floor);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CreateOrUpdateTableConfigurationAsync (int? restaurantId, List<Table> tables);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CreateOrUpdateTableConfigurationAsyncWithHttpInfo (int? restaurantId, List<Table> tables);
         /// <summary>
         /// 
         /// </summary>
@@ -750,8 +704,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>Task of Floor</returns>
-        System.Threading.Tasks.Task<Floor> UpdateFloorAsync (int? restaurantId, string floorId, Floor floor);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> UpdateFloorAsync (int? restaurantId, string floorId, Floor floor);
 
         /// <summary>
         /// 
@@ -763,8 +717,8 @@ namespace HostMe.Sdk.Apis.Admin
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>Task of ApiResponse (Floor)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Floor>> UpdateFloorAsyncWithHttpInfo (int? restaurantId, string floorId, Floor floor);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFloorAsyncWithHttpInfo (int? restaurantId, string floorId, Floor floor);
         #endregion Asynchronous Operations
     }
   
@@ -1038,188 +992,6 @@ namespace HostMe.Sdk.Apis.Admin
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (Floor) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Floor)));
             
-        }
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param> 
-        /// <param name="tables"></param> 
-        /// <returns></returns>
-        public void CreateOrUpdateTableConfiguration (int? restaurantId, List<Table> tables)
-        {
-             CreateOrUpdateTableConfigurationWithHttpInfo(restaurantId, tables);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param> 
-        /// <param name="tables"></param> 
-        /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CreateOrUpdateTableConfigurationWithHttpInfo (int? restaurantId, List<Table> tables)
-        {
-            
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminTableManagementApi->CreateOrUpdateTableConfiguration");
-            
-            // verify the required parameter 'tables' is set
-            if (tables == null)
-                throw new ApiException(400, "Missing required parameter 'tables' when calling AdminTableManagementApi->CreateOrUpdateTableConfiguration");
-            
-    
-            var localVarPath = "/api/tm/admin/restaurants/{restaurantId}/tables";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (tables.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(tables); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = tables; // byte array
-            }
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-    
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-    
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CreateOrUpdateTableConfiguration: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CreateOrUpdateTableConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-    
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CreateOrUpdateTableConfigurationAsync (int? restaurantId, List<Table> tables)
-        {
-             await CreateOrUpdateTableConfigurationAsyncWithHttpInfo(restaurantId, tables);
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="tables"></param>
-        /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CreateOrUpdateTableConfigurationAsyncWithHttpInfo (int? restaurantId, List<Table> tables)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling CreateOrUpdateTableConfiguration");
-            // verify the required parameter 'tables' is set
-            if (tables == null) throw new ApiException(400, "Missing required parameter 'tables' when calling CreateOrUpdateTableConfiguration");
-            
-    
-            var localVarPath = "/api/tm/admin/restaurants/{restaurantId}/tables";
-    
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded", "image/jpg", "image/jpeg", "image/png"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", "text/json", "application/xml", "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-                                                if (tables.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(tables); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = tables; // byte array
-            }
-
-            // authentication (oauth2) required
-            
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath, 
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams, 
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
- 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling CreateOrUpdateTableConfiguration: " + localVarResponse.Content, localVarResponse.Content);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling CreateOrUpdateTableConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            
-            return new ApiResponse<Object>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                null);
         }
         /// <summary>
         ///  
@@ -3476,10 +3248,10 @@ if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.Api
         /// <param name="restaurantId"></param> 
         /// <param name="floorId"></param> 
         /// <param name="floor"></param> 
-        /// <returns>Floor</returns>
-        public Floor UpdateFloor (int? restaurantId, string floorId, Floor floor)
+        /// <returns>Object</returns>
+        public Object UpdateFloor (int? restaurantId, string floorId, Floor floor)
         {
-             ApiResponse<Floor> localVarResponse = UpdateFloorWithHttpInfo(restaurantId, floorId, floor);
+             ApiResponse<Object> localVarResponse = UpdateFloorWithHttpInfo(restaurantId, floorId, floor);
              return localVarResponse.Data;
         }
 
@@ -3490,8 +3262,8 @@ if (tableNumber != null) localVarPathParams.Add("tableNumber", Configuration.Api
         /// <param name="restaurantId"></param> 
         /// <param name="floorId"></param> 
         /// <param name="floor"></param> 
-        /// <returns>ApiResponse of Floor</returns>
-        public ApiResponse< Floor > UpdateFloorWithHttpInfo (int? restaurantId, string floorId, Floor floor)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > UpdateFloorWithHttpInfo (int? restaurantId, string floorId, Floor floor)
         {
             
             // verify the required parameter 'restaurantId' is set
@@ -3564,9 +3336,9 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling UpdateFloor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
     
-            return new ApiResponse<Floor>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Floor) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Floor)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -3577,10 +3349,10 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>Task of Floor</returns>
-        public async System.Threading.Tasks.Task<Floor> UpdateFloorAsync (int? restaurantId, string floorId, Floor floor)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> UpdateFloorAsync (int? restaurantId, string floorId, Floor floor)
         {
-             ApiResponse<Floor> localVarResponse = await UpdateFloorAsyncWithHttpInfo(restaurantId, floorId, floor);
+             ApiResponse<Object> localVarResponse = await UpdateFloorAsyncWithHttpInfo(restaurantId, floorId, floor);
              return localVarResponse.Data;
 
         }
@@ -3592,8 +3364,8 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
         /// <param name="restaurantId"></param>
         /// <param name="floorId"></param>
         /// <param name="floor"></param>
-        /// <returns>Task of ApiResponse (Floor)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Floor>> UpdateFloorAsyncWithHttpInfo (int? restaurantId, string floorId, Floor floor)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> UpdateFloorAsyncWithHttpInfo (int? restaurantId, string floorId, Floor floor)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null) throw new ApiException(400, "Missing required parameter 'restaurantId' when calling UpdateFloor");
@@ -3660,9 +3432,9 @@ if (floorId != null) localVarPathParams.Add("floorId", Configuration.ApiClient.P
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling UpdateFloor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Floor>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Floor) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Floor)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
     }
