@@ -138,6 +138,30 @@ namespace HostMe.Sdk.Test
         {
             // TODO: unit test for the property 'Party' 
         }
+        /// <summary>
+        /// Test the property 'Email' 
+        /// </summary>
+        [Test]
+        public void EmailTest()
+        {
+            // TODO: unit test for the property 'Email' 
+        }
+        /// <summary>
+        /// Test the property 'FullName' 
+        /// </summary>
+        [Test]
+        public void FullNameTest()
+        {
+            // TODO: unit test for the property 'FullName' 
+        }
+        /// <summary>
+        /// Test the property 'PhoneNumber' 
+        /// </summary>
+        [Test]
+        public void PhoneNumberTest()
+        {
+            // TODO: unit test for the property 'PhoneNumber' 
+        }
 
     }
 

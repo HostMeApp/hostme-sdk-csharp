@@ -88,6 +88,24 @@ namespace HostMe.Sdk.Models
         public bool? Party { get; set; }
     
         /// <summary>
+        /// Gets or Sets Email
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue=true)]
+        public string Email { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets FullName
+        /// </summary>
+        [DataMember(Name="fullName", EmitDefaultValue=true)]
+        public string FullName { get; set; }
+    
+        /// <summary>
+        /// Gets or Sets PhoneNumber
+        /// </summary>
+        [DataMember(Name="phoneNumber", EmitDefaultValue=true)]
+        public string PhoneNumber { get; set; }
+    
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -106,6 +124,9 @@ sb.Append("  HighChair: ").Append(HighChair).Append("\n");
 sb.Append("  Stroller: ").Append(Stroller).Append("\n");
 sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
 sb.Append("  Party: ").Append(Party).Append("\n");
+sb.Append("  Email: ").Append(Email).Append("\n");
+sb.Append("  FullName: ").Append(FullName).Append("\n");
+sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -196,6 +217,21 @@ sb.Append("  Party: ").Append(Party).Append("\n");
                     this.Party == other.Party ||
                     this.Party != null &&
                     this.Party.Equals(other.Party)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) && 
+                (
+                    this.FullName == other.FullName ||
+                    this.FullName != null &&
+                    this.FullName.Equals(other.FullName)
+                ) && 
+                (
+                    this.PhoneNumber == other.PhoneNumber ||
+                    this.PhoneNumber != null &&
+                    this.PhoneNumber.Equals(other.PhoneNumber)
                 );
         }
 
@@ -232,6 +268,12 @@ sb.Append("  Party: ").Append(Party).Append("\n");
                     hash = hash * 59 + this.CustomerProfile.GetHashCode();
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
+                if (this.FullName != null)
+                    hash = hash * 59 + this.FullName.GetHashCode();
+                if (this.PhoneNumber != null)
+                    hash = hash * 59 + this.PhoneNumber.GetHashCode();
                 return hash;
             }
         }
