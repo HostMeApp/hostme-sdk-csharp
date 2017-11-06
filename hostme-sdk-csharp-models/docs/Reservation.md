@@ -1,0 +1,45 @@
+# HostMe.Sdk.Model.Reservation
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**UnreadMessageCount** | **int?** |  | [optional] 
+**Id** | **string** |  | [optional] 
+**Restaurant** | [**RestaurantContactInfo**](RestaurantContactInfo.md) |  | [optional] 
+**Created** | **DateTimeOffset?** |  | [optional] 
+**Closed** | **DateTimeOffset?** |  | [optional] 
+**ReservationTime** | **DateTimeOffset?** |  | [optional] 
+**Status** | **string** |  | [optional] 
+**CustomerName** | **string** |  | [optional] 
+**GroupSize** | **int?** |  | [optional] 
+**Phone** | **string** |  | [optional] 
+**Areas** | **string** |  | [optional] 
+**InternalNotes** | **string** |  | [optional] 
+**SpecialRequests** | **string** |  | [optional] 
+**AboutGuestNotes** | **string** |  | [optional] 
+**TableNumber** | **string** |  | [optional] 
+**DepositStatus** | **string** |  | [optional] 
+**CardAttached** | **bool?** |  | [optional] 
+**HighChair** | **bool?** |  | [optional] 
+**Stroller** | **bool?** |  | [optional] 
+**Vip** | **bool?** |  | [optional] 
+**Email** | **string** |  | [optional] 
+**Source** | **string** |  | [optional] 
+**Amount** | **int?** |  | [optional] 
+**RegistrationStatus** | **int?** |  | [optional] 
+**RegistrationId** | **int?** |  | [optional] 
+**EstimatedReleaseTime** | **DateTimeOffset?** |  | [optional] 
+**RegistrationTime** | **DateTimeOffset?** |  | [optional] 
+**EstimatedTurnOverTime** | **double?** |  | [optional] 
+**Messages** | [**List&lt;Message&gt;**](Message.md) |  | [optional] 
+**Membership** | [**MembershipInfo**](MembershipInfo.md) |  | [optional] 
+**Party** | **bool?** |  | [optional] 
+**PartyTypes** | **List&lt;string&gt;** |  | [optional] 
+**CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**Booth** | **bool?** |  | [optional] 
+**HighTop** | **bool?** |  | [optional] 
+**Table** | **bool?** |  | [optional] 
+**HandicapAccessible** | **bool?** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
