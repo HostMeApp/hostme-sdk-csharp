@@ -54,9 +54,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HostMe\Sdk\Apis\Mobile\MobileCoreApi.cs" />
-    <Compile Include="HostMe\Sdk\Apis\Mobile\MobileLoyaltyApi.cs" />
     <Compile Include="HostMe\Sdk\Apis\Mobile\MobileReservationsApi.cs" />
-    <Compile Include="HostMe\Sdk\Apis\Mobile\MobileWaitingManagementApi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HostMe.Sdk.Apis.Mobile.nuspec" />

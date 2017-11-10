@@ -9,7 +9,7 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace HostMe.Sdk.Models
+namespace HostMe.Sdk.Model
 {
     /// <summary>
     /// 
