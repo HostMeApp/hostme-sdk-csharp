@@ -45,11 +45,11 @@ namespace HostMe.Sdk.Model
         /// Initializes a new instance of the <see cref="WaitingStatLine" /> class.
         /// </summary>
         /// <param name="AvgSeatTime">AvgSeatTime.</param>
-        /// <param name="TopSize">TopSize.</param>
-        public WaitingStatLine(double? AvgSeatTime = null, int? TopSize = null)
+        /// <param name="TableTop">TableTop.</param>
+        public WaitingStatLine(double? AvgSeatTime = null, int? TableTop = null)
         {
             this.AvgSeatTime = AvgSeatTime;
-            this.TopSize = TopSize;
+            this.TableTop = TableTop;
         }
         
         /// <summary>
@@ -58,10 +58,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="avgSeatTime", EmitDefaultValue=true)]
         public double? AvgSeatTime { get; set; }
         /// <summary>
-        /// Gets or Sets TopSize
+        /// Gets or Sets TableTop
         /// </summary>
-        [DataMember(Name="topSize", EmitDefaultValue=true)]
-        public int? TopSize { get; set; }
+        [DataMember(Name="tableTop", EmitDefaultValue=true)]
+        public int? TableTop { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -71,7 +71,7 @@ namespace HostMe.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class WaitingStatLine {\n");
             sb.Append("  AvgSeatTime: ").Append(AvgSeatTime).Append("\n");
-            sb.Append("  TopSize: ").Append(TopSize).Append("\n");
+            sb.Append("  TableTop: ").Append(TableTop).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -114,9 +114,9 @@ namespace HostMe.Sdk.Model
                     this.AvgSeatTime.Equals(other.AvgSeatTime)
                 ) && 
                 (
-                    this.TopSize == other.TopSize ||
-                    this.TopSize != null &&
-                    this.TopSize.Equals(other.TopSize)
+                    this.TableTop == other.TableTop ||
+                    this.TableTop != null &&
+                    this.TableTop.Equals(other.TableTop)
                 );
         }
 
@@ -133,8 +133,8 @@ namespace HostMe.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.AvgSeatTime != null)
                     hash = hash * 59 + this.AvgSeatTime.GetHashCode();
-                if (this.TopSize != null)
-                    hash = hash * 59 + this.TopSize.GetHashCode();
+                if (this.TableTop != null)
+                    hash = hash * 59 + this.TableTop.GetHashCode();
                 return hash;
             }
         }

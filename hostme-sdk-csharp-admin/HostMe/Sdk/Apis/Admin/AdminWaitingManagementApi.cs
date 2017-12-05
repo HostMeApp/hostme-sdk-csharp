@@ -47,7 +47,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns></returns>
-        void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber = null);
+        void CallWaitingParty (int? restaurantId, string waitingItemId, string tableNumber = null);
 
         /// <summary>
         /// Calls waiting party.
@@ -60,7 +60,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null);
+        ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, string waitingItemId, string tableNumber = null);
         /// <summary>
         /// Closes current waiting position.
         /// </summary>
@@ -71,7 +71,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns></returns>
-        void Close (int? restaurantId, int? waitingItemId);
+        void Close (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Closes current waiting position.
@@ -83,7 +83,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CloseWithHttpInfo (int? restaurantId, int? waitingItemId);
+        ApiResponse<Object> CloseWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Cancels waiting item
         /// </summary>
@@ -93,9 +93,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns></returns>
-        void CloseAsCanceled (int? restaurantId, int? waitingItemId, string origin);
+        void CloseAsCanceled (int? restaurantId, string waitingItemId, string origin = null);
 
         /// <summary>
         /// Cancels waiting item
@@ -106,9 +106,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> CloseAsCanceledWithHttpInfo (int? restaurantId, int? waitingItemId, string origin);
+        ApiResponse<Object> CloseAsCanceledWithHttpInfo (int? restaurantId, string waitingItemId, string origin = null);
         /// <summary>
         /// Sets current waiting record in sited state. When person gets a table, hostess should mark current record as sited.
         /// </summary>
@@ -143,8 +143,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Waiting</returns>
-        Waiting Create (int? restaurantId, UpdateWaitingItem contract);
+        /// <returns>Booking</returns>
+        Booking Create (int? restaurantId, UpdateWaitingItem contract);
 
         /// <summary>
         /// 
@@ -155,8 +155,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Waiting</returns>
-        ApiResponse<Waiting> CreateWithHttpInfo (int? restaurantId, UpdateWaitingItem contract);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> CreateWithHttpInfo (int? restaurantId, UpdateWaitingItem contract);
         /// <summary>
         /// Returns all waiting items for the selected restaurant
         /// </summary>
@@ -209,33 +209,6 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;PartiesStatReportItem&gt;</returns>
-        List<PartiesStatReportItem> GetPartiesGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;PartiesStatReportItem&gt;</returns>
-        ApiResponse<List<PartiesStatReportItem>> GetPartiesGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
         /// <returns>WaitingsStatistic</returns>
         WaitingsStatistic GetRestaurantWaitingsStatistic (int? restaurantId);
 
@@ -249,27 +222,6 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <returns>ApiResponse of WaitingsStatistic</returns>
         ApiResponse<WaitingsStatistic> GetRestaurantWaitingsStatisticWithHttpInfo (int? restaurantId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>WaitingStats</returns>
-        WaitingStats GetTodayStats (int? restaurantId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>ApiResponse of WaitingStats</returns>
-        ApiResponse<WaitingStats> GetTodayStatsWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -342,208 +294,6 @@ namespace HostMe.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingReportItem&gt;</returns>
-        List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingReportItem&gt;</returns>
-        ApiResponse<List<WaitingReportItem>> GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        ApiResponse<List<WaitingsStatReportItem>> GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <param name="body"></param>
@@ -572,7 +322,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns></returns>
-        void MarkAllMessagesAsRead (int? restaurantId, int? waitingItemId);
+        void MarkAllMessagesAsRead (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Marks all message as read.
@@ -584,7 +334,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> MarkAllMessagesAsReadWithHttpInfo (int? restaurantId, int? waitingItemId);
+        ApiResponse<Object> MarkAllMessagesAsReadWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Reopens closed waiting item
         /// </summary>
@@ -594,8 +344,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Waiting</returns>
-        Waiting ReOpenWaiting (int? restaurantId, int? waitingItemId);
+        /// <returns>Object</returns>
+        Object ReOpenWaiting (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Reopens closed waiting item
@@ -606,8 +356,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>ApiResponse of Waiting</returns>
-        ApiResponse<Waiting> ReOpenWaitingWithHttpInfo (int? restaurantId, int? waitingItemId);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> ReOpenWaitingWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Sends a message related to specified waiting item.
         /// </summary>
@@ -619,8 +369,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Message</returns>
-        Message SendMessage (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage);
+        /// <returns>Object</returns>
+        Object SendMessage (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage);
 
         /// <summary>
         /// Sends a message related to specified waiting item.
@@ -633,8 +383,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>ApiResponse of Message</returns>
-        ApiResponse<Message> SendMessageWithHttpInfo (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage);
+        /// <returns>ApiResponse of Object</returns>
+        ApiResponse<Object> SendMessageWithHttpInfo (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage);
         /// <summary>
         /// 
         /// </summary>
@@ -669,7 +419,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Waiting</returns>
-        Waiting UpdateWaiting (int? restaurantId, int? waitingItemId, UpdateWaitingItem item);
+        Waiting UpdateWaiting (int? restaurantId, string waitingItemId, UpdateWaitingItem item);
 
         /// <summary>
         /// Updates waitingitem
@@ -682,7 +432,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>ApiResponse of Waiting</returns>
-        ApiResponse<Waiting> UpdateWaitingWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItem item);
+        ApiResponse<Waiting> UpdateWaitingWithHttpInfo (int? restaurantId, string waitingItemId, UpdateWaitingItem item);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -696,7 +446,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber = null);
+        System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, string waitingItemId, string tableNumber = null);
 
         /// <summary>
         /// Calls waiting party.
@@ -709,7 +459,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string tableNumber = null);
         /// <summary>
         /// Closes current waiting position.
         /// </summary>
@@ -720,7 +470,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CloseAsync (int? restaurantId, int? waitingItemId);
+        System.Threading.Tasks.Task CloseAsync (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Closes current waiting position.
@@ -732,7 +482,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsyncWithHttpInfo (int? restaurantId, int? waitingItemId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsyncWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Cancels waiting item
         /// </summary>
@@ -742,9 +492,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task CloseAsCanceledAsync (int? restaurantId, int? waitingItemId, string origin);
+        System.Threading.Tasks.Task CloseAsCanceledAsync (int? restaurantId, string waitingItemId, string origin = null);
 
         /// <summary>
         /// Cancels waiting item
@@ -755,9 +505,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string origin);
+        System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string origin = null);
         /// <summary>
         /// Sets current waiting record in sited state. When person gets a table, hostess should mark current record as sited.
         /// </summary>
@@ -792,8 +542,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Waiting</returns>
-        System.Threading.Tasks.Task<Waiting> CreateAsync (int? restaurantId, UpdateWaitingItem contract);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> CreateAsync (int? restaurantId, UpdateWaitingItem contract);
 
         /// <summary>
         /// 
@@ -804,8 +554,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Waiting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Waiting>> CreateAsyncWithHttpInfo (int? restaurantId, UpdateWaitingItem contract);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> CreateAsyncWithHttpInfo (int? restaurantId, UpdateWaitingItem contract);
         /// <summary>
         /// Returns all waiting items for the selected restaurant
         /// </summary>
@@ -858,33 +608,6 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;PartiesStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<PartiesStatReportItem>> GetPartiesGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;PartiesStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<PartiesStatReportItem>>> GetPartiesGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
         /// <returns>Task of WaitingsStatistic</returns>
         System.Threading.Tasks.Task<WaitingsStatistic> GetRestaurantWaitingsStatisticAsync (int? restaurantId);
 
@@ -898,27 +621,6 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <returns>Task of ApiResponse (WaitingsStatistic)</returns>
         System.Threading.Tasks.Task<ApiResponse<WaitingsStatistic>> GetRestaurantWaitingsStatisticAsyncWithHttpInfo (int? restaurantId);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>Task of WaitingStats</returns>
-        System.Threading.Tasks.Task<WaitingStats> GetTodayStatsAsync (int? restaurantId);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (WaitingStats)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WaitingStats>> GetTodayStatsAsyncWithHttpInfo (int? restaurantId);
         /// <summary>
         /// 
         /// </summary>
@@ -991,208 +693,6 @@ namespace HostMe.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <param name="body"></param>
@@ -1221,7 +721,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task MarkAllMessagesAsReadAsync (int? restaurantId, int? waitingItemId);
+        System.Threading.Tasks.Task MarkAllMessagesAsReadAsync (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Marks all message as read.
@@ -1233,7 +733,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> MarkAllMessagesAsReadAsyncWithHttpInfo (int? restaurantId, int? waitingItemId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> MarkAllMessagesAsReadAsyncWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Reopens closed waiting item
         /// </summary>
@@ -1243,8 +743,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Task of Waiting</returns>
-        System.Threading.Tasks.Task<Waiting> ReOpenWaitingAsync (int? restaurantId, int? waitingItemId);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> ReOpenWaitingAsync (int? restaurantId, string waitingItemId);
 
         /// <summary>
         /// Reopens closed waiting item
@@ -1255,8 +755,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Task of ApiResponse (Waiting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Waiting>> ReOpenWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> ReOpenWaitingAsyncWithHttpInfo (int? restaurantId, string waitingItemId);
         /// <summary>
         /// Sends a message related to specified waiting item.
         /// </summary>
@@ -1268,8 +768,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Task of Message</returns>
-        System.Threading.Tasks.Task<Message> SendMessageAsync (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage);
+        /// <returns>Task of Object</returns>
+        System.Threading.Tasks.Task<Object> SendMessageAsync (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage);
 
         /// <summary>
         /// Sends a message related to specified waiting item.
@@ -1282,8 +782,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Message>> SendMessageAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage);
+        /// <returns>Task of ApiResponse (Object)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage);
         /// <summary>
         /// 
         /// </summary>
@@ -1318,7 +818,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of Waiting</returns>
-        System.Threading.Tasks.Task<Waiting> UpdateWaitingAsync (int? restaurantId, int? waitingItemId, UpdateWaitingItem item);
+        System.Threading.Tasks.Task<Waiting> UpdateWaitingAsync (int? restaurantId, string waitingItemId, UpdateWaitingItem item);
 
         /// <summary>
         /// Updates waitingitem
@@ -1331,7 +831,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of ApiResponse (Waiting)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Waiting>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItem item);
+        System.Threading.Tasks.Task<ApiResponse<Waiting>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, string waitingItemId, UpdateWaitingItem item);
         #endregion Asynchronous Operations
     }
 
@@ -1452,7 +952,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns></returns>
-        public void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber = null)
+        public void CallWaitingParty (int? restaurantId, string waitingItemId, string tableNumber = null)
         {
              CallWaitingPartyWithHttpInfo(restaurantId, waitingItemId, tableNumber);
         }
@@ -1465,7 +965,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null)
+        public ApiResponse<Object> CallWaitingPartyWithHttpInfo (int? restaurantId, string waitingItemId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1539,7 +1039,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, int? waitingItemId, string tableNumber = null)
+        public async System.Threading.Tasks.Task CallWaitingPartyAsync (int? restaurantId, string waitingItemId, string tableNumber = null)
         {
              await CallWaitingPartyAsyncWithHttpInfo(restaurantId, waitingItemId, tableNumber);
 
@@ -1553,7 +1053,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="tableNumber">Number of the table (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string tableNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CallWaitingPartyAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1626,7 +1126,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns></returns>
-        public void Close (int? restaurantId, int? waitingItemId)
+        public void Close (int? restaurantId, string waitingItemId)
         {
              CloseWithHttpInfo(restaurantId, waitingItemId);
         }
@@ -1638,7 +1138,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CloseWithHttpInfo (int? restaurantId, int? waitingItemId)
+        public ApiResponse<Object> CloseWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1710,7 +1210,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CloseAsync (int? restaurantId, int? waitingItemId)
+        public async System.Threading.Tasks.Task CloseAsync (int? restaurantId, string waitingItemId)
         {
              await CloseAsyncWithHttpInfo(restaurantId, waitingItemId);
 
@@ -1723,7 +1223,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Identifier of the waiting item</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsyncWithHttpInfo (int? restaurantId, int? waitingItemId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsyncWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1794,9 +1294,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns></returns>
-        public void CloseAsCanceled (int? restaurantId, int? waitingItemId, string origin)
+        public void CloseAsCanceled (int? restaurantId, string waitingItemId, string origin = null)
         {
              CloseAsCanceledWithHttpInfo(restaurantId, waitingItemId, origin);
         }
@@ -1807,9 +1307,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> CloseAsCanceledWithHttpInfo (int? restaurantId, int? waitingItemId, string origin)
+        public ApiResponse<Object> CloseAsCanceledWithHttpInfo (int? restaurantId, string waitingItemId, string origin = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1817,9 +1317,6 @@ namespace HostMe.Sdk.Api
             // verify the required parameter 'waitingItemId' is set
             if (waitingItemId == null)
                 throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling AdminWaitingManagementApi->CloseAsCanceled");
-            // verify the required parameter 'origin' is set
-            if (origin == null)
-                throw new ApiException(400, "Missing required parameter 'origin' when calling AdminWaitingManagementApi->CloseAsCanceled");
 
             var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId}/cancel";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1884,9 +1381,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task CloseAsCanceledAsync (int? restaurantId, int? waitingItemId, string origin)
+        public async System.Threading.Tasks.Task CloseAsCanceledAsync (int? restaurantId, string waitingItemId, string origin = null)
         {
              await CloseAsCanceledAsyncWithHttpInfo(restaurantId, waitingItemId, origin);
 
@@ -1898,9 +1395,9 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
+        /// <param name="origin"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string origin)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> CloseAsCanceledAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string origin = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1908,9 +1405,6 @@ namespace HostMe.Sdk.Api
             // verify the required parameter 'waitingItemId' is set
             if (waitingItemId == null)
                 throw new ApiException(400, "Missing required parameter 'waitingItemId' when calling AdminWaitingManagementApi->CloseAsCanceled");
-            // verify the required parameter 'origin' is set
-            if (origin == null)
-                throw new ApiException(400, "Missing required parameter 'origin' when calling AdminWaitingManagementApi->CloseAsCanceled");
 
             var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId}/cancel";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2150,10 +1644,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Waiting</returns>
-        public Waiting Create (int? restaurantId, UpdateWaitingItem contract)
+        /// <returns>Booking</returns>
+        public Booking Create (int? restaurantId, UpdateWaitingItem contract)
         {
-             ApiResponse<Waiting> localVarResponse = CreateWithHttpInfo(restaurantId, contract);
+             ApiResponse<Booking> localVarResponse = CreateWithHttpInfo(restaurantId, contract);
              return localVarResponse.Data;
         }
 
@@ -2163,8 +1657,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Waiting</returns>
-        public ApiResponse< Waiting > CreateWithHttpInfo (int? restaurantId, UpdateWaitingItem contract)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > CreateWithHttpInfo (int? restaurantId, UpdateWaitingItem contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2235,9 +1729,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Waiting>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Waiting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Waiting)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -2247,10 +1741,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Waiting</returns>
-        public async System.Threading.Tasks.Task<Waiting> CreateAsync (int? restaurantId, UpdateWaitingItem contract)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> CreateAsync (int? restaurantId, UpdateWaitingItem contract)
         {
-             ApiResponse<Waiting> localVarResponse = await CreateAsyncWithHttpInfo(restaurantId, contract);
+             ApiResponse<Booking> localVarResponse = await CreateAsyncWithHttpInfo(restaurantId, contract);
              return localVarResponse.Data;
 
         }
@@ -2261,8 +1755,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Waiting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Waiting>> CreateAsyncWithHttpInfo (int? restaurantId, UpdateWaitingItem contract)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> CreateAsyncWithHttpInfo (int? restaurantId, UpdateWaitingItem contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2333,9 +1827,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Waiting>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Waiting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Waiting)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -2674,177 +2168,6 @@ namespace HostMe.Sdk.Api
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;PartiesStatReportItem&gt;</returns>
-        public List<PartiesStatReportItem> GetPartiesGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<PartiesStatReportItem>> localVarResponse = GetPartiesGroupByWithHttpInfo(restaurantId, groupBy, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;PartiesStatReportItem&gt;</returns>
-        public ApiResponse< List<PartiesStatReportItem> > GetPartiesGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetPartiesGroupBy");
-            // verify the required parameter 'groupBy' is set
-            if (groupBy == null)
-                throw new ApiException(400, "Missing required parameter 'groupBy' when calling AdminWaitingManagementApi->GetPartiesGroupBy");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/parties/groupby";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (groupBy != null) localVarQueryParams.Add("groupBy", Configuration.ApiClient.ParameterToString(groupBy)); // query parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetPartiesGroupBy", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<PartiesStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<PartiesStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PartiesStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;PartiesStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<PartiesStatReportItem>> GetPartiesGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<PartiesStatReportItem>> localVarResponse = await GetPartiesGroupByAsyncWithHttpInfo(restaurantId, groupBy, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;PartiesStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<PartiesStatReportItem>>> GetPartiesGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetPartiesGroupBy");
-            // verify the required parameter 'groupBy' is set
-            if (groupBy == null)
-                throw new ApiException(400, "Missing required parameter 'groupBy' when calling AdminWaitingManagementApi->GetPartiesGroupBy");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/parties/groupby";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (groupBy != null) localVarQueryParams.Add("groupBy", Configuration.ApiClient.ParameterToString(groupBy)); // query parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetPartiesGroupBy", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<PartiesStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<PartiesStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<PartiesStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
         /// <returns>WaitingsStatistic</returns>
         public WaitingsStatistic GetRestaurantWaitingsStatistic (int? restaurantId)
         {
@@ -2996,165 +2319,6 @@ namespace HostMe.Sdk.Api
             return new ApiResponse<WaitingsStatistic>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WaitingsStatistic) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingsStatistic)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>WaitingStats</returns>
-        public WaitingStats GetTodayStats (int? restaurantId)
-        {
-             ApiResponse<WaitingStats> localVarResponse = GetTodayStatsWithHttpInfo(restaurantId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>ApiResponse of WaitingStats</returns>
-        public ApiResponse< WaitingStats > GetTodayStatsWithHttpInfo (int? restaurantId)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetTodayStats");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/stats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetTodayStats", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<WaitingStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingStats)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>Task of WaitingStats</returns>
-        public async System.Threading.Tasks.Task<WaitingStats> GetTodayStatsAsync (int? restaurantId)
-        {
-             ApiResponse<WaitingStats> localVarResponse = await GetTodayStatsAsyncWithHttpInfo(restaurantId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <returns>Task of ApiResponse (WaitingStats)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WaitingStats>> GetTodayStatsAsyncWithHttpInfo (int? restaurantId)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetTodayStats");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/stats";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetTodayStats", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<WaitingStats>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (WaitingStats) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WaitingStats)));
             
         }
 
@@ -3651,1386 +2815,6 @@ namespace HostMe.Sdk.Api
         ///  
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByGroupWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByGroupWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByGroup");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/partysize";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByGroup", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByGroupAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByGroupAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByGroupAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByGroup");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/partysize";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByGroup", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByHourWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByHourWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByHour");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/hour";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByHour", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByHourAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByHourAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByHourAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByHour");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/hour";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByHour", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByLineWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByLineWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByLine");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/waitings/groupby/line";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByLine", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByLineAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByLineAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByLineAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByLine");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/waitings/groupby/line";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByLine", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByMealWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByMealWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByMeal");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/mealtype";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByMeal", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByMealAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByMealAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByMealAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByMeal");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/mealtype";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByMeal", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByWeekWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByWeek");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/week";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByWeek", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByWeekAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByWeek");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/week";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByWeek", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingTimeByWeekDayWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingTimeByWeekDayWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByWeekDay");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/weekday";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByWeekDay", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingTimeByWeekDayAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingTimeByWeekDayAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingTimeByWeekDayAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingTimeByWeekDay");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/weekday";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingTimeByWeekDay", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingReportItem&gt;</returns>
-        public List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingReportItem>> localVarResponse = GetWaitingsForPeriodWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingReportItem&gt;</returns>
-        public ApiResponse< List<WaitingReportItem> > GetWaitingsForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingsForPeriod");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingsForPeriod", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingReportItem>> GetWaitingsForPeriodAsync (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingReportItem>> localVarResponse = await GetWaitingsForPeriodAsyncWithHttpInfo(restaurantId, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingReportItem>>> GetWaitingsForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingsForPeriod");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingsForPeriod", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>List&lt;WaitingsStatReportItem&gt;</returns>
-        public List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = GetWaitingsGroupByWithHttpInfo(restaurantId, groupBy, from, to);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;WaitingsStatReportItem&gt;</returns>
-        public ApiResponse< List<WaitingsStatReportItem> > GetWaitingsGroupByWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingsGroupBy");
-            // verify the required parameter 'groupBy' is set
-            if (groupBy == null)
-                throw new ApiException(400, "Missing required parameter 'groupBy' when calling AdminWaitingManagementApi->GetWaitingsGroupBy");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (groupBy != null) localVarQueryParams.Add("groupBy", Configuration.ApiClient.ParameterToString(groupBy)); // query parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingsGroupBy", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of List&lt;WaitingsStatReportItem&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WaitingsStatReportItem>> GetWaitingsGroupByAsync (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-             ApiResponse<List<WaitingsStatReportItem>> localVarResponse = await GetWaitingsGroupByAsyncWithHttpInfo(restaurantId, groupBy, from, to);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="groupBy"></param>
-        /// <param name="from"> (optional)</param>
-        /// <param name="to"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;WaitingsStatReportItem&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WaitingsStatReportItem>>> GetWaitingsGroupByAsyncWithHttpInfo (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-        {
-            // verify the required parameter 'restaurantId' is set
-            if (restaurantId == null)
-                throw new ApiException(400, "Missing required parameter 'restaurantId' when calling AdminWaitingManagementApi->GetWaitingsGroupBy");
-            // verify the required parameter 'groupBy' is set
-            if (groupBy == null)
-                throw new ApiException(400, "Missing required parameter 'groupBy' when calling AdminWaitingManagementApi->GetWaitingsGroupBy");
-
-            var localVarPath = "/api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-            if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
-            if (groupBy != null) localVarQueryParams.Add("groupBy", Configuration.ApiClient.ParameterToString(groupBy)); // query parameter
-            if (from != null) localVarQueryParams.Add("from", Configuration.ApiClient.ParameterToString(from)); // query parameter
-            if (to != null) localVarQueryParams.Add("to", Configuration.ApiClient.ParameterToString(to)); // query parameter
-
-            // authentication (oauth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("GetWaitingsGroupBy", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<List<WaitingsStatReportItem>>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<WaitingsStatReportItem>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<WaitingsStatReportItem>)));
-            
-        }
-
-        /// <summary>
-        ///  
-        /// </summary>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="from"></param>
         /// <param name="to"></param>
         /// <param name="body"></param>
@@ -5205,7 +2989,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns></returns>
-        public void MarkAllMessagesAsRead (int? restaurantId, int? waitingItemId)
+        public void MarkAllMessagesAsRead (int? restaurantId, string waitingItemId)
         {
              MarkAllMessagesAsReadWithHttpInfo(restaurantId, waitingItemId);
         }
@@ -5217,7 +3001,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> MarkAllMessagesAsReadWithHttpInfo (int? restaurantId, int? waitingItemId)
+        public ApiResponse<Object> MarkAllMessagesAsReadWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5289,7 +3073,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task MarkAllMessagesAsReadAsync (int? restaurantId, int? waitingItemId)
+        public async System.Threading.Tasks.Task MarkAllMessagesAsReadAsync (int? restaurantId, string waitingItemId)
         {
              await MarkAllMessagesAsReadAsyncWithHttpInfo(restaurantId, waitingItemId);
 
@@ -5302,7 +3086,7 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkAllMessagesAsReadAsyncWithHttpInfo (int? restaurantId, int? waitingItemId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> MarkAllMessagesAsReadAsyncWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5373,10 +3157,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Waiting</returns>
-        public Waiting ReOpenWaiting (int? restaurantId, int? waitingItemId)
+        /// <returns>Object</returns>
+        public Object ReOpenWaiting (int? restaurantId, string waitingItemId)
         {
-             ApiResponse<Waiting> localVarResponse = ReOpenWaitingWithHttpInfo(restaurantId, waitingItemId);
+             ApiResponse<Object> localVarResponse = ReOpenWaitingWithHttpInfo(restaurantId, waitingItemId);
              return localVarResponse.Data;
         }
 
@@ -5386,8 +3170,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>ApiResponse of Waiting</returns>
-        public ApiResponse< Waiting > ReOpenWaitingWithHttpInfo (int? restaurantId, int? waitingItemId)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > ReOpenWaitingWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5446,9 +3230,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Waiting>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Waiting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Waiting)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -5458,10 +3242,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Task of Waiting</returns>
-        public async System.Threading.Tasks.Task<Waiting> ReOpenWaitingAsync (int? restaurantId, int? waitingItemId)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> ReOpenWaitingAsync (int? restaurantId, string waitingItemId)
         {
-             ApiResponse<Waiting> localVarResponse = await ReOpenWaitingAsyncWithHttpInfo(restaurantId, waitingItemId);
+             ApiResponse<Object> localVarResponse = await ReOpenWaitingAsyncWithHttpInfo(restaurantId, waitingItemId);
              return localVarResponse.Data;
 
         }
@@ -5472,8 +3256,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId">Restaurant identifier</param>
         /// <param name="waitingItemId">Waiting item identifier</param>
-        /// <returns>Task of ApiResponse (Waiting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Waiting>> ReOpenWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> ReOpenWaitingAsyncWithHttpInfo (int? restaurantId, string waitingItemId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5532,9 +3316,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Waiting>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Waiting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Waiting)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -5546,10 +3330,10 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Message</returns>
-        public Message SendMessage (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage)
+        /// <returns>Object</returns>
+        public Object SendMessage (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage)
         {
-             ApiResponse<Message> localVarResponse = SendMessageWithHttpInfo(restaurantId, waitingItemId, origin, createMessage);
+             ApiResponse<Object> localVarResponse = SendMessageWithHttpInfo(restaurantId, waitingItemId, origin, createMessage);
              return localVarResponse.Data;
         }
 
@@ -5561,8 +3345,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>ApiResponse of Message</returns>
-        public ApiResponse< Message > SendMessageWithHttpInfo (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage)
+        /// <returns>ApiResponse of Object</returns>
+        public ApiResponse< Object > SendMessageWithHttpInfo (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5641,9 +3425,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Message>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Message) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Message)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -5655,10 +3439,10 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Task of Message</returns>
-        public async System.Threading.Tasks.Task<Message> SendMessageAsync (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage)
+        /// <returns>Task of Object</returns>
+        public async System.Threading.Tasks.Task<Object> SendMessageAsync (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage)
         {
-             ApiResponse<Message> localVarResponse = await SendMessageAsyncWithHttpInfo(restaurantId, waitingItemId, origin, createMessage);
+             ApiResponse<Object> localVarResponse = await SendMessageAsyncWithHttpInfo(restaurantId, waitingItemId, origin, createMessage);
              return localVarResponse.Data;
 
         }
@@ -5671,8 +3455,8 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Waiting item identifier</param>
         /// <param name="origin">This parameter specifies who send the message. It could be host or client.</param>
         /// <param name="createMessage">The message with body</param>
-        /// <returns>Task of ApiResponse (Message)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Message>> SendMessageAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage)
+        /// <returns>Task of ApiResponse (Object)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> SendMessageAsyncWithHttpInfo (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -5751,9 +3535,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Message>(localVarStatusCode,
+            return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Message) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Message)));
+                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -5958,7 +3742,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Waiting</returns>
-        public Waiting UpdateWaiting (int? restaurantId, int? waitingItemId, UpdateWaitingItem item)
+        public Waiting UpdateWaiting (int? restaurantId, string waitingItemId, UpdateWaitingItem item)
         {
              ApiResponse<Waiting> localVarResponse = UpdateWaitingWithHttpInfo(restaurantId, waitingItemId, item);
              return localVarResponse.Data;
@@ -5972,7 +3756,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>ApiResponse of Waiting</returns>
-        public ApiResponse< Waiting > UpdateWaitingWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItem item)
+        public ApiResponse< Waiting > UpdateWaitingWithHttpInfo (int? restaurantId, string waitingItemId, UpdateWaitingItem item)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -6061,7 +3845,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of Waiting</returns>
-        public async System.Threading.Tasks.Task<Waiting> UpdateWaitingAsync (int? restaurantId, int? waitingItemId, UpdateWaitingItem item)
+        public async System.Threading.Tasks.Task<Waiting> UpdateWaitingAsync (int? restaurantId, string waitingItemId, UpdateWaitingItem item)
         {
              ApiResponse<Waiting> localVarResponse = await UpdateWaitingAsyncWithHttpInfo(restaurantId, waitingItemId, item);
              return localVarResponse.Data;
@@ -6076,7 +3860,7 @@ namespace HostMe.Sdk.Api
         /// <param name="waitingItemId">Identifier of the waiting record in our system</param>
         /// <param name="item">Update model of waiting record</param>
         /// <returns>Task of ApiResponse (Waiting)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Waiting>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, int? waitingItemId, UpdateWaitingItem item)
+        public async System.Threading.Tasks.Task<ApiResponse<Waiting>> UpdateWaitingAsyncWithHttpInfo (int? restaurantId, string waitingItemId, UpdateWaitingItem item)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)

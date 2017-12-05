@@ -51,7 +51,9 @@ namespace HostMe.Sdk.Model
         /// <param name="IsRedeemed">IsRedeemed.</param>
         /// <param name="ReservationTime">ReservationTime.</param>
         /// <param name="ReservationStatus">ReservationStatus.</param>
-        public ReservationInvitation(string Email = null, string PhoneNumber = null, RestaurantInfo Restaurant = null, int? GroupSize = null, bool? IsRedeemed = null, DateTimeOffset? ReservationTime = null, string ReservationStatus = null)
+        /// <param name="PartyTypes">PartyTypes.</param>
+        /// <param name="Party">Party.</param>
+        public ReservationInvitation(string Email = null, string PhoneNumber = null, RestaurantInfo Restaurant = null, int? GroupSize = null, bool? IsRedeemed = null, DateTimeOffset? ReservationTime = null, string ReservationStatus = null, List<string> PartyTypes = null, bool? Party = null)
         {
             this.Email = Email;
             this.PhoneNumber = PhoneNumber;
@@ -60,6 +62,8 @@ namespace HostMe.Sdk.Model
             this.IsRedeemed = IsRedeemed;
             this.ReservationTime = ReservationTime;
             this.ReservationStatus = ReservationStatus;
+            this.PartyTypes = PartyTypes;
+            this.Party = Party;
         }
         
         /// <summary>
@@ -98,6 +102,16 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="reservationStatus", EmitDefaultValue=true)]
         public string ReservationStatus { get; set; }
         /// <summary>
+        /// Gets or Sets PartyTypes
+        /// </summary>
+        [DataMember(Name="partyTypes", EmitDefaultValue=true)]
+        public List<string> PartyTypes { get; set; }
+        /// <summary>
+        /// Gets or Sets Party
+        /// </summary>
+        [DataMember(Name="party", EmitDefaultValue=true)]
+        public bool? Party { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -112,6 +126,8 @@ namespace HostMe.Sdk.Model
             sb.Append("  IsRedeemed: ").Append(IsRedeemed).Append("\n");
             sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
             sb.Append("  ReservationStatus: ").Append(ReservationStatus).Append("\n");
+            sb.Append("  PartyTypes: ").Append(PartyTypes).Append("\n");
+            sb.Append("  Party: ").Append(Party).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -182,6 +198,16 @@ namespace HostMe.Sdk.Model
                     this.ReservationStatus == other.ReservationStatus ||
                     this.ReservationStatus != null &&
                     this.ReservationStatus.Equals(other.ReservationStatus)
+                ) && 
+                (
+                    this.PartyTypes == other.PartyTypes ||
+                    this.PartyTypes != null &&
+                    this.PartyTypes.SequenceEqual(other.PartyTypes)
+                ) && 
+                (
+                    this.Party == other.Party ||
+                    this.Party != null &&
+                    this.Party.Equals(other.Party)
                 );
         }
 
@@ -210,6 +236,10 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.ReservationStatus != null)
                     hash = hash * 59 + this.ReservationStatus.GetHashCode();
+                if (this.PartyTypes != null)
+                    hash = hash * 59 + this.PartyTypes.GetHashCode();
+                if (this.Party != null)
+                    hash = hash * 59 + this.Party.GetHashCode();
                 return hash;
             }
         }

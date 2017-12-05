@@ -47,7 +47,6 @@ namespace HostMe.Sdk.Model
         /// <param name="Id">Id.</param>
         /// <param name="GroupSize">GroupSize.</param>
         /// <param name="UnreadMessageCount">UnreadMessageCount.</param>
-        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
         /// <param name="Status">Status.</param>
         /// <param name="CustomerName">CustomerName.</param>
         /// <param name="Phone">Phone.</param>
@@ -57,28 +56,26 @@ namespace HostMe.Sdk.Model
         /// <param name="ExpectedTime">ExpectedTime.</param>
         /// <param name="StatusTime">StatusTime.</param>
         /// <param name="EstimatedReleaseTime">EstimatedReleaseTime.</param>
-        /// <param name="RegistrationTime">RegistrationTime.</param>
         /// <param name="InternalNotes">InternalNotes.</param>
         /// <param name="SpecialRequests">SpecialRequests.</param>
         /// <param name="AboutGuestNotes">AboutGuestNotes.</param>
         /// <param name="TableNumber">TableNumber.</param>
         /// <param name="Email">Email.</param>
+        /// <param name="Membership">Membership.</param>
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
         /// <param name="Booth">Booth.</param>
         /// <param name="HighTop">HighTop.</param>
         /// <param name="Table">Table.</param>
         /// <param name="Party">Party.</param>
-        /// <param name="HandicapAccessible">HandicapAccessible.</param>
         /// <param name="PartyTypes">PartyTypes.</param>
-        /// <param name="Messages">Messages.</param>
-        /// <param name="Membership">Membership.</param>
-        public Waiting(string Id = null, int? GroupSize = null, int? UnreadMessageCount = null, double? EstimatedTurnOverTime = null, string Status = null, string CustomerName = null, string Phone = null, string Areas = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, DateTimeOffset? ExpectedTime = null, DateTimeOffset? StatusTime = null, DateTimeOffset? EstimatedReleaseTime = null, DateTimeOffset? RegistrationTime = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string TableNumber = null, string Email = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Party = null, bool? HandicapAccessible = null, List<string> PartyTypes = null, List<Message> Messages = null, MembershipInfo Membership = null)
+        /// <param name="CustomerProfile">CustomerProfile.</param>
+        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
+        public Waiting(string Id = null, int? GroupSize = null, int? UnreadMessageCount = null, string Status = null, string CustomerName = null, string Phone = null, string Areas = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, DateTimeOffset? ExpectedTime = null, DateTimeOffset? StatusTime = null, DateTimeOffset? EstimatedReleaseTime = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string TableNumber = null, string Email = null, MembershipInfo Membership = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Party = null, List<string> PartyTypes = null, ProfileData CustomerProfile = null, double? EstimatedTurnOverTime = null)
         {
             this.Id = Id;
             this.GroupSize = GroupSize;
             this.UnreadMessageCount = UnreadMessageCount;
-            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
             this.Status = Status;
             this.CustomerName = CustomerName;
             this.Phone = Phone;
@@ -88,22 +85,21 @@ namespace HostMe.Sdk.Model
             this.ExpectedTime = ExpectedTime;
             this.StatusTime = StatusTime;
             this.EstimatedReleaseTime = EstimatedReleaseTime;
-            this.RegistrationTime = RegistrationTime;
             this.InternalNotes = InternalNotes;
             this.SpecialRequests = SpecialRequests;
             this.AboutGuestNotes = AboutGuestNotes;
             this.TableNumber = TableNumber;
             this.Email = Email;
+            this.Membership = Membership;
             this.HighChair = HighChair;
             this.Stroller = Stroller;
             this.Booth = Booth;
             this.HighTop = HighTop;
             this.Table = Table;
             this.Party = Party;
-            this.HandicapAccessible = HandicapAccessible;
             this.PartyTypes = PartyTypes;
-            this.Messages = Messages;
-            this.Membership = Membership;
+            this.CustomerProfile = CustomerProfile;
+            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
         }
         
         /// <summary>
@@ -121,11 +117,6 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="unreadMessageCount", EmitDefaultValue=true)]
         public int? UnreadMessageCount { get; set; }
-        /// <summary>
-        /// Gets or Sets EstimatedTurnOverTime
-        /// </summary>
-        [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=true)]
-        public double? EstimatedTurnOverTime { get; set; }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -172,11 +163,6 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=true)]
         public DateTimeOffset? EstimatedReleaseTime { get; set; }
         /// <summary>
-        /// Gets or Sets RegistrationTime
-        /// </summary>
-        [DataMember(Name="registrationTime", EmitDefaultValue=true)]
-        public DateTimeOffset? RegistrationTime { get; set; }
-        /// <summary>
         /// Gets or Sets InternalNotes
         /// </summary>
         [DataMember(Name="internalNotes", EmitDefaultValue=true)]
@@ -201,6 +187,11 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="email", EmitDefaultValue=true)]
         public string Email { get; set; }
+        /// <summary>
+        /// Gets or Sets Membership
+        /// </summary>
+        [DataMember(Name="membership", EmitDefaultValue=true)]
+        public MembershipInfo Membership { get; set; }
         /// <summary>
         /// Gets or Sets HighChair
         /// </summary>
@@ -232,25 +223,20 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="party", EmitDefaultValue=true)]
         public bool? Party { get; set; }
         /// <summary>
-        /// Gets or Sets HandicapAccessible
-        /// </summary>
-        [DataMember(Name="handicapAccessible", EmitDefaultValue=true)]
-        public bool? HandicapAccessible { get; set; }
-        /// <summary>
         /// Gets or Sets PartyTypes
         /// </summary>
         [DataMember(Name="partyTypes", EmitDefaultValue=true)]
         public List<string> PartyTypes { get; set; }
         /// <summary>
-        /// Gets or Sets Messages
+        /// Gets or Sets CustomerProfile
         /// </summary>
-        [DataMember(Name="messages", EmitDefaultValue=true)]
-        public List<Message> Messages { get; set; }
+        [DataMember(Name="customerProfile", EmitDefaultValue=true)]
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
-        /// Gets or Sets Membership
+        /// Gets or Sets EstimatedTurnOverTime
         /// </summary>
-        [DataMember(Name="membership", EmitDefaultValue=true)]
-        public MembershipInfo Membership { get; set; }
+        [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=true)]
+        public double? EstimatedTurnOverTime { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -262,7 +248,6 @@ namespace HostMe.Sdk.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
             sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
-            sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
@@ -272,22 +257,21 @@ namespace HostMe.Sdk.Model
             sb.Append("  ExpectedTime: ").Append(ExpectedTime).Append("\n");
             sb.Append("  StatusTime: ").Append(StatusTime).Append("\n");
             sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
-            sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
             sb.Append("  InternalNotes: ").Append(InternalNotes).Append("\n");
             sb.Append("  SpecialRequests: ").Append(SpecialRequests).Append("\n");
             sb.Append("  AboutGuestNotes: ").Append(AboutGuestNotes).Append("\n");
             sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
+            sb.Append("  Membership: ").Append(Membership).Append("\n");
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             sb.Append("  Booth: ").Append(Booth).Append("\n");
             sb.Append("  HighTop: ").Append(HighTop).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("  Party: ").Append(Party).Append("\n");
-            sb.Append("  HandicapAccessible: ").Append(HandicapAccessible).Append("\n");
             sb.Append("  PartyTypes: ").Append(PartyTypes).Append("\n");
-            sb.Append("  Messages: ").Append(Messages).Append("\n");
-            sb.Append("  Membership: ").Append(Membership).Append("\n");
+            sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
+            sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -340,11 +324,6 @@ namespace HostMe.Sdk.Model
                     this.UnreadMessageCount.Equals(other.UnreadMessageCount)
                 ) && 
                 (
-                    this.EstimatedTurnOverTime == other.EstimatedTurnOverTime ||
-                    this.EstimatedTurnOverTime != null &&
-                    this.EstimatedTurnOverTime.Equals(other.EstimatedTurnOverTime)
-                ) && 
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -390,11 +369,6 @@ namespace HostMe.Sdk.Model
                     this.EstimatedReleaseTime.Equals(other.EstimatedReleaseTime)
                 ) && 
                 (
-                    this.RegistrationTime == other.RegistrationTime ||
-                    this.RegistrationTime != null &&
-                    this.RegistrationTime.Equals(other.RegistrationTime)
-                ) && 
-                (
                     this.InternalNotes == other.InternalNotes ||
                     this.InternalNotes != null &&
                     this.InternalNotes.Equals(other.InternalNotes)
@@ -418,6 +392,11 @@ namespace HostMe.Sdk.Model
                     this.Email == other.Email ||
                     this.Email != null &&
                     this.Email.Equals(other.Email)
+                ) && 
+                (
+                    this.Membership == other.Membership ||
+                    this.Membership != null &&
+                    this.Membership.Equals(other.Membership)
                 ) && 
                 (
                     this.HighChair == other.HighChair ||
@@ -450,24 +429,19 @@ namespace HostMe.Sdk.Model
                     this.Party.Equals(other.Party)
                 ) && 
                 (
-                    this.HandicapAccessible == other.HandicapAccessible ||
-                    this.HandicapAccessible != null &&
-                    this.HandicapAccessible.Equals(other.HandicapAccessible)
-                ) && 
-                (
                     this.PartyTypes == other.PartyTypes ||
                     this.PartyTypes != null &&
                     this.PartyTypes.SequenceEqual(other.PartyTypes)
                 ) && 
                 (
-                    this.Messages == other.Messages ||
-                    this.Messages != null &&
-                    this.Messages.SequenceEqual(other.Messages)
+                    this.CustomerProfile == other.CustomerProfile ||
+                    this.CustomerProfile != null &&
+                    this.CustomerProfile.Equals(other.CustomerProfile)
                 ) && 
                 (
-                    this.Membership == other.Membership ||
-                    this.Membership != null &&
-                    this.Membership.Equals(other.Membership)
+                    this.EstimatedTurnOverTime == other.EstimatedTurnOverTime ||
+                    this.EstimatedTurnOverTime != null &&
+                    this.EstimatedTurnOverTime.Equals(other.EstimatedTurnOverTime)
                 );
         }
 
@@ -488,8 +462,6 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.GroupSize.GetHashCode();
                 if (this.UnreadMessageCount != null)
                     hash = hash * 59 + this.UnreadMessageCount.GetHashCode();
-                if (this.EstimatedTurnOverTime != null)
-                    hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.CustomerName != null)
@@ -508,8 +480,6 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.StatusTime.GetHashCode();
                 if (this.EstimatedReleaseTime != null)
                     hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
-                if (this.RegistrationTime != null)
-                    hash = hash * 59 + this.RegistrationTime.GetHashCode();
                 if (this.InternalNotes != null)
                     hash = hash * 59 + this.InternalNotes.GetHashCode();
                 if (this.SpecialRequests != null)
@@ -520,6 +490,8 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.TableNumber.GetHashCode();
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                if (this.Membership != null)
+                    hash = hash * 59 + this.Membership.GetHashCode();
                 if (this.HighChair != null)
                     hash = hash * 59 + this.HighChair.GetHashCode();
                 if (this.Stroller != null)
@@ -532,14 +504,12 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Table.GetHashCode();
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
-                if (this.HandicapAccessible != null)
-                    hash = hash * 59 + this.HandicapAccessible.GetHashCode();
                 if (this.PartyTypes != null)
                     hash = hash * 59 + this.PartyTypes.GetHashCode();
-                if (this.Messages != null)
-                    hash = hash * 59 + this.Messages.GetHashCode();
-                if (this.Membership != null)
-                    hash = hash * 59 + this.Membership.GetHashCode();
+                if (this.CustomerProfile != null)
+                    hash = hash * 59 + this.CustomerProfile.GetHashCode();
+                if (this.EstimatedTurnOverTime != null)
+                    hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
                 return hash;
             }
         }

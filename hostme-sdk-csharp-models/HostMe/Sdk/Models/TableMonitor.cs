@@ -90,28 +90,22 @@ namespace HostMe.Sdk.Model
         /// <param name="TableNumber">TableNumber.</param>
         /// <param name="State">State.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="WaitingId">WaitingId.</param>
-        /// <param name="ReservationId">ReservationId.</param>
         /// <param name="Type">Type.</param>
         /// <param name="RegistrationTime">RegistrationTime.</param>
         /// <param name="Id">Id.</param>
-        /// <param name="RegistrationId">RegistrationId.</param>
         /// <param name="ReservationTime">ReservationTime.</param>
         /// <param name="AssignmentTime">AssignmentTime.</param>
         /// <param name="EstimatedReleaseTime">EstimatedReleaseTime.</param>
         /// <param name="Waiter">Waiter.</param>
         /// <param name="User">User.</param>
-        public TableMonitor(string TableNumber = null, string State = null, StatusEnum? Status = null, int? WaitingId = null, string ReservationId = null, string Type = null, DateTimeOffset? RegistrationTime = null, string Id = null, int? RegistrationId = null, DateTimeOffset? ReservationTime = null, DateTimeOffset? AssignmentTime = null, DateTimeOffset? EstimatedReleaseTime = null, WaiterMonitor Waiter = null, TableUserInfo User = null)
+        public TableMonitor(string TableNumber = null, string State = null, StatusEnum? Status = null, string Type = null, DateTimeOffset? RegistrationTime = null, string Id = null, DateTimeOffset? ReservationTime = null, DateTimeOffset? AssignmentTime = null, DateTimeOffset? EstimatedReleaseTime = null, WaiterMonitor Waiter = null, TableUserInfo User = null)
         {
             this.TableNumber = TableNumber;
             this.State = State;
             this.Status = Status;
-            this.WaitingId = WaitingId;
-            this.ReservationId = ReservationId;
             this.Type = Type;
             this.RegistrationTime = RegistrationTime;
             this.Id = Id;
-            this.RegistrationId = RegistrationId;
             this.ReservationTime = ReservationTime;
             this.AssignmentTime = AssignmentTime;
             this.EstimatedReleaseTime = EstimatedReleaseTime;
@@ -130,16 +124,6 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="state", EmitDefaultValue=true)]
         public string State { get; set; }
         /// <summary>
-        /// Gets or Sets WaitingId
-        /// </summary>
-        [DataMember(Name="waitingId", EmitDefaultValue=true)]
-        public int? WaitingId { get; set; }
-        /// <summary>
-        /// Gets or Sets ReservationId
-        /// </summary>
-        [DataMember(Name="reservationId", EmitDefaultValue=true)]
-        public string ReservationId { get; set; }
-        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=true)]
@@ -154,11 +138,6 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
-        /// <summary>
-        /// Gets or Sets RegistrationId
-        /// </summary>
-        [DataMember(Name="registrationId", EmitDefaultValue=true)]
-        public int? RegistrationId { get; set; }
         /// <summary>
         /// Gets or Sets ReservationTime
         /// </summary>
@@ -195,12 +174,9 @@ namespace HostMe.Sdk.Model
             sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  WaitingId: ").Append(WaitingId).Append("\n");
-            sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  RegistrationId: ").Append(RegistrationId).Append("\n");
             sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
             sb.Append("  AssignmentTime: ").Append(AssignmentTime).Append("\n");
             sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
@@ -258,16 +234,6 @@ namespace HostMe.Sdk.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.WaitingId == other.WaitingId ||
-                    this.WaitingId != null &&
-                    this.WaitingId.Equals(other.WaitingId)
-                ) && 
-                (
-                    this.ReservationId == other.ReservationId ||
-                    this.ReservationId != null &&
-                    this.ReservationId.Equals(other.ReservationId)
-                ) && 
-                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -281,11 +247,6 @@ namespace HostMe.Sdk.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.RegistrationId == other.RegistrationId ||
-                    this.RegistrationId != null &&
-                    this.RegistrationId.Equals(other.RegistrationId)
                 ) && 
                 (
                     this.ReservationTime == other.ReservationTime ||
@@ -331,18 +292,12 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.WaitingId != null)
-                    hash = hash * 59 + this.WaitingId.GetHashCode();
-                if (this.ReservationId != null)
-                    hash = hash * 59 + this.ReservationId.GetHashCode();
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 if (this.RegistrationTime != null)
                     hash = hash * 59 + this.RegistrationTime.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                if (this.RegistrationId != null)
-                    hash = hash * 59 + this.RegistrationId.GetHashCode();
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.AssignmentTime != null)

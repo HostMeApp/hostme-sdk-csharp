@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **NumberOfVisitsTotal** | **int?** |  | [optional] 
 **LastVisitDate** | **DateTimeOffset?** |  | [optional] 
 **Customer** | [**MemberUser**](MemberUser.md) |  | [optional] 
-**Profile** | [**Profile**](Profile.md) |  | [optional] 
+**CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 **AboutGuestNotes** | **string** |  | [optional] 
 **CancelCount** | **int?** |  | [optional] 
 **NoShowCount** | **int?** |  | [optional] 

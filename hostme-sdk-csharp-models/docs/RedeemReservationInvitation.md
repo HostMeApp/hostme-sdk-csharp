@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **PhoneNumber** | **string** |  | 
 **FullName** | **string** |  | 
 **Language** | **string** |  | [optional] 
-**CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

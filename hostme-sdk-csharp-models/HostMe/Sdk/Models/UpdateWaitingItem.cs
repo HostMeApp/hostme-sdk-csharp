@@ -58,11 +58,13 @@ namespace HostMe.Sdk.Model
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
         /// <param name="Party">Party.</param>
+        /// <param name="Booth">Booth.</param>
+        /// <param name="HighTop">HighTop.</param>
+        /// <param name="Table">Table.</param>
         /// <param name="AutoSeat">AutoSeat.</param>
-        /// <param name="Vip">Vip.</param>
         /// <param name="PartyTypes">PartyTypes.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
-        public UpdateWaitingItem(int? GroupSize = null, int? ExpectedTimeMinutes = null, int? EstimatedTurnOverTime = null, string CustomerName = null, string Phone = null, string Areas = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string Email = null, string TableNumber = null, bool? HighChair = null, bool? Stroller = null, bool? Party = null, bool? AutoSeat = null, bool? Vip = null, List<string> PartyTypes = null, Profile CustomerProfile = null)
+        public UpdateWaitingItem(int? GroupSize = null, int? ExpectedTimeMinutes = null, int? EstimatedTurnOverTime = null, string CustomerName = null, string Phone = null, string Areas = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string Email = null, string TableNumber = null, bool? HighChair = null, bool? Stroller = null, bool? Party = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? AutoSeat = null, List<string> PartyTypes = null, ProfileData CustomerProfile = null)
         {
             this.GroupSize = GroupSize;
             this.ExpectedTimeMinutes = ExpectedTimeMinutes;
@@ -78,8 +80,10 @@ namespace HostMe.Sdk.Model
             this.HighChair = HighChair;
             this.Stroller = Stroller;
             this.Party = Party;
+            this.Booth = Booth;
+            this.HighTop = HighTop;
+            this.Table = Table;
             this.AutoSeat = AutoSeat;
-            this.Vip = Vip;
             this.PartyTypes = PartyTypes;
             this.CustomerProfile = CustomerProfile;
         }
@@ -155,15 +159,25 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="party", EmitDefaultValue=true)]
         public bool? Party { get; set; }
         /// <summary>
+        /// Gets or Sets Booth
+        /// </summary>
+        [DataMember(Name="booth", EmitDefaultValue=true)]
+        public bool? Booth { get; set; }
+        /// <summary>
+        /// Gets or Sets HighTop
+        /// </summary>
+        [DataMember(Name="highTop", EmitDefaultValue=true)]
+        public bool? HighTop { get; set; }
+        /// <summary>
+        /// Gets or Sets Table
+        /// </summary>
+        [DataMember(Name="table", EmitDefaultValue=true)]
+        public bool? Table { get; set; }
+        /// <summary>
         /// Gets or Sets AutoSeat
         /// </summary>
         [DataMember(Name="autoSeat", EmitDefaultValue=true)]
         public bool? AutoSeat { get; set; }
-        /// <summary>
-        /// Gets or Sets Vip
-        /// </summary>
-        [DataMember(Name="vip", EmitDefaultValue=true)]
-        public bool? Vip { get; set; }
         /// <summary>
         /// Gets or Sets PartyTypes
         /// </summary>
@@ -173,7 +187,7 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile CustomerProfile { get; set; }
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,8 +210,10 @@ namespace HostMe.Sdk.Model
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             sb.Append("  Party: ").Append(Party).Append("\n");
+            sb.Append("  Booth: ").Append(Booth).Append("\n");
+            sb.Append("  HighTop: ").Append(HighTop).Append("\n");
+            sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("  AutoSeat: ").Append(AutoSeat).Append("\n");
-            sb.Append("  Vip: ").Append(Vip).Append("\n");
             sb.Append("  PartyTypes: ").Append(PartyTypes).Append("\n");
             sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
             sb.Append("}\n");
@@ -307,14 +323,24 @@ namespace HostMe.Sdk.Model
                     this.Party.Equals(other.Party)
                 ) && 
                 (
+                    this.Booth == other.Booth ||
+                    this.Booth != null &&
+                    this.Booth.Equals(other.Booth)
+                ) && 
+                (
+                    this.HighTop == other.HighTop ||
+                    this.HighTop != null &&
+                    this.HighTop.Equals(other.HighTop)
+                ) && 
+                (
+                    this.Table == other.Table ||
+                    this.Table != null &&
+                    this.Table.Equals(other.Table)
+                ) && 
+                (
                     this.AutoSeat == other.AutoSeat ||
                     this.AutoSeat != null &&
                     this.AutoSeat.Equals(other.AutoSeat)
-                ) && 
-                (
-                    this.Vip == other.Vip ||
-                    this.Vip != null &&
-                    this.Vip.Equals(other.Vip)
                 ) && 
                 (
                     this.PartyTypes == other.PartyTypes ||
@@ -367,10 +393,14 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Stroller.GetHashCode();
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
+                if (this.Booth != null)
+                    hash = hash * 59 + this.Booth.GetHashCode();
+                if (this.HighTop != null)
+                    hash = hash * 59 + this.HighTop.GetHashCode();
+                if (this.Table != null)
+                    hash = hash * 59 + this.Table.GetHashCode();
                 if (this.AutoSeat != null)
                     hash = hash * 59 + this.AutoSeat.GetHashCode();
-                if (this.Vip != null)
-                    hash = hash * 59 + this.Vip.GetHashCode();
                 if (this.PartyTypes != null)
                     hash = hash * 59 + this.PartyTypes.GetHashCode();
                 if (this.CustomerProfile != null)

@@ -45,12 +45,12 @@ namespace HostMe.Sdk.Model
         /// Initializes a new instance of the <see cref="MembershipUpdate" /> class.
         /// </summary>
         /// <param name="Note">Note.</param>
-        /// <param name="Profile">Profile.</param>
+        /// <param name="CustomerProfile">CustomerProfile.</param>
         /// <param name="Customer">Customer.</param>
-        public MembershipUpdate(string Note = null, Profile Profile = null, MemberUser Customer = null)
+        public MembershipUpdate(string Note = null, ProfileData CustomerProfile = null, MemberUser Customer = null)
         {
             this.Note = Note;
-            this.Profile = Profile;
+            this.CustomerProfile = CustomerProfile;
             this.Customer = Customer;
         }
         
@@ -60,10 +60,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="note", EmitDefaultValue=true)]
         public string Note { get; set; }
         /// <summary>
-        /// Gets or Sets Profile
+        /// Gets or Sets CustomerProfile
         /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=true)]
-        public Profile Profile { get; set; }
+        [DataMember(Name="customerProfile", EmitDefaultValue=true)]
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Gets or Sets Customer
         /// </summary>
@@ -78,7 +78,7 @@ namespace HostMe.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class MembershipUpdate {\n");
             sb.Append("  Note: ").Append(Note).Append("\n");
-            sb.Append("  Profile: ").Append(Profile).Append("\n");
+            sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
             sb.Append("  Customer: ").Append(Customer).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -122,9 +122,9 @@ namespace HostMe.Sdk.Model
                     this.Note.Equals(other.Note)
                 ) && 
                 (
-                    this.Profile == other.Profile ||
-                    this.Profile != null &&
-                    this.Profile.Equals(other.Profile)
+                    this.CustomerProfile == other.CustomerProfile ||
+                    this.CustomerProfile != null &&
+                    this.CustomerProfile.Equals(other.CustomerProfile)
                 ) && 
                 (
                     this.Customer == other.Customer ||
@@ -146,8 +146,8 @@ namespace HostMe.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Note != null)
                     hash = hash * 59 + this.Note.GetHashCode();
-                if (this.Profile != null)
-                    hash = hash * 59 + this.Profile.GetHashCode();
+                if (this.CustomerProfile != null)
+                    hash = hash * 59 + this.CustomerProfile.GetHashCode();
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
                 return hash;

@@ -44,22 +44,11 @@ namespace HostMe.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RestaurantInfo" /> class.
         /// </summary>
+        /// <param name="Id">Id.</param>
         /// <param name="HoursInterval">HoursInterval.</param>
-        /// <param name="AdditionalInfo">AdditionalInfo.</param>
-        /// <param name="City">City.</param>
         /// <param name="MaxPartySize">MaxPartySize.</param>
         /// <param name="MinPartySize">MinPartySize.</param>
-        /// <param name="GuestReservationNote">GuestReservationNote.</param>
-        /// <param name="Currency">Currency.</param>
-        /// <param name="OpeningHours">OpeningHours.</param>
-        /// <param name="ReservationHours">ReservationHours.</param>
-        /// <param name="SpecialPeriods">SpecialPeriods.</param>
-        /// <param name="SeatingZones">SeatingZones.</param>
-        /// <param name="Areas">Areas.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="NoShowFeeEnabled">NoShowFeeEnabled.</param>
         /// <param name="ChargeIfCancelledBefore">ChargeIfCancelledBefore.</param>
-        /// <param name="DepositRules">DepositRules.</param>
         /// <param name="Name">Name.</param>
         /// <param name="Address">Address.</param>
         /// <param name="ImageUrl">ImageUrl.</param>
@@ -69,33 +58,32 @@ namespace HostMe.Sdk.Model
         /// <param name="FoursquareId">FoursquareId.</param>
         /// <param name="Phone">Phone.</param>
         /// <param name="TimeZone">TimeZone.</param>
+        /// <param name="City">City.</param>
+        /// <param name="GuestReservationNote">GuestReservationNote.</param>
+        /// <param name="Currency">Currency.</param>
+        /// <param name="AdditionalInfo">AdditionalInfo.</param>
+        /// <param name="OpeningHours">OpeningHours.</param>
+        /// <param name="ReservationHours">ReservationHours.</param>
+        /// <param name="SpecialPeriods">SpecialPeriods.</param>
+        /// <param name="Areas">Areas.</param>
+        /// <param name="DepositRules">DepositRules.</param>
         /// <param name="Lat">Lat.</param>
         /// <param name="Lon">Lon.</param>
+        /// <param name="Distance">Distance.</param>
+        /// <param name="NoShowFeeEnabled">NoShowFeeEnabled.</param>
         /// <param name="CreditCardChargeEnabled">CreditCardChargeEnabled.</param>
         /// <param name="ApprovalRequired">ApprovalRequired.</param>
         /// <param name="HasHostmeSystem">HasHostmeSystem.</param>
-        /// <param name="Distance">Distance.</param>
         /// <param name="HasLoyaltyProgram">HasLoyaltyProgram.</param>
         /// <param name="AcceptReservation">AcceptReservation.</param>
         /// <param name="AllowManualHold">AllowManualHold.</param>
-        public RestaurantInfo(int? HoursInterval = null, AdditionalInfo AdditionalInfo = null, string City = null, int? MaxPartySize = null, int? MinPartySize = null, string GuestReservationNote = null, string Currency = null, BusinessHours OpeningHours = null, BusinessHours ReservationHours = null, List<SpecialPeriod> SpecialPeriods = null, List<string> SeatingZones = null, List<string> Areas = null, int? Id = null, bool? NoShowFeeEnabled = null, int? ChargeIfCancelledBefore = null, Dictionary<string, int?> DepositRules = null, string Name = null, string Address = null, string ImageUrl = null, string FacebookId = null, string TwitterAccount = null, string WebsiteUrl = null, string FoursquareId = null, string Phone = null, string TimeZone = null, double? Lat = null, double? Lon = null, bool? CreditCardChargeEnabled = null, bool? ApprovalRequired = null, bool? HasHostmeSystem = null, double? Distance = null, bool? HasLoyaltyProgram = null, bool? AcceptReservation = null, bool? AllowManualHold = null)
+        public RestaurantInfo(int? Id = null, int? HoursInterval = null, int? MaxPartySize = null, int? MinPartySize = null, int? ChargeIfCancelledBefore = null, string Name = null, string Address = null, string ImageUrl = null, string FacebookId = null, string TwitterAccount = null, string WebsiteUrl = null, string FoursquareId = null, string Phone = null, string TimeZone = null, string City = null, string GuestReservationNote = null, string Currency = null, AdditionalInfo AdditionalInfo = null, BusinessHours OpeningHours = null, BusinessHours ReservationHours = null, List<SpecialPeriod> SpecialPeriods = null, List<string> Areas = null, Dictionary<string, int?> DepositRules = null, double? Lat = null, double? Lon = null, double? Distance = null, bool? NoShowFeeEnabled = null, bool? CreditCardChargeEnabled = null, bool? ApprovalRequired = null, bool? HasHostmeSystem = null, bool? HasLoyaltyProgram = null, bool? AcceptReservation = null, bool? AllowManualHold = null)
         {
+            this.Id = Id;
             this.HoursInterval = HoursInterval;
-            this.AdditionalInfo = AdditionalInfo;
-            this.City = City;
             this.MaxPartySize = MaxPartySize;
             this.MinPartySize = MinPartySize;
-            this.GuestReservationNote = GuestReservationNote;
-            this.Currency = Currency;
-            this.OpeningHours = OpeningHours;
-            this.ReservationHours = ReservationHours;
-            this.SpecialPeriods = SpecialPeriods;
-            this.SeatingZones = SeatingZones;
-            this.Areas = Areas;
-            this.Id = Id;
-            this.NoShowFeeEnabled = NoShowFeeEnabled;
             this.ChargeIfCancelledBefore = ChargeIfCancelledBefore;
-            this.DepositRules = DepositRules;
             this.Name = Name;
             this.Address = Address;
             this.ImageUrl = ImageUrl;
@@ -105,32 +93,37 @@ namespace HostMe.Sdk.Model
             this.FoursquareId = FoursquareId;
             this.Phone = Phone;
             this.TimeZone = TimeZone;
+            this.City = City;
+            this.GuestReservationNote = GuestReservationNote;
+            this.Currency = Currency;
+            this.AdditionalInfo = AdditionalInfo;
+            this.OpeningHours = OpeningHours;
+            this.ReservationHours = ReservationHours;
+            this.SpecialPeriods = SpecialPeriods;
+            this.Areas = Areas;
+            this.DepositRules = DepositRules;
             this.Lat = Lat;
             this.Lon = Lon;
+            this.Distance = Distance;
+            this.NoShowFeeEnabled = NoShowFeeEnabled;
             this.CreditCardChargeEnabled = CreditCardChargeEnabled;
             this.ApprovalRequired = ApprovalRequired;
             this.HasHostmeSystem = HasHostmeSystem;
-            this.Distance = Distance;
             this.HasLoyaltyProgram = HasLoyaltyProgram;
             this.AcceptReservation = AcceptReservation;
             this.AllowManualHold = AllowManualHold;
         }
         
         /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=true)]
+        public int? Id { get; set; }
+        /// <summary>
         /// Gets or Sets HoursInterval
         /// </summary>
         [DataMember(Name="hoursInterval", EmitDefaultValue=true)]
         public int? HoursInterval { get; set; }
-        /// <summary>
-        /// Gets or Sets AdditionalInfo
-        /// </summary>
-        [DataMember(Name="additionalInfo", EmitDefaultValue=true)]
-        public AdditionalInfo AdditionalInfo { get; set; }
-        /// <summary>
-        /// Gets or Sets City
-        /// </summary>
-        [DataMember(Name="city", EmitDefaultValue=true)]
-        public string City { get; set; }
         /// <summary>
         /// Gets or Sets MaxPartySize
         /// </summary>
@@ -142,60 +135,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="minPartySize", EmitDefaultValue=true)]
         public int? MinPartySize { get; set; }
         /// <summary>
-        /// Gets or Sets GuestReservationNote
-        /// </summary>
-        [DataMember(Name="guestReservationNote", EmitDefaultValue=true)]
-        public string GuestReservationNote { get; set; }
-        /// <summary>
-        /// Gets or Sets Currency
-        /// </summary>
-        [DataMember(Name="currency", EmitDefaultValue=true)]
-        public string Currency { get; set; }
-        /// <summary>
-        /// Gets or Sets OpeningHours
-        /// </summary>
-        [DataMember(Name="openingHours", EmitDefaultValue=true)]
-        public BusinessHours OpeningHours { get; set; }
-        /// <summary>
-        /// Gets or Sets ReservationHours
-        /// </summary>
-        [DataMember(Name="reservationHours", EmitDefaultValue=true)]
-        public BusinessHours ReservationHours { get; set; }
-        /// <summary>
-        /// Gets or Sets SpecialPeriods
-        /// </summary>
-        [DataMember(Name="specialPeriods", EmitDefaultValue=true)]
-        public List<SpecialPeriod> SpecialPeriods { get; set; }
-        /// <summary>
-        /// Gets or Sets SeatingZones
-        /// </summary>
-        [DataMember(Name="seatingZones", EmitDefaultValue=true)]
-        public List<string> SeatingZones { get; set; }
-        /// <summary>
-        /// Gets or Sets Areas
-        /// </summary>
-        [DataMember(Name="areas", EmitDefaultValue=true)]
-        public List<string> Areas { get; set; }
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=true)]
-        public int? Id { get; set; }
-        /// <summary>
-        /// Gets or Sets NoShowFeeEnabled
-        /// </summary>
-        [DataMember(Name="noShowFeeEnabled", EmitDefaultValue=true)]
-        public bool? NoShowFeeEnabled { get; set; }
-        /// <summary>
         /// Gets or Sets ChargeIfCancelledBefore
         /// </summary>
         [DataMember(Name="chargeIfCancelledBefore", EmitDefaultValue=true)]
         public int? ChargeIfCancelledBefore { get; set; }
-        /// <summary>
-        /// Gets or Sets DepositRules
-        /// </summary>
-        [DataMember(Name="depositRules", EmitDefaultValue=true)]
-        public Dictionary<string, int?> DepositRules { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
@@ -242,6 +185,51 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="timeZone", EmitDefaultValue=true)]
         public string TimeZone { get; set; }
         /// <summary>
+        /// Gets or Sets City
+        /// </summary>
+        [DataMember(Name="city", EmitDefaultValue=true)]
+        public string City { get; set; }
+        /// <summary>
+        /// Gets or Sets GuestReservationNote
+        /// </summary>
+        [DataMember(Name="guestReservationNote", EmitDefaultValue=true)]
+        public string GuestReservationNote { get; set; }
+        /// <summary>
+        /// Gets or Sets Currency
+        /// </summary>
+        [DataMember(Name="currency", EmitDefaultValue=true)]
+        public string Currency { get; set; }
+        /// <summary>
+        /// Gets or Sets AdditionalInfo
+        /// </summary>
+        [DataMember(Name="additionalInfo", EmitDefaultValue=true)]
+        public AdditionalInfo AdditionalInfo { get; set; }
+        /// <summary>
+        /// Gets or Sets OpeningHours
+        /// </summary>
+        [DataMember(Name="openingHours", EmitDefaultValue=true)]
+        public BusinessHours OpeningHours { get; set; }
+        /// <summary>
+        /// Gets or Sets ReservationHours
+        /// </summary>
+        [DataMember(Name="reservationHours", EmitDefaultValue=true)]
+        public BusinessHours ReservationHours { get; set; }
+        /// <summary>
+        /// Gets or Sets SpecialPeriods
+        /// </summary>
+        [DataMember(Name="specialPeriods", EmitDefaultValue=true)]
+        public List<SpecialPeriod> SpecialPeriods { get; set; }
+        /// <summary>
+        /// Gets or Sets Areas
+        /// </summary>
+        [DataMember(Name="areas", EmitDefaultValue=true)]
+        public List<string> Areas { get; set; }
+        /// <summary>
+        /// Gets or Sets DepositRules
+        /// </summary>
+        [DataMember(Name="depositRules", EmitDefaultValue=true)]
+        public Dictionary<string, int?> DepositRules { get; set; }
+        /// <summary>
         /// Gets or Sets Lat
         /// </summary>
         [DataMember(Name="lat", EmitDefaultValue=true)]
@@ -251,6 +239,16 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="lon", EmitDefaultValue=true)]
         public double? Lon { get; set; }
+        /// <summary>
+        /// Gets or Sets Distance
+        /// </summary>
+        [DataMember(Name="distance", EmitDefaultValue=true)]
+        public double? Distance { get; set; }
+        /// <summary>
+        /// Gets or Sets NoShowFeeEnabled
+        /// </summary>
+        [DataMember(Name="noShowFeeEnabled", EmitDefaultValue=true)]
+        public bool? NoShowFeeEnabled { get; set; }
         /// <summary>
         /// Gets or Sets CreditCardChargeEnabled
         /// </summary>
@@ -266,11 +264,6 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="hasHostmeSystem", EmitDefaultValue=true)]
         public bool? HasHostmeSystem { get; set; }
-        /// <summary>
-        /// Gets or Sets Distance
-        /// </summary>
-        [DataMember(Name="distance", EmitDefaultValue=true)]
-        public double? Distance { get; set; }
         /// <summary>
         /// Gets or Sets HasLoyaltyProgram
         /// </summary>
@@ -294,22 +287,11 @@ namespace HostMe.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RestaurantInfo {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  HoursInterval: ").Append(HoursInterval).Append("\n");
-            sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
-            sb.Append("  City: ").Append(City).Append("\n");
             sb.Append("  MaxPartySize: ").Append(MaxPartySize).Append("\n");
             sb.Append("  MinPartySize: ").Append(MinPartySize).Append("\n");
-            sb.Append("  GuestReservationNote: ").Append(GuestReservationNote).Append("\n");
-            sb.Append("  Currency: ").Append(Currency).Append("\n");
-            sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
-            sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
-            sb.Append("  SpecialPeriods: ").Append(SpecialPeriods).Append("\n");
-            sb.Append("  SeatingZones: ").Append(SeatingZones).Append("\n");
-            sb.Append("  Areas: ").Append(Areas).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  NoShowFeeEnabled: ").Append(NoShowFeeEnabled).Append("\n");
             sb.Append("  ChargeIfCancelledBefore: ").Append(ChargeIfCancelledBefore).Append("\n");
-            sb.Append("  DepositRules: ").Append(DepositRules).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
@@ -319,12 +301,22 @@ namespace HostMe.Sdk.Model
             sb.Append("  FoursquareId: ").Append(FoursquareId).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            sb.Append("  City: ").Append(City).Append("\n");
+            sb.Append("  GuestReservationNote: ").Append(GuestReservationNote).Append("\n");
+            sb.Append("  Currency: ").Append(Currency).Append("\n");
+            sb.Append("  AdditionalInfo: ").Append(AdditionalInfo).Append("\n");
+            sb.Append("  OpeningHours: ").Append(OpeningHours).Append("\n");
+            sb.Append("  ReservationHours: ").Append(ReservationHours).Append("\n");
+            sb.Append("  SpecialPeriods: ").Append(SpecialPeriods).Append("\n");
+            sb.Append("  Areas: ").Append(Areas).Append("\n");
+            sb.Append("  DepositRules: ").Append(DepositRules).Append("\n");
             sb.Append("  Lat: ").Append(Lat).Append("\n");
             sb.Append("  Lon: ").Append(Lon).Append("\n");
+            sb.Append("  Distance: ").Append(Distance).Append("\n");
+            sb.Append("  NoShowFeeEnabled: ").Append(NoShowFeeEnabled).Append("\n");
             sb.Append("  CreditCardChargeEnabled: ").Append(CreditCardChargeEnabled).Append("\n");
             sb.Append("  ApprovalRequired: ").Append(ApprovalRequired).Append("\n");
             sb.Append("  HasHostmeSystem: ").Append(HasHostmeSystem).Append("\n");
-            sb.Append("  Distance: ").Append(Distance).Append("\n");
             sb.Append("  HasLoyaltyProgram: ").Append(HasLoyaltyProgram).Append("\n");
             sb.Append("  AcceptReservation: ").Append(AcceptReservation).Append("\n");
             sb.Append("  AllowManualHold: ").Append(AllowManualHold).Append("\n");
@@ -365,19 +357,14 @@ namespace HostMe.Sdk.Model
 
             return 
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
                     this.HoursInterval == other.HoursInterval ||
                     this.HoursInterval != null &&
                     this.HoursInterval.Equals(other.HoursInterval)
-                ) && 
-                (
-                    this.AdditionalInfo == other.AdditionalInfo ||
-                    this.AdditionalInfo != null &&
-                    this.AdditionalInfo.Equals(other.AdditionalInfo)
-                ) && 
-                (
-                    this.City == other.City ||
-                    this.City != null &&
-                    this.City.Equals(other.City)
                 ) && 
                 (
                     this.MaxPartySize == other.MaxPartySize ||
@@ -390,59 +377,9 @@ namespace HostMe.Sdk.Model
                     this.MinPartySize.Equals(other.MinPartySize)
                 ) && 
                 (
-                    this.GuestReservationNote == other.GuestReservationNote ||
-                    this.GuestReservationNote != null &&
-                    this.GuestReservationNote.Equals(other.GuestReservationNote)
-                ) && 
-                (
-                    this.Currency == other.Currency ||
-                    this.Currency != null &&
-                    this.Currency.Equals(other.Currency)
-                ) && 
-                (
-                    this.OpeningHours == other.OpeningHours ||
-                    this.OpeningHours != null &&
-                    this.OpeningHours.Equals(other.OpeningHours)
-                ) && 
-                (
-                    this.ReservationHours == other.ReservationHours ||
-                    this.ReservationHours != null &&
-                    this.ReservationHours.Equals(other.ReservationHours)
-                ) && 
-                (
-                    this.SpecialPeriods == other.SpecialPeriods ||
-                    this.SpecialPeriods != null &&
-                    this.SpecialPeriods.SequenceEqual(other.SpecialPeriods)
-                ) && 
-                (
-                    this.SeatingZones == other.SeatingZones ||
-                    this.SeatingZones != null &&
-                    this.SeatingZones.SequenceEqual(other.SeatingZones)
-                ) && 
-                (
-                    this.Areas == other.Areas ||
-                    this.Areas != null &&
-                    this.Areas.SequenceEqual(other.Areas)
-                ) && 
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) && 
-                (
-                    this.NoShowFeeEnabled == other.NoShowFeeEnabled ||
-                    this.NoShowFeeEnabled != null &&
-                    this.NoShowFeeEnabled.Equals(other.NoShowFeeEnabled)
-                ) && 
-                (
                     this.ChargeIfCancelledBefore == other.ChargeIfCancelledBefore ||
                     this.ChargeIfCancelledBefore != null &&
                     this.ChargeIfCancelledBefore.Equals(other.ChargeIfCancelledBefore)
-                ) && 
-                (
-                    this.DepositRules == other.DepositRules ||
-                    this.DepositRules != null &&
-                    this.DepositRules.SequenceEqual(other.DepositRules)
                 ) && 
                 (
                     this.Name == other.Name ||
@@ -490,6 +427,51 @@ namespace HostMe.Sdk.Model
                     this.TimeZone.Equals(other.TimeZone)
                 ) && 
                 (
+                    this.City == other.City ||
+                    this.City != null &&
+                    this.City.Equals(other.City)
+                ) && 
+                (
+                    this.GuestReservationNote == other.GuestReservationNote ||
+                    this.GuestReservationNote != null &&
+                    this.GuestReservationNote.Equals(other.GuestReservationNote)
+                ) && 
+                (
+                    this.Currency == other.Currency ||
+                    this.Currency != null &&
+                    this.Currency.Equals(other.Currency)
+                ) && 
+                (
+                    this.AdditionalInfo == other.AdditionalInfo ||
+                    this.AdditionalInfo != null &&
+                    this.AdditionalInfo.Equals(other.AdditionalInfo)
+                ) && 
+                (
+                    this.OpeningHours == other.OpeningHours ||
+                    this.OpeningHours != null &&
+                    this.OpeningHours.Equals(other.OpeningHours)
+                ) && 
+                (
+                    this.ReservationHours == other.ReservationHours ||
+                    this.ReservationHours != null &&
+                    this.ReservationHours.Equals(other.ReservationHours)
+                ) && 
+                (
+                    this.SpecialPeriods == other.SpecialPeriods ||
+                    this.SpecialPeriods != null &&
+                    this.SpecialPeriods.SequenceEqual(other.SpecialPeriods)
+                ) && 
+                (
+                    this.Areas == other.Areas ||
+                    this.Areas != null &&
+                    this.Areas.SequenceEqual(other.Areas)
+                ) && 
+                (
+                    this.DepositRules == other.DepositRules ||
+                    this.DepositRules != null &&
+                    this.DepositRules.SequenceEqual(other.DepositRules)
+                ) && 
+                (
                     this.Lat == other.Lat ||
                     this.Lat != null &&
                     this.Lat.Equals(other.Lat)
@@ -498,6 +480,16 @@ namespace HostMe.Sdk.Model
                     this.Lon == other.Lon ||
                     this.Lon != null &&
                     this.Lon.Equals(other.Lon)
+                ) && 
+                (
+                    this.Distance == other.Distance ||
+                    this.Distance != null &&
+                    this.Distance.Equals(other.Distance)
+                ) && 
+                (
+                    this.NoShowFeeEnabled == other.NoShowFeeEnabled ||
+                    this.NoShowFeeEnabled != null &&
+                    this.NoShowFeeEnabled.Equals(other.NoShowFeeEnabled)
                 ) && 
                 (
                     this.CreditCardChargeEnabled == other.CreditCardChargeEnabled ||
@@ -513,11 +505,6 @@ namespace HostMe.Sdk.Model
                     this.HasHostmeSystem == other.HasHostmeSystem ||
                     this.HasHostmeSystem != null &&
                     this.HasHostmeSystem.Equals(other.HasHostmeSystem)
-                ) && 
-                (
-                    this.Distance == other.Distance ||
-                    this.Distance != null &&
-                    this.Distance.Equals(other.Distance)
                 ) && 
                 (
                     this.HasLoyaltyProgram == other.HasLoyaltyProgram ||
@@ -547,38 +534,16 @@ namespace HostMe.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 if (this.HoursInterval != null)
                     hash = hash * 59 + this.HoursInterval.GetHashCode();
-                if (this.AdditionalInfo != null)
-                    hash = hash * 59 + this.AdditionalInfo.GetHashCode();
-                if (this.City != null)
-                    hash = hash * 59 + this.City.GetHashCode();
                 if (this.MaxPartySize != null)
                     hash = hash * 59 + this.MaxPartySize.GetHashCode();
                 if (this.MinPartySize != null)
                     hash = hash * 59 + this.MinPartySize.GetHashCode();
-                if (this.GuestReservationNote != null)
-                    hash = hash * 59 + this.GuestReservationNote.GetHashCode();
-                if (this.Currency != null)
-                    hash = hash * 59 + this.Currency.GetHashCode();
-                if (this.OpeningHours != null)
-                    hash = hash * 59 + this.OpeningHours.GetHashCode();
-                if (this.ReservationHours != null)
-                    hash = hash * 59 + this.ReservationHours.GetHashCode();
-                if (this.SpecialPeriods != null)
-                    hash = hash * 59 + this.SpecialPeriods.GetHashCode();
-                if (this.SeatingZones != null)
-                    hash = hash * 59 + this.SeatingZones.GetHashCode();
-                if (this.Areas != null)
-                    hash = hash * 59 + this.Areas.GetHashCode();
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                if (this.NoShowFeeEnabled != null)
-                    hash = hash * 59 + this.NoShowFeeEnabled.GetHashCode();
                 if (this.ChargeIfCancelledBefore != null)
                     hash = hash * 59 + this.ChargeIfCancelledBefore.GetHashCode();
-                if (this.DepositRules != null)
-                    hash = hash * 59 + this.DepositRules.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 if (this.Address != null)
@@ -597,18 +562,38 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Phone.GetHashCode();
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
+                if (this.City != null)
+                    hash = hash * 59 + this.City.GetHashCode();
+                if (this.GuestReservationNote != null)
+                    hash = hash * 59 + this.GuestReservationNote.GetHashCode();
+                if (this.Currency != null)
+                    hash = hash * 59 + this.Currency.GetHashCode();
+                if (this.AdditionalInfo != null)
+                    hash = hash * 59 + this.AdditionalInfo.GetHashCode();
+                if (this.OpeningHours != null)
+                    hash = hash * 59 + this.OpeningHours.GetHashCode();
+                if (this.ReservationHours != null)
+                    hash = hash * 59 + this.ReservationHours.GetHashCode();
+                if (this.SpecialPeriods != null)
+                    hash = hash * 59 + this.SpecialPeriods.GetHashCode();
+                if (this.Areas != null)
+                    hash = hash * 59 + this.Areas.GetHashCode();
+                if (this.DepositRules != null)
+                    hash = hash * 59 + this.DepositRules.GetHashCode();
                 if (this.Lat != null)
                     hash = hash * 59 + this.Lat.GetHashCode();
                 if (this.Lon != null)
                     hash = hash * 59 + this.Lon.GetHashCode();
+                if (this.Distance != null)
+                    hash = hash * 59 + this.Distance.GetHashCode();
+                if (this.NoShowFeeEnabled != null)
+                    hash = hash * 59 + this.NoShowFeeEnabled.GetHashCode();
                 if (this.CreditCardChargeEnabled != null)
                     hash = hash * 59 + this.CreditCardChargeEnabled.GetHashCode();
                 if (this.ApprovalRequired != null)
                     hash = hash * 59 + this.ApprovalRequired.GetHashCode();
                 if (this.HasHostmeSystem != null)
                     hash = hash * 59 + this.HasHostmeSystem.GetHashCode();
-                if (this.Distance != null)
-                    hash = hash * 59 + this.Distance.GetHashCode();
                 if (this.HasLoyaltyProgram != null)
                     hash = hash * 59 + this.HasLoyaltyProgram.GetHashCode();
                 if (this.AcceptReservation != null)

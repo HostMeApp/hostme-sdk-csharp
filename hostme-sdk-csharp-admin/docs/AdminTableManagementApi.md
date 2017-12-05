@@ -6,16 +6,14 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateNewFloor**](AdminTableManagementApi.md#createnewfloor) | **POST** /api/tm/admin/restaurants/{restaurantId}/floors | 
 [**DeleteFloor**](AdminTableManagementApi.md#deletefloor) | **DELETE** /api/tm/admin/restaurants/{restaurantId}/floors/{floorId} | 
-[**GetAvailableTables**](AdminTableManagementApi.md#getavailabletables) | **GET** /api/tm/admin/restaurants/{restaurantId}/tables/available | 
 [**GetFloorDetails**](AdminTableManagementApi.md#getfloordetails) | **GET** /api/tm/admin/restaurants/{restaurantId}/floors/{floorId} | 
 [**GetRestaurantFloors**](AdminTableManagementApi.md#getrestaurantfloors) | **GET** /api/tm/admin/restaurants/{restaurantId}/floors | 
 [**GetTableMonitors**](AdminTableManagementApi.md#gettablemonitors) | **GET** /api/tm/admin/restaurants/{restaurantId}/tables/monitors | 
 [**GetTableUsersList**](AdminTableManagementApi.md#gettableuserslist) | **GET** /api/tm/admin/restaurants/{restaurantId}/tables/users | 
 [**GetTables**](AdminTableManagementApi.md#gettables) | **GET** /api/tm/admin/restaurants/{restaurantId}/tables | 
 [**GetTablesSettings**](AdminTableManagementApi.md#gettablessettings) | **GET** /api/tm/admin/restaurants/{restaurantId}/tables/settings | 
-[**ReleaseTable**](AdminTableManagementApi.md#releasetable) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/{tableNumber}/release | 
-[**SeatPartyAtTable**](AdminTableManagementApi.md#seatpartyattable) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/{tableNumber}/seat | 
-[**SetTableState**](AdminTableManagementApi.md#settablestate) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/{tableNumber}/state | 
+[**ReleaseTable**](AdminTableManagementApi.md#releasetable) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/{bookingId}/release | 
+[**SetTableState**](AdminTableManagementApi.md#settablestate) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/state | 
 [**SetTablesSettings**](AdminTableManagementApi.md#settablessettings) | **PUT** /api/tm/admin/restaurants/{restaurantId}/tables/settings | 
 [**UpdateFloor**](AdminTableManagementApi.md#updatefloor) | **PUT** /api/tm/admin/restaurants/{restaurantId}/floors/{floorId} | 
 [**UpdateSeatedParty**](AdminTableManagementApi.md#updateseatedparty) | **PUT** /api/tm/admin/restaurants/{restaurantId}/seat/{registrationId} | 
@@ -136,72 +134,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getavailabletables"></a>
-# **GetAvailableTables**
-> List<TableInfo> GetAvailableTables (int? restaurantId, DateTimeOffset? date, int? partySize)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetAvailableTablesExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminTableManagementApi();
-            var restaurantId = 56;  // int? | 
-            var date = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? | 
-            var partySize = 56;  // int? | 
-
-            try
-            {
-                List&lt;TableInfo&gt; result = apiInstance.GetAvailableTables(restaurantId, date, partySize);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminTableManagementApi.GetAvailableTables: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **date** | **DateTimeOffset?**|  | 
- **partySize** | **int?**|  | 
-
-### Return type
-
-[**List<TableInfo>**](TableInfo.md)
 
 ### Authorization
 
@@ -408,7 +340,7 @@ Name | Type | Description  | Notes
 
 <a name="gettableuserslist"></a>
 # **GetTableUsersList**
-> List<TableUser> GetTableUsersList (int? restaurantId)
+> List<Booking> GetTableUsersList (int? restaurantId)
 
 
 
@@ -435,7 +367,7 @@ namespace Example
 
             try
             {
-                List&lt;TableUser&gt; result = apiInstance.GetTableUsersList(restaurantId);
+                List&lt;Booking&gt; result = apiInstance.GetTableUsersList(restaurantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -455,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<TableUser>**](TableUser.md)
+[**List<Booking>**](Booking.md)
 
 ### Authorization
 
@@ -594,7 +526,7 @@ Name | Type | Description  | Notes
 
 <a name="releasetable"></a>
 # **ReleaseTable**
-> Object ReleaseTable (int? restaurantId, string tableNumber)
+> Object ReleaseTable (int? restaurantId, string bookingId)
 
 
 
@@ -618,11 +550,11 @@ namespace Example
 
             var apiInstance = new AdminTableManagementApi();
             var restaurantId = 56;  // int? | 
-            var tableNumber = tableNumber_example;  // string | 
+            var bookingId = bookingId_example;  // string | 
 
             try
             {
-                Object result = apiInstance.ReleaseTable(restaurantId, tableNumber);
+                Object result = apiInstance.ReleaseTable(restaurantId, bookingId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -639,7 +571,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**|  | 
- **tableNumber** | **string**|  | 
+ **bookingId** | **string**|  | 
 
 ### Return type
 
@@ -656,75 +588,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="seatpartyattable"></a>
-# **SeatPartyAtTable**
-> TableMonitor SeatPartyAtTable (int? restaurantId, string tableNumber, RegisterAtTable registerAtTableContract)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class SeatPartyAtTableExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminTableManagementApi();
-            var restaurantId = 56;  // int? | 
-            var tableNumber = tableNumber_example;  // string | 
-            var registerAtTableContract = new RegisterAtTable(); // RegisterAtTable | 
-
-            try
-            {
-                TableMonitor result = apiInstance.SeatPartyAtTable(restaurantId, tableNumber, registerAtTableContract);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminTableManagementApi.SeatPartyAtTable: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **tableNumber** | **string**|  | 
- **registerAtTableContract** | [**RegisterAtTable**](RegisterAtTable.md)|  | 
-
-### Return type
-
-[**TableMonitor**](TableMonitor.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="settablestate"></a>
 # **SetTableState**
-> void SetTableState (int? restaurantId, string tableNumber, ChangeTableState stateContract)
+> void SetTableState (int? restaurantId, ChangeTableState contract)
 
 
 
@@ -748,12 +614,11 @@ namespace Example
 
             var apiInstance = new AdminTableManagementApi();
             var restaurantId = 56;  // int? | 
-            var tableNumber = tableNumber_example;  // string | 
-            var stateContract = new ChangeTableState(); // ChangeTableState | 
+            var contract = new ChangeTableState(); // ChangeTableState | 
 
             try
             {
-                apiInstance.SetTableState(restaurantId, tableNumber, stateContract);
+                apiInstance.SetTableState(restaurantId, contract);
             }
             catch (Exception e)
             {
@@ -769,8 +634,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**|  | 
- **tableNumber** | **string**|  | 
- **stateContract** | [**ChangeTableState**](ChangeTableState.md)|  | 
+ **contract** | [**ChangeTableState**](ChangeTableState.md)|  | 
 
 ### Return type
 
@@ -918,7 +782,7 @@ Name | Type | Description  | Notes
 
 <a name="updateseatedparty"></a>
 # **UpdateSeatedParty**
-> TableMonitor UpdateSeatedParty (int? restaurantId, int? registrationId, RegisterAtTable registerAtTableContract)
+> Object UpdateSeatedParty (int? restaurantId, string registrationId, RegisterAtTable contract)
 
 
 
@@ -942,12 +806,12 @@ namespace Example
 
             var apiInstance = new AdminTableManagementApi();
             var restaurantId = 56;  // int? | 
-            var registrationId = 56;  // int? | 
-            var registerAtTableContract = new RegisterAtTable(); // RegisterAtTable | 
+            var registrationId = registrationId_example;  // string | 
+            var contract = new RegisterAtTable(); // RegisterAtTable | 
 
             try
             {
-                TableMonitor result = apiInstance.UpdateSeatedParty(restaurantId, registrationId, registerAtTableContract);
+                Object result = apiInstance.UpdateSeatedParty(restaurantId, registrationId, contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -964,12 +828,12 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**|  | 
- **registrationId** | **int?**|  | 
- **registerAtTableContract** | [**RegisterAtTable**](RegisterAtTable.md)|  | 
+ **registrationId** | **string**|  | 
+ **contract** | [**RegisterAtTable**](RegisterAtTable.md)|  | 
 
 ### Return type
 
-[**TableMonitor**](TableMonitor.md)
+**Object**
 
 ### Authorization
 

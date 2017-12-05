@@ -47,14 +47,12 @@ namespace HostMe.Sdk.Model
         /// <param name="Id">Id.</param>
         /// <param name="MembershipLevel">MembershipLevel.</param>
         /// <param name="Points">Points.</param>
-        /// <param name="Profile">Profile.</param>
         /// <param name="Language">Language.</param>
-        public MembershipInfo(int? Id = null, string MembershipLevel = null, long? Points = null, Profile Profile = null, string Language = null)
+        public MembershipInfo(int? Id = null, string MembershipLevel = null, long? Points = null, string Language = null)
         {
             this.Id = Id;
             this.MembershipLevel = MembershipLevel;
             this.Points = Points;
-            this.Profile = Profile;
             this.Language = Language;
         }
         
@@ -74,11 +72,6 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="points", EmitDefaultValue=true)]
         public long? Points { get; set; }
         /// <summary>
-        /// Gets or Sets Profile
-        /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=true)]
-        public Profile Profile { get; set; }
-        /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=true)]
@@ -94,7 +87,6 @@ namespace HostMe.Sdk.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  MembershipLevel: ").Append(MembershipLevel).Append("\n");
             sb.Append("  Points: ").Append(Points).Append("\n");
-            sb.Append("  Profile: ").Append(Profile).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -148,11 +140,6 @@ namespace HostMe.Sdk.Model
                     this.Points.Equals(other.Points)
                 ) && 
                 (
-                    this.Profile == other.Profile ||
-                    this.Profile != null &&
-                    this.Profile.Equals(other.Profile)
-                ) && 
-                (
                     this.Language == other.Language ||
                     this.Language != null &&
                     this.Language.Equals(other.Language)
@@ -176,8 +163,6 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.MembershipLevel.GetHashCode();
                 if (this.Points != null)
                     hash = hash * 59 + this.Points.GetHashCode();
-                if (this.Profile != null)
-                    hash = hash * 59 + this.Profile.GetHashCode();
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
                 return hash;

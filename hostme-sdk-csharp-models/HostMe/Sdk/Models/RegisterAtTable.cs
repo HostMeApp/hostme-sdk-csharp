@@ -44,12 +44,7 @@ namespace HostMe.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RegisterAtTable" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected RegisterAtTable() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="RegisterAtTable" /> class.
-        /// </summary>
-        /// <param name="GroupSize">GroupSize (required).</param>
+        /// <param name="GroupSize">GroupSize.</param>
         /// <param name="CustomerName">CustomerName.</param>
         /// <param name="InternalNotes">InternalNotes.</param>
         /// <param name="SpecialRequests">SpecialRequests.</param>
@@ -57,6 +52,9 @@ namespace HostMe.Sdk.Model
         /// <param name="Areas">Areas.</param>
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
+        /// <param name="Booth">Booth.</param>
+        /// <param name="HighTop">HighTop.</param>
+        /// <param name="Table">Table.</param>
         /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
         /// <param name="Vip">Vip.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
@@ -65,17 +63,9 @@ namespace HostMe.Sdk.Model
         /// <param name="Email">Email.</param>
         /// <param name="Phone">Phone.</param>
         /// <param name="TableNumber">TableNumber.</param>
-        public RegisterAtTable(int? GroupSize = null, string CustomerName = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string Areas = null, bool? HighChair = null, bool? Stroller = null, double? EstimatedTurnOverTime = null, bool? Vip = null, Profile CustomerProfile = null, bool? Party = null, List<string> PartyTypes = null, string Email = null, string Phone = null, string TableNumber = null)
+        public RegisterAtTable(int? GroupSize = null, string CustomerName = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string Areas = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, int? EstimatedTurnOverTime = null, bool? Vip = null, ProfileData CustomerProfile = null, bool? Party = null, List<string> PartyTypes = null, string Email = null, string Phone = null, string TableNumber = null)
         {
-            // to ensure "GroupSize" is required (not null)
-            if (GroupSize == null)
-            {
-                throw new InvalidDataException("GroupSize is a required property for RegisterAtTable and cannot be null");
-            }
-            else
-            {
-                this.GroupSize = GroupSize;
-            }
+            this.GroupSize = GroupSize;
             this.CustomerName = CustomerName;
             this.InternalNotes = InternalNotes;
             this.SpecialRequests = SpecialRequests;
@@ -83,6 +73,9 @@ namespace HostMe.Sdk.Model
             this.Areas = Areas;
             this.HighChair = HighChair;
             this.Stroller = Stroller;
+            this.Booth = Booth;
+            this.HighTop = HighTop;
+            this.Table = Table;
             this.EstimatedTurnOverTime = EstimatedTurnOverTime;
             this.Vip = Vip;
             this.CustomerProfile = CustomerProfile;
@@ -134,10 +127,25 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="stroller", EmitDefaultValue=true)]
         public bool? Stroller { get; set; }
         /// <summary>
+        /// Gets or Sets Booth
+        /// </summary>
+        [DataMember(Name="booth", EmitDefaultValue=true)]
+        public bool? Booth { get; set; }
+        /// <summary>
+        /// Gets or Sets HighTop
+        /// </summary>
+        [DataMember(Name="highTop", EmitDefaultValue=true)]
+        public bool? HighTop { get; set; }
+        /// <summary>
+        /// Gets or Sets Table
+        /// </summary>
+        [DataMember(Name="table", EmitDefaultValue=true)]
+        public bool? Table { get; set; }
+        /// <summary>
         /// Gets or Sets EstimatedTurnOverTime
         /// </summary>
         [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=true)]
-        public double? EstimatedTurnOverTime { get; set; }
+        public int? EstimatedTurnOverTime { get; set; }
         /// <summary>
         /// Gets or Sets Vip
         /// </summary>
@@ -147,7 +155,7 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile CustomerProfile { get; set; }
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Gets or Sets Party
         /// </summary>
@@ -189,6 +197,9 @@ namespace HostMe.Sdk.Model
             sb.Append("  Areas: ").Append(Areas).Append("\n");
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
+            sb.Append("  Booth: ").Append(Booth).Append("\n");
+            sb.Append("  HighTop: ").Append(HighTop).Append("\n");
+            sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
             sb.Append("  Vip: ").Append(Vip).Append("\n");
             sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
@@ -274,6 +285,21 @@ namespace HostMe.Sdk.Model
                     this.Stroller.Equals(other.Stroller)
                 ) && 
                 (
+                    this.Booth == other.Booth ||
+                    this.Booth != null &&
+                    this.Booth.Equals(other.Booth)
+                ) && 
+                (
+                    this.HighTop == other.HighTop ||
+                    this.HighTop != null &&
+                    this.HighTop.Equals(other.HighTop)
+                ) && 
+                (
+                    this.Table == other.Table ||
+                    this.Table != null &&
+                    this.Table.Equals(other.Table)
+                ) && 
+                (
                     this.EstimatedTurnOverTime == other.EstimatedTurnOverTime ||
                     this.EstimatedTurnOverTime != null &&
                     this.EstimatedTurnOverTime.Equals(other.EstimatedTurnOverTime)
@@ -342,6 +368,12 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.HighChair.GetHashCode();
                 if (this.Stroller != null)
                     hash = hash * 59 + this.Stroller.GetHashCode();
+                if (this.Booth != null)
+                    hash = hash * 59 + this.Booth.GetHashCode();
+                if (this.HighTop != null)
+                    hash = hash * 59 + this.HighTop.GetHashCode();
+                if (this.Table != null)
+                    hash = hash * 59 + this.Table.GetHashCode();
                 if (this.EstimatedTurnOverTime != null)
                     hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
                 if (this.Vip != null)

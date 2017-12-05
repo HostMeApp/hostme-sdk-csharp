@@ -45,9 +45,11 @@ namespace HostMe.Sdk.Model
         /// Initializes a new instance of the <see cref="ChangeTableState" /> class.
         /// </summary>
         /// <param name="State">State.</param>
-        public ChangeTableState(string State = null)
+        /// <param name="TableNumber">TableNumber.</param>
+        public ChangeTableState(string State = null, string TableNumber = null)
         {
             this.State = State;
+            this.TableNumber = TableNumber;
         }
         
         /// <summary>
@@ -55,6 +57,11 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=true)]
         public string State { get; set; }
+        /// <summary>
+        /// Gets or Sets TableNumber
+        /// </summary>
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
+        public string TableNumber { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -64,6 +71,7 @@ namespace HostMe.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class ChangeTableState {\n");
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -104,6 +112,11 @@ namespace HostMe.Sdk.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) && 
+                (
+                    this.TableNumber == other.TableNumber ||
+                    this.TableNumber != null &&
+                    this.TableNumber.Equals(other.TableNumber)
                 );
         }
 
@@ -120,6 +133,8 @@ namespace HostMe.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                if (this.TableNumber != null)
+                    hash = hash * 59 + this.TableNumber.GetHashCode();
                 return hash;
             }
         }

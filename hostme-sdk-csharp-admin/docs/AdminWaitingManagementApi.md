@@ -11,20 +11,10 @@ Method | HTTP request | Description
 [**Create**](AdminWaitingManagementApi.md#create) | **POST** /api/wm/admin/restaurant/{restaurantId}/waitings | 
 [**GetAllWaitings**](AdminWaitingManagementApi.md#getallwaitings) | **GET** /api/wm/admin/restaurant/{restaurantId}/waitings | Returns all waiting items for the selected restaurant
 [**GetMessages**](AdminWaitingManagementApi.md#getmessages) | **GET** /api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId}/messages | 
-[**GetPartiesGroupBy**](AdminWaitingManagementApi.md#getpartiesgroupby) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/parties/groupby | 
 [**GetRestaurantWaitingsStatistic**](AdminWaitingManagementApi.md#getrestaurantwaitingsstatistic) | **GET** /api/wm/admin/restaurant/{restaurantId}/waitings/stats | 
-[**GetTodayStats**](AdminWaitingManagementApi.md#gettodaystats) | **GET** /api/wm/admin/restaurant/{restaurantId}/stats | 
 [**GetUnreadMessagesCount**](AdminWaitingManagementApi.md#getunreadmessagescount) | **GET** /api/wm/admin/restaurant/{restaurantId}/waitings/messages/unread/count | 
 [**GetWaitingById**](AdminWaitingManagementApi.md#getwaitingbyid) | **GET** /api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId} | Returns waiting item by waiting item identifier
 [**GetWaitingSettings**](AdminWaitingManagementApi.md#getwaitingsettings) | **GET** /api/wm/admin/restaurant/{restaurantId}/settings | 
-[**GetWaitingTimeByGroup**](AdminWaitingManagementApi.md#getwaitingtimebygroup) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/partysize | 
-[**GetWaitingTimeByHour**](AdminWaitingManagementApi.md#getwaitingtimebyhour) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/hour | 
-[**GetWaitingTimeByLine**](AdminWaitingManagementApi.md#getwaitingtimebyline) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/waitings/groupby/line | 
-[**GetWaitingTimeByMeal**](AdminWaitingManagementApi.md#getwaitingtimebymeal) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/mealtype | 
-[**GetWaitingTimeByWeek**](AdminWaitingManagementApi.md#getwaitingtimebyweek) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/week | 
-[**GetWaitingTimeByWeekDay**](AdminWaitingManagementApi.md#getwaitingtimebyweekday) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby/weekday | 
-[**GetWaitingsForPeriod**](AdminWaitingManagementApi.md#getwaitingsforperiod) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings | 
-[**GetWaitingsGroupBy**](AdminWaitingManagementApi.md#getwaitingsgroupby) | **GET** /api/wm/admin/restaurant/{restaurantId}/analytics/waitings/groupby | 
 [**Incoming**](AdminWaitingManagementApi.md#incoming) | **GET** /api/wm/admin/smsclient/incoming | 
 [**MarkAllMessagesAsRead**](AdminWaitingManagementApi.md#markallmessagesasread) | **POST** /api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId}/messages/readall | Marks all message as read.
 [**ReOpenWaiting**](AdminWaitingManagementApi.md#reopenwaiting) | **PUT** /api/wm/admin/restaurant/{restaurantId}/waitings/{waitingItemId}/reopen | Reopens closed waiting item
@@ -35,7 +25,7 @@ Method | HTTP request | Description
 
 <a name="callwaitingparty"></a>
 # **CallWaitingParty**
-> void CallWaitingParty (int? restaurantId, int? waitingItemId, string tableNumber = null)
+> void CallWaitingParty (int? restaurantId, string waitingItemId, string tableNumber = null)
 
 Calls waiting party.
 
@@ -61,7 +51,7 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Waiting item identifier
+            var waitingItemId = waitingItemId_example;  // string | Waiting item identifier
             var tableNumber = tableNumber_example;  // string | Number of the table (optional) 
 
             try
@@ -83,7 +73,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Waiting item identifier | 
+ **waitingItemId** | **string**| Waiting item identifier | 
  **tableNumber** | **string**| Number of the table | [optional] 
 
 ### Return type
@@ -103,7 +93,7 @@ void (empty response body)
 
 <a name="close"></a>
 # **Close**
-> void Close (int? restaurantId, int? waitingItemId)
+> void Close (int? restaurantId, string waitingItemId)
 
 Closes current waiting position.
 
@@ -129,7 +119,7 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Identifier of the waiting item
+            var waitingItemId = waitingItemId_example;  // string | Identifier of the waiting item
 
             try
             {
@@ -150,7 +140,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Identifier of the waiting item | 
+ **waitingItemId** | **string**| Identifier of the waiting item | 
 
 ### Return type
 
@@ -169,7 +159,7 @@ void (empty response body)
 
 <a name="closeascanceled"></a>
 # **CloseAsCanceled**
-> void CloseAsCanceled (int? restaurantId, int? waitingItemId, string origin)
+> void CloseAsCanceled (int? restaurantId, string waitingItemId, string origin = null)
 
 Cancels waiting item
 
@@ -193,8 +183,8 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Waiting item identifier
-            var origin = origin_example;  // string | This parameter specifies who send the message. It could be host or client.
+            var waitingItemId = waitingItemId_example;  // string | Waiting item identifier
+            var origin = origin_example;  // string |  (optional) 
 
             try
             {
@@ -215,8 +205,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Waiting item identifier | 
- **origin** | **string**| This parameter specifies who send the message. It could be host or client. | 
+ **waitingItemId** | **string**| Waiting item identifier | 
+ **origin** | **string**|  | [optional] 
 
 ### Return type
 
@@ -301,7 +291,7 @@ void (empty response body)
 
 <a name="create"></a>
 # **Create**
-> Waiting Create (int? restaurantId, UpdateWaitingItem contract)
+> Booking Create (int? restaurantId, UpdateWaitingItem contract)
 
 
 
@@ -329,7 +319,7 @@ namespace Example
 
             try
             {
-                Waiting result = apiInstance.Create(restaurantId, contract);
+                Booking result = apiInstance.Create(restaurantId, contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -350,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Waiting**](Waiting.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -490,71 +480,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getpartiesgroupby"></a>
-# **GetPartiesGroupBy**
-> List<PartiesStatReportItem> GetPartiesGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetPartiesGroupByExample
-    {
-        public void main()
-        {
-            
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var groupBy = groupBy_example;  // string | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;PartiesStatReportItem&gt; result = apiInstance.GetPartiesGroupBy(restaurantId, groupBy, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetPartiesGroupBy: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **groupBy** | **string**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<PartiesStatReportItem>**](PartiesStatReportItem.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getrestaurantwaitingsstatistic"></a>
 # **GetRestaurantWaitingsStatistic**
 > WaitingsStatistic GetRestaurantWaitingsStatistic (int? restaurantId)
@@ -605,68 +530,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WaitingsStatistic**](WaitingsStatistic.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="gettodaystats"></a>
-# **GetTodayStats**
-> WaitingStats GetTodayStats (int? restaurantId)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetTodayStatsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-
-            try
-            {
-                WaitingStats result = apiInstance.GetTodayStats(restaurantId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetTodayStats: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
-
-### Return type
-
-[**WaitingStats**](WaitingStats.md)
 
 ### Authorization
 
@@ -868,536 +731,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getwaitingtimebygroup"></a>
-# **GetWaitingTimeByGroup**
-> List<WaitingsStatReportItem> GetWaitingTimeByGroup (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByGroupExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByGroup(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByGroup: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingtimebyhour"></a>
-# **GetWaitingTimeByHour**
-> List<WaitingsStatReportItem> GetWaitingTimeByHour (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByHourExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByHour(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByHour: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingtimebyline"></a>
-# **GetWaitingTimeByLine**
-> List<WaitingsStatReportItem> GetWaitingTimeByLine (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByLineExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByLine(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByLine: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingtimebymeal"></a>
-# **GetWaitingTimeByMeal**
-> List<WaitingsStatReportItem> GetWaitingTimeByMeal (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByMealExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByMeal(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByMeal: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingtimebyweek"></a>
-# **GetWaitingTimeByWeek**
-> List<WaitingsStatReportItem> GetWaitingTimeByWeek (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByWeekExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByWeek(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByWeek: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingtimebyweekday"></a>
-# **GetWaitingTimeByWeekDay**
-> List<WaitingsStatReportItem> GetWaitingTimeByWeekDay (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingTimeByWeekDayExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingTimeByWeekDay(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingTimeByWeekDay: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingsforperiod"></a>
-# **GetWaitingsForPeriod**
-> List<WaitingReportItem> GetWaitingsForPeriod (int? restaurantId, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingsForPeriodExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingReportItem&gt; result = apiInstance.GetWaitingsForPeriod(restaurantId, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingsForPeriod: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingReportItem>**](WaitingReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getwaitingsgroupby"></a>
-# **GetWaitingsGroupBy**
-> List<WaitingsStatReportItem> GetWaitingsGroupBy (int? restaurantId, string groupBy, DateTimeOffset? from = null, DateTimeOffset? to = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetWaitingsGroupByExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new AdminWaitingManagementApi();
-            var restaurantId = 56;  // int? | 
-            var groupBy = groupBy_example;  // string | 
-            var from = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-            var to = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
-
-            try
-            {
-                List&lt;WaitingsStatReportItem&gt; result = apiInstance.GetWaitingsGroupBy(restaurantId, groupBy, from, to);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AdminWaitingManagementApi.GetWaitingsGroupBy: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **restaurantId** | **int?**|  | 
- **groupBy** | **string**|  | 
- **from** | **DateTimeOffset?**|  | [optional] 
- **to** | **DateTimeOffset?**|  | [optional] 
-
-### Return type
-
-[**List<WaitingsStatReportItem>**](WaitingsStatReportItem.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="incoming"></a>
 # **Incoming**
 > Object Incoming (string from, string to, string body)
@@ -1463,7 +796,7 @@ No authorization required
 
 <a name="markallmessagesasread"></a>
 # **MarkAllMessagesAsRead**
-> void MarkAllMessagesAsRead (int? restaurantId, int? waitingItemId)
+> void MarkAllMessagesAsRead (int? restaurantId, string waitingItemId)
 
 Marks all message as read.
 
@@ -1487,7 +820,7 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Waiting item identifier
+            var waitingItemId = waitingItemId_example;  // string | Waiting item identifier
 
             try
             {
@@ -1508,7 +841,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Waiting item identifier | 
+ **waitingItemId** | **string**| Waiting item identifier | 
 
 ### Return type
 
@@ -1527,7 +860,7 @@ void (empty response body)
 
 <a name="reopenwaiting"></a>
 # **ReOpenWaiting**
-> Waiting ReOpenWaiting (int? restaurantId, int? waitingItemId)
+> Object ReOpenWaiting (int? restaurantId, string waitingItemId)
 
 Reopens closed waiting item
 
@@ -1551,12 +884,12 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Waiting item identifier
+            var waitingItemId = waitingItemId_example;  // string | Waiting item identifier
 
             try
             {
                 // Reopens closed waiting item
-                Waiting result = apiInstance.ReOpenWaiting(restaurantId, waitingItemId);
+                Object result = apiInstance.ReOpenWaiting(restaurantId, waitingItemId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1573,11 +906,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Waiting item identifier | 
+ **waitingItemId** | **string**| Waiting item identifier | 
 
 ### Return type
 
-[**Waiting**](Waiting.md)
+**Object**
 
 ### Authorization
 
@@ -1592,7 +925,7 @@ Name | Type | Description  | Notes
 
 <a name="sendmessage"></a>
 # **SendMessage**
-> Message SendMessage (int? restaurantId, int? waitingItemId, string origin, CreateMessage createMessage)
+> Object SendMessage (int? restaurantId, string waitingItemId, string origin, CreateMessage createMessage)
 
 Sends a message related to specified waiting item.
 
@@ -1616,14 +949,14 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Restaurant identifier
-            var waitingItemId = 56;  // int? | Waiting item identifier
+            var waitingItemId = waitingItemId_example;  // string | Waiting item identifier
             var origin = origin_example;  // string | This parameter specifies who send the message. It could be host or client.
             var createMessage = new CreateMessage(); // CreateMessage | The message with body
 
             try
             {
                 // Sends a message related to specified waiting item.
-                Message result = apiInstance.SendMessage(restaurantId, waitingItemId, origin, createMessage);
+                Object result = apiInstance.SendMessage(restaurantId, waitingItemId, origin, createMessage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1640,13 +973,13 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Restaurant identifier | 
- **waitingItemId** | **int?**| Waiting item identifier | 
+ **waitingItemId** | **string**| Waiting item identifier | 
  **origin** | **string**| This parameter specifies who send the message. It could be host or client. | 
  **createMessage** | [**CreateMessage**](CreateMessage.md)| The message with body | 
 
 ### Return type
 
-[**Message**](Message.md)
+**Object**
 
 ### Authorization
 
@@ -1724,7 +1057,7 @@ void (empty response body)
 
 <a name="updatewaiting"></a>
 # **UpdateWaiting**
-> Waiting UpdateWaiting (int? restaurantId, int? waitingItemId, UpdateWaitingItem item)
+> Waiting UpdateWaiting (int? restaurantId, string waitingItemId, UpdateWaitingItem item)
 
 Updates waitingitem
 
@@ -1748,7 +1081,7 @@ namespace Example
 
             var apiInstance = new AdminWaitingManagementApi();
             var restaurantId = 56;  // int? | Identifier of the restaurant registered in our system
-            var waitingItemId = 56;  // int? | Identifier of the waiting record in our system
+            var waitingItemId = waitingItemId_example;  // string | Identifier of the waiting record in our system
             var item = new UpdateWaitingItem(); // UpdateWaitingItem | Update model of waiting record
 
             try
@@ -1771,7 +1104,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**| Identifier of the restaurant registered in our system | 
- **waitingItemId** | **int?**| Identifier of the waiting record in our system | 
+ **waitingItemId** | **string**| Identifier of the waiting record in our system | 
  **item** | [**UpdateWaitingItem**](UpdateWaitingItem.md)| Update model of waiting record | 
 
 ### Return type

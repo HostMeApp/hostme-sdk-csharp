@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupSize** | **int?** |  | 
+**GroupSize** | **int?** |  | [optional] 
 **CustomerName** | **string** |  | [optional] 
 **InternalNotes** | **string** |  | [optional] 
 **SpecialRequests** | **string** |  | [optional] 
@@ -11,9 +11,12 @@ Name | Type | Description | Notes
 **Areas** | **string** |  | [optional] 
 **HighChair** | **bool?** |  | [optional] 
 **Stroller** | **bool?** |  | [optional] 
-**EstimatedTurnOverTime** | **double?** |  | [optional] 
+**Booth** | **bool?** |  | [optional] 
+**HighTop** | **bool?** |  | [optional] 
+**Table** | **bool?** |  | [optional] 
+**EstimatedTurnOverTime** | **int?** |  | [optional] 
 **Vip** | **bool?** |  | [optional] 
-**CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 **Party** | **bool?** |  | [optional] 
 **PartyTypes** | **List&lt;string&gt;** |  | [optional] 
 **Email** | **string** |  | [optional] 

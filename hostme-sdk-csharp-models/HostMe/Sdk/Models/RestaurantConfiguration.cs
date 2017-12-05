@@ -48,18 +48,20 @@ namespace HostMe.Sdk.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Address">Address.</param>
         /// <param name="Password">Password.</param>
+        /// <param name="Created">Created.</param>
         /// <param name="Settings">Settings.</param>
         /// <param name="WaitingSettings">WaitingSettings.</param>
         /// <param name="LoyaltySettings">LoyaltySettings.</param>
         /// <param name="ReservationSettings">ReservationSettings.</param>
         /// <param name="TableStates">TableStates.</param>
         /// <param name="PaymentSettings">PaymentSettings.</param>
-        public RestaurantConfiguration(string Name = null, string TimeZone = null, string Address = null, string Password = null, RestaurantSettings Settings = null, WaitingSettings WaitingSettings = null, LoyaltySettings LoyaltySettings = null, ReservationSettings ReservationSettings = null, List<TableState> TableStates = null, PaymentSettings PaymentSettings = null)
+        public RestaurantConfiguration(string Name = null, string TimeZone = null, string Address = null, string Password = null, DateTimeOffset? Created = null, RestaurantSettings Settings = null, WaitingSettings WaitingSettings = null, LoyaltySettings LoyaltySettings = null, ReservationSettings ReservationSettings = null, List<TableState> TableStates = null, PaymentSettings PaymentSettings = null)
         {
             this.Name = Name;
             this.TimeZone = TimeZone;
             this.Address = Address;
             this.Password = Password;
+            this.Created = Created;
             this.Settings = Settings;
             this.WaitingSettings = WaitingSettings;
             this.LoyaltySettings = LoyaltySettings;
@@ -88,6 +90,11 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="password", EmitDefaultValue=true)]
         public string Password { get; set; }
+        /// <summary>
+        /// Gets or Sets Created
+        /// </summary>
+        [DataMember(Name="created", EmitDefaultValue=true)]
+        public DateTimeOffset? Created { get; set; }
         /// <summary>
         /// Gets or Sets Settings
         /// </summary>
@@ -130,6 +137,7 @@ namespace HostMe.Sdk.Model
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("  WaitingSettings: ").Append(WaitingSettings).Append("\n");
             sb.Append("  LoyaltySettings: ").Append(LoyaltySettings).Append("\n");
@@ -193,6 +201,11 @@ namespace HostMe.Sdk.Model
                     this.Password.Equals(other.Password)
                 ) && 
                 (
+                    this.Created == other.Created ||
+                    this.Created != null &&
+                    this.Created.Equals(other.Created)
+                ) && 
+                (
                     this.Settings == other.Settings ||
                     this.Settings != null &&
                     this.Settings.Equals(other.Settings)
@@ -243,6 +256,8 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Address.GetHashCode();
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
+                if (this.Created != null)
+                    hash = hash * 59 + this.Created.GetHashCode();
                 if (this.Settings != null)
                     hash = hash * 59 + this.Settings.GetHashCode();
                 if (this.WaitingSettings != null)

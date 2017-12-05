@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Status** | **string** |  | [optional] 
 **MembershipLevel** | **string** |  | [optional] 
 **Points** | **long?** |  | [optional] 
-**_CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**_CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

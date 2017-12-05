@@ -52,7 +52,7 @@ namespace HostMe.Sdk.Model
         /// <param name="MembershipLevel">MembershipLevel.</param>
         /// <param name="Points">Points.</param>
         /// <param name="_CustomerProfile">_CustomerProfile.</param>
-        public CustomerProfile(DateTimeOffset? LastVisitDate = null, string Phone = null, int? VisitsCount = null, string CustomerName = null, string Status = null, string MembershipLevel = null, long? Points = null, Profile _CustomerProfile = null)
+        public CustomerProfile(DateTimeOffset? LastVisitDate = null, string Phone = null, int? VisitsCount = null, string CustomerName = null, string Status = null, string MembershipLevel = null, long? Points = null, ProfileData _CustomerProfile = null)
         {
             this.LastVisitDate = LastVisitDate;
             this.Phone = Phone;
@@ -103,7 +103,7 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets _CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile _CustomerProfile { get; set; }
+        public ProfileData _CustomerProfile { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

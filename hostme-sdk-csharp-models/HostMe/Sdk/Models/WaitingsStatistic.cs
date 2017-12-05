@@ -48,20 +48,22 @@ namespace HostMe.Sdk.Model
         /// <param name="Called">Called.</param>
         /// <param name="TablesAvailable">TablesAvailable.</param>
         /// <param name="TotalCovers">TotalCovers.</param>
-        /// <param name="CoversAvalible">CoversAvalible.</param>
+        /// <param name="CoversAvailable">CoversAvailable.</param>
         /// <param name="OneTwoGroup">OneTwoGroup.</param>
         /// <param name="ThreeFourGroup">ThreeFourGroup.</param>
         /// <param name="FiveSixGroup">FiveSixGroup.</param>
-        public WaitingsStatistic(int? InList = null, int? Called = null, int? TablesAvailable = null, int? TotalCovers = null, int? CoversAvalible = null, AverageWaitingTime OneTwoGroup = null, AverageWaitingTime ThreeFourGroup = null, AverageWaitingTime FiveSixGroup = null)
+        /// <param name="WaitByGroup">WaitByGroup.</param>
+        public WaitingsStatistic(int? InList = null, int? Called = null, int? TablesAvailable = null, int? TotalCovers = null, int? CoversAvailable = null, AverageWaitingTime OneTwoGroup = null, AverageWaitingTime ThreeFourGroup = null, AverageWaitingTime FiveSixGroup = null, List<WaitingStatLine> WaitByGroup = null)
         {
             this.InList = InList;
             this.Called = Called;
             this.TablesAvailable = TablesAvailable;
             this.TotalCovers = TotalCovers;
-            this.CoversAvalible = CoversAvalible;
+            this.CoversAvailable = CoversAvailable;
             this.OneTwoGroup = OneTwoGroup;
             this.ThreeFourGroup = ThreeFourGroup;
             this.FiveSixGroup = FiveSixGroup;
+            this.WaitByGroup = WaitByGroup;
         }
         
         /// <summary>
@@ -85,10 +87,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="totalCovers", EmitDefaultValue=true)]
         public int? TotalCovers { get; set; }
         /// <summary>
-        /// Gets or Sets CoversAvalible
+        /// Gets or Sets CoversAvailable
         /// </summary>
-        [DataMember(Name="coversAvalible", EmitDefaultValue=true)]
-        public int? CoversAvalible { get; set; }
+        [DataMember(Name="coversAvailable", EmitDefaultValue=true)]
+        public int? CoversAvailable { get; set; }
         /// <summary>
         /// Gets or Sets OneTwoGroup
         /// </summary>
@@ -105,6 +107,11 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="fiveSixGroup", EmitDefaultValue=true)]
         public AverageWaitingTime FiveSixGroup { get; set; }
         /// <summary>
+        /// Gets or Sets WaitByGroup
+        /// </summary>
+        [DataMember(Name="waitByGroup", EmitDefaultValue=true)]
+        public List<WaitingStatLine> WaitByGroup { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,10 +123,11 @@ namespace HostMe.Sdk.Model
             sb.Append("  Called: ").Append(Called).Append("\n");
             sb.Append("  TablesAvailable: ").Append(TablesAvailable).Append("\n");
             sb.Append("  TotalCovers: ").Append(TotalCovers).Append("\n");
-            sb.Append("  CoversAvalible: ").Append(CoversAvalible).Append("\n");
+            sb.Append("  CoversAvailable: ").Append(CoversAvailable).Append("\n");
             sb.Append("  OneTwoGroup: ").Append(OneTwoGroup).Append("\n");
             sb.Append("  ThreeFourGroup: ").Append(ThreeFourGroup).Append("\n");
             sb.Append("  FiveSixGroup: ").Append(FiveSixGroup).Append("\n");
+            sb.Append("  WaitByGroup: ").Append(WaitByGroup).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,9 +185,9 @@ namespace HostMe.Sdk.Model
                     this.TotalCovers.Equals(other.TotalCovers)
                 ) && 
                 (
-                    this.CoversAvalible == other.CoversAvalible ||
-                    this.CoversAvalible != null &&
-                    this.CoversAvalible.Equals(other.CoversAvalible)
+                    this.CoversAvailable == other.CoversAvailable ||
+                    this.CoversAvailable != null &&
+                    this.CoversAvailable.Equals(other.CoversAvailable)
                 ) && 
                 (
                     this.OneTwoGroup == other.OneTwoGroup ||
@@ -195,6 +203,11 @@ namespace HostMe.Sdk.Model
                     this.FiveSixGroup == other.FiveSixGroup ||
                     this.FiveSixGroup != null &&
                     this.FiveSixGroup.Equals(other.FiveSixGroup)
+                ) && 
+                (
+                    this.WaitByGroup == other.WaitByGroup ||
+                    this.WaitByGroup != null &&
+                    this.WaitByGroup.SequenceEqual(other.WaitByGroup)
                 );
         }
 
@@ -217,14 +230,16 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.TablesAvailable.GetHashCode();
                 if (this.TotalCovers != null)
                     hash = hash * 59 + this.TotalCovers.GetHashCode();
-                if (this.CoversAvalible != null)
-                    hash = hash * 59 + this.CoversAvalible.GetHashCode();
+                if (this.CoversAvailable != null)
+                    hash = hash * 59 + this.CoversAvailable.GetHashCode();
                 if (this.OneTwoGroup != null)
                     hash = hash * 59 + this.OneTwoGroup.GetHashCode();
                 if (this.ThreeFourGroup != null)
                     hash = hash * 59 + this.ThreeFourGroup.GetHashCode();
                 if (this.FiveSixGroup != null)
                     hash = hash * 59 + this.FiveSixGroup.GetHashCode();
+                if (this.WaitByGroup != null)
+                    hash = hash * 59 + this.WaitByGroup.GetHashCode();
                 return hash;
             }
         }

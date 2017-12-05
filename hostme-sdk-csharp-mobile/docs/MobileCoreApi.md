@@ -5,12 +5,8 @@ All URIs are relative to *http://hostme-services-dev.azurewebsites.net*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ChangePassword**](MobileCoreApi.md#changepassword) | **POST** /api/core/mb/account/changePassword | 
-[**CheckIn**](MobileCoreApi.md#checkin) | **PUT** /api/core/mb/restaurant/checkin | 
-[**FindRestaurants**](MobileCoreApi.md#findrestaurants) | **GET** /api/core/mb/restaurants/find | 
 [**GetAllRestaurants**](MobileCoreApi.md#getallrestaurants) | **GET** /api/core/mb/restaurants | 
-[**GetListOfLocations**](MobileCoreApi.md#getlistoflocations) | **GET** /api/core/mb/locations | 
 [**GetManageInfo**](MobileCoreApi.md#getmanageinfo) | **GET** /api/core/mb/account/manageInfo | 
-[**GetRegistrationToken**](MobileCoreApi.md#getregistrationtoken) | **GET** /api/core/mb/campaign/{token} | 
 [**GetReservationAvailability**](MobileCoreApi.md#getreservationavailability) | **GET** /api/core/mb/restaurants/{restaurantId}/availability | 
 [**GetRestaurantById**](MobileCoreApi.md#getrestaurantbyid) | **GET** /api/core/mb/restaurants/{id} | 
 [**GetUserInfo**](MobileCoreApi.md#getuserinfo) | **GET** /api/core/mb/account/userInfo | 
@@ -84,136 +80,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="checkin"></a>
-# **CheckIn**
-> Transaction CheckIn (TransactionCheckin checkinContract)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class CheckInExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileCoreApi();
-            var checkinContract = new TransactionCheckin(); // TransactionCheckin | 
-
-            try
-            {
-                Transaction result = apiInstance.CheckIn(checkinContract);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileCoreApi.CheckIn: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checkinContract** | [**TransactionCheckin**](TransactionCheckin.md)|  | 
-
-### Return type
-
-[**Transaction**](Transaction.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="findrestaurants"></a>
-# **FindRestaurants**
-> List<RestaurantInfo> FindRestaurants (double? lat = null, double? lon = null, string name = null, string city = null)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class FindRestaurantsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileCoreApi();
-            var lat = 1.2;  // double? |  (optional) 
-            var lon = 1.2;  // double? |  (optional) 
-            var name = name_example;  // string |  (optional) 
-            var city = city_example;  // string |  (optional) 
-
-            try
-            {
-                List&lt;RestaurantInfo&gt; result = apiInstance.FindRestaurants(lat, lon, name, city);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileCoreApi.FindRestaurants: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **lat** | **double?**|  | [optional] 
- **lon** | **double?**|  | [optional] 
- **name** | **string**|  | [optional] 
- **city** | **string**|  | [optional] 
-
-### Return type
-
-[**List<RestaurantInfo>**](RestaurantInfo.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getallrestaurants"></a>
 # **GetAllRestaurants**
 > List<RestaurantInfo> GetAllRestaurants ()
@@ -235,9 +101,6 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MobileCoreApi();
 
             try
@@ -263,65 +126,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="getlistoflocations"></a>
-# **GetListOfLocations**
-> List<Location> GetListOfLocations ()
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetListOfLocationsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileCoreApi();
-
-            try
-            {
-                List&lt;Location&gt; result = apiInstance.GetListOfLocations();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileCoreApi.GetListOfLocations: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**List<Location>**](Location.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -394,68 +199,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getregistrationtoken"></a>
-# **GetRegistrationToken**
-> CampaignInfo GetRegistrationToken (string token)
-
-
-
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using HostMe.Sdk.Api;
-using HostMe.Sdk.Client;
-using HostMe.Sdk.Model;
-
-namespace Example
-{
-    public class GetRegistrationTokenExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
-            var apiInstance = new MobileCoreApi();
-            var token = token_example;  // string | 
-
-            try
-            {
-                CampaignInfo result = apiInstance.GetRegistrationToken(token);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling MobileCoreApi.GetRegistrationToken: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **token** | **string**|  | 
-
-### Return type
-
-[**CampaignInfo**](CampaignInfo.md)
-
-### Authorization
-
-[oauth2](../README.md#oauth2)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getreservationavailability"></a>
 # **GetReservationAvailability**
 > List<OnlineAvailability> GetReservationAvailability (int? restaurantId, DateTimeOffset? date, int? partySize, int? rangeInMinutes, string areas = null)
@@ -477,9 +220,6 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MobileCoreApi();
             var restaurantId = 56;  // int? | 
             var date = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? | 
@@ -517,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -547,9 +287,6 @@ namespace Example
         public void main()
         {
             
-            // Configure OAuth2 access token for authorization: oauth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MobileCoreApi();
             var id = 56;  // int? | 
 
@@ -579,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

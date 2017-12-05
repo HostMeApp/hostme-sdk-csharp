@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **TimeZone** | **string** |  | [optional] 
 **Address** | **string** |  | [optional] 
 **Password** | **string** |  | [optional] 
+**Created** | **DateTimeOffset?** |  | [optional] 
 **Settings** | [**RestaurantSettings**](RestaurantSettings.md) |  | [optional] 
 **WaitingSettings** | [**WaitingSettings**](WaitingSettings.md) |  | [optional] 
 **LoyaltySettings** | [**LoyaltySettings**](LoyaltySettings.md) |  | [optional] 

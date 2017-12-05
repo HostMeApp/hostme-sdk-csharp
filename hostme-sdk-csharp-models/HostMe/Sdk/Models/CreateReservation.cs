@@ -45,6 +45,7 @@ namespace HostMe.Sdk.Model
         /// Initializes a new instance of the <see cref="CreateReservation" /> class.
         /// </summary>
         /// <param name="ReservationTime">ReservationTime.</param>
+        /// <param name="DoB">DoB.</param>
         /// <param name="GroupSize">GroupSize.</param>
         /// <param name="Amount">Amount.</param>
         /// <param name="ReservationSource">ReservationSource.</param>
@@ -61,18 +62,18 @@ namespace HostMe.Sdk.Model
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
         /// <param name="Party">Party.</param>
-        /// <param name="Vip">Vip.</param>
         /// <param name="Booth">Booth.</param>
         /// <param name="HighTop">HighTop.</param>
         /// <param name="Table">Table.</param>
-        /// <param name="HandicapAccessible">HandicapAccessible.</param>
+        /// <param name="Vip">Vip.</param>
         /// <param name="PartyTypes">PartyTypes.</param>
         /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
         /// <param name="IsOnline">IsOnline.</param>
-        public CreateReservation(DateTimeOffset? ReservationTime = null, int? GroupSize = null, int? Amount = null, string ReservationSource = null, string CustomerName = null, string Phone = null, string Email = null, string Areas = null, string Language = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string TableNumber = null, string DepositToken = null, bool? HighChair = null, bool? Stroller = null, bool? Party = null, bool? Vip = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? HandicapAccessible = null, List<string> PartyTypes = null, int? EstimatedTurnOverTime = null, Profile CustomerProfile = null, bool? IsOnline = null)
+        public CreateReservation(DateTimeOffset? ReservationTime = null, DateTimeOffset? DoB = null, int? GroupSize = null, int? Amount = null, string ReservationSource = null, string CustomerName = null, string Phone = null, string Email = null, string Areas = null, string Language = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string TableNumber = null, string DepositToken = null, bool? HighChair = null, bool? Stroller = null, bool? Party = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Vip = null, List<string> PartyTypes = null, int? EstimatedTurnOverTime = null, ProfileData CustomerProfile = null, bool? IsOnline = null)
         {
             this.ReservationTime = ReservationTime;
+            this.DoB = DoB;
             this.GroupSize = GroupSize;
             this.Amount = Amount;
             this.ReservationSource = ReservationSource;
@@ -89,11 +90,10 @@ namespace HostMe.Sdk.Model
             this.HighChair = HighChair;
             this.Stroller = Stroller;
             this.Party = Party;
-            this.Vip = Vip;
             this.Booth = Booth;
             this.HighTop = HighTop;
             this.Table = Table;
-            this.HandicapAccessible = HandicapAccessible;
+            this.Vip = Vip;
             this.PartyTypes = PartyTypes;
             this.EstimatedTurnOverTime = EstimatedTurnOverTime;
             this.CustomerProfile = CustomerProfile;
@@ -105,6 +105,11 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="reservationTime", EmitDefaultValue=true)]
         public DateTimeOffset? ReservationTime { get; set; }
+        /// <summary>
+        /// Gets or Sets DoB
+        /// </summary>
+        [DataMember(Name="doB", EmitDefaultValue=true)]
+        public DateTimeOffset? DoB { get; set; }
         /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
@@ -186,11 +191,6 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="party", EmitDefaultValue=true)]
         public bool? Party { get; set; }
         /// <summary>
-        /// Gets or Sets Vip
-        /// </summary>
-        [DataMember(Name="vip", EmitDefaultValue=true)]
-        public bool? Vip { get; set; }
-        /// <summary>
         /// Gets or Sets Booth
         /// </summary>
         [DataMember(Name="booth", EmitDefaultValue=true)]
@@ -206,10 +206,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="table", EmitDefaultValue=true)]
         public bool? Table { get; set; }
         /// <summary>
-        /// Gets or Sets HandicapAccessible
+        /// Gets or Sets Vip
         /// </summary>
-        [DataMember(Name="handicapAccessible", EmitDefaultValue=true)]
-        public bool? HandicapAccessible { get; set; }
+        [DataMember(Name="vip", EmitDefaultValue=true)]
+        public bool? Vip { get; set; }
         /// <summary>
         /// Gets or Sets PartyTypes
         /// </summary>
@@ -224,7 +224,7 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile CustomerProfile { get; set; }
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Gets or Sets IsOnline
         /// </summary>
@@ -239,6 +239,7 @@ namespace HostMe.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class CreateReservation {\n");
             sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  DoB: ").Append(DoB).Append("\n");
             sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  ReservationSource: ").Append(ReservationSource).Append("\n");
@@ -255,11 +256,10 @@ namespace HostMe.Sdk.Model
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             sb.Append("  Party: ").Append(Party).Append("\n");
-            sb.Append("  Vip: ").Append(Vip).Append("\n");
             sb.Append("  Booth: ").Append(Booth).Append("\n");
             sb.Append("  HighTop: ").Append(HighTop).Append("\n");
             sb.Append("  Table: ").Append(Table).Append("\n");
-            sb.Append("  HandicapAccessible: ").Append(HandicapAccessible).Append("\n");
+            sb.Append("  Vip: ").Append(Vip).Append("\n");
             sb.Append("  PartyTypes: ").Append(PartyTypes).Append("\n");
             sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
             sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
@@ -304,6 +304,11 @@ namespace HostMe.Sdk.Model
                     this.ReservationTime == other.ReservationTime ||
                     this.ReservationTime != null &&
                     this.ReservationTime.Equals(other.ReservationTime)
+                ) && 
+                (
+                    this.DoB == other.DoB ||
+                    this.DoB != null &&
+                    this.DoB.Equals(other.DoB)
                 ) && 
                 (
                     this.GroupSize == other.GroupSize ||
@@ -386,11 +391,6 @@ namespace HostMe.Sdk.Model
                     this.Party.Equals(other.Party)
                 ) && 
                 (
-                    this.Vip == other.Vip ||
-                    this.Vip != null &&
-                    this.Vip.Equals(other.Vip)
-                ) && 
-                (
                     this.Booth == other.Booth ||
                     this.Booth != null &&
                     this.Booth.Equals(other.Booth)
@@ -406,9 +406,9 @@ namespace HostMe.Sdk.Model
                     this.Table.Equals(other.Table)
                 ) && 
                 (
-                    this.HandicapAccessible == other.HandicapAccessible ||
-                    this.HandicapAccessible != null &&
-                    this.HandicapAccessible.Equals(other.HandicapAccessible)
+                    this.Vip == other.Vip ||
+                    this.Vip != null &&
+                    this.Vip.Equals(other.Vip)
                 ) && 
                 (
                     this.PartyTypes == other.PartyTypes ||
@@ -445,6 +445,8 @@ namespace HostMe.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
+                if (this.DoB != null)
+                    hash = hash * 59 + this.DoB.GetHashCode();
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
                 if (this.Amount != null)
@@ -477,16 +479,14 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Stroller.GetHashCode();
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
-                if (this.Vip != null)
-                    hash = hash * 59 + this.Vip.GetHashCode();
                 if (this.Booth != null)
                     hash = hash * 59 + this.Booth.GetHashCode();
                 if (this.HighTop != null)
                     hash = hash * 59 + this.HighTop.GetHashCode();
                 if (this.Table != null)
                     hash = hash * 59 + this.Table.GetHashCode();
-                if (this.HandicapAccessible != null)
-                    hash = hash * 59 + this.HandicapAccessible.GetHashCode();
+                if (this.Vip != null)
+                    hash = hash * 59 + this.Vip.GetHashCode();
                 if (this.PartyTypes != null)
                     hash = hash * 59 + this.PartyTypes.GetHashCode();
                 if (this.EstimatedTurnOverTime != null)

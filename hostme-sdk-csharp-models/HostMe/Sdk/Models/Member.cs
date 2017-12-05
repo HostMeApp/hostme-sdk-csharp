@@ -53,13 +53,13 @@ namespace HostMe.Sdk.Model
         /// <param name="NumberOfVisitsTotal">NumberOfVisitsTotal.</param>
         /// <param name="LastVisitDate">LastVisitDate.</param>
         /// <param name="Customer">Customer.</param>
-        /// <param name="Profile">Profile.</param>
+        /// <param name="CustomerProfile">CustomerProfile.</param>
         /// <param name="AboutGuestNotes">AboutGuestNotes.</param>
         /// <param name="CancelCount">CancelCount.</param>
         /// <param name="NoShowCount">NoShowCount.</param>
         /// <param name="IsAuto">IsAuto.</param>
         /// <param name="Image">Image.</param>
-        public Member(int? Id = null, string MembershipLevel = null, long? Points = null, DateTimeOffset? JoinDate = null, string Status = null, int? NumberOfVisits30Days = null, int? NumberOfVisitsTotal = null, DateTimeOffset? LastVisitDate = null, MemberUser Customer = null, Profile Profile = null, string AboutGuestNotes = null, int? CancelCount = null, int? NoShowCount = null, bool? IsAuto = null, string Image = null)
+        public Member(int? Id = null, string MembershipLevel = null, long? Points = null, DateTimeOffset? JoinDate = null, string Status = null, int? NumberOfVisits30Days = null, int? NumberOfVisitsTotal = null, DateTimeOffset? LastVisitDate = null, MemberUser Customer = null, ProfileData CustomerProfile = null, string AboutGuestNotes = null, int? CancelCount = null, int? NoShowCount = null, bool? IsAuto = null, string Image = null)
         {
             this.Id = Id;
             this.MembershipLevel = MembershipLevel;
@@ -70,7 +70,7 @@ namespace HostMe.Sdk.Model
             this.NumberOfVisitsTotal = NumberOfVisitsTotal;
             this.LastVisitDate = LastVisitDate;
             this.Customer = Customer;
-            this.Profile = Profile;
+            this.CustomerProfile = CustomerProfile;
             this.AboutGuestNotes = AboutGuestNotes;
             this.CancelCount = CancelCount;
             this.NoShowCount = NoShowCount;
@@ -124,10 +124,10 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="customer", EmitDefaultValue=true)]
         public MemberUser Customer { get; set; }
         /// <summary>
-        /// Gets or Sets Profile
+        /// Gets or Sets CustomerProfile
         /// </summary>
-        [DataMember(Name="profile", EmitDefaultValue=true)]
-        public Profile Profile { get; set; }
+        [DataMember(Name="customerProfile", EmitDefaultValue=true)]
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Gets or Sets AboutGuestNotes
         /// </summary>
@@ -170,7 +170,7 @@ namespace HostMe.Sdk.Model
             sb.Append("  NumberOfVisitsTotal: ").Append(NumberOfVisitsTotal).Append("\n");
             sb.Append("  LastVisitDate: ").Append(LastVisitDate).Append("\n");
             sb.Append("  Customer: ").Append(Customer).Append("\n");
-            sb.Append("  Profile: ").Append(Profile).Append("\n");
+            sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
             sb.Append("  AboutGuestNotes: ").Append(AboutGuestNotes).Append("\n");
             sb.Append("  CancelCount: ").Append(CancelCount).Append("\n");
             sb.Append("  NoShowCount: ").Append(NoShowCount).Append("\n");
@@ -258,9 +258,9 @@ namespace HostMe.Sdk.Model
                     this.Customer.Equals(other.Customer)
                 ) && 
                 (
-                    this.Profile == other.Profile ||
-                    this.Profile != null &&
-                    this.Profile.Equals(other.Profile)
+                    this.CustomerProfile == other.CustomerProfile ||
+                    this.CustomerProfile != null &&
+                    this.CustomerProfile.Equals(other.CustomerProfile)
                 ) && 
                 (
                     this.AboutGuestNotes == other.AboutGuestNotes ||
@@ -318,8 +318,8 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.LastVisitDate.GetHashCode();
                 if (this.Customer != null)
                     hash = hash * 59 + this.Customer.GetHashCode();
-                if (this.Profile != null)
-                    hash = hash * 59 + this.Profile.GetHashCode();
+                if (this.CustomerProfile != null)
+                    hash = hash * 59 + this.CustomerProfile.GetHashCode();
                 if (this.AboutGuestNotes != null)
                     hash = hash * 59 + this.AboutGuestNotes.GetHashCode();
                 if (this.CancelCount != null)

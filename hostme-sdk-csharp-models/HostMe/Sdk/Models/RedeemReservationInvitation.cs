@@ -55,7 +55,7 @@ namespace HostMe.Sdk.Model
         /// <param name="FullName">FullName (required).</param>
         /// <param name="Language">Language.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
-        public RedeemReservationInvitation(string Code = null, string Email = null, string PhoneNumber = null, string FullName = null, string Language = null, Profile CustomerProfile = null)
+        public RedeemReservationInvitation(string Code = null, string Email = null, string PhoneNumber = null, string FullName = null, string Language = null, ProfileData CustomerProfile = null)
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -126,7 +126,7 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile CustomerProfile { get; set; }
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

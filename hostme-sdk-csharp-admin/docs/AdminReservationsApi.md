@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 <a name="approve"></a>
 # **Approve**
-> Reservation Approve (int? restaurantId, string reservationId, ApproveReservation contract)
+> Booking Approve (int? restaurantId, string reservationId, ApproveReservation contract)
 
 
 
@@ -56,7 +56,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.Approve(restaurantId, reservationId, contract);
+                Booking result = apiInstance.Approve(restaurantId, reservationId, contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 <a name="cancel"></a>
 # **Cancel**
-> Reservation Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
+> Booking Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
 
 
 
@@ -122,7 +122,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.Cancel(restaurantId, reservationId, cancelReservationContract);
+                Booking result = apiInstance.Cancel(restaurantId, reservationId, cancelReservationContract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 <a name="create"></a>
 # **Create**
-> Reservation Create (int? restaurantId, CreateReservation contract)
+> Booking Create (int? restaurantId, CreateReservation contract)
 
 
 
@@ -187,7 +187,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.Create(restaurantId, contract);
+                Booking result = apiInstance.Create(restaurantId, contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 <a name="get"></a>
 # **Get**
-> ReservationHost Get (int? restaurantId, string reservationId)
+> Booking Get (int? restaurantId, string reservationId)
 
 
 
@@ -313,7 +313,7 @@ namespace Example
 
             try
             {
-                ReservationHost result = apiInstance.Get(restaurantId, reservationId);
+                Booking result = apiInstance.Get(restaurantId, reservationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -334,7 +334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ReservationHost**](ReservationHost.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 <a name="getforperiod"></a>
 # **GetForPeriod**
-> List<ReservationHostList> GetForPeriod (int? restaurantId, DateTimeOffset? from = null)
+> List<Booking> GetForPeriod (int? restaurantId, DateTimeOffset? from = null)
 
 
 
@@ -377,7 +377,7 @@ namespace Example
 
             try
             {
-                List&lt;ReservationHostList&gt; result = apiInstance.GetForPeriod(restaurantId, from);
+                List&lt;Booking&gt; result = apiInstance.GetForPeriod(restaurantId, from);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<ReservationHostList>**](ReservationHostList.md)
+[**List<Booking>**](Booking.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 <a name="getstatistic"></a>
 # **GetStatistic**
-> ReservationsStatistic GetStatistic (int? restaurantId)
+> ReservationsStatistic GetStatistic (int? restaurantId, DateTimeOffset? date = null)
 
 
 
@@ -631,10 +631,11 @@ namespace Example
 
             var apiInstance = new AdminReservationsApi();
             var restaurantId = 56;  // int? | 
+            var date = 2013-10-20T19:20:30+01:00;  // DateTimeOffset? |  (optional) 
 
             try
             {
-                ReservationsStatistic result = apiInstance.GetStatistic(restaurantId);
+                ReservationsStatistic result = apiInstance.GetStatistic(restaurantId, date);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -651,6 +652,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **restaurantId** | **int?**|  | 
+ **date** | **DateTimeOffset?**|  | [optional] 
 
 ### Return type
 
@@ -731,7 +733,7 @@ Name | Type | Description  | Notes
 
 <a name="noshow"></a>
 # **NoShow**
-> Reservation NoShow (int? restaurantId, string reservationId)
+> Booking NoShow (int? restaurantId, string reservationId)
 
 
 
@@ -759,7 +761,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.NoShow(restaurantId, reservationId);
+                Booking result = apiInstance.NoShow(restaurantId, reservationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -780,7 +782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -859,7 +861,7 @@ void (empty response body)
 
 <a name="rejectreservation"></a>
 # **RejectReservation**
-> Reservation RejectReservation (int? restaurantId, string reservationId, RejectReservation contract)
+> Booking RejectReservation (int? restaurantId, string reservationId, RejectReservation contract)
 
 
 
@@ -888,7 +890,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.RejectReservation(restaurantId, reservationId, contract);
+                Booking result = apiInstance.RejectReservation(restaurantId, reservationId, contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -910,7 +912,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -925,7 +927,7 @@ Name | Type | Description  | Notes
 
 <a name="reopen"></a>
 # **Reopen**
-> Reservation Reopen (int? restaurantId, string reservationId)
+> Booking Reopen (int? restaurantId, string reservationId)
 
 
 
@@ -953,7 +955,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.Reopen(restaurantId, reservationId);
+                Booking result = apiInstance.Reopen(restaurantId, reservationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -974,7 +976,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 
@@ -989,7 +991,7 @@ Name | Type | Description  | Notes
 
 <a name="seat"></a>
 # **Seat**
-> Reservation Seat (int? restaurantId, string reservationId, string tableNumber = null)
+> Booking Seat (int? restaurantId, string reservationId, string tableNumber = null)
 
 
 
@@ -1018,7 +1020,7 @@ namespace Example
 
             try
             {
-                Reservation result = apiInstance.Seat(restaurantId, reservationId, tableNumber);
+                Booking result = apiInstance.Seat(restaurantId, reservationId, tableNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1040,7 +1042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Reservation**](Reservation.md)
+[**Booking**](Booking.md)
 
 ### Authorization
 

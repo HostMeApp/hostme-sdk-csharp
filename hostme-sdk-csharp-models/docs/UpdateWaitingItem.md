@@ -17,10 +17,12 @@ Name | Type | Description | Notes
 **HighChair** | **bool?** |  | [optional] 
 **Stroller** | **bool?** |  | [optional] 
 **Party** | **bool?** |  | [optional] 
+**Booth** | **bool?** |  | [optional] 
+**HighTop** | **bool?** |  | [optional] 
+**Table** | **bool?** |  | [optional] 
 **AutoSeat** | **bool?** |  | [optional] 
-**Vip** | **bool?** |  | [optional] 
 **PartyTypes** | **List&lt;string&gt;** |  | [optional] 
-**CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

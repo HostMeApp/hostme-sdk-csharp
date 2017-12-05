@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Body** | **string** |  | [optional] 
 **Time** | **DateTimeOffset?** |  | [optional] 
 **Origin** | **string** |  | [optional] 
+**Phone** | **string** |  | [optional] 
 **DeliveryStatus** | **string** |  | [optional] 
 **DeliveryTime** | **DateTimeOffset?** |  | [optional] 
 **IsRead** | **bool?** |  | [optional] 

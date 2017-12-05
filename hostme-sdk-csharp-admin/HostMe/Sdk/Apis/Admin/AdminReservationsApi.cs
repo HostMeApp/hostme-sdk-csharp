@@ -46,8 +46,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        Reservation Approve (int? restaurantId, string reservationId, ApproveReservation contract);
+        /// <returns>Booking</returns>
+        Booking Approve (int? restaurantId, string reservationId, ApproveReservation contract);
 
         /// <summary>
         /// 
@@ -59,21 +59,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> ApproveWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="reservationId"></param>
-        /// <param name="cancelReservationContract"></param>
-        /// <returns>Reservation</returns>
-        Reservation Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
-
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> ApproveWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -84,8 +71,21 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> CancelWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
+        /// <returns>Booking</returns>
+        Booking Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="reservationId"></param>
+        /// <param name="cancelReservationContract"></param>
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> CancelWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
         /// <summary>
         /// 
         /// </summary>
@@ -95,8 +95,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        Reservation Create (int? restaurantId, CreateReservation contract);
+        /// <returns>Booking</returns>
+        Booking Create (int? restaurantId, CreateReservation contract);
 
         /// <summary>
         /// 
@@ -107,8 +107,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> CreateWithHttpInfo (int? restaurantId, CreateReservation contract);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> CreateWithHttpInfo (int? restaurantId, CreateReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -139,8 +139,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ReservationHost</returns>
-        ReservationHost Get (int? restaurantId, string reservationId);
+        /// <returns>Booking</returns>
+        Booking Get (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -151,8 +151,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of ReservationHost</returns>
-        ApiResponse<ReservationHost> GetWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> GetWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// 
         /// </summary>
@@ -162,8 +162,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>List&lt;ReservationHostList&gt;</returns>
-        List<ReservationHostList> GetForPeriod (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>List&lt;Booking&gt;</returns>
+        List<Booking> GetForPeriod (int? restaurantId, DateTimeOffset? from = null);
 
         /// <summary>
         /// 
@@ -174,8 +174,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReservationHostList&gt;</returns>
-        ApiResponse<List<ReservationHostList>> GetForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>ApiResponse of List&lt;Booking&gt;</returns>
+        ApiResponse<List<Booking>> GetForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -255,8 +255,9 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ReservationsStatistic</returns>
-        ReservationsStatistic GetStatistic (int? restaurantId);
+        ReservationsStatistic GetStatistic (int? restaurantId, DateTimeOffset? date = null);
 
         /// <summary>
         /// 
@@ -266,8 +267,9 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ApiResponse of ReservationsStatistic</returns>
-        ApiResponse<ReservationsStatistic> GetStatisticWithHttpInfo (int? restaurantId);
+        ApiResponse<ReservationsStatistic> GetStatisticWithHttpInfo (int? restaurantId, DateTimeOffset? date = null);
         /// <summary>
         /// 
         /// </summary>
@@ -298,8 +300,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Reservation</returns>
-        Reservation NoShow (int? restaurantId, string reservationId);
+        /// <returns>Booking</returns>
+        Booking NoShow (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -310,8 +312,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> NoShowWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> NoShowWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -345,8 +347,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        Reservation RejectReservation (int? restaurantId, string reservationId, RejectReservation contract);
+        /// <returns>Booking</returns>
+        Booking RejectReservation (int? restaurantId, string reservationId, RejectReservation contract);
 
         /// <summary>
         /// 
@@ -358,8 +360,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> RejectReservationWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> RejectReservationWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -369,8 +371,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Reservation</returns>
-        Reservation Reopen (int? restaurantId, string reservationId);
+        /// <returns>Booking</returns>
+        Booking Reopen (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -381,8 +383,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> ReopenWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> ReopenWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// 
         /// </summary>
@@ -393,8 +395,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Reservation</returns>
-        Reservation Seat (int? restaurantId, string reservationId, string tableNumber = null);
+        /// <returns>Booking</returns>
+        Booking Seat (int? restaurantId, string reservationId, string tableNumber = null);
 
         /// <summary>
         /// 
@@ -406,8 +408,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>ApiResponse of Reservation</returns>
-        ApiResponse<Reservation> SeatWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
+        /// <returns>ApiResponse of Booking</returns>
+        ApiResponse<Booking> SeatWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
         /// <summary>
         /// Sends a message related to specified reservation.
         /// </summary>
@@ -493,8 +495,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> ApproveAsync (int? restaurantId, string reservationId, ApproveReservation contract);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> ApproveAsync (int? restaurantId, string reservationId, ApproveReservation contract);
 
         /// <summary>
         /// 
@@ -506,21 +508,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> ApproveAsyncWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract);
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="restaurantId"></param>
-        /// <param name="reservationId"></param>
-        /// <param name="cancelReservationContract"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> CancelAsync (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
-
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> ApproveAsyncWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -531,8 +520,21 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> CancelAsyncWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> CancelAsync (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="restaurantId"></param>
+        /// <param name="reservationId"></param>
+        /// <param name="cancelReservationContract"></param>
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> CancelAsyncWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract);
         /// <summary>
         /// 
         /// </summary>
@@ -542,8 +544,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> CreateAsync (int? restaurantId, CreateReservation contract);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> CreateAsync (int? restaurantId, CreateReservation contract);
 
         /// <summary>
         /// 
@@ -554,8 +556,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> CreateAsyncWithHttpInfo (int? restaurantId, CreateReservation contract);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> CreateAsyncWithHttpInfo (int? restaurantId, CreateReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -586,8 +588,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ReservationHost</returns>
-        System.Threading.Tasks.Task<ReservationHost> GetAsync (int? restaurantId, string reservationId);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> GetAsync (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -598,8 +600,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (ReservationHost)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReservationHost>> GetAsyncWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> GetAsyncWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// 
         /// </summary>
@@ -609,8 +611,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of List&lt;ReservationHostList&gt;</returns>
-        System.Threading.Tasks.Task<List<ReservationHostList>> GetForPeriodAsync (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>Task of List&lt;Booking&gt;</returns>
+        System.Threading.Tasks.Task<List<Booking>> GetForPeriodAsync (int? restaurantId, DateTimeOffset? from = null);
 
         /// <summary>
         /// 
@@ -621,8 +623,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;ReservationHostList&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<ReservationHostList>>> GetForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
+        /// <returns>Task of ApiResponse (List&lt;Booking&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Booking>>> GetForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null);
         /// <summary>
         /// 
         /// </summary>
@@ -702,8 +704,9 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ReservationsStatistic</returns>
-        System.Threading.Tasks.Task<ReservationsStatistic> GetStatisticAsync (int? restaurantId);
+        System.Threading.Tasks.Task<ReservationsStatistic> GetStatisticAsync (int? restaurantId, DateTimeOffset? date = null);
 
         /// <summary>
         /// 
@@ -713,8 +716,9 @@ namespace HostMe.Sdk.Api
         /// </remarks>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (ReservationsStatistic)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetStatisticAsyncWithHttpInfo (int? restaurantId);
+        System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetStatisticAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date = null);
         /// <summary>
         /// 
         /// </summary>
@@ -745,8 +749,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> NoShowAsync (int? restaurantId, string reservationId);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> NoShowAsync (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -757,8 +761,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> NoShowAsyncWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> NoShowAsyncWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// Mark all message as read.
         /// </summary>
@@ -792,8 +796,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> RejectReservationAsync (int? restaurantId, string reservationId, RejectReservation contract);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> RejectReservationAsync (int? restaurantId, string reservationId, RejectReservation contract);
 
         /// <summary>
         /// 
@@ -805,8 +809,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> RejectReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> RejectReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract);
         /// <summary>
         /// 
         /// </summary>
@@ -816,8 +820,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> ReopenAsync (int? restaurantId, string reservationId);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> ReopenAsync (int? restaurantId, string reservationId);
 
         /// <summary>
         /// 
@@ -828,8 +832,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> ReopenAsyncWithHttpInfo (int? restaurantId, string reservationId);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> ReopenAsyncWithHttpInfo (int? restaurantId, string reservationId);
         /// <summary>
         /// 
         /// </summary>
@@ -840,8 +844,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of Reservation</returns>
-        System.Threading.Tasks.Task<Reservation> SeatAsync (int? restaurantId, string reservationId, string tableNumber = null);
+        /// <returns>Task of Booking</returns>
+        System.Threading.Tasks.Task<Booking> SeatAsync (int? restaurantId, string reservationId, string tableNumber = null);
 
         /// <summary>
         /// 
@@ -853,8 +857,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Reservation>> SeatAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Booking>> SeatAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null);
         /// <summary>
         /// Sends a message related to specified reservation.
         /// </summary>
@@ -1047,10 +1051,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        public Reservation Approve (int? restaurantId, string reservationId, ApproveReservation contract)
+        /// <returns>Booking</returns>
+        public Booking Approve (int? restaurantId, string reservationId, ApproveReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = ApproveWithHttpInfo(restaurantId, reservationId, contract);
+             ApiResponse<Booking> localVarResponse = ApproveWithHttpInfo(restaurantId, reservationId, contract);
              return localVarResponse.Data;
         }
 
@@ -1061,8 +1065,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > ApproveWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > ApproveWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1137,9 +1141,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1150,10 +1154,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> ApproveAsync (int? restaurantId, string reservationId, ApproveReservation contract)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> ApproveAsync (int? restaurantId, string reservationId, ApproveReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = await ApproveAsyncWithHttpInfo(restaurantId, reservationId, contract);
+             ApiResponse<Booking> localVarResponse = await ApproveAsyncWithHttpInfo(restaurantId, reservationId, contract);
              return localVarResponse.Data;
 
         }
@@ -1165,8 +1169,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> ApproveAsyncWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> ApproveAsyncWithHttpInfo (int? restaurantId, string reservationId, ApproveReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1241,9 +1245,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1254,10 +1258,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>Reservation</returns>
-        public Reservation Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
+        /// <returns>Booking</returns>
+        public Booking Cancel (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
         {
-             ApiResponse<Reservation> localVarResponse = CancelWithHttpInfo(restaurantId, reservationId, cancelReservationContract);
+             ApiResponse<Booking> localVarResponse = CancelWithHttpInfo(restaurantId, reservationId, cancelReservationContract);
              return localVarResponse.Data;
         }
 
@@ -1268,8 +1272,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > CancelWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > CancelWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1344,9 +1348,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1357,10 +1361,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> CancelAsync (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> CancelAsync (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
         {
-             ApiResponse<Reservation> localVarResponse = await CancelAsyncWithHttpInfo(restaurantId, reservationId, cancelReservationContract);
+             ApiResponse<Booking> localVarResponse = await CancelAsyncWithHttpInfo(restaurantId, reservationId, cancelReservationContract);
              return localVarResponse.Data;
 
         }
@@ -1372,8 +1376,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="cancelReservationContract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> CancelAsyncWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> CancelAsyncWithHttpInfo (int? restaurantId, string reservationId, CancelReservation cancelReservationContract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1448,9 +1452,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1460,10 +1464,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        public Reservation Create (int? restaurantId, CreateReservation contract)
+        /// <returns>Booking</returns>
+        public Booking Create (int? restaurantId, CreateReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = CreateWithHttpInfo(restaurantId, contract);
+             ApiResponse<Booking> localVarResponse = CreateWithHttpInfo(restaurantId, contract);
              return localVarResponse.Data;
         }
 
@@ -1473,8 +1477,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > CreateWithHttpInfo (int? restaurantId, CreateReservation contract)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > CreateWithHttpInfo (int? restaurantId, CreateReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1545,9 +1549,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1557,10 +1561,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> CreateAsync (int? restaurantId, CreateReservation contract)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> CreateAsync (int? restaurantId, CreateReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = await CreateAsyncWithHttpInfo(restaurantId, contract);
+             ApiResponse<Booking> localVarResponse = await CreateAsyncWithHttpInfo(restaurantId, contract);
              return localVarResponse.Data;
 
         }
@@ -1571,8 +1575,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> CreateAsyncWithHttpInfo (int? restaurantId, CreateReservation contract)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> CreateAsyncWithHttpInfo (int? restaurantId, CreateReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1643,9 +1647,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1814,10 +1818,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ReservationHost</returns>
-        public ReservationHost Get (int? restaurantId, string reservationId)
+        /// <returns>Booking</returns>
+        public Booking Get (int? restaurantId, string reservationId)
         {
-             ApiResponse<ReservationHost> localVarResponse = GetWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = GetWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
         }
 
@@ -1827,8 +1831,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of ReservationHost</returns>
-        public ApiResponse< ReservationHost > GetWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > GetWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1887,9 +1891,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ReservationHost>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ReservationHost) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReservationHost)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1899,10 +1903,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ReservationHost</returns>
-        public async System.Threading.Tasks.Task<ReservationHost> GetAsync (int? restaurantId, string reservationId)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> GetAsync (int? restaurantId, string reservationId)
         {
-             ApiResponse<ReservationHost> localVarResponse = await GetAsyncWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = await GetAsyncWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
 
         }
@@ -1913,8 +1917,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (ReservationHost)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReservationHost>> GetAsyncWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> GetAsyncWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -1973,9 +1977,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ReservationHost>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ReservationHost) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReservationHost)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -1985,10 +1989,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>List&lt;ReservationHostList&gt;</returns>
-        public List<ReservationHostList> GetForPeriod (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>List&lt;Booking&gt;</returns>
+        public List<Booking> GetForPeriod (int? restaurantId, DateTimeOffset? from = null)
         {
-             ApiResponse<List<ReservationHostList>> localVarResponse = GetForPeriodWithHttpInfo(restaurantId, from);
+             ApiResponse<List<Booking>> localVarResponse = GetForPeriodWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
         }
 
@@ -1998,8 +2002,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>ApiResponse of List&lt;ReservationHostList&gt;</returns>
-        public ApiResponse< List<ReservationHostList> > GetForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>ApiResponse of List&lt;Booking&gt;</returns>
+        public ApiResponse< List<Booking> > GetForPeriodWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2055,9 +2059,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<ReservationHostList>>(localVarStatusCode,
+            return new ApiResponse<List<Booking>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ReservationHostList>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ReservationHostList>)));
+                (List<Booking>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Booking>)));
             
         }
 
@@ -2067,10 +2071,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of List&lt;ReservationHostList&gt;</returns>
-        public async System.Threading.Tasks.Task<List<ReservationHostList>> GetForPeriodAsync (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>Task of List&lt;Booking&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Booking>> GetForPeriodAsync (int? restaurantId, DateTimeOffset? from = null)
         {
-             ApiResponse<List<ReservationHostList>> localVarResponse = await GetForPeriodAsyncWithHttpInfo(restaurantId, from);
+             ApiResponse<List<Booking>> localVarResponse = await GetForPeriodAsyncWithHttpInfo(restaurantId, from);
              return localVarResponse.Data;
 
         }
@@ -2081,8 +2085,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="from"> (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;ReservationHostList&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<ReservationHostList>>> GetForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
+        /// <returns>Task of ApiResponse (List&lt;Booking&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Booking>>> GetForPeriodAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? from = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2138,9 +2142,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<ReservationHostList>>(localVarStatusCode,
+            return new ApiResponse<List<Booking>>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<ReservationHostList>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<ReservationHostList>)));
+                (List<Booking>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Booking>)));
             
         }
 
@@ -2674,10 +2678,11 @@ namespace HostMe.Sdk.Api
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ReservationsStatistic</returns>
-        public ReservationsStatistic GetStatistic (int? restaurantId)
+        public ReservationsStatistic GetStatistic (int? restaurantId, DateTimeOffset? date = null)
         {
-             ApiResponse<ReservationsStatistic> localVarResponse = GetStatisticWithHttpInfo(restaurantId);
+             ApiResponse<ReservationsStatistic> localVarResponse = GetStatisticWithHttpInfo(restaurantId, date);
              return localVarResponse.Data;
         }
 
@@ -2686,8 +2691,9 @@ namespace HostMe.Sdk.Api
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>ApiResponse of ReservationsStatistic</returns>
-        public ApiResponse< ReservationsStatistic > GetStatisticWithHttpInfo (int? restaurantId)
+        public ApiResponse< ReservationsStatistic > GetStatisticWithHttpInfo (int? restaurantId, DateTimeOffset? date = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2721,6 +2727,7 @@ namespace HostMe.Sdk.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2753,10 +2760,11 @@ namespace HostMe.Sdk.Api
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ReservationsStatistic</returns>
-        public async System.Threading.Tasks.Task<ReservationsStatistic> GetStatisticAsync (int? restaurantId)
+        public async System.Threading.Tasks.Task<ReservationsStatistic> GetStatisticAsync (int? restaurantId, DateTimeOffset? date = null)
         {
-             ApiResponse<ReservationsStatistic> localVarResponse = await GetStatisticAsyncWithHttpInfo(restaurantId);
+             ApiResponse<ReservationsStatistic> localVarResponse = await GetStatisticAsyncWithHttpInfo(restaurantId, date);
              return localVarResponse.Data;
 
         }
@@ -2766,8 +2774,9 @@ namespace HostMe.Sdk.Api
         /// </summary>
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
+        /// <param name="date"> (optional)</param>
         /// <returns>Task of ApiResponse (ReservationsStatistic)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetStatisticAsyncWithHttpInfo (int? restaurantId)
+        public async System.Threading.Tasks.Task<ApiResponse<ReservationsStatistic>> GetStatisticAsyncWithHttpInfo (int? restaurantId, DateTimeOffset? date = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -2801,6 +2810,7 @@ namespace HostMe.Sdk.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (restaurantId != null) localVarPathParams.Add("restaurantId", Configuration.ApiClient.ParameterToString(restaurantId)); // path parameter
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
 
             // authentication (oauth2) required
             // oauth required
@@ -2993,10 +3003,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Reservation</returns>
-        public Reservation NoShow (int? restaurantId, string reservationId)
+        /// <returns>Booking</returns>
+        public Booking NoShow (int? restaurantId, string reservationId)
         {
-             ApiResponse<Reservation> localVarResponse = NoShowWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = NoShowWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
         }
 
@@ -3006,8 +3016,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > NoShowWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > NoShowWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3066,9 +3076,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3078,10 +3088,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> NoShowAsync (int? restaurantId, string reservationId)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> NoShowAsync (int? restaurantId, string reservationId)
         {
-             ApiResponse<Reservation> localVarResponse = await NoShowAsyncWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = await NoShowAsyncWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
 
         }
@@ -3092,8 +3102,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> NoShowAsyncWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> NoShowAsyncWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3152,9 +3162,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3334,10 +3344,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Reservation</returns>
-        public Reservation RejectReservation (int? restaurantId, string reservationId, RejectReservation contract)
+        /// <returns>Booking</returns>
+        public Booking RejectReservation (int? restaurantId, string reservationId, RejectReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = RejectReservationWithHttpInfo(restaurantId, reservationId, contract);
+             ApiResponse<Booking> localVarResponse = RejectReservationWithHttpInfo(restaurantId, reservationId, contract);
              return localVarResponse.Data;
         }
 
@@ -3348,8 +3358,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > RejectReservationWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > RejectReservationWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3424,9 +3434,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3437,10 +3447,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> RejectReservationAsync (int? restaurantId, string reservationId, RejectReservation contract)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> RejectReservationAsync (int? restaurantId, string reservationId, RejectReservation contract)
         {
-             ApiResponse<Reservation> localVarResponse = await RejectReservationAsyncWithHttpInfo(restaurantId, reservationId, contract);
+             ApiResponse<Booking> localVarResponse = await RejectReservationAsyncWithHttpInfo(restaurantId, reservationId, contract);
              return localVarResponse.Data;
 
         }
@@ -3452,8 +3462,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="contract"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> RejectReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> RejectReservationAsyncWithHttpInfo (int? restaurantId, string reservationId, RejectReservation contract)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3528,9 +3538,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3540,10 +3550,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Reservation</returns>
-        public Reservation Reopen (int? restaurantId, string reservationId)
+        /// <returns>Booking</returns>
+        public Booking Reopen (int? restaurantId, string reservationId)
         {
-             ApiResponse<Reservation> localVarResponse = ReopenWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = ReopenWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
         }
 
@@ -3553,8 +3563,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > ReopenWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > ReopenWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3613,9 +3623,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3625,10 +3635,10 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> ReopenAsync (int? restaurantId, string reservationId)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> ReopenAsync (int? restaurantId, string reservationId)
         {
-             ApiResponse<Reservation> localVarResponse = await ReopenAsyncWithHttpInfo(restaurantId, reservationId);
+             ApiResponse<Booking> localVarResponse = await ReopenAsyncWithHttpInfo(restaurantId, reservationId);
              return localVarResponse.Data;
 
         }
@@ -3639,8 +3649,8 @@ namespace HostMe.Sdk.Api
         /// <exception cref="HostMe.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> ReopenAsyncWithHttpInfo (int? restaurantId, string reservationId)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> ReopenAsyncWithHttpInfo (int? restaurantId, string reservationId)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3699,9 +3709,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3712,10 +3722,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Reservation</returns>
-        public Reservation Seat (int? restaurantId, string reservationId, string tableNumber = null)
+        /// <returns>Booking</returns>
+        public Booking Seat (int? restaurantId, string reservationId, string tableNumber = null)
         {
-             ApiResponse<Reservation> localVarResponse = SeatWithHttpInfo(restaurantId, reservationId, tableNumber);
+             ApiResponse<Booking> localVarResponse = SeatWithHttpInfo(restaurantId, reservationId, tableNumber);
              return localVarResponse.Data;
         }
 
@@ -3726,8 +3736,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>ApiResponse of Reservation</returns>
-        public ApiResponse< Reservation > SeatWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
+        /// <returns>ApiResponse of Booking</returns>
+        public ApiResponse< Booking > SeatWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3787,9 +3797,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 
@@ -3800,10 +3810,10 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of Reservation</returns>
-        public async System.Threading.Tasks.Task<Reservation> SeatAsync (int? restaurantId, string reservationId, string tableNumber = null)
+        /// <returns>Task of Booking</returns>
+        public async System.Threading.Tasks.Task<Booking> SeatAsync (int? restaurantId, string reservationId, string tableNumber = null)
         {
-             ApiResponse<Reservation> localVarResponse = await SeatAsyncWithHttpInfo(restaurantId, reservationId, tableNumber);
+             ApiResponse<Booking> localVarResponse = await SeatAsyncWithHttpInfo(restaurantId, reservationId, tableNumber);
              return localVarResponse.Data;
 
         }
@@ -3815,8 +3825,8 @@ namespace HostMe.Sdk.Api
         /// <param name="restaurantId"></param>
         /// <param name="reservationId"></param>
         /// <param name="tableNumber"> (optional)</param>
-        /// <returns>Task of ApiResponse (Reservation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Reservation>> SeatAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
+        /// <returns>Task of ApiResponse (Booking)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Booking>> SeatAsyncWithHttpInfo (int? restaurantId, string reservationId, string tableNumber = null)
         {
             // verify the required parameter 'restaurantId' is set
             if (restaurantId == null)
@@ -3876,9 +3886,9 @@ namespace HostMe.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Reservation>(localVarStatusCode,
+            return new ApiResponse<Booking>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Reservation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Reservation)));
+                (Booking) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Booking)));
             
         }
 

@@ -36,33 +36,39 @@ using System.ComponentModel.DataAnnotations;
 namespace HostMe.Sdk.Model
 {
     /// <summary>
-    /// ReservationGuest
+    /// Booking
     /// </summary>
     [DataContract]
-    public partial class ReservationGuest :  IEquatable<ReservationGuest>, IValidatableObject
+    public partial class Booking :  IEquatable<Booking>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ReservationGuest" /> class.
+        /// Initializes a new instance of the <see cref="Booking" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        /// <param name="TimeZone">TimeZone.</param>
-        /// <param name="Email">Email.</param>
-        /// <param name="Status">Status.</param>
         /// <param name="CustomerName">CustomerName.</param>
         /// <param name="Phone">Phone.</param>
+        /// <param name="Status">Status.</param>
         /// <param name="Areas">Areas.</param>
+        /// <param name="InternalNotes">InternalNotes.</param>
         /// <param name="SpecialRequests">SpecialRequests.</param>
-        /// <param name="TableNumber">TableNumber.</param>
+        /// <param name="AboutGuestNotes">AboutGuestNotes.</param>
         /// <param name="DepositStatus">DepositStatus.</param>
+        /// <param name="TableNumber">TableNumber.</param>
+        /// <param name="Email">Email.</param>
         /// <param name="Source">Source.</param>
+        /// <param name="Type">Type.</param>
         /// <param name="Created">Created.</param>
         /// <param name="Closed">Closed.</param>
         /// <param name="ReservationTime">ReservationTime.</param>
+        /// <param name="ExpectedTime">ExpectedTime.</param>
+        /// <param name="StatusTime">StatusTime.</param>
+        /// <param name="EstimatedReleaseTime">EstimatedReleaseTime.</param>
+        /// <param name="RegistrationTime">RegistrationTime.</param>
         /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="RestaurantId">RestaurantId.</param>
+        /// <param name="UnreadMessageCount">UnreadMessageCount.</param>
         /// <param name="Amount">Amount.</param>
-        /// <param name="Roles">Roles.</param>
-        /// <param name="Token">Token.</param>
+        /// <param name="CardAttached">CardAttached.</param>
+        /// <param name="Membership">Membership.</param>
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
         /// <param name="Booth">Booth.</param>
@@ -72,27 +78,33 @@ namespace HostMe.Sdk.Model
         /// <param name="PartyTypes">PartyTypes.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
         /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
-        public ReservationGuest(string Id = null, string TimeZone = null, string Email = null, string Status = null, string CustomerName = null, string Phone = null, string Areas = null, string SpecialRequests = null, string TableNumber = null, string DepositStatus = null, string Source = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, DateTimeOffset? ReservationTime = null, int? GroupSize = null, int? RestaurantId = null, int? Amount = null, List<string> Roles = null, string Token = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Party = null, List<string> PartyTypes = null, ProfileData CustomerProfile = null, double? EstimatedTurnOverTime = null)
+        public Booking(string Id = null, string CustomerName = null, string Phone = null, string Status = null, string Areas = null, string InternalNotes = null, string SpecialRequests = null, string AboutGuestNotes = null, string DepositStatus = null, string TableNumber = null, string Email = null, string Source = null, string Type = null, DateTimeOffset? Created = null, DateTimeOffset? Closed = null, DateTimeOffset? ReservationTime = null, DateTimeOffset? ExpectedTime = null, DateTimeOffset? StatusTime = null, DateTimeOffset? EstimatedReleaseTime = null, DateTimeOffset? RegistrationTime = null, int? GroupSize = null, int? UnreadMessageCount = null, int? Amount = null, bool? CardAttached = null, MembershipInfo Membership = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Party = null, List<string> PartyTypes = null, ProfileData CustomerProfile = null, double? EstimatedTurnOverTime = null)
         {
             this.Id = Id;
-            this.TimeZone = TimeZone;
-            this.Email = Email;
-            this.Status = Status;
             this.CustomerName = CustomerName;
             this.Phone = Phone;
+            this.Status = Status;
             this.Areas = Areas;
+            this.InternalNotes = InternalNotes;
             this.SpecialRequests = SpecialRequests;
-            this.TableNumber = TableNumber;
+            this.AboutGuestNotes = AboutGuestNotes;
             this.DepositStatus = DepositStatus;
+            this.TableNumber = TableNumber;
+            this.Email = Email;
             this.Source = Source;
+            this.Type = Type;
             this.Created = Created;
             this.Closed = Closed;
             this.ReservationTime = ReservationTime;
+            this.ExpectedTime = ExpectedTime;
+            this.StatusTime = StatusTime;
+            this.EstimatedReleaseTime = EstimatedReleaseTime;
+            this.RegistrationTime = RegistrationTime;
             this.GroupSize = GroupSize;
-            this.RestaurantId = RestaurantId;
+            this.UnreadMessageCount = UnreadMessageCount;
             this.Amount = Amount;
-            this.Roles = Roles;
-            this.Token = Token;
+            this.CardAttached = CardAttached;
+            this.Membership = Membership;
             this.HighChair = HighChair;
             this.Stroller = Stroller;
             this.Booth = Booth;
@@ -110,21 +122,6 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
         /// <summary>
-        /// Gets or Sets TimeZone
-        /// </summary>
-        [DataMember(Name="timeZone", EmitDefaultValue=true)]
-        public string TimeZone { get; set; }
-        /// <summary>
-        /// Gets or Sets Email
-        /// </summary>
-        [DataMember(Name="email", EmitDefaultValue=true)]
-        public string Email { get; set; }
-        /// <summary>
-        /// Gets or Sets Status
-        /// </summary>
-        [DataMember(Name="status", EmitDefaultValue=true)]
-        public string Status { get; set; }
-        /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
         [DataMember(Name="customerName", EmitDefaultValue=true)]
@@ -135,30 +132,55 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
         /// <summary>
+        /// Gets or Sets Status
+        /// </summary>
+        [DataMember(Name="status", EmitDefaultValue=true)]
+        public string Status { get; set; }
+        /// <summary>
         /// Gets or Sets Areas
         /// </summary>
         [DataMember(Name="areas", EmitDefaultValue=true)]
         public string Areas { get; set; }
+        /// <summary>
+        /// Gets or Sets InternalNotes
+        /// </summary>
+        [DataMember(Name="internalNotes", EmitDefaultValue=true)]
+        public string InternalNotes { get; set; }
         /// <summary>
         /// Gets or Sets SpecialRequests
         /// </summary>
         [DataMember(Name="specialRequests", EmitDefaultValue=true)]
         public string SpecialRequests { get; set; }
         /// <summary>
-        /// Gets or Sets TableNumber
+        /// Gets or Sets AboutGuestNotes
         /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
-        public string TableNumber { get; set; }
+        [DataMember(Name="aboutGuestNotes", EmitDefaultValue=true)]
+        public string AboutGuestNotes { get; set; }
         /// <summary>
         /// Gets or Sets DepositStatus
         /// </summary>
         [DataMember(Name="depositStatus", EmitDefaultValue=true)]
         public string DepositStatus { get; set; }
         /// <summary>
+        /// Gets or Sets TableNumber
+        /// </summary>
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
+        public string TableNumber { get; set; }
+        /// <summary>
+        /// Gets or Sets Email
+        /// </summary>
+        [DataMember(Name="email", EmitDefaultValue=true)]
+        public string Email { get; set; }
+        /// <summary>
         /// Gets or Sets Source
         /// </summary>
         [DataMember(Name="source", EmitDefaultValue=true)]
         public string Source { get; set; }
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=true)]
+        public string Type { get; set; }
         /// <summary>
         /// Gets or Sets Created
         /// </summary>
@@ -175,30 +197,50 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="reservationTime", EmitDefaultValue=true)]
         public DateTimeOffset? ReservationTime { get; set; }
         /// <summary>
+        /// Gets or Sets ExpectedTime
+        /// </summary>
+        [DataMember(Name="expectedTime", EmitDefaultValue=true)]
+        public DateTimeOffset? ExpectedTime { get; set; }
+        /// <summary>
+        /// Gets or Sets StatusTime
+        /// </summary>
+        [DataMember(Name="statusTime", EmitDefaultValue=true)]
+        public DateTimeOffset? StatusTime { get; set; }
+        /// <summary>
+        /// Gets or Sets EstimatedReleaseTime
+        /// </summary>
+        [DataMember(Name="estimatedReleaseTime", EmitDefaultValue=true)]
+        public DateTimeOffset? EstimatedReleaseTime { get; set; }
+        /// <summary>
+        /// Gets or Sets RegistrationTime
+        /// </summary>
+        [DataMember(Name="registrationTime", EmitDefaultValue=true)]
+        public DateTimeOffset? RegistrationTime { get; set; }
+        /// <summary>
         /// Gets or Sets GroupSize
         /// </summary>
         [DataMember(Name="groupSize", EmitDefaultValue=true)]
         public int? GroupSize { get; set; }
         /// <summary>
-        /// Gets or Sets RestaurantId
+        /// Gets or Sets UnreadMessageCount
         /// </summary>
-        [DataMember(Name="restaurantId", EmitDefaultValue=true)]
-        public int? RestaurantId { get; set; }
+        [DataMember(Name="unreadMessageCount", EmitDefaultValue=true)]
+        public int? UnreadMessageCount { get; set; }
         /// <summary>
         /// Gets or Sets Amount
         /// </summary>
         [DataMember(Name="amount", EmitDefaultValue=true)]
         public int? Amount { get; set; }
         /// <summary>
-        /// Gets or Sets Roles
+        /// Gets or Sets CardAttached
         /// </summary>
-        [DataMember(Name="roles", EmitDefaultValue=true)]
-        public List<string> Roles { get; set; }
+        [DataMember(Name="cardAttached", EmitDefaultValue=true)]
+        public bool? CardAttached { get; set; }
         /// <summary>
-        /// Gets or Sets Token
+        /// Gets or Sets Membership
         /// </summary>
-        [DataMember(Name="token", EmitDefaultValue=true)]
-        public string Token { get; set; }
+        [DataMember(Name="membership", EmitDefaultValue=true)]
+        public MembershipInfo Membership { get; set; }
         /// <summary>
         /// Gets or Sets HighChair
         /// </summary>
@@ -251,26 +293,32 @@ namespace HostMe.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ReservationGuest {\n");
+            sb.Append("class Booking {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
-            sb.Append("  Email: ").Append(Email).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Areas: ").Append(Areas).Append("\n");
+            sb.Append("  InternalNotes: ").Append(InternalNotes).Append("\n");
             sb.Append("  SpecialRequests: ").Append(SpecialRequests).Append("\n");
-            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
+            sb.Append("  AboutGuestNotes: ").Append(AboutGuestNotes).Append("\n");
             sb.Append("  DepositStatus: ").Append(DepositStatus).Append("\n");
+            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
+            sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Created: ").Append(Created).Append("\n");
             sb.Append("  Closed: ").Append(Closed).Append("\n");
             sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  ExpectedTime: ").Append(ExpectedTime).Append("\n");
+            sb.Append("  StatusTime: ").Append(StatusTime).Append("\n");
+            sb.Append("  EstimatedReleaseTime: ").Append(EstimatedReleaseTime).Append("\n");
+            sb.Append("  RegistrationTime: ").Append(RegistrationTime).Append("\n");
             sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-            sb.Append("  RestaurantId: ").Append(RestaurantId).Append("\n");
+            sb.Append("  UnreadMessageCount: ").Append(UnreadMessageCount).Append("\n");
             sb.Append("  Amount: ").Append(Amount).Append("\n");
-            sb.Append("  Roles: ").Append(Roles).Append("\n");
-            sb.Append("  Token: ").Append(Token).Append("\n");
+            sb.Append("  CardAttached: ").Append(CardAttached).Append("\n");
+            sb.Append("  Membership: ").Append(Membership).Append("\n");
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
             sb.Append("  Booth: ").Append(Booth).Append("\n");
@@ -301,15 +349,15 @@ namespace HostMe.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ReservationGuest);
+            return this.Equals(obj as Booking);
         }
 
         /// <summary>
-        /// Returns true if ReservationGuest instances are equal
+        /// Returns true if Booking instances are equal
         /// </summary>
-        /// <param name="other">Instance of ReservationGuest to be compared</param>
+        /// <param name="other">Instance of Booking to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ReservationGuest other)
+        public bool Equals(Booking other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -322,21 +370,6 @@ namespace HostMe.Sdk.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.TimeZone == other.TimeZone ||
-                    this.TimeZone != null &&
-                    this.TimeZone.Equals(other.TimeZone)
-                ) && 
-                (
-                    this.Email == other.Email ||
-                    this.Email != null &&
-                    this.Email.Equals(other.Email)
-                ) && 
-                (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) && 
-                (
                     this.CustomerName == other.CustomerName ||
                     this.CustomerName != null &&
                     this.CustomerName.Equals(other.CustomerName)
@@ -347,9 +380,19 @@ namespace HostMe.Sdk.Model
                     this.Phone.Equals(other.Phone)
                 ) && 
                 (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) && 
+                (
                     this.Areas == other.Areas ||
                     this.Areas != null &&
                     this.Areas.Equals(other.Areas)
+                ) && 
+                (
+                    this.InternalNotes == other.InternalNotes ||
+                    this.InternalNotes != null &&
+                    this.InternalNotes.Equals(other.InternalNotes)
                 ) && 
                 (
                     this.SpecialRequests == other.SpecialRequests ||
@@ -357,9 +400,9 @@ namespace HostMe.Sdk.Model
                     this.SpecialRequests.Equals(other.SpecialRequests)
                 ) && 
                 (
-                    this.TableNumber == other.TableNumber ||
-                    this.TableNumber != null &&
-                    this.TableNumber.Equals(other.TableNumber)
+                    this.AboutGuestNotes == other.AboutGuestNotes ||
+                    this.AboutGuestNotes != null &&
+                    this.AboutGuestNotes.Equals(other.AboutGuestNotes)
                 ) && 
                 (
                     this.DepositStatus == other.DepositStatus ||
@@ -367,9 +410,24 @@ namespace HostMe.Sdk.Model
                     this.DepositStatus.Equals(other.DepositStatus)
                 ) && 
                 (
+                    this.TableNumber == other.TableNumber ||
+                    this.TableNumber != null &&
+                    this.TableNumber.Equals(other.TableNumber)
+                ) && 
+                (
+                    this.Email == other.Email ||
+                    this.Email != null &&
+                    this.Email.Equals(other.Email)
+                ) && 
+                (
                     this.Source == other.Source ||
                     this.Source != null &&
                     this.Source.Equals(other.Source)
+                ) && 
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
                 ) && 
                 (
                     this.Created == other.Created ||
@@ -387,14 +445,34 @@ namespace HostMe.Sdk.Model
                     this.ReservationTime.Equals(other.ReservationTime)
                 ) && 
                 (
+                    this.ExpectedTime == other.ExpectedTime ||
+                    this.ExpectedTime != null &&
+                    this.ExpectedTime.Equals(other.ExpectedTime)
+                ) && 
+                (
+                    this.StatusTime == other.StatusTime ||
+                    this.StatusTime != null &&
+                    this.StatusTime.Equals(other.StatusTime)
+                ) && 
+                (
+                    this.EstimatedReleaseTime == other.EstimatedReleaseTime ||
+                    this.EstimatedReleaseTime != null &&
+                    this.EstimatedReleaseTime.Equals(other.EstimatedReleaseTime)
+                ) && 
+                (
+                    this.RegistrationTime == other.RegistrationTime ||
+                    this.RegistrationTime != null &&
+                    this.RegistrationTime.Equals(other.RegistrationTime)
+                ) && 
+                (
                     this.GroupSize == other.GroupSize ||
                     this.GroupSize != null &&
                     this.GroupSize.Equals(other.GroupSize)
                 ) && 
                 (
-                    this.RestaurantId == other.RestaurantId ||
-                    this.RestaurantId != null &&
-                    this.RestaurantId.Equals(other.RestaurantId)
+                    this.UnreadMessageCount == other.UnreadMessageCount ||
+                    this.UnreadMessageCount != null &&
+                    this.UnreadMessageCount.Equals(other.UnreadMessageCount)
                 ) && 
                 (
                     this.Amount == other.Amount ||
@@ -402,14 +480,14 @@ namespace HostMe.Sdk.Model
                     this.Amount.Equals(other.Amount)
                 ) && 
                 (
-                    this.Roles == other.Roles ||
-                    this.Roles != null &&
-                    this.Roles.SequenceEqual(other.Roles)
+                    this.CardAttached == other.CardAttached ||
+                    this.CardAttached != null &&
+                    this.CardAttached.Equals(other.CardAttached)
                 ) && 
                 (
-                    this.Token == other.Token ||
-                    this.Token != null &&
-                    this.Token.Equals(other.Token)
+                    this.Membership == other.Membership ||
+                    this.Membership != null &&
+                    this.Membership.Equals(other.Membership)
                 ) && 
                 (
                     this.HighChair == other.HighChair ||
@@ -471,42 +549,54 @@ namespace HostMe.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                if (this.TimeZone != null)
-                    hash = hash * 59 + this.TimeZone.GetHashCode();
-                if (this.Email != null)
-                    hash = hash * 59 + this.Email.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 if (this.Areas != null)
                     hash = hash * 59 + this.Areas.GetHashCode();
+                if (this.InternalNotes != null)
+                    hash = hash * 59 + this.InternalNotes.GetHashCode();
                 if (this.SpecialRequests != null)
                     hash = hash * 59 + this.SpecialRequests.GetHashCode();
-                if (this.TableNumber != null)
-                    hash = hash * 59 + this.TableNumber.GetHashCode();
+                if (this.AboutGuestNotes != null)
+                    hash = hash * 59 + this.AboutGuestNotes.GetHashCode();
                 if (this.DepositStatus != null)
                     hash = hash * 59 + this.DepositStatus.GetHashCode();
+                if (this.TableNumber != null)
+                    hash = hash * 59 + this.TableNumber.GetHashCode();
+                if (this.Email != null)
+                    hash = hash * 59 + this.Email.GetHashCode();
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 if (this.Created != null)
                     hash = hash * 59 + this.Created.GetHashCode();
                 if (this.Closed != null)
                     hash = hash * 59 + this.Closed.GetHashCode();
                 if (this.ReservationTime != null)
                     hash = hash * 59 + this.ReservationTime.GetHashCode();
+                if (this.ExpectedTime != null)
+                    hash = hash * 59 + this.ExpectedTime.GetHashCode();
+                if (this.StatusTime != null)
+                    hash = hash * 59 + this.StatusTime.GetHashCode();
+                if (this.EstimatedReleaseTime != null)
+                    hash = hash * 59 + this.EstimatedReleaseTime.GetHashCode();
+                if (this.RegistrationTime != null)
+                    hash = hash * 59 + this.RegistrationTime.GetHashCode();
                 if (this.GroupSize != null)
                     hash = hash * 59 + this.GroupSize.GetHashCode();
-                if (this.RestaurantId != null)
-                    hash = hash * 59 + this.RestaurantId.GetHashCode();
+                if (this.UnreadMessageCount != null)
+                    hash = hash * 59 + this.UnreadMessageCount.GetHashCode();
                 if (this.Amount != null)
                     hash = hash * 59 + this.Amount.GetHashCode();
-                if (this.Roles != null)
-                    hash = hash * 59 + this.Roles.GetHashCode();
-                if (this.Token != null)
-                    hash = hash * 59 + this.Token.GetHashCode();
+                if (this.CardAttached != null)
+                    hash = hash * 59 + this.CardAttached.GetHashCode();
+                if (this.Membership != null)
+                    hash = hash * 59 + this.Membership.GetHashCode();
                 if (this.HighChair != null)
                     hash = hash * 59 + this.HighChair.GetHashCode();
                 if (this.Stroller != null)

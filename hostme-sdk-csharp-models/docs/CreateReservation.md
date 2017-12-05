@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ReservationTime** | **DateTimeOffset?** |  | [optional] 
+**DoB** | **DateTimeOffset?** |  | [optional] 
 **GroupSize** | **int?** |  | [optional] 
 **Amount** | **int?** |  | [optional] 
 **ReservationSource** | **string** |  | [optional] 
@@ -20,14 +21,13 @@ Name | Type | Description | Notes
 **HighChair** | **bool?** |  | [optional] 
 **Stroller** | **bool?** |  | [optional] 
 **Party** | **bool?** |  | [optional] 
-**Vip** | **bool?** |  | [optional] 
 **Booth** | **bool?** |  | [optional] 
 **HighTop** | **bool?** |  | [optional] 
 **Table** | **bool?** |  | [optional] 
-**HandicapAccessible** | **bool?** |  | [optional] 
+**Vip** | **bool?** |  | [optional] 
 **PartyTypes** | **List&lt;string&gt;** |  | [optional] 
 **EstimatedTurnOverTime** | **int?** |  | [optional] 
-**CustomerProfile** | [**Profile**](Profile.md) |  | [optional] 
+**CustomerProfile** | [**ProfileData**](ProfileData.md) |  | [optional] 
 **IsOnline** | **bool?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

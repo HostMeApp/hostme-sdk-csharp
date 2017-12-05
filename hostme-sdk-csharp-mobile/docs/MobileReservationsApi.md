@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 <a name="guestaddnewreservation"></a>
 # **GuestAddNewReservation**
-> ReservationGuest GuestAddNewReservation (CreateMobileReservation item)
+> ReservationGuest GuestAddNewReservation (CreateMobileReservation contract)
 
 
 
@@ -35,11 +35,11 @@ namespace Example
         {
             
             var apiInstance = new MobileReservationsApi();
-            var item = new CreateMobileReservation(); // CreateMobileReservation | 
+            var contract = new CreateMobileReservation(); // CreateMobileReservation | 
 
             try
             {
-                ReservationGuest result = apiInstance.GuestAddNewReservation(item);
+                ReservationGuest result = apiInstance.GuestAddNewReservation(contract);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,7 +55,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item** | [**CreateMobileReservation**](CreateMobileReservation.md)|  | 
+ **contract** | [**CreateMobileReservation**](CreateMobileReservation.md)|  | 
 
 ### Return type
 
@@ -382,7 +382,7 @@ No authorization required
 
 <a name="guestupdatereservation"></a>
 # **GuestUpdateReservation**
-> void GuestUpdateReservation (string reservationId, CreateMobileReservation value)
+> void GuestUpdateReservation (string reservationId, CreateMobileReservation contract)
 
 
 
@@ -406,11 +406,11 @@ namespace Example
 
             var apiInstance = new MobileReservationsApi();
             var reservationId = reservationId_example;  // string | 
-            var value = new CreateMobileReservation(); // CreateMobileReservation | 
+            var contract = new CreateMobileReservation(); // CreateMobileReservation | 
 
             try
             {
-                apiInstance.GuestUpdateReservation(reservationId, value);
+                apiInstance.GuestUpdateReservation(reservationId, contract);
             }
             catch (Exception e)
             {
@@ -426,7 +426,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **reservationId** | **string**|  | 
- **value** | [**CreateMobileReservation**](CreateMobileReservation.md)|  | 
+ **contract** | [**CreateMobileReservation**](CreateMobileReservation.md)|  | 
 
 ### Return type
 

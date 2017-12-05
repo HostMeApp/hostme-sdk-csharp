@@ -44,56 +44,61 @@ namespace HostMe.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TableUserInfo" /> class.
         /// </summary>
-        /// <param name="TableNumber">TableNumber.</param>
         /// <param name="Id">Id.</param>
+        /// <param name="GroupSize">GroupSize.</param>
+        /// <param name="TableNumber">TableNumber.</param>
         /// <param name="CustomerName">CustomerName.</param>
         /// <param name="Email">Email.</param>
         /// <param name="Phone">Phone.</param>
-        /// <param name="Note">Note.</param>
+        /// <param name="SpecialRequests">SpecialRequests.</param>
         /// <param name="Areas">Areas.</param>
+        /// <param name="ReservationTime">ReservationTime.</param>
         /// <param name="HighChair">HighChair.</param>
         /// <param name="Stroller">Stroller.</param>
+        /// <param name="Booth">Booth.</param>
+        /// <param name="HighTop">HighTop.</param>
+        /// <param name="Table">Table.</param>
         /// <param name="Party">Party.</param>
-        /// <param name="Vip">Vip.</param>
-        /// <param name="GroupSize">GroupSize.</param>
-        /// <param name="RegistrationId">RegistrationId.</param>
-        /// <param name="ReservationId">ReservationId.</param>
-        /// <param name="WaitingId">WaitingId.</param>
         /// <param name="PartyTypes">PartyTypes.</param>
         /// <param name="CustomerProfile">CustomerProfile.</param>
-        /// <param name="ReservationTime">ReservationTime.</param>
-        public TableUserInfo(string TableNumber = null, string Id = null, string CustomerName = null, string Email = null, string Phone = null, string Note = null, string Areas = null, bool? HighChair = null, bool? Stroller = null, bool? Party = null, bool? Vip = null, int? GroupSize = null, int? RegistrationId = null, string ReservationId = null, int? WaitingId = null, List<string> PartyTypes = null, Profile CustomerProfile = null, DateTimeOffset? ReservationTime = null)
+        /// <param name="EstimatedTurnOverTime">EstimatedTurnOverTime.</param>
+        public TableUserInfo(string Id = null, int? GroupSize = null, string TableNumber = null, string CustomerName = null, string Email = null, string Phone = null, string SpecialRequests = null, string Areas = null, DateTimeOffset? ReservationTime = null, bool? HighChair = null, bool? Stroller = null, bool? Booth = null, bool? HighTop = null, bool? Table = null, bool? Party = null, List<string> PartyTypes = null, ProfileData CustomerProfile = null, double? EstimatedTurnOverTime = null)
         {
-            this.TableNumber = TableNumber;
             this.Id = Id;
+            this.GroupSize = GroupSize;
+            this.TableNumber = TableNumber;
             this.CustomerName = CustomerName;
             this.Email = Email;
             this.Phone = Phone;
-            this.Note = Note;
+            this.SpecialRequests = SpecialRequests;
             this.Areas = Areas;
+            this.ReservationTime = ReservationTime;
             this.HighChair = HighChair;
             this.Stroller = Stroller;
+            this.Booth = Booth;
+            this.HighTop = HighTop;
+            this.Table = Table;
             this.Party = Party;
-            this.Vip = Vip;
-            this.GroupSize = GroupSize;
-            this.RegistrationId = RegistrationId;
-            this.ReservationId = ReservationId;
-            this.WaitingId = WaitingId;
             this.PartyTypes = PartyTypes;
             this.CustomerProfile = CustomerProfile;
-            this.ReservationTime = ReservationTime;
+            this.EstimatedTurnOverTime = EstimatedTurnOverTime;
         }
         
-        /// <summary>
-        /// Gets or Sets TableNumber
-        /// </summary>
-        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
-        public string TableNumber { get; set; }
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=true)]
         public string Id { get; set; }
+        /// <summary>
+        /// Gets or Sets GroupSize
+        /// </summary>
+        [DataMember(Name="groupSize", EmitDefaultValue=true)]
+        public int? GroupSize { get; set; }
+        /// <summary>
+        /// Gets or Sets TableNumber
+        /// </summary>
+        [DataMember(Name="tableNumber", EmitDefaultValue=true)]
+        public string TableNumber { get; set; }
         /// <summary>
         /// Gets or Sets CustomerName
         /// </summary>
@@ -110,15 +115,20 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="phone", EmitDefaultValue=true)]
         public string Phone { get; set; }
         /// <summary>
-        /// Gets or Sets Note
+        /// Gets or Sets SpecialRequests
         /// </summary>
-        [DataMember(Name="note", EmitDefaultValue=true)]
-        public string Note { get; set; }
+        [DataMember(Name="specialRequests", EmitDefaultValue=true)]
+        public string SpecialRequests { get; set; }
         /// <summary>
         /// Gets or Sets Areas
         /// </summary>
         [DataMember(Name="areas", EmitDefaultValue=true)]
         public string Areas { get; set; }
+        /// <summary>
+        /// Gets or Sets ReservationTime
+        /// </summary>
+        [DataMember(Name="reservationTime", EmitDefaultValue=true)]
+        public DateTimeOffset? ReservationTime { get; set; }
         /// <summary>
         /// Gets or Sets HighChair
         /// </summary>
@@ -130,35 +140,25 @@ namespace HostMe.Sdk.Model
         [DataMember(Name="stroller", EmitDefaultValue=true)]
         public bool? Stroller { get; set; }
         /// <summary>
+        /// Gets or Sets Booth
+        /// </summary>
+        [DataMember(Name="booth", EmitDefaultValue=true)]
+        public bool? Booth { get; set; }
+        /// <summary>
+        /// Gets or Sets HighTop
+        /// </summary>
+        [DataMember(Name="highTop", EmitDefaultValue=true)]
+        public bool? HighTop { get; set; }
+        /// <summary>
+        /// Gets or Sets Table
+        /// </summary>
+        [DataMember(Name="table", EmitDefaultValue=true)]
+        public bool? Table { get; set; }
+        /// <summary>
         /// Gets or Sets Party
         /// </summary>
         [DataMember(Name="party", EmitDefaultValue=true)]
         public bool? Party { get; set; }
-        /// <summary>
-        /// Gets or Sets Vip
-        /// </summary>
-        [DataMember(Name="vip", EmitDefaultValue=true)]
-        public bool? Vip { get; set; }
-        /// <summary>
-        /// Gets or Sets GroupSize
-        /// </summary>
-        [DataMember(Name="groupSize", EmitDefaultValue=true)]
-        public int? GroupSize { get; set; }
-        /// <summary>
-        /// Gets or Sets RegistrationId
-        /// </summary>
-        [DataMember(Name="registrationId", EmitDefaultValue=true)]
-        public int? RegistrationId { get; set; }
-        /// <summary>
-        /// Gets or Sets ReservationId
-        /// </summary>
-        [DataMember(Name="reservationId", EmitDefaultValue=true)]
-        public string ReservationId { get; set; }
-        /// <summary>
-        /// Gets or Sets WaitingId
-        /// </summary>
-        [DataMember(Name="waitingId", EmitDefaultValue=true)]
-        public int? WaitingId { get; set; }
         /// <summary>
         /// Gets or Sets PartyTypes
         /// </summary>
@@ -168,12 +168,12 @@ namespace HostMe.Sdk.Model
         /// Gets or Sets CustomerProfile
         /// </summary>
         [DataMember(Name="customerProfile", EmitDefaultValue=true)]
-        public Profile CustomerProfile { get; set; }
+        public ProfileData CustomerProfile { get; set; }
         /// <summary>
-        /// Gets or Sets ReservationTime
+        /// Gets or Sets EstimatedTurnOverTime
         /// </summary>
-        [DataMember(Name="reservationTime", EmitDefaultValue=true)]
-        public DateTimeOffset? ReservationTime { get; set; }
+        [DataMember(Name="estimatedTurnOverTime", EmitDefaultValue=true)]
+        public double? EstimatedTurnOverTime { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -182,24 +182,24 @@ namespace HostMe.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TableUserInfo {\n");
-            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
+            sb.Append("  TableNumber: ").Append(TableNumber).Append("\n");
             sb.Append("  CustomerName: ").Append(CustomerName).Append("\n");
             sb.Append("  Email: ").Append(Email).Append("\n");
             sb.Append("  Phone: ").Append(Phone).Append("\n");
-            sb.Append("  Note: ").Append(Note).Append("\n");
+            sb.Append("  SpecialRequests: ").Append(SpecialRequests).Append("\n");
             sb.Append("  Areas: ").Append(Areas).Append("\n");
+            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
             sb.Append("  HighChair: ").Append(HighChair).Append("\n");
             sb.Append("  Stroller: ").Append(Stroller).Append("\n");
+            sb.Append("  Booth: ").Append(Booth).Append("\n");
+            sb.Append("  HighTop: ").Append(HighTop).Append("\n");
+            sb.Append("  Table: ").Append(Table).Append("\n");
             sb.Append("  Party: ").Append(Party).Append("\n");
-            sb.Append("  Vip: ").Append(Vip).Append("\n");
-            sb.Append("  GroupSize: ").Append(GroupSize).Append("\n");
-            sb.Append("  RegistrationId: ").Append(RegistrationId).Append("\n");
-            sb.Append("  ReservationId: ").Append(ReservationId).Append("\n");
-            sb.Append("  WaitingId: ").Append(WaitingId).Append("\n");
             sb.Append("  PartyTypes: ").Append(PartyTypes).Append("\n");
             sb.Append("  CustomerProfile: ").Append(CustomerProfile).Append("\n");
-            sb.Append("  ReservationTime: ").Append(ReservationTime).Append("\n");
+            sb.Append("  EstimatedTurnOverTime: ").Append(EstimatedTurnOverTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -237,14 +237,19 @@ namespace HostMe.Sdk.Model
 
             return 
                 (
-                    this.TableNumber == other.TableNumber ||
-                    this.TableNumber != null &&
-                    this.TableNumber.Equals(other.TableNumber)
-                ) && 
-                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.GroupSize == other.GroupSize ||
+                    this.GroupSize != null &&
+                    this.GroupSize.Equals(other.GroupSize)
+                ) && 
+                (
+                    this.TableNumber == other.TableNumber ||
+                    this.TableNumber != null &&
+                    this.TableNumber.Equals(other.TableNumber)
                 ) && 
                 (
                     this.CustomerName == other.CustomerName ||
@@ -262,14 +267,19 @@ namespace HostMe.Sdk.Model
                     this.Phone.Equals(other.Phone)
                 ) && 
                 (
-                    this.Note == other.Note ||
-                    this.Note != null &&
-                    this.Note.Equals(other.Note)
+                    this.SpecialRequests == other.SpecialRequests ||
+                    this.SpecialRequests != null &&
+                    this.SpecialRequests.Equals(other.SpecialRequests)
                 ) && 
                 (
                     this.Areas == other.Areas ||
                     this.Areas != null &&
                     this.Areas.Equals(other.Areas)
+                ) && 
+                (
+                    this.ReservationTime == other.ReservationTime ||
+                    this.ReservationTime != null &&
+                    this.ReservationTime.Equals(other.ReservationTime)
                 ) && 
                 (
                     this.HighChair == other.HighChair ||
@@ -282,34 +292,24 @@ namespace HostMe.Sdk.Model
                     this.Stroller.Equals(other.Stroller)
                 ) && 
                 (
+                    this.Booth == other.Booth ||
+                    this.Booth != null &&
+                    this.Booth.Equals(other.Booth)
+                ) && 
+                (
+                    this.HighTop == other.HighTop ||
+                    this.HighTop != null &&
+                    this.HighTop.Equals(other.HighTop)
+                ) && 
+                (
+                    this.Table == other.Table ||
+                    this.Table != null &&
+                    this.Table.Equals(other.Table)
+                ) && 
+                (
                     this.Party == other.Party ||
                     this.Party != null &&
                     this.Party.Equals(other.Party)
-                ) && 
-                (
-                    this.Vip == other.Vip ||
-                    this.Vip != null &&
-                    this.Vip.Equals(other.Vip)
-                ) && 
-                (
-                    this.GroupSize == other.GroupSize ||
-                    this.GroupSize != null &&
-                    this.GroupSize.Equals(other.GroupSize)
-                ) && 
-                (
-                    this.RegistrationId == other.RegistrationId ||
-                    this.RegistrationId != null &&
-                    this.RegistrationId.Equals(other.RegistrationId)
-                ) && 
-                (
-                    this.ReservationId == other.ReservationId ||
-                    this.ReservationId != null &&
-                    this.ReservationId.Equals(other.ReservationId)
-                ) && 
-                (
-                    this.WaitingId == other.WaitingId ||
-                    this.WaitingId != null &&
-                    this.WaitingId.Equals(other.WaitingId)
                 ) && 
                 (
                     this.PartyTypes == other.PartyTypes ||
@@ -322,9 +322,9 @@ namespace HostMe.Sdk.Model
                     this.CustomerProfile.Equals(other.CustomerProfile)
                 ) && 
                 (
-                    this.ReservationTime == other.ReservationTime ||
-                    this.ReservationTime != null &&
-                    this.ReservationTime.Equals(other.ReservationTime)
+                    this.EstimatedTurnOverTime == other.EstimatedTurnOverTime ||
+                    this.EstimatedTurnOverTime != null &&
+                    this.EstimatedTurnOverTime.Equals(other.EstimatedTurnOverTime)
                 );
         }
 
@@ -339,42 +339,42 @@ namespace HostMe.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.TableNumber != null)
-                    hash = hash * 59 + this.TableNumber.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.GroupSize != null)
+                    hash = hash * 59 + this.GroupSize.GetHashCode();
+                if (this.TableNumber != null)
+                    hash = hash * 59 + this.TableNumber.GetHashCode();
                 if (this.CustomerName != null)
                     hash = hash * 59 + this.CustomerName.GetHashCode();
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
                 if (this.Phone != null)
                     hash = hash * 59 + this.Phone.GetHashCode();
-                if (this.Note != null)
-                    hash = hash * 59 + this.Note.GetHashCode();
+                if (this.SpecialRequests != null)
+                    hash = hash * 59 + this.SpecialRequests.GetHashCode();
                 if (this.Areas != null)
                     hash = hash * 59 + this.Areas.GetHashCode();
+                if (this.ReservationTime != null)
+                    hash = hash * 59 + this.ReservationTime.GetHashCode();
                 if (this.HighChair != null)
                     hash = hash * 59 + this.HighChair.GetHashCode();
                 if (this.Stroller != null)
                     hash = hash * 59 + this.Stroller.GetHashCode();
+                if (this.Booth != null)
+                    hash = hash * 59 + this.Booth.GetHashCode();
+                if (this.HighTop != null)
+                    hash = hash * 59 + this.HighTop.GetHashCode();
+                if (this.Table != null)
+                    hash = hash * 59 + this.Table.GetHashCode();
                 if (this.Party != null)
                     hash = hash * 59 + this.Party.GetHashCode();
-                if (this.Vip != null)
-                    hash = hash * 59 + this.Vip.GetHashCode();
-                if (this.GroupSize != null)
-                    hash = hash * 59 + this.GroupSize.GetHashCode();
-                if (this.RegistrationId != null)
-                    hash = hash * 59 + this.RegistrationId.GetHashCode();
-                if (this.ReservationId != null)
-                    hash = hash * 59 + this.ReservationId.GetHashCode();
-                if (this.WaitingId != null)
-                    hash = hash * 59 + this.WaitingId.GetHashCode();
                 if (this.PartyTypes != null)
                     hash = hash * 59 + this.PartyTypes.GetHashCode();
                 if (this.CustomerProfile != null)
                     hash = hash * 59 + this.CustomerProfile.GetHashCode();
-                if (this.ReservationTime != null)
-                    hash = hash * 59 + this.ReservationTime.GetHashCode();
+                if (this.EstimatedTurnOverTime != null)
+                    hash = hash * 59 + this.EstimatedTurnOverTime.GetHashCode();
                 return hash;
             }
         }

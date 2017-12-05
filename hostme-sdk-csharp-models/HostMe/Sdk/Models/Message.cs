@@ -48,15 +48,17 @@ namespace HostMe.Sdk.Model
         /// <param name="Body">Body.</param>
         /// <param name="Time">Time.</param>
         /// <param name="Origin">Origin.</param>
+        /// <param name="Phone">Phone.</param>
         /// <param name="DeliveryStatus">DeliveryStatus.</param>
         /// <param name="DeliveryTime">DeliveryTime.</param>
         /// <param name="IsRead">IsRead.</param>
-        public Message(int? Id = null, string Body = null, DateTimeOffset? Time = null, string Origin = null, string DeliveryStatus = null, DateTimeOffset? DeliveryTime = null, bool? IsRead = null)
+        public Message(int? Id = null, string Body = null, DateTimeOffset? Time = null, string Origin = null, string Phone = null, string DeliveryStatus = null, DateTimeOffset? DeliveryTime = null, bool? IsRead = null)
         {
             this.Id = Id;
             this.Body = Body;
             this.Time = Time;
             this.Origin = Origin;
+            this.Phone = Phone;
             this.DeliveryStatus = DeliveryStatus;
             this.DeliveryTime = DeliveryTime;
             this.IsRead = IsRead;
@@ -82,6 +84,11 @@ namespace HostMe.Sdk.Model
         /// </summary>
         [DataMember(Name="origin", EmitDefaultValue=true)]
         public string Origin { get; set; }
+        /// <summary>
+        /// Gets or Sets Phone
+        /// </summary>
+        [DataMember(Name="phone", EmitDefaultValue=true)]
+        public string Phone { get; set; }
         /// <summary>
         /// Gets or Sets DeliveryStatus
         /// </summary>
@@ -109,6 +116,7 @@ namespace HostMe.Sdk.Model
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
             sb.Append("  Origin: ").Append(Origin).Append("\n");
+            sb.Append("  Phone: ").Append(Phone).Append("\n");
             sb.Append("  DeliveryStatus: ").Append(DeliveryStatus).Append("\n");
             sb.Append("  DeliveryTime: ").Append(DeliveryTime).Append("\n");
             sb.Append("  IsRead: ").Append(IsRead).Append("\n");
@@ -169,6 +177,11 @@ namespace HostMe.Sdk.Model
                     this.Origin.Equals(other.Origin)
                 ) && 
                 (
+                    this.Phone == other.Phone ||
+                    this.Phone != null &&
+                    this.Phone.Equals(other.Phone)
+                ) && 
+                (
                     this.DeliveryStatus == other.DeliveryStatus ||
                     this.DeliveryStatus != null &&
                     this.DeliveryStatus.Equals(other.DeliveryStatus)
@@ -204,6 +217,8 @@ namespace HostMe.Sdk.Model
                     hash = hash * 59 + this.Time.GetHashCode();
                 if (this.Origin != null)
                     hash = hash * 59 + this.Origin.GetHashCode();
+                if (this.Phone != null)
+                    hash = hash * 59 + this.Phone.GetHashCode();
                 if (this.DeliveryStatus != null)
                     hash = hash * 59 + this.DeliveryStatus.GetHashCode();
                 if (this.DeliveryTime != null)
